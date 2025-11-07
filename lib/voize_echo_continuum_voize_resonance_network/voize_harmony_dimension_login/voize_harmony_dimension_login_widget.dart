@@ -1,6 +1,9 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/index.dart';
+import '/app_state.dart';
+import '/backend/schema/structs/index.dart';
+import '/utils/piano_loading.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'voize_harmony_dimension_login_model.dart';
@@ -595,40 +598,111 @@ class _VoizeHarmonyDimensionLoginWidgetState
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 157.0, 16.0, 0.0),
-                            child: Container(
-                              width: double.infinity,
-                              height: 48.0,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  fit: BoxFit.fill,
-                                  image: Image.asset(
-                                    'assets/images/xcbvuysdifgyiUAD_eiyrughdfiugDFG.png',
-                                  ).image,
+                            child: GestureDetector(
+                              onTap: () async {
+                                // 获取输入的邮箱和密码
+                                final email =
+                                    _model.textController1.text.trim();
+                                final password =
+                                    _model.textController2.text.trim();
+
+                                // 验证邮箱和密码不能为空
+                                if (email.isEmpty || password.isEmpty) {
+                                  PianoLoading.showError(
+                                    context,
+                                    message: 'Please enter email and password',
+                                  );
+                                  return;
+                                }
+
+                                // 显示加载动画
+                                PianoLoading.show(context, message: 'Logging in...');
+
+                                // 模拟网络延迟
+                                await Future.delayed(const Duration(milliseconds: 800));
+
+                                // 在用户列表中查找匹配的用户
+                                final users =
+                                    FFAppState().voizeNaiyaEchoCompanionUsers;
+                                VoizeCognitiveHarmonyUserStruct? matchedUser;
+
+                                for (var user in users) {
+                                  if (user.voizeCognitiveHarmonyUserEmail ==
+                                          email &&
+                                      user.voizeCognitiveHarmonyUserPassword ==
+                                          password) {
+                                    matchedUser = user;
+                                    break;
+                                  }
+                                }
+
+                                // 关闭加载动画
+                                PianoLoading.dismiss();
+
+                                // 如果找到匹配的用户
+                                if (matchedUser != null) {
+                                  // 保存用户ID到appstate
+                                  FFAppState().voizeRivenDreamVoiceLoginToken =
+                                      matchedUser.voizeCognitiveHarmonyUserId;
+
+                                  // 显示成功提示
+                                  PianoLoading.showSuccess(
+                                    context,
+                                    message: 'Login successful!',
+                                    duration: const Duration(milliseconds: 1500),
+                                  );
+
+                                  // 延迟跳转以显示成功动画
+                                  await Future.delayed(const Duration(milliseconds: 1600));
+
+                                  // 跳转到主页
+                                  if (context.mounted) {
+                                    context.goNamed('VoizePrismLink_home');
+                                  }
+                                } else {
+                                  // 登录失败提示
+                                  PianoLoading.showError(
+                                    context,
+                                    message: 'Invalid email or password',
+                                  );
+                                }
+                              },
+                              child: Container(
+                                width: double.infinity,
+                                height: 48.0,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    fit: BoxFit.fill,
+                                    image: Image.asset(
+                                      'assets/images/xcbvuysdifgyiUAD_eiyrughdfiugDFG.png',
+                                    ).image,
+                                  ),
                                 ),
-                              ),
-                              child: Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
-                                child: Text(
-                                  'Login',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        font: GoogleFonts.archivo(
+                                child: Align(
+                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  child: Text(
+                                    'Login',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          font: GoogleFonts.archivo(
+                                            fontWeight: FontWeight.w600,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
+                                          color:
+                                              FlutterFlowTheme.of(context).info,
+                                          fontSize: 16.0,
+                                          letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                           fontStyle:
                                               FlutterFlowTheme.of(context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
-                                        fontSize: 16.0,
-                                        letterSpacing: 0.0,
-                                        fontWeight: FontWeight.w600,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
-                                      ),
+                                  ),
                                 ),
                               ),
                             ),

@@ -172,6 +172,7 @@ class _VoizeSentientSymphonyProjectReportWidgetState
                                                   newValue!);
                                             },
                                             side: (FlutterFlowTheme.of(context)
+                                                        // ignore: unnecessary_null_comparison
                                                         .alternate !=
                                                     null)
                                                 ? BorderSide(
