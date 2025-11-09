@@ -160,7 +160,7 @@ class _VoizeMemoryChamberVaultDymaticDetailsWidgetState
                                 decoration: BoxDecoration(
                                   shape: BoxShape.circle,
                                 ),
-                                child: Image.network(
+                                child: Image.asset(
                                   FFAppState()
                                       .voizeNaiyaEchoCompanionUsers
                                       .elementAtOrNull(widget
@@ -243,7 +243,7 @@ class _VoizeMemoryChamberVaultDymaticDetailsWidgetState
                                 0.0, 16.0, 0.0, 0.0),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(16.0),
-                              child: Image.network(
+                              child: Image.asset(
                                 FFAppState()
                                     .voizeAelithBondEntityDynamtics
                                     .elementAtOrNull(
@@ -325,7 +325,7 @@ class _VoizeMemoryChamberVaultDymaticDetailsWidgetState
                                       ),
                                     ),
                                     Text(
-                                      '${FFAppState().voizeAelithBondEntityDynamtics.elementAtOrNull(widget.voizeHeartSyncDimensionPost!)?.voizeSynestheticConnectionDymaticComments.toString()}',
+                                      '${FFAppState().voizeSoulReflectionOrbitComments.where((e) => widget.voizeHeartSyncDimensionPost == e.voizeSentienceEchoRealmCommentPostRef).length.toString()}',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -444,7 +444,7 @@ class _VoizeMemoryChamberVaultDymaticDetailsWidgetState
                                             decoration: BoxDecoration(
                                               shape: BoxShape.circle,
                                             ),
-                                            child: Image.network(
+                                            child: Image.asset(
                                               FFAppState()
                                                   .voizeNaiyaEchoCompanionUsers
                                                   .elementAtOrNull(
@@ -624,7 +624,7 @@ class _VoizeMemoryChamberVaultDymaticDetailsWidgetState
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                               ),
-                              child: Image.network(
+                              child: Image.asset(
                                 FFAppState()
                                     .voizeNaiyaEchoCompanionUsers
                                     .elementAtOrNull(FFAppState()

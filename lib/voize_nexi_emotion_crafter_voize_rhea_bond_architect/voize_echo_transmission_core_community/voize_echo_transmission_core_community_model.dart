@@ -7,19 +7,12 @@ import 'package:flutter/material.dart';
 
 class VoizeEchoTransmissionCoreCommunityModel
     extends FlutterFlowModel<VoizeEchoTransmissionCoreCommunityWidget> {
-  ///  State fields for stateful widgets in this page.
 
-  // State field(s) for TabBar widget.
   TabController? tabBarController;
-  int get tabBarCurrentIndex =>
-      tabBarController != null ? tabBarController!.index : 0;
-  int get tabBarPreviousIndex =>
-      tabBarController != null ? tabBarController!.previousIndex : 0;
 
-  // Models for VoizeAffectionContinuumAxis_likes_user dynamic component.
   late FlutterFlowDynamicModels<VoizeAffectionContinuumAxisLikesUserModel>
       voizeAffectionContinuumAxisLikesUserModels1;
-  // Models for VoizeAffectionContinuumAxis_likes_user dynamic component.
+
   late FlutterFlowDynamicModels<VoizeAffectionContinuumAxisLikesUserModel>
       voizeAffectionContinuumAxisLikesUserModels2;
 

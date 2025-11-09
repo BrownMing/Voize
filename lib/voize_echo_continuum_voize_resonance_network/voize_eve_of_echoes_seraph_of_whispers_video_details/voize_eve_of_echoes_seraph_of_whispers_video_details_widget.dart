@@ -83,17 +83,14 @@ class _VoizeEveOfEchoesSeraphOfWhispersVideoDetailsWidgetState
               decoration: BoxDecoration(),
               child: Stack(
                 children: [
-                  FlutterFlowVideoPlayer(
+                  RebelTorqueBrotherhoodDen(
                     path: FFAppState()
                         .voizeSerenEmotionSpiritVideos
                         .elementAtOrNull(widget.voizeHeartSyncProtocolPost!)!
                         .voizeHeartWaveContinuityVideoUrl,
-                    videoType: VideoType.network,
-                    autoPlay: false,
+                    autoPlay: true,
                     looping: true,
-                    showControls: true,
-                    allowFullScreen: false,
-                    allowPlaybackSpeedMenu: false,
+                    showControls: false,
                   ),
                 ],
               ),
@@ -371,7 +368,7 @@ class _VoizeEveOfEchoesSeraphOfWhispersVideoDetailsWidgetState
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                   ),
-                                  child: Image.network(
+                                  child: Image.asset(
                                     FFAppState()
                                         .voizeNaiyaEchoCompanionUsers
                                         .elementAtOrNull(widget

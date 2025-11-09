@@ -65,15 +65,20 @@ class _VoizeEchoDreamLegacyRechargeWidgetState
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        width: 32.0,
-                        height: 32.0,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: Image.asset(
-                              'assets/images/agyiufgdfyu_audfigydfuihgduiofg.png',
-                            ).image,
+                      GestureDetector(
+                        onTap: () async {
+                          context.safePop();
+                        },
+                        child: Container(
+                          width: 32.0,
+                          height: 32.0,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: Image.asset(
+                                'assets/images/agyiufgdfyu_audfigydfuihgduiofg.png',
+                              ).image,
+                            ),
                           ),
                         ),
                       ),

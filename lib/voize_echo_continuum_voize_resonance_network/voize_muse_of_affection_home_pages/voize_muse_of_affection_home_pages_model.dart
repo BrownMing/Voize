@@ -7,9 +7,7 @@ import 'package:flutter/material.dart';
 
 class VoizeMuseOfAffectionHomePagesModel
     extends FlutterFlowModel<VoizeMuseOfAffectionHomePagesWidget> {
-  ///  State fields for stateful widgets in this page.
 
-  // Models for VoizeEtherealSoundCodex_following dynamic component.
   late FlutterFlowDynamicModels<VoizeEtherealSoundCodexFollowingModel>
       voizeEtherealSoundCodexFollowingModels;
 

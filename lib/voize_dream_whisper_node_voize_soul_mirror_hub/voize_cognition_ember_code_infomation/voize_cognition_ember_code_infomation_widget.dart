@@ -1,3 +1,4 @@
+import '../voize_emotive_frequency_grid_empty/voize_emotive_frequency_grid_empty_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'dart:ui';
@@ -78,7 +79,7 @@ class _VoizeCognitionEmberCodeInfomationWidgetState
                         children: [
                           ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
-                            child: Image.network(
+                            child: Image.asset(
                               FFAppState()
                                   .voizeNaiyaEchoCompanionUsers
                                   .elementAtOrNull(FFAppState()
@@ -134,7 +135,7 @@ class _VoizeCognitionEmberCodeInfomationWidgetState
                                         decoration: BoxDecoration(
                                           image: DecorationImage(
                                             fit: BoxFit.cover,
-                                            image: Image.network(
+                                            image: Image.asset(
                                               FFAppState()
                                                   .voizeNaiyaEchoCompanionUsers
                                                   .elementAtOrNull(FFAppState()
@@ -388,7 +389,10 @@ class _VoizeCognitionEmberCodeInfomationWidgetState
                                       .voizeSynestheticConnectionDymaticCreateTime!,
                                   desc: false)
                               .toList();
-
+                          if (voizeVelinAffectionMuse.isEmpty) {
+                            return const Center(
+                                child: VoizeEmotiveFrequencyGridEmptyWidget());
+                          }
                           return GridView.builder(
                             padding: EdgeInsets.zero,
                             gridDelegate:

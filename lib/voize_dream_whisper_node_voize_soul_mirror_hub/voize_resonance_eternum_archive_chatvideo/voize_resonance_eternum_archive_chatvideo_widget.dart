@@ -55,7 +55,7 @@ class _VoizeResonanceEternumArchiveChatvideoWidgetState
         key: scaffoldKey,
         body: Stack(
           children: [
-            Image.network(
+            Image.asset(
               FFAppState()
                   .voizeNaiyaEchoCompanionUsers
                   .elementAtOrNull(widget.voizeWhisperFlowProtocolUserid!)!

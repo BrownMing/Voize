@@ -71,15 +71,20 @@ class _VoizeHeartWaveInterfacePostVideoWidgetState
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      Container(
-                        width: 32.0,
-                        height: 32.0,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: Image.asset(
-                              'assets/images/agyiufgdfyu_audfigydfuihgduiofg.png',
-                            ).image,
+                      GestureDetector(
+                        onTap: () async {
+                          context.safePop();
+                        },
+                        child: Container(
+                          width: 32.0,
+                          height: 32.0,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: Image.asset(
+                                'assets/images/agyiufgdfyu_audfigydfuihgduiofg.png',
+                              ).image,
+                            ),
                           ),
                         ),
                       ),
@@ -275,16 +280,17 @@ class _VoizeHeartWaveInterfacePostVideoWidgetState
                               ),
                               child: Stack(
                                 children: [
-                                  FlutterFlowVideoPlayer(
-                                    path:
-                                        'https://assets.mixkit.co/videos/529/529-720.mp4',
-                                    videoType: VideoType.network,
-                                    autoPlay: false,
-                                    looping: true,
-                                    showControls: true,
-                                    allowFullScreen: true,
-                                    allowPlaybackSpeedMenu: false,
-                                  ),
+                                  if (_model.voizeEmotiveFrequencyFieldUrl !=
+                                          null &&
+                                      _model.voizeEmotiveFrequencyFieldUrl !=
+                                          '')
+                                    RebelTorqueBrotherhoodDen(
+                                      path:
+                                          _model.voizeEmotiveFrequencyFieldUrl!,
+                                      autoPlay: false,
+                                      looping: true,
+                                      showControls: true,
+                                    ),
                                   if (_model.voizeEmotiveFrequencyFieldUrl ==
                                           null ||
                                       _model.voizeEmotiveFrequencyFieldUrl ==

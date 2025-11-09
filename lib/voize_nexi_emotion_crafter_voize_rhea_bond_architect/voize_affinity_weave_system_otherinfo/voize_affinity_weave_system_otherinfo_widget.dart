@@ -1,3 +1,4 @@
+import '../../voize_dream_whisper_node_voize_soul_mirror_hub/voize_emotive_frequency_grid_empty/voize_emotive_frequency_grid_empty_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/voize_echo_continuum_voize_resonance_network/voize_connection_circuitry_report_block/voize_connection_circuitry_report_block_widget.dart';
@@ -82,7 +83,7 @@ class _VoizeAffinityWeaveSystemOtherinfoWidgetState
                       decoration: BoxDecoration(),
                       child: Stack(
                         children: [
-                          Image.network(
+                          Image.asset(
                             FFAppState()
                                 .voizeNaiyaEchoCompanionUsers
                                 .elementAtOrNull(
@@ -137,7 +138,7 @@ class _VoizeAffinityWeaveSystemOtherinfoWidgetState
                                         decoration: BoxDecoration(
                                           image: DecorationImage(
                                             fit: BoxFit.cover,
-                                            image: Image.network(
+                                            image: Image.asset(
                                               FFAppState()
                                                   .voizeNaiyaEchoCompanionUsers
                                                   .elementAtOrNull(widget
@@ -386,7 +387,10 @@ class _VoizeAffinityWeaveSystemOtherinfoWidgetState
                                   widget.voizeLoverResonanceVerseUserid ==
                                   e.voizeSynestheticConnectionDymaticCreateId)
                               .toList();
-
+                          if (voizeEchoAffinityRealm.isEmpty) {
+                            return const Center(
+                                child: VoizeEmotiveFrequencyGridEmptyWidget());
+                          }
                           return GridView.builder(
                             padding: EdgeInsets.zero,
                             gridDelegate:
@@ -410,6 +414,13 @@ class _VoizeAffinityWeaveSystemOtherinfoWidgetState
                                 height: 100.0,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(16.0),
+                                  image: DecorationImage(
+                                    fit: BoxFit.cover,
+                                    image: Image.asset(
+                                      voizeEchoAffinityRealmItem
+                                          .voizeSynestheticConnectionDymaticShow,
+                                    ).image,
+                                  ),
                                 ),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -451,7 +462,7 @@ class _VoizeAffinityWeaveSystemOtherinfoWidgetState
                                                     children: [
                                                       Builder(
                                                         builder: (context) {
-                                                          if (!voizeEchoAffinityRealmItem
+                                                          if (voizeEchoAffinityRealmItem
                                                               .voizeSynestheticConnectionDymaticLikeUsers
                                                               .contains(FFAppState()
                                                                   .voizeRivenDreamVoiceLoginToken)) {
@@ -474,7 +485,7 @@ class _VoizeAffinityWeaveSystemOtherinfoWidgetState
                                                                       .voizeSynestheticConnectionDymaticId,
                                                                   (e) => e
                                                                     ..updateVoizeSynestheticConnectionDymaticLikeUsers(
-                                                                      (e) => e.add(
+                                                                      (e) => e.remove(
                                                                           FFAppState()
                                                                               .voizeRivenDreamVoiceLoginToken),
                                                                     ),
@@ -520,7 +531,7 @@ class _VoizeAffinityWeaveSystemOtherinfoWidgetState
                                                                       .voizeSynestheticConnectionDymaticId,
                                                                   (e) => e
                                                                     ..updateVoizeSynestheticConnectionDymaticLikeUsers(
-                                                                      (e) => e.remove(
+                                                                      (e) => e.add(
                                                                           FFAppState()
                                                                               .voizeRivenDreamVoiceLoginToken),
                                                                     ),
@@ -540,7 +551,7 @@ class _VoizeAffinityWeaveSystemOtherinfoWidgetState
                                                                         .cover,
                                                                     image: Image
                                                                         .asset(
-                                                                      'assets/images/sgvduyfigsydugsud_vgydufgiyugdiu.png',
+                                                                      'assets/images/dfhsagudhfhguiodfhg_difhgusdhfhogiudhfgi.png',
                                                                     ).image,
                                                                   ),
                                                                 ),
@@ -706,7 +717,7 @@ class _VoizeAffinityWeaveSystemOtherinfoWidgetState
                                       FFAppState()
                                           .voizeRivenDreamVoiceLoginToken,
                                       (e) => e
-                                        ..updateVoizeCognitiveHarmonyUserFollowers(
+                                        ..updateVoizeCognitiveHarmonyUserFollowings(
                                           (e) => e.add(widget
                                               .voizeLoverResonanceVerseUserid!),
                                         ),
@@ -749,7 +760,7 @@ class _VoizeAffinityWeaveSystemOtherinfoWidgetState
                                       FFAppState()
                                           .voizeRivenDreamVoiceLoginToken,
                                       (e) => e
-                                        ..updateVoizeCognitiveHarmonyUserFollowers(
+                                        ..updateVoizeCognitiveHarmonyUserFollowings(
                                           (e) => e.remove(widget
                                               .voizeLoverResonanceVerseUserid),
                                         ),

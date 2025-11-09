@@ -94,7 +94,7 @@ class _VoizeAerisDreamOracleDiaryDetailsWidgetState
                               final voizeEchoSoulChronicleItem =
                                   voizeEchoSoulChronicle[
                                       voizeEchoSoulChronicleIndex];
-                              return Image.network(
+                              return Image.asset(
                                 voizeEchoSoulChronicleItem,
                                 width: double.infinity,
                                 height: double.infinity,
@@ -179,7 +179,7 @@ class _VoizeAerisDreamOracleDiaryDetailsWidgetState
                                 decoration: BoxDecoration(
                                   shape: BoxShape.circle,
                                 ),
-                                child: Image.network(
+                                child: Image.asset(
                                   FFAppState()
                                       .voizeNaiyaEchoCompanionUsers
                                       .elementAtOrNull(widget

@@ -82,7 +82,7 @@ class _VoizeSentientSymphonyProjectReportWidgetState
                           fit: BoxFit.cover,
                         ),
                       ),
-                      Image.network(
+                      Image.asset(
                         '',
                         width: 32.0,
                         height: 32.0,

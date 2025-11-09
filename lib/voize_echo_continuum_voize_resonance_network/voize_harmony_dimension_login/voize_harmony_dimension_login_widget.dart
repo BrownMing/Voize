@@ -111,12 +111,7 @@ class _VoizeHarmonyDimensionLoginWidgetState
                                         .fontStyle,
                                   ),
                         ),
-                        Image.asset(
-                          'assets/images/mwmx0_600',
-                          width: 32.0,
-                          height: 32.0,
-                          fit: BoxFit.cover,
-                        ),
+                      SizedBox(width: 32.0),
                       ],
                     ),
                   ),
@@ -407,7 +402,7 @@ class _VoizeHarmonyDimensionLoginWidgetState
                                         autofocus: false,
                                         enabled: true,
                                         textInputAction: TextInputAction.done,
-                                        obscureText: false,
+                                        obscureText: true,
                                         decoration: InputDecoration(
                                           isDense: true,
                                           labelStyle: FlutterFlowTheme.of(
@@ -616,10 +611,12 @@ class _VoizeHarmonyDimensionLoginWidgetState
                                 }
 
                                 // 显示加载动画
-                                PianoLoading.show(context, message: 'Logging in...');
+                                PianoLoading.show(context,
+                                    message: 'Logging in...');
 
                                 // 模拟网络延迟
-                                await Future.delayed(const Duration(milliseconds: 800));
+                                await Future.delayed(
+                                    const Duration(milliseconds: 800));
 
                                 // 在用户列表中查找匹配的用户
                                 final users =
@@ -649,15 +646,17 @@ class _VoizeHarmonyDimensionLoginWidgetState
                                   PianoLoading.showSuccess(
                                     context,
                                     message: 'Login successful!',
-                                    duration: const Duration(milliseconds: 1500),
+                                    duration:
+                                        const Duration(milliseconds: 1500),
                                   );
 
                                   // 延迟跳转以显示成功动画
-                                  await Future.delayed(const Duration(milliseconds: 1600));
+                                  await Future.delayed(
+                                      const Duration(milliseconds: 1600));
 
                                   // 跳转到主页
                                   if (context.mounted) {
-                                    context.goNamed('VoizePrismLink_home');
+                                    context.goNamed('VoizeMuseOfAffection_home_pages');
                                   }
                                 } else {
                                   // 登录失败提示

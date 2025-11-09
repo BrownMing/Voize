@@ -106,7 +106,7 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                         hoverColor: Colors.transparent,
                         highlightColor: Colors.transparent,
                         onTap: () async {
-                          FFAppState().voizeRivenDreamVoiceLoginToken = 2;
+                          FFAppState().voizeRivenDreamVoiceLoginToken = 0;
                           FFAppState().update(() {});
 
                           context.pushNamed(
@@ -297,35 +297,48 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
-                          Theme(
-                            data: ThemeData(
-                              checkboxTheme: CheckboxThemeData(
-                                visualDensity: VisualDensity.compact,
-                                materialTapTargetSize:
-                                    MaterialTapTargetSize.shrinkWrap,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(4.0),
-                                ),
+                          GestureDetector(
+                            onTap: () async {
+                              safeSetState(() => _model.checkboxValue =
+                                  !(_model.checkboxValue ?? true));
+                            },
+                            child: AnimatedContainer(
+                              duration: Duration(milliseconds: 300),
+                              curve: Curves.linear,
+                              width: 18.0,
+                              height: 18.0,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5.0),
+                                gradient: (_model.checkboxValue ?? true)
+                                    ? LinearGradient(
+                                        begin: Alignment.topCenter,
+                                        end: Alignment.bottomCenter,
+                                        colors: [
+                                          Color(
+                                              0xFF8E00ED),
+                                          Color(
+                                              0xFFFC5EB2), 
+                                        ],
+                                      )
+                                    : null,
+                                color: (_model.checkboxValue ?? true)
+                                    ? null
+                                    : FlutterFlowTheme.of(context).alternate,
+                                border: (_model.checkboxValue ?? true)
+                                    ? null
+                                    : Border.all(
+                                        width: 2,
+                                        color: FlutterFlowTheme.of(context)
+                                            .alternate,
+                                      ),
                               ),
-                              unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).alternate,
-                            ),
-                            child: Checkbox(
-                              value: _model.checkboxValue ??= true,
-                              onChanged: (newValue) async {
-                                safeSetState(
-                                    () => _model.checkboxValue = newValue!);
-                              },
-                              side: (FlutterFlowTheme.of(context).alternate !=
-                                      null)
-                                  ? BorderSide(
-                                      width: 2,
-                                      color: FlutterFlowTheme.of(context)
-                                          .alternate,
+                              child: (_model.checkboxValue ?? true)
+                                  ? Icon(
+                                      Icons.check,
+                                      color: Colors.white,
+                                      size: 18.0,
                                     )
                                   : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context).info,
                             ),
                           ),
                           Flexible(

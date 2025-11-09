@@ -13,7 +13,7 @@ void main() async {
 
   await FlutterFlowTheme.initialize();
 
-  final appState = FFAppState(); // Initialize FFAppState
+  final appState = FFAppState();
   await appState.initializePersistedState();
 
   runApp(ChangeNotifierProvider(
@@ -67,6 +67,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Voize',

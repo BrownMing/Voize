@@ -1,6 +1,10 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/index.dart';
+import '/app_state.dart';
+import '/backend/schema/structs/index.dart';
+import '/utils/piano_loading.dart';
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'voize_whisper_ecliptica_pulse_odyssey_signup_model.dart';
@@ -112,12 +116,7 @@ class _VoizeWhisperEclipticaPulseOdysseySignupWidgetState
                                         .fontStyle,
                                   ),
                         ),
-                        Image.asset(
-                          'assets/images/mwmx0_600',
-                          width: 32.0,
-                          height: 32.0,
-                          fit: BoxFit.cover,
-                        ),
+                       SizedBox(width: 32.0),
                       ],
                     ),
                   ),
@@ -408,7 +407,7 @@ class _VoizeWhisperEclipticaPulseOdysseySignupWidgetState
                                         autofocus: false,
                                         enabled: true,
                                         textInputAction: TextInputAction.done,
-                                        obscureText: false,
+                                        obscureText: true,
                                         decoration: InputDecoration(
                                           isDense: true,
                                           labelStyle: FlutterFlowTheme.of(
@@ -556,7 +555,7 @@ class _VoizeWhisperEclipticaPulseOdysseySignupWidgetState
                                           autofocus: false,
                                           enabled: true,
                                           textInputAction: TextInputAction.done,
-                                          obscureText: false,
+                                          obscureText: true,
                                           decoration: InputDecoration(
                                             isDense: true,
                                             labelStyle:
@@ -697,22 +696,138 @@ class _VoizeWhisperEclipticaPulseOdysseySignupWidgetState
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 121.0, 16.0, 0.0),
-                            child: InkWell(
-                              splashColor: Colors.transparent,
-                              focusColor: Colors.transparent,
-                              hoverColor: Colors.transparent,
-                              highlightColor: Colors.transparent,
+                            child: GestureDetector(
                               onTap: () async {
-                                context.pushNamed(
-                                  VoizeMuseOfAffectionHomePagesWidget.routeName,
-                                  extra: <String, dynamic>{
-                                    kTransitionInfoKey: TransitionInfo(
-                                      hasTransition: true,
-                                      transitionType:
-                                          PageTransitionType.bottomToTop,
-                                    ),
-                                  },
+                                // 获取输入的邮箱和密码
+                                final email = _model.textController1.text.trim();
+                                final password = _model.textController2.text.trim();
+                                final confirmPassword = _model.textController3.text.trim();
+
+                                // 验证邮箱是否输入
+                                if (email.isEmpty) {
+                                  PianoLoading.showError(
+                                    context,
+                                    message: 'Please enter your email address',
+                                  );
+                                  return;
+                                }
+
+                                // 验证邮箱格式
+                                final emailRegex = RegExp(
+                                    r'^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$');
+                                if (!emailRegex.hasMatch(email)) {
+                                  PianoLoading.showError(
+                                    context,
+                                    message: 'Please enter a valid email address',
+                                  );
+                                  return;
+                                }
+
+                                // 验证密码是否输入
+                                if (password.isEmpty) {
+                                  PianoLoading.showError(
+                                    context,
+                                    message: 'Please enter your password',
+                                  );
+                                  return;
+                                }
+
+                                // 验证密码长度
+                                if (password.length < 6) {
+                                  PianoLoading.showError(
+                                    context,
+                                    message: 'Password must be at least 6 characters',
+                                  );
+                                  return;
+                                }
+
+                                // 验证确认密码是否输入
+                                if (confirmPassword.isEmpty) {
+                                  PianoLoading.showError(
+                                    context,
+                                    message: 'Please confirm your password',
+                                  );
+                                  return;
+                                }
+
+                                // 验证两次密码是否一致
+                                if (password != confirmPassword) {
+                                  PianoLoading.showError(
+                                    context,
+                                    message: 'Passwords do not match',
+                                  );
+                                  return;
+                                }
+
+                                // 显示加载动画
+                                PianoLoading.show(context, message: 'Creating account...');
+
+                                // 模拟网络延迟
+                                await Future.delayed(const Duration(milliseconds: 800));
+
+                                // 检查邮箱是否已存在
+                                final users = FFAppState().voizeNaiyaEchoCompanionUsers;
+                                final emailExists = users.any(
+                                    (user) => user.voizeCognitiveHarmonyUserEmail == email);
+
+                                if (emailExists) {
+                                  PianoLoading.dismiss();
+                                  PianoLoading.showError(
+                                    context,
+                                    message: 'This email is already registered',
+                                  );
+                                  return;
+                                }
+
+                                // 获取新用户ID（当前用户数量）
+                                final newUserId = users.length;
+
+                                // 创建新用户
+                                final newUser = VoizeCognitiveHarmonyUserStruct.fromSerializableMap(
+                                  jsonDecode(
+                                    '{"VoizeCognitiveHarmonyUser_id":"$newUserId",'
+                                    '"VoizeCognitiveHarmonyUser_email":"$email",'
+                                    '"VoizeCognitiveHarmonyUser_password":"$password",'
+                                    '"VoizeCognitiveHarmonyUser_photo":"assets/images/dfghudfhogiuo_dfuighudifhoig.png",'
+                                    '"VoizeCognitiveHarmonyUser_name":"Visitor",'
+                                    '"VoizeCognitiveHarmonyUser_about_me":"",'
+                                    '"VoizeCognitiveHarmonyUser_diamonds":"0",'
+                                    '"VoizeCognitiveHarmonyUser_followers":"[]",'
+                                    '"VoizeCognitiveHarmonyUser_followings":"[]",'
+                                    '"VoizeCognitiveHarmonyUser_blacklist":"[]"}',
+                                  ),
                                 );
+
+                                // 添加新用户到列表
+                                FFAppState().update(() {
+                                  FFAppState().voizeNaiyaEchoCompanionUsers = [
+                                    ...users,
+                                    newUser,
+                                  ];
+                                });
+
+                                // 保存用户ID到登录token
+                                FFAppState().voizeRivenDreamVoiceLoginToken = newUserId;
+
+                                // 关闭加载
+                                PianoLoading.dismiss();
+
+                                // 显示成功提示
+                                PianoLoading.showSuccess(
+                                  context,
+                                  message: 'Account created successfully!',
+                                  duration: const Duration(milliseconds: 1500),
+                                );
+
+                                // 延迟跳转以显示成功动画
+                                await Future.delayed(const Duration(milliseconds: 1600));
+
+                                // 跳转到主页
+                                if (context.mounted) {
+                                  context.goNamed(
+                                    VoizeMuseOfAffectionHomePagesWidget.routeName,
+                                  );
+                                }
                               },
                               child: Container(
                                 width: double.infinity,

@@ -411,6 +411,7 @@ class _VoizeKaelWhisperSoulPostsGroupWidgetState
                                       ),
                                       fontSize: 12.0,
                                       letterSpacing: 0.0,
+                                      color: Color(0xFF0D002A),
                                       fontWeight: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .fontWeight,

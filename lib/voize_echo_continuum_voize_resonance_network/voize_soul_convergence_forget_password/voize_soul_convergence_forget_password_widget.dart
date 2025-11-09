@@ -1,5 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/app_state.dart';
+import '/backend/schema/structs/index.dart';
+import '/utils/piano_loading.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'voize_soul_convergence_forget_password_model.dart';
@@ -111,12 +114,7 @@ class _VoizeSoulConvergenceForgetPasswordWidgetState
                                         .fontStyle,
                                   ),
                         ),
-                        Image.asset(
-                          'assets/images/mwmx0_600',
-                          width: 32.0,
-                          height: 32.0,
-                          fit: BoxFit.cover,
-                        ),
+                         SizedBox(width: 32.0),
                       ],
                     ),
                   ),
@@ -696,40 +694,164 @@ class _VoizeSoulConvergenceForgetPasswordWidgetState
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 121.0, 16.0, 0.0),
-                            child: Container(
-                              width: double.infinity,
-                              height: 48.0,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  fit: BoxFit.fill,
-                                  image: Image.asset(
-                                    'assets/images/xcbvuysdifgyiUAD_eiyrughdfiugDFG.png',
-                                  ).image,
+                            child: GestureDetector(
+                              onTap: () async {
+                                // 获取输入的邮箱和密码
+                                final email =
+                                    _model.textController1.text.trim();
+                                final newPassword =
+                                    _model.textController2.text.trim();
+                                final confirmPassword =
+                                    _model.textController3.text.trim();
+
+                                // 验证邮箱是否输入
+                                if (email.isEmpty) {
+                                  PianoLoading.showError(
+                                    context,
+                                    message: 'Please enter your email address',
+                                  );
+                                  return;
+                                }
+
+                                // 显示加载动画
+                                PianoLoading.show(context,
+                                    message: 'Verifying...');
+
+                                // 模拟网络延迟
+                                await Future.delayed(
+                                    const Duration(milliseconds: 800));
+
+                                // 检查邮箱是否存在
+                                final users =
+                                    FFAppState().voizeNaiyaEchoCompanionUsers;
+                                final userIndex = users.indexWhere((user) =>
+                                    user.voizeCognitiveHarmonyUserEmail ==
+                                    email);
+
+                                if (userIndex == -1) {
+                                  PianoLoading.dismiss();
+                                  PianoLoading.showError(
+                                    context,
+                                    message: 'This email is not registered',
+                                  );
+                                  return;
+                                }
+
+                                // 关闭加载动画
+                                PianoLoading.dismiss();
+
+                                // 验证新密码是否输入
+                                if (newPassword.isEmpty) {
+                                  PianoLoading.showError(
+                                    context,
+                                    message: 'Please enter new password',
+                                  );
+                                  return;
+                                }
+
+                                // 验证密码长度
+                                if (newPassword.length < 6) {
+                                  PianoLoading.showError(
+                                    context,
+                                    message:
+                                        'Password must be at least 6 characters',
+                                  );
+                                  return;
+                                }
+
+                                // 验证确认密码是否输入
+                                if (confirmPassword.isEmpty) {
+                                  PianoLoading.showError(
+                                    context,
+                                    message: 'Please confirm your new password',
+                                  );
+                                  return;
+                                }
+
+                                // 验证两次密码是否一致
+                                if (newPassword != confirmPassword) {
+                                  PianoLoading.showError(
+                                    context,
+                                    message: 'Passwords do not match',
+                                  );
+                                  return;
+                                }
+
+                                // 显示更新密码的加载动画
+                                PianoLoading.show(context,
+                                    message: 'Updating password...');
+
+                                // 模拟网络延迟
+                                await Future.delayed(
+                                    const Duration(milliseconds: 800));
+
+                                // 更新用户密码
+                                final updatedUser = users[userIndex];
+                                updatedUser.voizeCognitiveHarmonyUserPassword =
+                                    newPassword;
+
+                                // 更新用户列表
+                                FFAppState().update(() {
+                                  FFAppState().voizeNaiyaEchoCompanionUsers = [
+                                    ...users
+                                  ];
+                                });
+
+                                // 关闭加载
+                                PianoLoading.dismiss();
+
+                                // 显示成功提示
+                                PianoLoading.showSuccess(
+                                  context,
+                                  message: 'Password reset successfully!',
+                                  duration: const Duration(milliseconds: 1500),
+                                );
+
+                                // 延迟跳转以显示成功动画
+                                await Future.delayed(
+                                    const Duration(milliseconds: 1600));
+
+                                // 跳转到登录页面
+                                if (context.mounted) {
+                                  context.safePop();
+                                }
+                              },
+                              child: Container(
+                                width: double.infinity,
+                                height: 48.0,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    fit: BoxFit.fill,
+                                    image: Image.asset(
+                                      'assets/images/xcbvuysdifgyiUAD_eiyrughdfiugDFG.png',
+                                    ).image,
+                                  ),
                                 ),
-                              ),
-                              child: Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
-                                child: Text(
-                                  'Confirm',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        font: GoogleFonts.archivo(
+                                child: Align(
+                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  child: Text(
+                                    'Confirm',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          font: GoogleFonts.archivo(
+                                            fontWeight: FontWeight.w600,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
+                                          color:
+                                              FlutterFlowTheme.of(context).info,
+                                          fontSize: 16.0,
+                                          letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                           fontStyle:
                                               FlutterFlowTheme.of(context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
-                                        fontSize: 16.0,
-                                        letterSpacing: 0.0,
-                                        fontWeight: FontWeight.w600,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
-                                      ),
+                                  ),
                                 ),
                               ),
                             ),

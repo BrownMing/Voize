@@ -320,7 +320,7 @@ class _VoizeBondResonatorEnginePostDymaticWidgetState
                                           decoration: BoxDecoration(
                                             image: DecorationImage(
                                               fit: BoxFit.cover,
-                                              image: Image.network(
+                                              image: Image.asset(
                                                 _model
                                                     .voizeEclipticaLoverVersePhoto!,
                                               ).image,

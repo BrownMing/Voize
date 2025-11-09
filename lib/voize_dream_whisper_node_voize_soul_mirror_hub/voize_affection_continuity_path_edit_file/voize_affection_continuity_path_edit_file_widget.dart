@@ -143,7 +143,7 @@ class _VoizeAffectionContinuityPathEditFileWidgetState
                               decoration: BoxDecoration(
                                 image: DecorationImage(
                                   fit: BoxFit.cover,
-                                  image: Image.network(
+                                  image: Image.asset(
                                     FFAppState()
                                         .voizeNaiyaEchoCompanionUsers
                                         .elementAtOrNull(FFAppState()
@@ -163,7 +163,7 @@ class _VoizeAffectionContinuityPathEditFileWidgetState
                                       decoration: BoxDecoration(
                                         image: DecorationImage(
                                           fit: BoxFit.cover,
-                                          image: Image.network(
+                                          image: Image.asset(
                                             _model.voizeElyraEmotionSinger!,
                                           ).image,
                                         ),

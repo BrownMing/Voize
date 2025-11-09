@@ -1,3 +1,4 @@
+import '../voize_emotive_frequency_grid_empty/voize_emotive_frequency_grid_empty_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -126,7 +127,10 @@ class _VoizeWhisperConvergenceBlockedlistWidgetState
                                 ?.voizeCognitiveHarmonyUserBlacklist
                                 .toList() ??
                             [];
-
+                        if (voizeEmotionBloomCircuit.isEmpty) {
+                          return const Center(
+                              child: VoizeEmotiveFrequencyGridEmptyWidget());
+                        }
                         return ListView.separated(
                           padding: EdgeInsets.zero,
                           shrinkWrap: true,
@@ -148,7 +152,7 @@ class _VoizeWhisperConvergenceBlockedlistWidgetState
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                   ),
-                                  child: Image.network(
+                                  child: Image.asset(
                                     FFAppState()
                                         .voizeNaiyaEchoCompanionUsers
                                         .elementAtOrNull(

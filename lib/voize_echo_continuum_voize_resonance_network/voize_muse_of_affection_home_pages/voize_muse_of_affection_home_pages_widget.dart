@@ -92,7 +92,7 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                         },
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(100.0),
-                          child: Image.network(
+                          child: Image.asset(
                             FFAppState()
                                 .voizeNaiyaEchoCompanionUsers
                                 .elementAtOrNull(FFAppState()
@@ -432,15 +432,12 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                         ),
                                         child: Stack(
                                           children: [
-                                            FlutterFlowVideoPlayer(
+                                            RebelTorqueBrotherhoodDen(
                                               path: voizeAffectionEchoLinkItem
                                                   .voizeHeartWaveContinuityVideoUrl,
-                                              videoType: VideoType.network,
                                               autoPlay: false,
                                               looping: true,
                                               showControls: false,
-                                              allowFullScreen: false,
-                                              allowPlaybackSpeedMenu: false,
                                             ),
                                             Padding(
                                               padding: EdgeInsets.all(12.0),
@@ -464,7 +461,7 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                                           shape:
                                                               BoxShape.circle,
                                                         ),
-                                                        child: Image.network(
+                                                        child: Image.asset(
                                                           FFAppState()
                                                               .voizeNaiyaEchoCompanionUsers
                                                               .elementAtOrNull(
@@ -962,8 +959,15 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                   .voizeKiraSoundOraclePianoNotes
                                   .where((e) =>
                                       e.voizeEclipticSoulStreamPianoNotesCreateId !=
-                                      FFAppState()
-                                          .voizeRivenDreamVoiceLoginToken)
+                                          FFAppState()
+                                              .voizeRivenDreamVoiceLoginToken &&
+                                      !FFAppState()
+                                          .voizeNaiyaEchoCompanionUsers[
+                                              FFAppState()
+                                                  .voizeRivenDreamVoiceLoginToken]
+                                          .voizeCognitiveHarmonyUserBlacklist
+                                          .contains(e
+                                              .voizeEclipticSoulStreamPianoNotesCreateId))
                                   .toList();
 
                               return SingleChildScrollView(
@@ -983,13 +987,10 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                         hoverColor: Colors.transparent,
                                         highlightColor: Colors.transparent,
                                         onTap: () async {
-                                          if ((voizeEmotionFeedbackLoopItem
-                                                      .voizeEclipticSoulStreamPianoNotesUnlockShow ==
-                                                  false) &&
-                                              voizeEmotionFeedbackLoopItem
-                                                  .voizeEclipticSoulStreamPianoNotesUnlock
-                                                  .contains(FFAppState()
-                                                      .voizeRivenDreamVoiceLoginToken)) {
+                                          if (voizeEmotionFeedbackLoopItem
+                                              .voizeEclipticSoulStreamPianoNotesUnlock
+                                              .contains(FFAppState()
+                                                  .voizeRivenDreamVoiceLoginToken)) {
                                             context.pushNamed(
                                               VoizeAerisDreamOracleDiaryDetailsWidget
                                                   .routeName,
@@ -1065,7 +1066,7 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           16.0),
-                                                  child: Image.network(
+                                                  child: Image.asset(
                                                     voizeEmotionFeedbackLoopItem
                                                         .voizeEclipticSoulStreamPianoNotesShow
                                                         .firstOrNull!,
@@ -1113,7 +1114,7 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                             ),
                                             if ((voizeEmotionFeedbackLoopItem
                                                         .voizeEclipticSoulStreamPianoNotesUnlockShow ==
-                                                    true) &&
+                                                    false) &&
                                                 !voizeEmotionFeedbackLoopItem
                                                     .voizeEclipticSoulStreamPianoNotesUnlock
                                                     .contains(FFAppState()
