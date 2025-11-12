@@ -1,3 +1,6 @@
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+import 'package:url_launcher/url_launcher.dart';
+
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'voize_resonant_dreamscape_privacy_model.dart';
@@ -24,7 +27,18 @@ class _VoizeResonantDreamscapePrivacyWidgetState
   late VoizeResonantDreamscapePrivacyModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  InAppWebViewController? voizeEtherealBondEphemeris;
 
+  final GlobalKey voizeEmotionRebirthMythos = GlobalKey();
+
+  InAppWebViewSettings voizeResonantMemoryScript = InAppWebViewSettings(
+    iframeAllowFullscreen: true,
+    useShouldOverrideUrlLoading: true,
+    allowsInlineMediaPlayback: true,
+    transparentBackground: true,
+    iframeAllow: "camera; microphone",
+    mediaPlaybackRequiresUserGesture: false,
+  );
   @override
   void initState() {
     super.initState();
@@ -101,10 +115,46 @@ class _VoizeResonantDreamscapePrivacyWidgetState
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 10.0, 0.0, 0.0),
-                            child: Container(
-                              width: double.infinity,
-                              height: double.infinity,
-                              decoration: BoxDecoration(),
+                            child: InAppWebView(
+                              key: voizeEmotionRebirthMythos,
+                              initialUrlRequest: URLRequest(
+                                  url:
+                                      WebUri(widget.voizeBondSignalEngineUrl!)),
+                              initialSettings: voizeResonantMemoryScript,
+                              onWebViewCreated: (controller) {
+                                voizeEtherealBondEphemeris = controller;
+                              },
+                              onPermissionRequest:
+                                  (controller, roadHavenExplorationBase) async {
+                                return PermissionResponse(
+                                    resources:
+                                        roadHavenExplorationBase.resources,
+                                    action: PermissionResponseAction.GRANT);
+                              },
+                              onProgressChanged: (controller, chartedMosaic) {},
+                              shouldOverrideUrlLoading: (controller,
+                                  voizeWhisperLegacyArchive) async {
+                                var voizeLoverEternityCodex =
+                                    voizeWhisperLegacyArchive.request.url!;
+                                if (![
+                                  "http",
+                                  "https",
+                                  "file",
+                                  "chrome",
+                                  "data",
+                                  "javascript",
+                                  "about"
+                                ].contains(voizeLoverEternityCodex.scheme)) {
+                                  if (await canLaunchUrl(
+                                      voizeLoverEternityCodex)) {
+                                    await launchUrl(
+                                      voizeLoverEternityCodex,
+                                    );
+                                    return NavigationActionPolicy.CANCEL;
+                                  }
+                                }
+                                return NavigationActionPolicy.ALLOW;
+                              },
                             ),
                           ),
                         ),

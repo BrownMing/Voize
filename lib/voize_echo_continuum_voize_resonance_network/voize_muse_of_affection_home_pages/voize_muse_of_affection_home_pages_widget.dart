@@ -814,7 +814,7 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                                                         0.0,
                                                                         0.0),
                                                             child: Text(
-                                                              '${voizeAffectionEchoLinkItem.voizeHeartWaveContinuityVideoComments.toString()}',
+                                                              '${FFAppState().voizeVelanEmpathComments.where((e) => (voizeAffectionEchoLinkItem.voizeHeartWaveContinuityVideoId == e.voizeSentienceEchoRealmCommentPostRef)).length.toString()}',
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .bodyMedium

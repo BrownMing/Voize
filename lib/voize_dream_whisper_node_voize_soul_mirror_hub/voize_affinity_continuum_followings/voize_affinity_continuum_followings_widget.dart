@@ -8,10 +8,14 @@ import 'voize_affinity_continuum_followings_model.dart';
 export 'voize_affinity_continuum_followings_model.dart';
 
 class VoizeAffinityContinuumFollowingsWidget extends StatefulWidget {
-  const VoizeAffinityContinuumFollowingsWidget({super.key});
+  const VoizeAffinityContinuumFollowingsWidget({
+    super.key,
+    this.initialIndex = 0,
+  });
 
   static String routeName = 'VoizeAffinityContinuum_followings';
   static String routePath = '/voizeAffinityContinuumFollowings';
+  final int initialIndex;
 
   @override
   State<VoizeAffinityContinuumFollowingsWidget> createState() =>
@@ -34,7 +38,7 @@ class _VoizeAffinityContinuumFollowingsWidgetState
     _model.tabBarController = TabController(
       vsync: this,
       length: 2,
-      initialIndex: 0,
+      initialIndex: widget.initialIndex.clamp(0, 1),
     )..addListener(() => safeSetState(() {}));
   }
 
@@ -113,6 +117,18 @@ class _VoizeAffinityContinuumFollowingsWidgetState
                           alignment: Alignment(0.0, 0),
                           child: FlutterFlowButtonTabBar(
                             useToggleButtonStyle: false,
+                              decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              gradient: const LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  Color(0xFF8E00ED),
+                                  Color(0xFFFC5EB2),
+                                ],
+                              ),
+                            ),
+                              backgroundColor: Color(0xFF8E00ED),
                             labelStyle: FlutterFlowTheme.of(context)
                                 .titleMedium
                                 .override(
@@ -145,8 +161,7 @@ class _VoizeAffinityContinuumFollowingsWidgetState
                                 ),
                             labelColor: FlutterFlowTheme.of(context).info,
                             unselectedLabelColor: Color(0xB3FFFFFF),
-                            backgroundColor:
-                                FlutterFlowTheme.of(context).accent1,
+                 
                             unselectedBackgroundColor: Color(0x25FFFFFF),
                             borderWidth: 0.0,
                             borderRadius: 100.0,
@@ -164,6 +179,7 @@ class _VoizeAffinityContinuumFollowingsWidgetState
                               ),
                             ],
                             controller: _model.tabBarController,
+                          
                             onTap: (i) async {
                               [() async {}, () async {}][i]();
                             },

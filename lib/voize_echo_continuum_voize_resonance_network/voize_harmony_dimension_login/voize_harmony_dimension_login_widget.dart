@@ -616,7 +616,7 @@ class _VoizeHarmonyDimensionLoginWidgetState
 
                                 // 模拟网络延迟
                                 await Future.delayed(
-                                    const Duration(milliseconds: 800));
+                                    const Duration(milliseconds: 2000));
 
                                 // 在用户列表中查找匹配的用户
                                 final users =

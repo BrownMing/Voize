@@ -1,3 +1,5 @@
+import 'package:voize/utils/piano_loading.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/index.dart';
@@ -105,8 +107,7 @@ class _VoizeConnectionCircuitryReportBlockWidgetState
                     child: Image.asset(
                       FFAppState()
                           .voizeNaiyaEchoCompanionUsers
-                          .elementAtOrNull(
-                              widget.voizeNoelleVocalLoverUserid!)!
+                          .elementAtOrNull(widget.voizeNoelleVocalLoverUserid!)!
                           .voizeCognitiveHarmonyUserPhoto,
                       fit: BoxFit.cover,
                     ),
@@ -210,7 +211,11 @@ class _VoizeConnectionCircuitryReportBlockWidgetState
                                   ),
                               );
                               FFAppState().update(() {});
-                              Navigator.pop(context);
+                              Navigator.pop(context, true);
+                              PianoLoading.showSuccess(
+                                context,
+                                message: 'Blocked successfully!',
+                              );
                             },
                             child: Container(
                               width: 100.0,

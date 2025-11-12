@@ -1,9 +1,8 @@
+import '../../components/voize_ethereal_sound_codex_following_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/voize_echo_continuum_voize_resonance_network/voize_connection_circuitry_report_block/voize_connection_circuitry_report_block_widget.dart';
 import 'dart:ui';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart'
-    as smooth_page_indicator;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -73,20 +72,20 @@ class _VoizeAerisDreamOracleDiaryDetailsWidgetState
                             .toList() ??
                         [];
 
+                    final pageController = _model.pageViewController ??=
+                        PageController(
+                            initialPage: max(
+                                0,
+                                min(0,
+                                    voizeEchoSoulChronicle.length - 1)));
+
                     return Container(
                       width: double.infinity,
                       height: MediaQuery.sizeOf(context).height * 0.6,
                       child: Stack(
                         children: [
                           PageView.builder(
-                            controller: _model.pageViewController ??=
-                                PageController(
-                                    initialPage: max(
-                                        0,
-                                        min(
-                                            0,
-                                            voizeEchoSoulChronicle.length -
-                                                1))),
+                            controller: pageController,
                             scrollDirection: Axis.horizontal,
                             itemCount: voizeEchoSoulChronicle.length,
                             itemBuilder:
@@ -107,36 +106,95 @@ class _VoizeAerisDreamOracleDiaryDetailsWidgetState
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 0.0, 16.0),
-                              child: smooth_page_indicator.SmoothPageIndicator(
-                                controller: _model.pageViewController ??=
-                                    PageController(
-                                        initialPage: max(
-                                            0,
-                                            min(
-                                                0,
-                                                voizeEchoSoulChronicle.length -
-                                                    1))),
-                                count: voizeEchoSoulChronicle.length,
-                                axisDirection: Axis.horizontal,
-                                onDotClicked: (i) async {
-                                  await _model.pageViewController!
-                                      .animateToPage(
-                                    i,
-                                    duration: Duration(milliseconds: 500),
-                                    curve: Curves.ease,
+                              child: AnimatedBuilder(
+                                animation: pageController,
+                                builder: (context, child) {
+                                  final hasClients =
+                                      pageController.hasClients;
+                                  final currentPage = hasClients &&
+                                          pageController.page != null
+                                      ? pageController.page!
+                                      : pageController.initialPage.toDouble();
+                                  return Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: List.generate(
+                                        voizeEchoSoulChronicle.length,
+                                        (index) {
+                                      final isActive =
+                                          (currentPage - index).abs() < 0.5;
+                                      return GestureDetector(
+                                        onTap: () async {
+                                          await pageController.animateToPage(
+                                            index,
+                                            duration: const Duration(
+                                                milliseconds: 500),
+                                            curve: Curves.ease,
+                                          );
+                                        },
+                                        child: AnimatedContainer(
+                                          duration: const Duration(
+                                              milliseconds: 220),
+                                          width: isActive ? 16.0 : 8.0,
+                                          height: 8.0,
+                                          margin: EdgeInsetsDirectional.only(
+                                            end: index ==
+                                                    voizeEchoSoulChronicle
+                                                            .length -
+                                                        1
+                                                ? 0.0
+                                                : 8.0,
+                                          ),
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(100.0),
+                                            color: isActive
+                                                ? Colors.transparent
+                                                : const Color(0xFFD9D9D9),
+                                          ),
+                                          child: isActive
+                                              ? ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          100.0),
+                                                  child: Stack(
+                                                    fit: StackFit.expand,
+                                                    children: [
+                                                      BackdropFilter(
+                                                        filter: ImageFilter.blur(
+                                                          sigmaX: 8.0,
+                                                          sigmaY: 8.0,
+                                                        ),
+                                                        child: Container(
+                                                          color: Colors.white
+                                                              .withOpacity(
+                                                                  0.05),
+                                                        ),
+                                                      ),
+                                                      Container(
+                                                        decoration:
+                                                            const BoxDecoration(
+                                                          gradient:
+                                                              LinearGradient(
+                                                            begin: Alignment
+                                                                .topCenter,
+                                                            end: Alignment
+                                                                .bottomCenter,
+                                                            colors: [
+                                                              Color(0xFF8E00ED),
+                                                              Color(0xFFFC5EB2)
+                                                            ],
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                )
+                                              : null,
+                                        ),
+                                      );
+                                    }),
                                   );
-                                  safeSetState(() {});
                                 },
-                                effect: smooth_page_indicator.SlideEffect(
-                                  spacing: 8.0,
-                                  radius: 8.0,
-                                  dotWidth: 8.0,
-                                  dotHeight: 8.0,
-                                  dotColor: Color(0x80FFFFFF),
-                                  activeDotColor:
-                                      FlutterFlowTheme.of(context).primary,
-                                  paintStyle: PaintingStyle.fill,
-                                ),
                               ),
                             ),
                           ),
@@ -182,8 +240,8 @@ class _VoizeAerisDreamOracleDiaryDetailsWidgetState
                                 child: Image.asset(
                                   FFAppState()
                                       .voizeNaiyaEchoCompanionUsers
-                                      .elementAtOrNull(widget
-                                          .voizeAffinityResonatorUserid!)!
+                                      .elementAtOrNull(
+                                          widget.voizeAffinityResonatorUserid!)!
                                       .voizeCognitiveHarmonyUserPhoto,
                                   fit: BoxFit.cover,
                                 ),
@@ -255,6 +313,18 @@ class _VoizeAerisDreamOracleDiaryDetailsWidgetState
                                   ].divide(SizedBox(height: 4.0)),
                                 ),
                               ),
+                              Flexible(
+                                child: wrapWithModel(
+                                  model: _model
+                                      .voizeEtherealSoundCodexFollowingModel,
+                                  updateCallback: () => safeSetState(() {}),
+                                  updateOnChange: true,
+                                  child: VoizeEtherealSoundCodexFollowingWidget(
+                                    voizeSentientHarmonySagaUserid:
+                                        widget.voizeAffinityResonatorUserid,
+                                  ),
+                                ),
+                              )
                             ],
                           ),
                           Padding(
@@ -318,8 +388,8 @@ class _VoizeAerisDreamOracleDiaryDetailsWidgetState
                                 builder: (context) {
                                   if (FFAppState()
                                           .voizeKiraSoundOraclePianoNotes
-                                          .elementAtOrNull(widget
-                                              .voizeAffinityResonatorRef!)
+                                          .elementAtOrNull(
+                                              widget.voizeAffinityResonatorRef!)
                                           ?.voizeEclipticSoulStreamPianoNotesLikeUsers
                                           .contains(FFAppState()
                                               .voizeRivenDreamVoiceLoginToken) ??
@@ -361,48 +431,62 @@ class _VoizeAerisDreamOracleDiaryDetailsWidgetState
                                       ),
                                     );
                                   } else {
-                                    return ClipRRect(
-                                      borderRadius:
-                                          BorderRadius.circular(100.0),
-                                      child: BackdropFilter(
-                                        filter: ImageFilter.blur(
-                                          sigmaX: 16.0,
-                                          sigmaY: 16.0,
-                                        ),
-                                        child: Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 0.0, 0.0, 34.0),
-                                          child: AnimatedContainer(
-                                            duration:
-                                                Duration(milliseconds: 300),
-                                            curve: Curves.easeInOutQuint,
-                                            width: 68.0,
-                                            height: 68.0,
-                                            decoration: BoxDecoration(
-                                              color: Color(0x41FFFFFF),
-                                              shape: BoxShape.circle,
+                                    return GestureDetector(
+                                      onTap: () async {
+                                        FFAppState()
+                                            .updateVoizeKiraSoundOraclePianoNotesAtIndex(
+                                          widget.voizeAffinityResonatorRef!,
+                                          (e) => e
+                                            ..updateVoizeEclipticSoulStreamPianoNotesLikeUsers(
+                                              (e) => e.add(FFAppState()
+                                                  .voizeRivenDreamVoiceLoginToken),
                                             ),
-                                            child: Stack(
-                                              children: [
-                                                Align(
-                                                  alignment:
-                                                      AlignmentDirectional(
-                                                          0.0, 0.0),
-                                                  child: Container(
-                                                    width: 40.0,
-                                                    height: 40.0,
-                                                    decoration: BoxDecoration(
-                                                      image: DecorationImage(
-                                                        fit: BoxFit.cover,
-                                                        image: Image.asset(
-                                                          'assets/images/dfhsagudhfhguiodfhg_difhgusdhfhogiudhfgi.png',
-                                                        ).image,
+                                        );
+                                        FFAppState().update(() {});
+                                      },
+                                      child: ClipRRect(
+                                        borderRadius:
+                                            BorderRadius.circular(100.0),
+                                        child: BackdropFilter(
+                                          filter: ImageFilter.blur(
+                                            sigmaX: 16.0,
+                                            sigmaY: 16.0,
+                                          ),
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 0.0, 0.0, 34.0),
+                                            child: AnimatedContainer(
+                                              duration:
+                                                  Duration(milliseconds: 300),
+                                              curve: Curves.easeInOutQuint,
+                                              width: 68.0,
+                                              height: 68.0,
+                                              decoration: BoxDecoration(
+                                                color: Color(0x41FFFFFF),
+                                                shape: BoxShape.circle,
+                                              ),
+                                              child: Stack(
+                                                children: [
+                                                  Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            0.0, 0.0),
+                                                    child: Container(
+                                                      width: 40.0,
+                                                      height: 40.0,
+                                                      decoration: BoxDecoration(
+                                                        image: DecorationImage(
+                                                          fit: BoxFit.cover,
+                                                          image: Image.asset(
+                                                            'assets/images/dfhsagudhfhguiodfhg_difhgusdhfhogiudhfgi.png',
+                                                          ).image,
+                                                        ),
                                                       ),
                                                     ),
                                                   ),
-                                                ),
-                                              ],
+                                                ],
+                                              ),
                                             ),
                                           ),
                                         ),
@@ -468,7 +552,13 @@ class _VoizeAerisDreamOracleDiaryDetailsWidgetState
                             ),
                           );
                         },
-                      ).then((value) => safeSetState(() {}));
+                      ).then((value) => safeSetState(() {
+                            if (value == true) {
+                              Future.delayed(Duration(milliseconds: 1000), () {
+                                Navigator.pop(context);
+                              });
+                            }
+                          }));
                     },
                     child: Image.asset(
                       'assets/images/dsfghhodjfgouidf_vbhidhhfugiohdiufg.png',

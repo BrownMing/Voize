@@ -1,3 +1,4 @@
+import '../voize_emotive_frequency_grid_empty/voize_emotive_frequency_grid_empty_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/index.dart';
@@ -141,7 +142,10 @@ class _VoizeEtherealSoundChronicleChatsWidgetState
                                       .contains(e
                                           .voizeEmpathicSignalPlaneChatReceiveUser))
                               .toList();
-
+                          if (voizeMythraEchoComposer.isEmpty) {
+                            return const Center(
+                                child: VoizeEmotiveFrequencyGridEmptyWidget());
+                          }
                           return ListView.separated(
                             padding: EdgeInsets.zero,
                             shrinkWrap: true,

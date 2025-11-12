@@ -1,9 +1,13 @@
+import 'package:voize/utils/piano_loading.dart';
+
 import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:image_picker/image_picker.dart';
+import 'dart:io';
 import 'voize_bond_resonator_engine_post_dymatic_model.dart';
 export 'voize_bond_resonator_engine_post_dymatic_model.dart';
 
@@ -284,7 +288,130 @@ class _VoizeBondResonatorEnginePostDymaticWidgetState
                                               null ||
                                           _model.voizeEclipticaLoverVersePhoto ==
                                               '') {
-                                        return Container(
+                                        return InkWell(
+                                          splashColor: Colors.transparent,
+                                          focusColor: Colors.transparent,
+                                          hoverColor: Colors.transparent,
+                                          highlightColor: Colors.transparent,
+                                          onTap: () async {
+                                            final ImageSource? source =
+                                                await showModalBottomSheet<ImageSource>(
+                                              context: context,
+                                              backgroundColor: Colors.transparent,
+                                              builder: (context) => Container(
+                                                decoration: BoxDecoration(
+                                                  color: Color(0x27FFFFFF),
+                                                  borderRadius: BorderRadius.only(
+                                                    topLeft: Radius.circular(20.0),
+                                                    topRight: Radius.circular(20.0),
+                                                  ),
+                                                ),
+                                                child: SafeArea(
+                                                  child: Column(
+                                                    mainAxisSize: MainAxisSize.min,
+                                                    children: [
+                                                      Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                                    0.0,
+                                                                    16.0,
+                                                                    0.0,
+                                                                    16.0),
+                                                        child: Container(
+                                                          width: 40.0,
+                                                          height: 4.0,
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            color: Color(0x80FFFFFF),
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(2.0),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                      ListTile(
+                                                        leading: Icon(
+                                                          Icons.photo_library,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .info,
+                                                        ),
+                                                        title: Text(
+                                                          'Select from the album',
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyLarge
+                                                              .override(
+                                                                font: GoogleFonts
+                                                                    .archivo(),
+                                                                color: FlutterFlowTheme
+                                                                        .of(context)
+                                                                    .info,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                              ),
+                                                        ),
+                                                        onTap: () =>
+                                                            Navigator.pop(
+                                                                context,
+                                                                ImageSource
+                                                                    .gallery),
+                                                      ),
+                                                      ListTile(
+                                                        leading: Icon(
+                                                          Icons.camera_alt,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .info,
+                                                        ),
+                                                        title: Text(
+                                                          'Shoot with a camera',
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyLarge
+                                                              .override(
+                                                                font: GoogleFonts
+                                                                    .archivo(),
+                                                                color: FlutterFlowTheme
+                                                                        .of(context)
+                                                                    .info,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                              ),
+                                                        ),
+                                                        onTap: () =>
+                                                            Navigator.pop(
+                                                                context,
+                                                                ImageSource
+                                                                    .camera),
+                                                      ),
+                                                      SizedBox(height: 16.0),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ),
+                                            );
+
+                                            if (source != null) {
+                                              final ImagePicker picker =
+                                                  ImagePicker();
+                                              final XFile? image =
+                                                  await picker.pickImage(
+                                                source: source,
+                                                maxWidth: 1024,
+                                                maxHeight: 1024,
+                                                imageQuality: 85,
+                                              );
+                                              if (image != null) {
+                                                safeSetState(() {
+                                                  _model.voizeEclipticaLoverVersePhoto =
+                                                      image.path;
+                                                });
+                                              }
+                                            }
+                                          },
+                                          child: Container(
                                           width: 68.0,
                                           height: 68.0,
                                           decoration: BoxDecoration(
@@ -295,7 +422,8 @@ class _VoizeBondResonatorEnginePostDymaticWidgetState
                                           child: Stack(
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                  alignment:
+                                                      AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: Container(
                                                   width: 30.0,
@@ -311,6 +439,7 @@ class _VoizeBondResonatorEnginePostDymaticWidgetState
                                                 ),
                                               ),
                                             ],
+                                            ),
                                           ),
                                         );
                                       } else {
@@ -320,9 +449,16 @@ class _VoizeBondResonatorEnginePostDymaticWidgetState
                                           decoration: BoxDecoration(
                                             image: DecorationImage(
                                               fit: BoxFit.cover,
-                                              image: Image.asset(
+                                              image: _model
+                                                      .voizeEclipticaLoverVersePhoto!
+                                                      .startsWith('assets/')
+                                                  ? Image.asset(
                                                 _model
                                                     .voizeEclipticaLoverVersePhoto!,
+                                                    ).image
+                                                  : Image.file(
+                                                      File(_model
+                                                          .voizeEclipticaLoverVersePhoto!),
                                               ).image,
                                             ),
                                             borderRadius:
@@ -401,16 +537,33 @@ class _VoizeBondResonatorEnginePostDymaticWidgetState
                                           _model.textController.text,
                                       voizeSynestheticConnectionDymaticCreateTime:
                                           getCurrentTimestamp,
-                                      voizeSynestheticConnectionDymaticLikeUsers: [
-                                        0,
-                                        0
-                                      ],
+                                      voizeSynestheticConnectionDymaticLikeUsers: [],
                                       voizeSynestheticConnectionDymaticComments:
                                           0,
                                     ));
                                     FFAppState().update(() {});
                                     context.safePop();
+                                    PianoLoading.showSuccess(
+                                      context,
+                                      message: '"Published successfully!',
+                                      duration:
+                                          const Duration(milliseconds: 1500),
+                                    );
+                                  } else {
+                                    PianoLoading.showWarning(
+                                      context,
+                                      message: 'Please upload the picture!',
+                                      duration:
+                                          const Duration(milliseconds: 1500),
+                                    );
                                   }
+                                } else {
+                                  PianoLoading.showWarning(
+                                    context,
+                                    message: 'Please fill in the dynamic description!',
+                                    duration:
+                                        const Duration(milliseconds: 1500),
+                                  );
                                 }
                               },
                               child: Container(

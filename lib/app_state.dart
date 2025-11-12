@@ -600,19 +600,15 @@ class FFAppState extends ChangeNotifier {
   List<VoizeNioraDreamListenerPurchaseStruct> _voizeAurellSoulDancerPurchases =
       [
     VoizeNioraDreamListenerPurchaseStruct.fromSerializableMap(jsonDecode(
-        '{\"VoizeNioraDreamListenerPurchase_prince\":\"0\",\"VoizeNioraDreamListenerPurchase_usd\":\"0\",\"VoizeNioraDreamListenerPurchase_productid\":\"Hello World\"}')),
+        '{\"VoizeNioraDreamListenerPurchase_prince\":\"19\",\"VoizeNioraDreamListenerPurchase_usd\":\"2.99\",\"VoizeNioraDreamListenerPurchase_productid\":\"com.Voize.diamond.01\"}')),
     VoizeNioraDreamListenerPurchaseStruct.fromSerializableMap(jsonDecode(
-        '{\"VoizeNioraDreamListenerPurchase_prince\":\"0\",\"VoizeNioraDreamListenerPurchase_usd\":\"0\",\"VoizeNioraDreamListenerPurchase_productid\":\"Hello World\"}')),
+        '{\"VoizeNioraDreamListenerPurchase_prince\":\"62\",\"VoizeNioraDreamListenerPurchase_usd\":\"8.99\",\"VoizeNioraDreamListenerPurchase_productid\":\"com.Voize.diamond.02\"}')),
     VoizeNioraDreamListenerPurchaseStruct.fromSerializableMap(jsonDecode(
-        '{\"VoizeNioraDreamListenerPurchase_prince\":\"0\",\"VoizeNioraDreamListenerPurchase_usd\":\"0\",\"VoizeNioraDreamListenerPurchase_productid\":\"Hello World\"}')),
+        '{\"VoizeNioraDreamListenerPurchase_prince\":\"98\",\"VoizeNioraDreamListenerPurchase_usd\":\"12.99\",\"VoizeNioraDreamListenerPurchase_productid\":\"com.Voize.diamond.03\"}')),
     VoizeNioraDreamListenerPurchaseStruct.fromSerializableMap(jsonDecode(
-        '{\"VoizeNioraDreamListenerPurchase_prince\":\"0\",\"VoizeNioraDreamListenerPurchase_usd\":\"0\",\"VoizeNioraDreamListenerPurchase_productid\":\"Hello World\"}')),
+        '{\"VoizeNioraDreamListenerPurchase_prince\":\"198\",\"VoizeNioraDreamListenerPurchase_usd\":\"24.99\",\"VoizeNioraDreamListenerPurchase_productid\":\"com.Voize.diamond.04\"}')),
     VoizeNioraDreamListenerPurchaseStruct.fromSerializableMap(jsonDecode(
-        '{\"VoizeNioraDreamListenerPurchase_prince\":\"0\",\"VoizeNioraDreamListenerPurchase_usd\":\"0\",\"VoizeNioraDreamListenerPurchase_productid\":\"Hello World\"}')),
-    VoizeNioraDreamListenerPurchaseStruct.fromSerializableMap(jsonDecode(
-        '{\"VoizeNioraDreamListenerPurchase_prince\":\"0\",\"VoizeNioraDreamListenerPurchase_usd\":\"0\",\"VoizeNioraDreamListenerPurchase_productid\":\"Hello World\"}')),
-    VoizeNioraDreamListenerPurchaseStruct.fromSerializableMap(jsonDecode(
-        '{\"VoizeNioraDreamListenerPurchase_prince\":\"0\",\"VoizeNioraDreamListenerPurchase_usd\":\"0\",\"VoizeNioraDreamListenerPurchase_productid\":\"Hello World\"}'))
+        '{\"VoizeNioraDreamListenerPurchase_prince\":\"338\",\"VoizeNioraDreamListenerPurchase_usd\":\"39.99\",\"VoizeNioraDreamListenerPurchase_productid\":\"com.Voize.diamond.05\"}')),
   ];
   List<VoizeNioraDreamListenerPurchaseStruct>
       get voizeAurellSoulDancerPurchases => _voizeAurellSoulDancerPurchases;

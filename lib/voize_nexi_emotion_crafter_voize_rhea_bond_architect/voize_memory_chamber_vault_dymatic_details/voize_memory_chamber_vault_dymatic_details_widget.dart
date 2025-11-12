@@ -127,7 +127,13 @@ class _VoizeMemoryChamberVaultDymaticDetailsWidgetState
                                   ),
                                 );
                               },
-                            ).then((value) => safeSetState(() {}));
+                            ).then((value) => safeSetState(() {
+                                  if (value == true) {
+                                    Future.delayed(
+                                        Duration(milliseconds: 1000));
+                                    context.safePop();
+                                  }
+                                }));
                           },
                           child: Image.asset(
                             'assets/images/dsfghhodjfgouidf_vbhidhhfugiohdiufg.png',
@@ -414,7 +420,15 @@ class _VoizeMemoryChamberVaultDymaticDetailsWidgetState
                                     .voizeSoulReflectionOrbitComments
                                     .where((e) =>
                                         widget.voizeHeartSyncDimensionPost ==
-                                        e.voizeSentienceEchoRealmCommentPostRef)
+                                            e
+                                                .voizeSentienceEchoRealmCommentPostRef &&
+                                        !FFAppState()
+                                            .voizeNaiyaEchoCompanionUsers[
+                                                FFAppState()
+                                                    .voizeRivenDreamVoiceLoginToken]
+                                            .voizeCognitiveHarmonyUserBlacklist
+                                            .contains(e
+                                                .voizeSentienceEchoRealmCommentCreateId))
                                     .toList();
 
                                 return ListView.separated(

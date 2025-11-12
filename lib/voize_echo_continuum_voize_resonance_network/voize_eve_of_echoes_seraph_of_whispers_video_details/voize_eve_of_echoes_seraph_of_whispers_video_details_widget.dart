@@ -155,7 +155,13 @@ class _VoizeEveOfEchoesSeraphOfWhispersVideoDetailsWidgetState
                                   ),
                                 );
                               },
-                            ).then((value) => safeSetState(() {}));
+                            ).then((value) => safeSetState(() {
+                                  if (value == true) {
+                                    Future.delayed(
+                                        Duration(milliseconds: 1000));
+                                    context.safePop();
+                                  }
+                                }));
                           },
                           child: Image.asset(
                             'assets/images/dsfghhodjfgouidf_vbhidhhfugiohdiufg.png',
@@ -330,7 +336,7 @@ class _VoizeEveOfEchoesSeraphOfWhispersVideoDetailsWidgetState
                             ),
                           ),
                           Text(
-                            '${FFAppState().voizeSerenEmotionSpiritVideos.elementAtOrNull(widget.voizeHeartSyncProtocolPost!)?.voizeHeartWaveContinuityVideoComments.toString()}',
+                            '${FFAppState().voizeVelanEmpathComments.where((e) => (widget.voizeHeartSyncProtocolPost == e.voizeSentienceEchoRealmCommentPostRef)).length.toString()}',
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(

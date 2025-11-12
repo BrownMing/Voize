@@ -1,11 +1,13 @@
+import 'package:voize/utils/piano_loading.dart';
+
 import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_video_player.dart';
-import '/voize_nexi_emotion_crafter_voize_rhea_bond_architect/voize_emotion_link_matrix_post_video/voize_emotion_link_matrix_post_video_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:image_picker/image_picker.dart';
 import 'voize_heart_wave_interface_post_video_model.dart';
 export 'voize_heart_wave_interface_post_video_model.dart';
 
@@ -297,15 +299,148 @@ class _VoizeHeartWaveInterfacePostVideoWidgetState
                                           '')
                                     Align(
                                       alignment: AlignmentDirectional(0.0, 0.0),
-                                      child: Container(
-                                        width: 60.0,
-                                        height: 60.0,
-                                        decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                            fit: BoxFit.cover,
-                                            image: Image.asset(
-                                              'assets/images/cxvguysfhouidh_sigdfuysdgyuigdsyu.png',
-                                            ).image,
+                                      child: InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
+                                        onTap: () async {
+                                          final ImageSource? source =
+                                              await showModalBottomSheet<
+                                                  ImageSource>(
+                                            context: context,
+                                            backgroundColor: Colors.transparent,
+                                            builder: (context) => Container(
+                                              decoration: BoxDecoration(
+                                                color: Color(0x27FFFFFF),
+                                                borderRadius: BorderRadius.only(
+                                                  topLeft:
+                                                      Radius.circular(20.0),
+                                                  topRight:
+                                                      Radius.circular(20.0),
+                                                ),
+                                              ),
+                                              child: SafeArea(
+                                                child: Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.min,
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  0.0,
+                                                                  16.0,
+                                                                  0.0,
+                                                                  16.0),
+                                                      child: Container(
+                                                        width: 40.0,
+                                                        height: 4.0,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color:
+                                                              Color(0x80FFFFFF),
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      2.0),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    ListTile(
+                                                      leading: Icon(
+                                                        Icons.photo_library,
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .info,
+                                                      ),
+                                                      title: Text(
+                                                        'Select from the album',
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyLarge
+                                                                .override(
+                                                                  font: GoogleFonts
+                                                                      .archivo(),
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .info,
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                ),
+                                                      ),
+                                                      onTap: () =>
+                                                          Navigator.pop(
+                                                              context,
+                                                              ImageSource
+                                                                  .gallery),
+                                                    ),
+                                                    ListTile(
+                                                      leading: Icon(
+                                                        Icons.videocam,
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .info,
+                                                      ),
+                                                      title: Text(
+                                                        'Shoot with a camera',
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyLarge
+                                                                .override(
+                                                                  font: GoogleFonts
+                                                                      .archivo(),
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .info,
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                ),
+                                                      ),
+                                                      onTap: () =>
+                                                          Navigator.pop(
+                                                              context,
+                                                              ImageSource
+                                                                  .camera),
+                                                    ),
+                                                    SizedBox(height: 16.0),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          );
+
+                                          if (source != null) {
+                                            final ImagePicker picker =
+                                                ImagePicker();
+                                            final XFile? video =
+                                                await picker.pickVideo(
+                                              source: source,
+                                              maxDuration:
+                                                  Duration(minutes: 10),
+                                            );
+                                            if (video != null) {
+                                              safeSetState(() {
+                                                _model.voizeEmotiveFrequencyFieldUrl =
+                                                    video.path;
+                                              });
+                                            }
+                                          }
+                                        },
+                                        child: Container(
+                                          width: 60.0,
+                                          height: 60.0,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              fit: BoxFit.cover,
+                                              image: Image.asset(
+                                                'assets/images/cxvguysfhouidh_sigdfuysdgyuigdsyu.png',
+                                              ).image,
+                                            ),
                                           ),
                                         ),
                                       ),
@@ -329,33 +464,6 @@ class _VoizeHeartWaveInterfacePostVideoWidgetState
                                             null &&
                                         _model.voizeEmotiveFrequencyFieldUrl !=
                                             '') {
-                                      await showDialog(
-                                        barrierColor: Color(0x99000000),
-                                        context: context,
-                                        builder: (dialogContext) {
-                                          return Dialog(
-                                            elevation: 0,
-                                            insetPadding: EdgeInsets.zero,
-                                            backgroundColor: Colors.transparent,
-                                            alignment: AlignmentDirectional(
-                                                    0.0, 0.0)
-                                                .resolve(
-                                                    Directionality.of(context)),
-                                            child: GestureDetector(
-                                              onTap: () {
-                                                FocusScope.of(dialogContext)
-                                                    .unfocus();
-                                                FocusManager
-                                                    .instance.primaryFocus
-                                                    ?.unfocus();
-                                              },
-                                              child:
-                                                  VoizeEmotionLinkMatrixPostVideoWidget(),
-                                            ),
-                                          );
-                                        },
-                                      );
-
                                       FFAppState()
                                           .addToVoizeSerenEmotionSpiritVideos(
                                               VoizeHeartWaveContinuityVideoStruct(
@@ -372,16 +480,28 @@ class _VoizeHeartWaveInterfacePostVideoWidgetState
                                             _model.textController.text,
                                         voizeHeartWaveContinuityVideoCreateTime:
                                             getCurrentTimestamp,
-                                        voizeHeartWaveContinuityVideoLikeUsers: [
-                                          0,
-                                          0
-                                        ],
+                                        voizeHeartWaveContinuityVideoLikeUsers: [],
                                         voizeHeartWaveContinuityVideoComments:
                                             0,
                                       ));
                                       FFAppState().update(() {});
                                       context.safePop();
+                                      PianoLoading.showSuccess(
+                                        context,
+                                        message: 'Published successfully!',
+                                      );
+                                    } else {
+                                      PianoLoading.showWarning(
+                                        context,
+                                        message: 'Please upload the video!',
+                                      );
                                     }
+                                  } else {
+                                    PianoLoading.showWarning(
+                                      context,
+                                      message:
+                                          'Please fill in the description!',
+                                    );
                                   }
                                 },
                                 child: Container(

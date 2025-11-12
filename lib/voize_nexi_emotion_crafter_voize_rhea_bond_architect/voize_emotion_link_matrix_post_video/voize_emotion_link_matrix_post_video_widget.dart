@@ -211,8 +211,9 @@ class _VoizeEmotionLinkMatrixPostVideoWidgetState
                                         -20),
                                 );
                                 FFAppState().update(() {});
-                                Navigator.pop(context);
+                                Navigator.pop(context,true);
                               } else {
+                                Navigator.pop(context);
                                 await showDialog(
                                   barrierColor: Color(0x98000000),
                                   context: context,

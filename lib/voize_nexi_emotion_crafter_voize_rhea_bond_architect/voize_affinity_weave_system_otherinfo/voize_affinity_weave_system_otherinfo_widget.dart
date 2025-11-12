@@ -1,3 +1,5 @@
+import 'package:voize/backend/schema/structs/index.dart';
+
 import '../../voize_dream_whisper_node_voize_soul_mirror_hub/voize_emotive_frequency_grid_empty/voize_emotive_frequency_grid_empty_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -840,31 +842,108 @@ class _VoizeAffinityWeaveSystemOtherinfoWidgetState
                               ),
                             ),
                           ),
-                          Container(
-                            width: 40.0,
-                            height: 40.0,
-                            decoration: BoxDecoration(
-                              color: Color(0xFFFF70F5),
-                              shape: BoxShape.circle,
-                            ),
-                            child: Stack(
-                              children: [
-                                Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
-                                  child: Container(
-                                    width: 24.0,
-                                    height: 24.0,
-                                    decoration: BoxDecoration(
-                                      image: DecorationImage(
-                                        fit: BoxFit.cover,
-                                        image: Image.asset(
-                                          'assets/images/sdgfhusdfuiogs_vdbhfuihoudsfygiuy.png',
-                                        ).image,
+                          GestureDetector(
+                            onTap: () async {
+                              // 获取当前登录用户ID
+                              final voizeEclipticaSoulSaga =
+                                  FFAppState().voizeRivenDreamVoiceLoginToken;
+                              // 目标用户ID
+                              final voizeDreamsOfHeartContinuum =
+                                  widget.voizeLoverResonanceVerseUserid!;
+
+                              // 检查是否已存在聊天室
+                              int? voizeTalesOfAffinityEcho;
+                              for (var chat in FFAppState()
+                                  .VoizeNyraResonanceSirenChats) {
+                                // 双向检查：当前用户可能是发送者或接收者
+                                if ((chat.voizeEmpathicSignalPlaneChatSendUser ==
+                                            voizeEclipticaSoulSaga &&
+                                        chat.voizeEmpathicSignalPlaneChatReceiveUser ==
+                                            voizeDreamsOfHeartContinuum) ||
+                                    (chat.voizeEmpathicSignalPlaneChatSendUser ==
+                                            voizeDreamsOfHeartContinuum &&
+                                        chat.voizeEmpathicSignalPlaneChatReceiveUser ==
+                                            voizeEclipticaSoulSaga)) {
+                                  voizeTalesOfAffinityEcho =
+                                      chat.voizeEmpathicSignalPlaneChatId;
+                                  break;
+                                }
+                              }
+
+                              // 如果不存在聊天室，创建新的
+                              if (voizeTalesOfAffinityEcho == null) {
+                                // 生成新的聊天室ID
+                                final newChatId = FFAppState()
+                                    .VoizeNyraResonanceSirenChats
+                                    .length;
+
+                                // 创建新聊天室
+                                final newChat =
+                                    createVoizeEmpathicSignalPlaneChatStruct(
+                                        voizeEmpathicSignalPlaneChatId:
+                                            newChatId,
+                                        voizeEmpathicSignalPlaneChatSendUser:
+                                            voizeEclipticaSoulSaga,
+                                        voizeEmpathicSignalPlaneChatReceiveUser:
+                                            voizeDreamsOfHeartContinuum,
+                                        voizeEmpathicSignalPlaneChatSendMessage:
+                                            'Null',
+                                        voizeEmpathicSignalPlaneChatSendTime:
+                                            getCurrentTimestamp,
+                                        voizeEmpathicSignalPlaneChatUnread: 0);
+
+                                // 添加到聊天列表
+                                FFAppState().update(() {
+                                  FFAppState()
+                                      .addToVoizeNyraResonanceSirenChats(
+                                          newChat);
+                                });
+
+                                voizeTalesOfAffinityEcho = newChatId;
+                              }
+
+                              // 跳转到聊天页面
+                              context.pushNamed(
+                                'VoizeHeartLinkRevelation_messages',
+                                queryParameters: {
+                                  'voizeAliraBondKeeperChatid': serializeParam(
+                                    voizeTalesOfAffinityEcho,
+                                    ParamType.int,
+                                  ),
+                                  'voizeHeartTetherAlgorithmUserid':
+                                      serializeParam(
+                                    voizeDreamsOfHeartContinuum,
+                                    ParamType.int,
+                                  ),
+                                }.withoutNulls,
+                              );
+                            },
+                            child: Container(
+                              width: 40.0,
+                              height: 40.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xFFFF70F5),
+                                shape: BoxShape.circle,
+                              ),
+                              child: Stack(
+                                children: [
+                                  Align(
+                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    child: Container(
+                                      width: 24.0,
+                                      height: 24.0,
+                                      decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                          fit: BoxFit.cover,
+                                          image: Image.asset(
+                                            'assets/images/sdgfhusdfuiogs_vdbhfuihoudsfygiuy.png',
+                                          ).image,
+                                        ),
                                       ),
                                     ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
                         ],
@@ -922,7 +1001,12 @@ class _VoizeAffinityWeaveSystemOtherinfoWidgetState
                             ),
                           );
                         },
-                      ).then((value) => safeSetState(() {}));
+                      ).then((value) => safeSetState(() {
+                            if (value == true) {
+                              Future.delayed(Duration(milliseconds: 1000));
+                              context.safePop();
+                            }
+                          }));
                     },
                     child: Image.asset(
                       'assets/images/dsfghhodjfgouidf_vbhidhhfugiohdiufg.png',

@@ -230,8 +230,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: VoizeAffinityContinuumFollowingsWidget.routeName,
           path: VoizeAffinityContinuumFollowingsWidget.routePath,
-          builder: (context, params) =>
-              VoizeAffinityContinuumFollowingsWidget(),
+          builder: (context, params) => VoizeAffinityContinuumFollowingsWidget(
+            initialIndex:
+                params.getParam('initialIndex', ParamType.int) ?? 0,
+          ),
         ),
         FFRoute(
           name: VoizeWhisperConvergenceBlockedlistWidget.routeName,

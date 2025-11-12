@@ -1,3 +1,5 @@
+import 'package:voize/utils/piano_loading.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -393,6 +395,10 @@ class _VoizeSentientSymphonyProjectReportWidgetState
                               highlightColor: Colors.transparent,
                               onTap: () async {
                                 context.safePop();
+                                PianoLoading.showSuccess(
+                                  context,
+                                  message: 'The report was successful!',
+                                );
                               },
                               child: Container(
                                 width: double.infinity,

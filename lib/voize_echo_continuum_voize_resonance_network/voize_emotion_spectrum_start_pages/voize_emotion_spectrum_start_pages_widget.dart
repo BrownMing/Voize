@@ -21,20 +21,72 @@ class VoizeEmotionSpectrumStartPagesWidget extends StatefulWidget {
 }
 
 class _VoizeEmotionSpectrumStartPagesWidgetState
-    extends State<VoizeEmotionSpectrumStartPagesWidget> {
+    extends State<VoizeEmotionSpectrumStartPagesWidget>
+    with SingleTickerProviderStateMixin {
   late VoizeEmotionSpectrumStartPagesModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  late AnimationController _introController;
+  late Animation<double> _logoScale;
+  late Animation<double> _logoOpacity;
+  late Animation<double> _titleOpacity;
+  late Animation<double> _buttonsOpacity;
+  late Animation<Offset> _firstButtonOffset;
+  late Animation<Offset> _secondButtonOffset;
 
   @override
   void initState() {
     super.initState();
     _model = createModel(context, () => VoizeEmotionSpectrumStartPagesModel());
+    _introController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1200),
+    );
+    _logoScale = Tween<double>(begin: 0.85, end: 1.0).animate(
+      CurvedAnimation(
+        parent: _introController,
+        curve: const Interval(0.0, 0.5, curve: Curves.easeOutBack),
+      ),
+    );
+    _logoOpacity = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(
+        parent: _introController,
+        curve: const Interval(0.0, 0.4, curve: Curves.easeOut),
+      ),
+    );
+    _titleOpacity = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(
+        parent: _introController,
+        curve: const Interval(0.35, 0.7, curve: Curves.easeOut),
+      ),
+    );
+    _buttonsOpacity = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(
+        parent: _introController,
+        curve: const Interval(0.55, 1.0, curve: Curves.easeOut),
+      ),
+    );
+    _firstButtonOffset = Tween<Offset>(begin: const Offset(0.0, 0.15), end: Offset.zero)
+        .animate(
+      CurvedAnimation(
+        parent: _introController,
+        curve: const Interval(0.55, 0.9, curve: Curves.easeOut),
+      ),
+    );
+    _secondButtonOffset = Tween<Offset>(begin: const Offset(0.0, 0.2), end: Offset.zero)
+        .animate(
+      CurvedAnimation(
+        parent: _introController,
+        curve: const Interval(0.65, 1.0, curve: Curves.easeOut),
+      ),
+    );
+    _introController.forward();
   }
 
   @override
   void dispose() {
     _model.dispose();
+    _introController.dispose();
 
     super.dispose();
   }
@@ -63,94 +115,109 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Container(
-                      width: 85.0,
-                      height: 85.0,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: Image.asset(
-                            'assets/images/csaudasiohgHUDSFO_xcigvyasgdifYISD.png',
-                          ).image,
+                    FadeTransition(
+                      opacity: _logoOpacity,
+                      child: ScaleTransition(
+                        scale: _logoScale,
+                        child: Container(
+                          width: 85.0,
+                          height: 85.0,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: Image.asset(
+                                'assets/images/csaudasiohgHUDSFO_xcigvyasgdifYISD.png',
+                              ).image,
+                            ),
+                          ),
                         ),
                       ),
                     ),
                     Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
-                      child: Text(
-                        'Voize',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              font: GoogleFonts.archivo(
+                      child: FadeTransition(
+                        opacity: _titleOpacity,
+                        child: Text(
+                          'Voize',
+                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                font: GoogleFonts.archivo(
+                                  fontWeight: FontWeight.w600,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .fontStyle,
+                                ),
+                                color: FlutterFlowTheme.of(context).info,
+                                fontSize: 36.0,
+                                letterSpacing: 0.0,
                                 fontWeight: FontWeight.w600,
                                 fontStyle: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .fontStyle,
                               ),
-                              color: FlutterFlowTheme.of(context).info,
-                              fontSize: 36.0,
-                              letterSpacing: 0.0,
-                              fontWeight: FontWeight.w600,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .fontStyle,
-                            ),
+                        ),
                       ),
                     ),
                     Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 36.0, 0.0, 0.0),
-                      child: InkWell(
-                        splashColor: Colors.transparent,
-                        focusColor: Colors.transparent,
-                        hoverColor: Colors.transparent,
-                        highlightColor: Colors.transparent,
-                        onTap: () async {
-                          FFAppState().voizeRivenDreamVoiceLoginToken = 0;
-                          FFAppState().update(() {});
+                      child: FadeTransition(
+                        opacity: _buttonsOpacity,
+                        child: SlideTransition(
+                          position: _firstButtonOffset,
+                          child: InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              FFAppState().voizeRivenDreamVoiceLoginToken = 0;
+                              FFAppState().update(() {});
 
-                          context.pushNamed(
-                            VoizeMuseOfAffectionHomePagesWidget.routeName,
-                            extra: <String, dynamic>{
-                              kTransitionInfoKey: TransitionInfo(
-                                hasTransition: true,
-                                transitionType: PageTransitionType.bottomToTop,
-                              ),
-                            },
-                          );
-                        },
-                        child: Container(
-                          width: double.infinity,
-                          height: 52.0,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              fit: BoxFit.fill,
-                              image: Image.asset(
-                                'assets/images/xcbvuysdifgyiUAD_eiyrughdfiugDFG.png',
-                              ).image,
-                            ),
-                          ),
-                          child: Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
-                            child: Text(
-                              'I\'m New',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    font: GoogleFonts.archivo(
-                                      fontWeight: FontWeight.w600,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
-                                    ),
-                                    color: FlutterFlowTheme.of(context).info,
-                                    fontSize: 16.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.w600,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
+                              context.pushNamed(
+                                VoizeMuseOfAffectionHomePagesWidget.routeName,
+                                extra: <String, dynamic>{
+                                  kTransitionInfoKey: TransitionInfo(
+                                    hasTransition: true,
+                                    transitionType: PageTransitionType.bottomToTop,
                                   ),
+                                },
+                              );
+                            },
+                            child: Container(
+                              width: double.infinity,
+                              height: 52.0,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  fit: BoxFit.fill,
+                                  image: Image.asset(
+                                    'assets/images/xcbvuysdifgyiUAD_eiyrughdfiugDFG.png',
+                                  ).image,
+                                ),
+                              ),
+                              child: Align(
+                                alignment: AlignmentDirectional(0.0, 0.0),
+                                child: Text(
+                                  'I\'m New',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        font: GoogleFonts.archivo(
+                                          fontWeight: FontWeight.w600,
+                                          fontStyle: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .fontStyle,
+                                        ),
+                                        color: FlutterFlowTheme.of(context).info,
+                                        fontSize: 16.0,
+                                        letterSpacing: 0.0,
+                                        fontWeight: FontWeight.w600,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
+                                      ),
+                                ),
+                              ),
                             ),
                           ),
                         ),
@@ -159,63 +226,69 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                     Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
-                      child: InkWell(
-                        splashColor: Colors.transparent,
-                        focusColor: Colors.transparent,
-                        hoverColor: Colors.transparent,
-                        highlightColor: Colors.transparent,
-                        onTap: () async {
-                          context.pushNamed(
-                            VoizeHarmonyDimensionLoginWidget.routeName,
-                            extra: <String, dynamic>{
-                              kTransitionInfoKey: TransitionInfo(
-                                hasTransition: true,
-                                transitionType: PageTransitionType.rightToLeft,
-                              ),
+                      child: FadeTransition(
+                        opacity: _buttonsOpacity,
+                        child: SlideTransition(
+                          position: _secondButtonOffset,
+                          child: InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              context.pushNamed(
+                                VoizeHarmonyDimensionLoginWidget.routeName,
+                                extra: <String, dynamic>{
+                                  kTransitionInfoKey: TransitionInfo(
+                                    hasTransition: true,
+                                    transitionType: PageTransitionType.rightToLeft,
+                                  ),
+                                },
+                              );
                             },
-                          );
-                        },
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(100.0),
-                          child: BackdropFilter(
-                            filter: ImageFilter.blur(
-                              sigmaX: 8.0,
-                              sigmaY: 8.0,
-                            ),
-                            child: Container(
-                              width: double.infinity,
-                              height: 52.0,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  fit: BoxFit.fill,
-                                  image: Image.asset(
-                                    'assets/images/diufohguhdiofhGU_iudhfugiodhfGDF.png',
-                                  ).image,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(100.0),
+                              child: BackdropFilter(
+                                filter: ImageFilter.blur(
+                                  sigmaX: 8.0,
+                                  sigmaY: 8.0,
                                 ),
-                              ),
-                              child: Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
-                                child: Text(
-                                  'Login',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        font: GoogleFonts.archivo(
-                                          fontWeight: FontWeight.w600,
-                                          fontStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                        ),
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
-                                        fontSize: 16.0,
-                                        letterSpacing: 0.0,
-                                        fontWeight: FontWeight.w600,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
-                                      ),
+                                child: Container(
+                                  width: double.infinity,
+                                  height: 52.0,
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      fit: BoxFit.fill,
+                                      image: Image.asset(
+                                        'assets/images/diufohguhdiofhGU_iudhfugiodhfGDF.png',
+                                      ).image,
+                                    ),
+                                  ),
+                                  child: Align(
+                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    child: Text(
+                                      'Login',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            font: GoogleFonts.archivo(
+                                              fontWeight: FontWeight.w600,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontStyle,
+                                            ),
+                                            color:
+                                                FlutterFlowTheme.of(context).info,
+                                            fontSize: 16.0,
+                                            letterSpacing: 0.0,
+                                            fontWeight: FontWeight.w600,
+                                            fontStyle: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .fontStyle,
+                                          ),
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),

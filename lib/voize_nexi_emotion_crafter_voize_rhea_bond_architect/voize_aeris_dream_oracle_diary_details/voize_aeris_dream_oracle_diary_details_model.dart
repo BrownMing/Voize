@@ -1,3 +1,5 @@
+import 'package:voize/components/voize_ethereal_sound_codex_following_model.dart';
+
 import '/flutter_flow/flutter_flow_util.dart';
 import 'voize_aeris_dream_oracle_diary_details_widget.dart'
     show VoizeAerisDreamOracleDiaryDetailsWidget;
@@ -5,20 +7,19 @@ import 'package:flutter/material.dart';
 
 class VoizeAerisDreamOracleDiaryDetailsModel
     extends FlutterFlowModel<VoizeAerisDreamOracleDiaryDetailsWidget> {
-  ///  State fields for stateful widgets in this page.
-
-  // State field(s) for PageView widget.
   PageController? pageViewController;
 
-  int get pageViewCurrentIndex => pageViewController != null &&
-          pageViewController!.hasClients &&
-          pageViewController!.page != null
-      ? pageViewController!.page!.round()
-      : 0;
+  late VoizeEtherealSoundCodexFollowingModel
+      voizeEtherealSoundCodexFollowingModel;
 
   @override
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    voizeEtherealSoundCodexFollowingModel =
+        createModel(context, () => VoizeEtherealSoundCodexFollowingModel());
+  }
 
   @override
-  void dispose() {}
+  void dispose() {
+    voizeEtherealSoundCodexFollowingModel.dispose();
+  }
 }

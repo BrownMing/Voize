@@ -225,7 +225,13 @@ class _VoizeHeartLinkRevelationMessagesWidgetState
                                     ),
                                   );
                                 },
-                              ).then((value) => safeSetState(() {}));
+                              ).then((value) => safeSetState(() {
+                                    if (value == true) {
+                                      Future.delayed(
+                                          Duration(milliseconds: 1000));
+                                      context.safePop();
+                                    }
+                                  }));
                             },
                             child: Container(
                               width: 32.0,
@@ -278,8 +284,8 @@ class _VoizeHeartLinkRevelationMessagesWidgetState
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       if (voizeEchoAffinityMatrixMessagesItem
-                                                  .voizeLioraWhisperMuseMessageContent !=
-                                              '')
+                                              .voizeLioraWhisperMuseMessageContent !=
+                                          '')
                                         Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
@@ -398,8 +404,8 @@ class _VoizeHeartLinkRevelationMessagesWidgetState
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       if (voizeEchoAffinityMatrixMessagesItem
-                                                  .voizeLioraWhisperMuseMessageContent !=
-                                              '')
+                                              .voizeLioraWhisperMuseMessageContent !=
+                                          '')
                                         Row(
                                           mainAxisSize: MainAxisSize.max,
                                           mainAxisAlignment:
@@ -532,8 +538,8 @@ class _VoizeHeartLinkRevelationMessagesWidgetState
                                           ],
                                         ),
                                       if (voizeEchoAffinityMatrixMessagesItem
-                                                  .voizeLioraWhisperMuseMessageAudio !=
-                                              '')
+                                              .voizeLioraWhisperMuseMessageAudio !=
+                                          '')
                                         Row(
                                           mainAxisSize: MainAxisSize.max,
                                           mainAxisAlignment:

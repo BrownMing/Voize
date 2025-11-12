@@ -1,9 +1,13 @@
+import 'package:voize/utils/piano_loading.dart';
+
 import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:image_picker/image_picker.dart';
+import 'dart:io';
 import 'voize_whisper_sync_protocol_post_diarys_model.dart';
 export 'voize_whisper_sync_protocol_post_diarys_model.dart';
 
@@ -434,63 +438,124 @@ class _VoizeWhisperSyncProtocolPostDiarysWidgetState
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
-                                          Container(
-                                            width: 68.0,
-                                            height: 68.0,
-                                            decoration: BoxDecoration(
-                                              borderRadius:
-                                                  BorderRadius.circular(16.0),
-                                            ),
-                                            child: Stack(
-                                              children: [
-                                                Align(
-                                                  alignment:
-                                                      AlignmentDirectional(
-                                                          1.0, -1.0),
-                                                  child: Container(
-                                                    width: 24.0,
-                                                    height: 24.0,
+                                          ..._model.voizeNeraiWhisperIdolPhoto
+                                              .map((photoPath) => Container(
+                                                    width: 68.0,
+                                                    height: 68.0,
                                                     decoration: BoxDecoration(
                                                       image: DecorationImage(
                                                         fit: BoxFit.cover,
-                                                        image: Image.asset(
-                                                          'assets/images/vcxbdhfbdkfhbgio_wuigysdgfyisudysi.png',
-                                                        ).image,
+                                                        image: photoPath
+                                                                .startsWith(
+                                                                    'assets/')
+                                                            ? Image.asset(
+                                                                photoPath,
+                                                              ).image
+                                                            : Image.file(
+                                                                File(photoPath),
+                                                              ).image,
+                                                      ),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              16.0),
+                                                    ),
+                                                    child: Stack(
+                                                      children: [
+                                                        Align(
+                                                          alignment:
+                                                              AlignmentDirectional(
+                                                                  1.0, -1.0),
+                                                          child: InkWell(
+                                                            splashColor: Colors
+                                                                .transparent,
+                                                            focusColor: Colors
+                                                                .transparent,
+                                                            hoverColor: Colors
+                                                                .transparent,
+                                                            highlightColor:
+                                                                Colors
+                                                                    .transparent,
+                                                            onTap: () async {
+                                                              safeSetState(() {
+                                                                _model.removeFromVoizeNeraiWhisperIdolPhoto(
+                                                                    photoPath);
+                                                              });
+                                                            },
+                                                            child: Container(
+                                                              width: 24.0,
+                                                              height: 24.0,
+                                                              decoration:
+                                                                  BoxDecoration(
+                                                                image:
+                                                                    DecorationImage(
+                                                                  fit: BoxFit
+                                                                      .cover,
+                                                                  image: Image
+                                                                      .asset(
+                                                                    'assets/images/vcxbdhfbdkfhbgio_wuigysdgfyisudysi.png',
+                                                                  ).image,
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ))
+                                              .toList(),
+                                          InkWell(
+                                            splashColor: Colors.transparent,
+                                            focusColor: Colors.transparent,
+                                            hoverColor: Colors.transparent,
+                                            highlightColor: Colors.transparent,
+                                            onTap: () async {
+                                              final ImagePicker picker =
+                                                  ImagePicker();
+                                              final List<XFile> images =
+                                                  await picker.pickMultiImage(
+                                                maxWidth: 1024,
+                                                maxHeight: 1024,
+                                                imageQuality: 85,
+                                              );
+                                              if (images.isNotEmpty) {
+                                                safeSetState(() {
+                                                  for (var image in images) {
+                                                    _model
+                                                        .addToVoizeNeraiWhisperIdolPhoto(
+                                                            image.path);
+                                                  }
+                                                });
+                                              }
+                                            },
+                                            child: Container(
+                                              width: 68.0,
+                                              height: 68.0,
+                                              decoration: BoxDecoration(
+                                                color: Color(0x25FFFFFF),
+                                                borderRadius:
+                                                    BorderRadius.circular(16.0),
+                                              ),
+                                              child: Stack(
+                                                children: [
+                                                  Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            0.0, 0.0),
+                                                    child: Container(
+                                                      width: 30.0,
+                                                      height: 30.0,
+                                                      decoration: BoxDecoration(
+                                                        image: DecorationImage(
+                                                          fit: BoxFit.cover,
+                                                          image: Image.asset(
+                                                            'assets/images/cxvbuisdyfgiuys_weiygsduyfgsduifs.png',
+                                                          ).image,
+                                                        ),
                                                       ),
                                                     ),
                                                   ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                          Container(
-                                            width: 68.0,
-                                            height: 68.0,
-                                            decoration: BoxDecoration(
-                                              color: Color(0x25FFFFFF),
-                                              borderRadius:
-                                                  BorderRadius.circular(16.0),
-                                            ),
-                                            child: Stack(
-                                              children: [
-                                                Align(
-                                                  alignment:
-                                                      AlignmentDirectional(
-                                                          0.0, 0.0),
-                                                  child: Container(
-                                                    width: 30.0,
-                                                    height: 30.0,
-                                                    decoration: BoxDecoration(
-                                                      image: DecorationImage(
-                                                        fit: BoxFit.cover,
-                                                        image: Image.asset(
-                                                          'assets/images/cxvbuisdyfgiuys_weiygsduyfgsduifs.png',
-                                                        ).image,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ],
+                                                ],
+                                              ),
                                             ),
                                           ),
                                         ].divide(SizedBox(width: 12.0)),
@@ -632,23 +697,40 @@ class _VoizeWhisperSyncProtocolPostDiarysWidgetState
                                             _model.textController1.text,
                                         voizeEclipticSoulStreamPianoNotesDescribe:
                                             _model.textController2.text,
-                                        voizeEclipticSoulStreamPianoNotesLikeUsers: [
-                                          0,
-                                          0
-                                        ],
+                                        voizeEclipticSoulStreamPianoNotesLikeUsers: [],
                                         voizeEclipticSoulStreamPianoNotesCreateTime:
                                             getCurrentTimestamp,
                                         voizeEclipticSoulStreamPianoNotesUnlock: [
-                                          0,
-                                          0
+                                          FFAppState()
+                                              .voizeRivenDreamVoiceLoginToken,
                                         ],
                                         voizeEclipticSoulStreamPianoNotesUnlockShow:
                                             _model.checkboxValue,
                                       ));
                                       FFAppState().update(() {});
                                       context.safePop();
+                                      PianoLoading.showSuccess(
+                                        context,
+                                        message: 'Published successfully!',
+                                      );
+                                    } else {
+                                      PianoLoading.showWarning(
+                                        context,
+                                        message:
+                                            'Please upload multiple pictures!',
+                                      );
                                     }
+                                  } else {
+                                    PianoLoading.showWarning(
+                                      context,
+                                      message: 'Please enter the description!',
+                                    );
                                   }
+                                } else {
+                                  PianoLoading.showWarning(
+                                    context,
+                                    message: 'Please enter the title!',
+                                  );
                                 }
                               },
                               child: Container(

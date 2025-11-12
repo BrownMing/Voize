@@ -331,6 +331,17 @@ class _VoizeEchoTransmissionCoreCommunityWidgetState
                                             .titleMedium
                                             .fontStyle,
                                       ),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8),
+                                    gradient: const LinearGradient(
+                                      begin: Alignment.topCenter,
+                                      end: Alignment.bottomCenter,
+                                      colors: [
+                                        Color(0xFF8E00ED),
+                                        Color(0xFFFC5EB2),
+                                      ],
+                                    ),
+                                  ),
                                   unselectedLabelStyle:
                                       FlutterFlowTheme.of(context)
                                           .titleMedium
