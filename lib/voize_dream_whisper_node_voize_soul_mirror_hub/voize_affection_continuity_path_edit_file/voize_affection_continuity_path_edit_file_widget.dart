@@ -1,8 +1,10 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/utils/piano_loading.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:image_picker/image_picker.dart';
 import 'voize_affection_continuity_path_edit_file_model.dart';
 export 'voize_affection_continuity_path_edit_file_model.dart';
 
@@ -137,55 +139,154 @@ class _VoizeAffectionContinuityPathEditFileWidgetState
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Container(
-                              width: 125.0,
-                              height: 125.0,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  fit: BoxFit.cover,
-                                  image: Image.asset(
-                                    FFAppState()
-                                        .voizeNaiyaEchoCompanionUsers
-                                        .elementAtOrNull(FFAppState()
-                                            .voizeRivenDreamVoiceLoginToken)!
-                                        .voizeCognitiveHarmonyUserPhoto,
-                                  ).image,
-                                ),
-                                shape: BoxShape.circle,
-                              ),
-                              child: Stack(
-                                children: [
-                                  if (_model.voizeElyraEmotionSinger != null &&
-                                      _model.voizeElyraEmotionSinger != '')
-                                    Container(
-                                      width: 125.0,
-                                      height: 125.0,
+                            GestureDetector(
+                              onTap: () async {
+                                // Show bottom sheet to choose camera or gallery
+                                await showModalBottomSheet(
+                                  context: context,
+                                  backgroundColor: Colors.transparent,
+                                  builder: (BuildContext context) {
+                                    return Container(
                                       decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                          fit: BoxFit.cover,
-                                          image: Image.asset(
-                                            _model.voizeElyraEmotionSinger!,
-                                          ).image,
-                                        ),
-                                        shape: BoxShape.circle,
-                                      ),
-                                    ),
-                                  Align(
-                                    alignment: AlignmentDirectional(1.0, 1.0),
-                                    child: Container(
-                                      width: 36.0,
-                                      height: 36.0,
-                                      decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                          fit: BoxFit.cover,
-                                          image: Image.asset(
-                                            'assets/images/lxcvbsdgushdobu_egsyudfguysdtferf.png',
-                                          ).image,
+                                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                                        borderRadius: BorderRadius.only(
+                                          topLeft: Radius.circular(20.0),
+                                          topRight: Radius.circular(20.0),
                                         ),
                                       ),
-                                    ),
+                                      child: SafeArea(
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.min,
+                                          children: [
+                                            ListTile(
+                                              leading: Icon(
+                                                Icons.camera_alt,
+                                                color: FlutterFlowTheme.of(context).primaryText,
+                                              ),
+                                              title: Text(
+                                                'Take Photo',
+                                                style: FlutterFlowTheme.of(context).bodyLarge,
+                                              ),
+                                              onTap: () async {
+                                                Navigator.pop(context);
+                                                final ImagePicker picker = ImagePicker();
+                                                final XFile? image = await picker.pickImage(
+                                                  source: ImageSource.camera,
+                                                  imageQuality: 80,
+                                                );
+                                                
+                                                if (image != null) {
+                                                  safeSetState(() => _model.isDataUploading = true);
+                                                  
+                                                  try {
+                                                    final bytes = await image.readAsBytes();
+                                                    _model.uploadedLocalFile = FFUploadedFile(
+                                                      name: image.name,
+                                                      bytes: bytes,
+                                                    );
+                                                  } finally {
+                                                    _model.isDataUploading = false;
+                                                  }
+                                                  
+                                                  safeSetState(() {});
+                                                }
+                                              },
+                                            ),
+                                            Divider(height: 1),
+                                            ListTile(
+                                              leading: Icon(
+                                                Icons.photo_library,
+                                                color: FlutterFlowTheme.of(context).primaryText,
+                                              ),
+                                              title: Text(
+                                                'Choose from Gallery',
+                                                style: FlutterFlowTheme.of(context).bodyLarge,
+                                              ),
+                                              onTap: () async {
+                                                Navigator.pop(context);
+                                                final ImagePicker picker = ImagePicker();
+                                                final XFile? image = await picker.pickImage(
+                                                  source: ImageSource.gallery,
+                                                  imageQuality: 80,
+                                                );
+                                                
+                                                if (image != null) {
+                                                  safeSetState(() => _model.isDataUploading = true);
+                                                  
+                                                  try {
+                                                    final bytes = await image.readAsBytes();
+                                                    _model.uploadedLocalFile = FFUploadedFile(
+                                                      name: image.name,
+                                                      bytes: bytes,
+                                                    );
+                                                  } finally {
+                                                    _model.isDataUploading = false;
+                                                  }
+                                                  
+                                                  safeSetState(() {});
+                                                }
+                                              },
+                                            ),
+                                            ListTile(
+                                              leading: Icon(
+                                                Icons.close,
+                                                color: FlutterFlowTheme.of(context).secondaryText,
+                                              ),
+                                              title: Text(
+                                                'Cancel',
+                                                style: FlutterFlowTheme.of(context).bodyLarge.override(
+                                                  font: GoogleFonts.archivo(),
+                                                  color: FlutterFlowTheme.of(context).secondaryText,
+                                                ),
+                                              ),
+                                              onTap: () {
+                                                Navigator.pop(context);
+                                              },
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    );
+                                  },
+                                );
+                              },
+                              child: Container(
+                                width: 125.0,
+                                height: 125.0,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    fit: BoxFit.cover,
+                                    image: _model.uploadedLocalFile.bytes?.isNotEmpty ?? false
+                                        ? MemoryImage(_model.uploadedLocalFile.bytes!)
+                                        : Image.asset(
+                                            FFAppState()
+                                                .voizeNaiyaEchoCompanionUsers
+                                                .elementAtOrNull(FFAppState()
+                                                    .voizeRivenDreamVoiceLoginToken)!
+                                                .voizeCognitiveHarmonyUserPhoto,
+                                          ).image,
                                   ),
-                                ],
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Stack(
+                                  children: [
+                                    Align(
+                                      alignment: AlignmentDirectional(1.0, 1.0),
+                                      child: Container(
+                                        width: 36.0,
+                                        height: 36.0,
+                                        decoration: BoxDecoration(
+                                          image: DecorationImage(
+                                            fit: BoxFit.cover,
+                                            image: Image.asset(
+                                              'assets/images/lxcvbsdgushdobu_egsyudfguysdtferf.png',
+                                            ).image,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                             Padding(
@@ -580,41 +681,87 @@ class _VoizeAffectionContinuityPathEditFileWidgetState
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   16.0, 46.0, 16.0, 0.0),
-                              child: Container(
-                                width: double.infinity,
-                                height: 50.0,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    fit: BoxFit.fill,
-                                    image: Image.asset(
-                                      'assets/images/gvfydgiugfydif_dyfgihudghuidfhgiul.png',
-                                    ).image,
+                              child: GestureDetector(
+                                onTap: () async {
+                                  // 验证输入
+                                  final nickname = _model.textController1.text.trim();
+                                  final aboutMe = _model.textController2.text.trim();
+
+                                  if (nickname.isEmpty && aboutMe.isEmpty && 
+                                      (_model.uploadedLocalFile.bytes?.isEmpty ?? true)) {
+                                    PianoLoading.showWarning(
+                                      context,
+                                      message: 'Please make at least one change',
+                                    );
+                                    return;
+                                  }
+
+                                  // 显示 loading
+                                  PianoLoading.show(context, message: 'Saving...');
+
+                                  // 模拟保存延迟
+                                  await Future.delayed(Duration(milliseconds: 500));
+
+                                  // 更新用户信息
+                                  FFAppState().updateVoizeNaiyaEchoCompanionUsersAtIndex(
+                                    FFAppState().voizeRivenDreamVoiceLoginToken,
+                                    (user) => user
+                                      ..voizeCognitiveHarmonyUserName = 
+                                          nickname.isNotEmpty ? nickname : user.voizeCognitiveHarmonyUserName
+                                      ..voizeCognitiveHarmonyUserAboutMe = 
+                                          aboutMe.isNotEmpty ? aboutMe : user.voizeCognitiveHarmonyUserAboutMe,
+                                  );
+                                  FFAppState().update(() {});
+
+                                  // 关闭 loading
+                                  PianoLoading.dismiss();
+
+                                  // 显示成功提示
+                                  PianoLoading.showSuccess(
+                                    context,
+                                    message: 'Profile updated successfully!',
+                                  );
+
+                                  // 延迟返回
+                                  await Future.delayed(Duration(milliseconds: 800));
+                                  context.safePop();
+                                },
+                                child: Container(
+                                  width: double.infinity,
+                                  height: 50.0,
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      fit: BoxFit.fill,
+                                      image: Image.asset(
+                                        'assets/images/gvfydgiugfydif_dyfgihudghuidfhgiul.png',
+                                      ).image,
+                                    ),
                                   ),
-                                ),
-                                child: Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
-                                  child: Text(
-                                    'Save',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          font: GoogleFonts.archivo(
+                                  child: Align(
+                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    child: Text(
+                                      'Save',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            font: GoogleFonts.archivo(
+                                              fontWeight: FontWeight.w600,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontStyle,
+                                            ),
+                                            color:
+                                                FlutterFlowTheme.of(context).info,
+                                            fontSize: 16.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             fontStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
-                                          color:
-                                              FlutterFlowTheme.of(context).info,
-                                          fontSize: 16.0,
-                                          letterSpacing: 0.0,
-                                          fontWeight: FontWeight.w600,
-                                          fontStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                        ),
+                                    ),
                                   ),
                                 ),
                               ),

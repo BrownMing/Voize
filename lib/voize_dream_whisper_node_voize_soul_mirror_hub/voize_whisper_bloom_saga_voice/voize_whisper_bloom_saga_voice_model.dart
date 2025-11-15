@@ -13,9 +13,18 @@ class VoizeWhisperBloomSagaVoiceModel
   FFUploadedFile recordedFileBytes =
       FFUploadedFile(bytes: Uint8List.fromList([]), originalFilename: '');
 
+  // 录音状态
+  bool isRecording = false;
+  
+  // 动画控制器
+  AnimationController? pulseAnimationController;
+  Animation<double>? pulseAnimation;
+
   @override
   void initState(BuildContext context) {}
 
   @override
-  void dispose() {}
+  void dispose() {
+    pulseAnimationController?.dispose();
+  }
 }

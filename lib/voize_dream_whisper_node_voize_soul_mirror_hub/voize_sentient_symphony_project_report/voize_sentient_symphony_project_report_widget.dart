@@ -1,4 +1,5 @@
 import 'package:voize/utils/piano_loading.dart';
+import 'dart:ui';
 
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -84,12 +85,9 @@ class _VoizeSentientSymphonyProjectReportWidgetState
                           fit: BoxFit.cover,
                         ),
                       ),
-                      Image.asset(
-                        '',
-                        width: 32.0,
-                        height: 32.0,
-                        fit: BoxFit.cover,
-                      ),
+                      SizedBox(
+                        width: 32,
+                      )
                     ],
                   ),
                 ),
@@ -146,58 +144,105 @@ class _VoizeSentientSymphonyProjectReportWidgetState
                                     return Row(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
-                                        Theme(
-                                          data: ThemeData(
-                                            checkboxTheme: CheckboxThemeData(
-                                              visualDensity:
-                                                  VisualDensity.compact,
-                                              materialTapTargetSize:
-                                                  MaterialTapTargetSize
-                                                      .shrinkWrap,
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(5.0),
-                                              ),
-                                            ),
-                                            unselectedWidgetColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .alternate,
-                                          ),
-                                          child: Checkbox(
-                                            value: _model.checkboxValueMap[
+                                        Builder(
+                                          builder: (context) {
+                                            final bool isChecked = _model
+                                                        .checkboxValueMap[
                                                     voizeConnectionHarmonyGridItem] ??=
-                                                false,
-                                            onChanged: (newValue) async {
-                                              safeSetState(() => _model
-                                                          .checkboxValueMap[
-                                                      voizeConnectionHarmonyGridItem] =
-                                                  newValue!);
-                                            },
-                                            side: (FlutterFlowTheme.of(context)
-                                                        // ignore: unnecessary_null_comparison
-                                                        .alternate !=
-                                                    null)
-                                                ? BorderSide(
-                                                    width: 2,
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .alternate,
-                                                  )
-                                                : null,
-                                            activeColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .primary,
-                                            checkColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .info,
-                                          ),
+                                                false;
+                                            return GestureDetector(
+                                              onTap: () {
+                                                safeSetState(() {
+                                                  _model.checkboxValueMap[
+                                                          voizeConnectionHarmonyGridItem] =
+                                                      !isChecked;
+                                                });
+                                              },
+                                              child: SizedBox(
+                                                width: 18.0,
+                                                height: 18.0,
+                                                child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          5.0),
+                                                  child: BackdropFilter(
+                                                    filter: ImageFilter.blur(
+                                                      sigmaX: 8.0,
+                                                      sigmaY: 8.0,
+                                                    ),
+                                                    child: AnimatedContainer(
+                                                      duration: const Duration(
+                                                          milliseconds: 150),
+                                                      decoration: BoxDecoration(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(5.0),
+                                                        gradient: isChecked
+                                                            ? const LinearGradient(
+                                                                begin: Alignment
+                                                                    .topCenter,
+                                                                end: Alignment
+                                                                    .bottomCenter,
+                                                                colors: [
+                                                                  Color(
+                                                                      0xFF8E00ED),
+                                                                  Color(
+                                                                      0xFFFC5EB2),
+                                                                ],
+                                                              )
+                                                            : null,
+                                                        color: isChecked
+                                                            ? null
+                                                            : Colors
+                                                                .transparent,
+                                                        border: isChecked
+                                                            ? null
+                                                            : Border.all(
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .alternate,
+                                                                width: 2,
+                                                              ),
+                                                      ),
+                                                      child: isChecked
+                                                          ? Icon(
+                                                              Icons.check,
+                                                              size: 14.0,
+                                                              color: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .info,
+                                                            )
+                                                          : null,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            );
+                                          },
                                         ),
-                                        Text(
-                                          '${voizeConnectionHarmonyGridItem}',
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                font: GoogleFonts.archivo(
+                                        Flexible(
+                                          child: Text(
+                                            '${voizeConnectionHarmonyGridItem}',
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  font: GoogleFonts.archivo(
+                                                    fontWeight:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontStyle,
+                                                  ),
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .info,
+                                                  fontSize: 16.0,
+                                                  letterSpacing: 0.0,
                                                   fontWeight:
                                                       FlutterFlowTheme.of(
                                                               context)
@@ -209,24 +254,11 @@ class _VoizeSentientSymphonyProjectReportWidgetState
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .info,
-                                                fontSize: 16.0,
-                                                letterSpacing: 0.0,
-                                                fontWeight:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontStyle,
-                                              ),
+                                          ),
                                         ),
                                       ].divide(SizedBox(width: 12.0)),
                                     );
-                                  }),
+                                  }).divide(SizedBox(height: 16.0)),
                                 );
                               },
                             ),

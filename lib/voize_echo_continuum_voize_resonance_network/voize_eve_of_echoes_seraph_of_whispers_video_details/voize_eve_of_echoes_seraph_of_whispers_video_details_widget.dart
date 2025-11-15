@@ -1,3 +1,5 @@
+import 'package:voize/voize_nexi_emotion_crafter_voize_rhea_bond_architect/voize_affinity_weave_system_otherinfo/voize_affinity_weave_system_otherinfo_widget.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_video_player.dart';
@@ -367,20 +369,50 @@ class _VoizeEveOfEchoesSeraphOfWhispersVideoDetailsWidgetState
                             Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
-                                Container(
-                                  width: 40.0,
-                                  height: 40.0,
-                                  clipBehavior: Clip.antiAlias,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Image.asset(
-                                    FFAppState()
-                                        .voizeNaiyaEchoCompanionUsers
-                                        .elementAtOrNull(widget
-                                            .voizeWhisperMemoryHubUserid!)!
-                                        .voizeCognitiveHarmonyUserPhoto,
-                                    fit: BoxFit.cover,
+                                GestureDetector(
+                                  onTap: () async {
+                                    if (widget.voizeWhisperMemoryHubUserid !=
+                                        FFAppState()
+                                            .voizeRivenDreamVoiceLoginToken) {
+                                      context.pushNamed(
+                                        VoizeAffinityWeaveSystemOtherinfoWidget
+                                            .routeName,
+                                        extra: <String, dynamic>{
+                                          kTransitionInfoKey: TransitionInfo(
+                                            hasTransition: true,
+                                            transitionType:
+                                                PageTransitionType.rightToLeft,
+                                          ),
+                                        },
+                                        queryParameters: {
+                                          'voizeLoverResonanceVerseUserid':
+                                              serializeParam(
+                                            FFAppState()
+                                                .voizeNaiyaEchoCompanionUsers
+                                                .elementAtOrNull(widget
+                                                    .voizeWhisperMemoryHubUserid!)!
+                                                .voizeCognitiveHarmonyUserId,
+                                            ParamType.int,
+                                          ),
+                                        }.withoutNulls,
+                                      );
+                                    }
+                                  },
+                                  child: Container(
+                                    width: 40.0,
+                                    height: 40.0,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Image.asset(
+                                      FFAppState()
+                                          .voizeNaiyaEchoCompanionUsers
+                                          .elementAtOrNull(widget
+                                              .voizeWhisperMemoryHubUserid!)!
+                                          .voizeCognitiveHarmonyUserPhoto,
+                                      fit: BoxFit.cover,
+                                    ),
                                   ),
                                 ),
                                 Padding(

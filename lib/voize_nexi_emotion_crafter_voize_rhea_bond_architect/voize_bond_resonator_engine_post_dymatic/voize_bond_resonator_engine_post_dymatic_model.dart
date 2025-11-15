@@ -5,13 +5,9 @@ import 'package:flutter/material.dart';
 
 class VoizeBondResonatorEnginePostDymaticModel
     extends FlutterFlowModel<VoizeBondResonatorEnginePostDymaticWidget> {
-  ///  Local state fields for this page.
 
   String? voizeEclipticaLoverVersePhoto;
 
-  ///  State fields for stateful widgets in this page.
-
-  // State field(s) for TextField widget.
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;
   String? Function(BuildContext, String?)? textControllerValidator;

@@ -246,22 +246,11 @@ class _VoizeEchoDreamLegacyRechargeWidgetState
                                     final voizeRhaenSympathyCasterItem =
                                         voizeRhaenSympathyCaster[
                                             voizeRhaenSympathyCasterIndex];
-                                    return InkWell(
-                                      splashColor: Colors.transparent,
-                                      focusColor: Colors.transparent,
-                                      hoverColor: Colors.transparent,
-                                      highlightColor: Colors.transparent,
+                                    return GestureDetector(
                                       onTap: () async {
-                                        FFAppState()
-                                            .updateVoizeNaiyaEchoCompanionUsersAtIndex(
-                                          FFAppState()
-                                              .voizeRivenDreamVoiceLoginToken,
-                                          (e) => e
-                                            ..incrementVoizeCognitiveHarmonyUserDiamonds(
-                                                voizeRhaenSympathyCasterItem
-                                                    .voizeNioraDreamListenerPurchasePrince),
-                                        );
-                                        FFAppState().update(() {});
+                                        _model.selectProduct(
+                                            voizeRhaenSympathyCasterItem
+                                                .voizeNioraDreamListenerPurchaseProductid);
                                       },
                                       child: Container(
                                         width: 100.0,

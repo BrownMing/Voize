@@ -163,6 +163,15 @@ class _VoizeEtherealSoundChronicleChatsWidgetState
                                 hoverColor: Colors.transparent,
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
+                                  FFAppState()
+                                      .updateVoizeNyraResonanceSirenChatsAtIndex(
+                                    voizeMythraEchoComposerItem
+                                        .voizeEmpathicSignalPlaneChatId,
+                                    (e) => e
+                                      ..voizeEmpathicSignalPlaneChatUnread =
+                                          null,
+                                  );
+                                  FFAppState().update(() {});
                                   context.pushNamed(
                                     VoizeHeartLinkRevelationMessagesWidget
                                         .routeName,

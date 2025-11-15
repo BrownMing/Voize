@@ -129,21 +129,38 @@ class _VoizeCognitionEmberCodeInfomationWidgetState
                                     ),
                                     child: Padding(
                                       padding: EdgeInsets.all(3.0),
-                                      child: Container(
-                                        width: 75.0,
-                                        height: 75.0,
-                                        decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                            fit: BoxFit.cover,
-                                            image: Image.asset(
-                                              FFAppState()
-                                                  .voizeNaiyaEchoCompanionUsers
-                                                  .elementAtOrNull(FFAppState()
-                                                      .voizeRivenDreamVoiceLoginToken)!
-                                                  .voizeCognitiveHarmonyUserPhoto,
-                                            ).image,
+                                      child: GestureDetector(
+                                        onTap: () async {
+                                          context.pushNamed(
+                                            VoizeAffectionContinuityPathEditFileWidget
+                                                .routeName,
+                                            extra: <String, dynamic>{
+                                              kTransitionInfoKey:
+                                                  TransitionInfo(
+                                                hasTransition: true,
+                                                transitionType:
+                                                    PageTransitionType
+                                                        .rightToLeft,
+                                              ),
+                                            },
+                                          );
+                                        },
+                                        child: Container(
+                                          width: 75.0,
+                                          height: 75.0,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              fit: BoxFit.cover,
+                                              image: Image.asset(
+                                                FFAppState()
+                                                    .voizeNaiyaEchoCompanionUsers
+                                                    .elementAtOrNull(FFAppState()
+                                                        .voizeRivenDreamVoiceLoginToken)!
+                                                    .voizeCognitiveHarmonyUserPhoto,
+                                              ).image,
+                                            ),
+                                            shape: BoxShape.circle,
                                           ),
-                                          shape: BoxShape.circle,
                                         ),
                                       ),
                                     ),
@@ -253,7 +270,8 @@ class _VoizeCognitionEmberCodeInfomationWidgetState
                             highlightColor: Colors.transparent,
                             onTap: () async {
                               context.pushNamed(
-                                VoizeAffinityContinuumFollowingsWidget.routeName,
+                                VoizeAffinityContinuumFollowingsWidget
+                                    .routeName,
                                 queryParameters: {'initialIndex': '1'},
                                 extra: <String, dynamic>{
                                   kTransitionInfoKey: TransitionInfo(
@@ -285,10 +303,9 @@ class _VoizeCognitionEmberCodeInfomationWidgetState
                                         fontSize: 16.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
-                                        fontStyle:
-                                            FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .fontStyle,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
                                       ),
                                 ),
                                 Text(
@@ -310,14 +327,12 @@ class _VoizeCognitionEmberCodeInfomationWidgetState
                                             FlutterFlowTheme.of(context).info,
                                         fontSize: 12.0,
                                         letterSpacing: 0.0,
-                                        fontWeight:
-                                            FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .fontWeight,
-                                        fontStyle:
-                                            FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .fontStyle,
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
                                       ),
                                 ),
                               ].divide(SizedBox(height: 8.0)),
@@ -330,7 +345,8 @@ class _VoizeCognitionEmberCodeInfomationWidgetState
                             highlightColor: Colors.transparent,
                             onTap: () async {
                               context.pushNamed(
-                                VoizeAffinityContinuumFollowingsWidget.routeName,
+                                VoizeAffinityContinuumFollowingsWidget
+                                    .routeName,
                                 queryParameters: {'initialIndex': '0'},
                                 extra: <String, dynamic>{
                                   kTransitionInfoKey: TransitionInfo(
@@ -362,10 +378,9 @@ class _VoizeCognitionEmberCodeInfomationWidgetState
                                         fontSize: 16.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
-                                        fontStyle:
-                                            FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .fontStyle,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
                                       ),
                                 ),
                                 Text(
@@ -387,14 +402,12 @@ class _VoizeCognitionEmberCodeInfomationWidgetState
                                             FlutterFlowTheme.of(context).info,
                                         fontSize: 12.0,
                                         letterSpacing: 0.0,
-                                        fontWeight:
-                                            FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .fontWeight,
-                                        fontStyle:
-                                            FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .fontStyle,
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
                                       ),
                                 ),
                               ].divide(SizedBox(height: 8.0)),
@@ -465,175 +478,194 @@ class _VoizeCognitionEmberCodeInfomationWidgetState
                               final voizeVelinAffectionMuseItem =
                                   voizeVelinAffectionMuse[
                                       voizeVelinAffectionMuseIndex];
-                              return Container(
-                                width: 100.0,
-                                height: 100.0,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(16.0),
-                                ),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          4.0, 4.0, 4.0, 0.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(100.0),
-                                            child: BackdropFilter(
-                                              filter: ImageFilter.blur(
-                                                sigmaX: 8.0,
-                                                sigmaY: 8.0,
-                                              ),
-                                              child: Container(
-                                                width: 45.0,
-                                                height: 20.0,
-                                                decoration: BoxDecoration(
-                                                  color: Color(0x27FFFFFF),
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          100.0),
+                              return GestureDetector(
+                                onTap: () async {
+                                  context.pushNamed(
+                                    VoizeMemoryChamberVaultDymaticDetailsWidget
+                                        .routeName,
+                                    extra: <String, dynamic>{
+                                      kTransitionInfoKey: TransitionInfo(
+                                        hasTransition: true,
+                                        transitionType:
+                                            PageTransitionType.rightToLeft,
+                                      ),
+                                    },
+                                    queryParameters: {
+                                      'voizeHeartSyncDimensionPost':
+                                          serializeParam(
+                                        voizeVelinAffectionMuseItem
+                                            .voizeSynestheticConnectionDymaticId,
+                                        ParamType.int,
+                                      ),
+                                      'voizeDreamSignalTopologyUserid':
+                                          serializeParam(
+                                              voizeVelinAffectionMuseItem
+                                                  .voizeSynestheticConnectionDymaticCreateId,
+                                              ParamType.int)
+                                    }.withoutNulls,
+                                  );
+                                },
+                                child: Container(
+                                  width: 100.0,
+                                  height: 100.0,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(16.0),
+                                      image: DecorationImage(
+                                          fit: BoxFit.cover,
+                                          image: AssetImage(
+                                              voizeVelinAffectionMuseItem
+                                                  .voizeSynestheticConnectionDymaticShow))),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            4.0, 4.0, 4.0, 0.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(100.0),
+                                              child: BackdropFilter(
+                                                filter: ImageFilter.blur(
+                                                  sigmaX: 8.0,
+                                                  sigmaY: 8.0,
                                                 ),
-                                                child: Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          5.0, 0.0, 0.0, 0.0),
-                                                  child: Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.start,
-                                                    children: [
-                                                      Builder(
-                                                        builder: (context) {
-                                                          if (!voizeVelinAffectionMuseItem
-                                                              .voizeSynestheticConnectionDymaticLikeUsers
-                                                              .contains(FFAppState()
-                                                                  .voizeRivenDreamVoiceLoginToken)) {
-                                                            return InkWell(
-                                                              splashColor: Colors
-                                                                  .transparent,
-                                                              focusColor: Colors
-                                                                  .transparent,
-                                                              hoverColor: Colors
-                                                                  .transparent,
-                                                              highlightColor:
-                                                                  Colors
-                                                                      .transparent,
-                                                              onTap: () async {
-                                                                HapticFeedback
-                                                                    .heavyImpact();
-                                                                FFAppState()
-                                                                    .updateVoizeAelithBondEntityDynamticsAtIndex(
-                                                                  voizeVelinAffectionMuseItem
-                                                                      .voizeSynestheticConnectionDymaticId,
-                                                                  (e) => e
-                                                                    ..updateVoizeSynestheticConnectionDymaticLikeUsers(
-                                                                      (e) => e.add(
-                                                                          FFAppState()
-                                                                              .voizeRivenDreamVoiceLoginToken),
+                                                child: Container(
+                                                  width: 45.0,
+                                                  height: 20.0,
+                                                  decoration: BoxDecoration(
+                                                    color: Color(0x27FFFFFF),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            100.0),
+                                                  ),
+                                                  child: Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(5.0, 0.0,
+                                                                0.0, 0.0),
+                                                    child: Row(
+                                                      mainAxisSize:
+                                                          MainAxisSize.max,
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Builder(
+                                                          builder: (context) {
+                                                            if (!voizeVelinAffectionMuseItem
+                                                                .voizeSynestheticConnectionDymaticLikeUsers
+                                                                .contains(
+                                                                    FFAppState()
+                                                                        .voizeRivenDreamVoiceLoginToken)) {
+                                                              return InkWell(
+                                                                splashColor: Colors
+                                                                    .transparent,
+                                                                focusColor: Colors
+                                                                    .transparent,
+                                                                hoverColor: Colors
+                                                                    .transparent,
+                                                                highlightColor:
+                                                                    Colors
+                                                                        .transparent,
+                                                                onTap:
+                                                                    () async {
+                                                                  HapticFeedback
+                                                                      .heavyImpact();
+                                                                  FFAppState()
+                                                                      .updateVoizeAelithBondEntityDynamticsAtIndex(
+                                                                    voizeVelinAffectionMuseItem
+                                                                        .voizeSynestheticConnectionDymaticId,
+                                                                    (e) => e
+                                                                      ..updateVoizeSynestheticConnectionDymaticLikeUsers(
+                                                                        (e) => e
+                                                                            .add(FFAppState().voizeRivenDreamVoiceLoginToken),
+                                                                      ),
+                                                                  );
+                                                                  FFAppState()
+                                                                      .update(
+                                                                          () {});
+                                                                },
+                                                                child:
+                                                                    Container(
+                                                                  width: 14.0,
+                                                                  height: 12.0,
+                                                                  decoration:
+                                                                      BoxDecoration(
+                                                                    image:
+                                                                        DecorationImage(
+                                                                      fit: BoxFit
+                                                                          .cover,
+                                                                      image: Image
+                                                                          .asset(
+                                                                        'assets/images/dfhsagudhfhguiodfhg_difhgusdhfhogiudhfgi.png',
+                                                                      ).image,
                                                                     ),
-                                                                );
-                                                                FFAppState()
-                                                                    .update(
-                                                                        () {});
-                                                              },
-                                                              child: Container(
-                                                                width: 14.0,
-                                                                height: 12.0,
-                                                                decoration:
-                                                                    BoxDecoration(
-                                                                  image:
-                                                                      DecorationImage(
-                                                                    fit: BoxFit
-                                                                        .cover,
-                                                                    image: Image
-                                                                        .asset(
-                                                                      'assets/images/sgvduyfigsydugsud_vgydufgiyugdiu.png',
-                                                                    ).image,
                                                                   ),
                                                                 ),
-                                                              ),
-                                                            );
-                                                          } else {
-                                                            return InkWell(
-                                                              splashColor: Colors
-                                                                  .transparent,
-                                                              focusColor: Colors
-                                                                  .transparent,
-                                                              hoverColor: Colors
-                                                                  .transparent,
-                                                              highlightColor:
-                                                                  Colors
-                                                                      .transparent,
-                                                              onTap: () async {
-                                                                HapticFeedback
-                                                                    .heavyImpact();
-                                                                FFAppState()
-                                                                    .updateVoizeAelithBondEntityDynamticsAtIndex(
-                                                                  voizeVelinAffectionMuseItem
-                                                                      .voizeSynestheticConnectionDymaticId,
-                                                                  (e) => e
-                                                                    ..updateVoizeSynestheticConnectionDymaticLikeUsers(
-                                                                      (e) => e.remove(
-                                                                          FFAppState()
-                                                                              .voizeRivenDreamVoiceLoginToken),
+                                                              );
+                                                            } else {
+                                                              return InkWell(
+                                                                splashColor: Colors
+                                                                    .transparent,
+                                                                focusColor: Colors
+                                                                    .transparent,
+                                                                hoverColor: Colors
+                                                                    .transparent,
+                                                                highlightColor:
+                                                                    Colors
+                                                                        .transparent,
+                                                                onTap:
+                                                                    () async {
+                                                                  HapticFeedback
+                                                                      .heavyImpact();
+                                                                  FFAppState()
+                                                                      .updateVoizeAelithBondEntityDynamticsAtIndex(
+                                                                    voizeVelinAffectionMuseItem
+                                                                        .voizeSynestheticConnectionDymaticId,
+                                                                    (e) => e
+                                                                      ..updateVoizeSynestheticConnectionDymaticLikeUsers(
+                                                                        (e) => e
+                                                                            .remove(FFAppState().voizeRivenDreamVoiceLoginToken),
+                                                                      ),
+                                                                  );
+                                                                  FFAppState()
+                                                                      .update(
+                                                                          () {});
+                                                                },
+                                                                child:
+                                                                    Container(
+                                                                  width: 14.0,
+                                                                  height: 12.0,
+                                                                  decoration:
+                                                                      BoxDecoration(
+                                                                    image:
+                                                                        DecorationImage(
+                                                                      fit: BoxFit
+                                                                          .cover,
+                                                                      image: Image
+                                                                          .asset(
+                                                                        'assets/images/sgvduyfigsydugsud_vgydufgiyugdiu.png',
+                                                                      ).image,
                                                                     ),
-                                                                );
-                                                                FFAppState()
-                                                                    .update(
-                                                                        () {});
-                                                              },
-                                                              child: Container(
-                                                                width: 14.0,
-                                                                height: 12.0,
-                                                                decoration:
-                                                                    BoxDecoration(
-                                                                  image:
-                                                                      DecorationImage(
-                                                                    fit: BoxFit
-                                                                        .cover,
-                                                                    image: Image
-                                                                        .asset(
-                                                                      'assets/images/sgvduyfigsydugsud_vgydufgiyugdiu.png',
-                                                                    ).image,
                                                                   ),
                                                                 ),
-                                                              ),
-                                                            );
-                                                          }
-                                                        },
-                                                      ),
-                                                      Text(
-                                                        '${voizeVelinAffectionMuseItem.voizeSynestheticConnectionDymaticLikeUsers.length.toString()}',
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  font: GoogleFonts
-                                                                      .archivo(
-                                                                    fontWeight: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .bodyMedium
-                                                                        .fontWeight,
-                                                                    fontStyle: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .bodyMedium
-                                                                        .fontStyle,
-                                                                  ),
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .info,
-                                                                  fontSize:
-                                                                      10.0,
-                                                                  letterSpacing:
-                                                                      0.0,
+                                                              );
+                                                            }
+                                                          },
+                                                        ),
+                                                        Text(
+                                                          '${voizeVelinAffectionMuseItem.voizeSynestheticConnectionDymaticLikeUsers.length.toString()}',
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                font: GoogleFonts
+                                                                    .archivo(
                                                                   fontWeight: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
@@ -643,18 +675,34 @@ class _VoizeCognitionEmberCodeInfomationWidgetState
                                                                       .bodyMedium
                                                                       .fontStyle,
                                                                 ),
-                                                      ),
-                                                    ].divide(
-                                                        SizedBox(width: 4.0)),
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .info,
+                                                                fontSize: 10.0,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontWeight,
+                                                                fontStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontStyle,
+                                                              ),
+                                                        ),
+                                                      ].divide(
+                                                          SizedBox(width: 4.0)),
+                                                    ),
                                                   ),
                                                 ),
                                               ),
                                             ),
-                                          ),
-                                        ],
+                                          ],
+                                        ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               );
                             },

@@ -20,12 +20,12 @@ class FFAppState extends ChangeNotifier {
     prefs = await SharedPreferences.getInstance();
     _safeInit(() {
       _voizeRivenDreamVoiceLoginToken =
-          prefs.getInt('ff_voizeRivenDreamVoiceLoginToken') ??
+          prefs.getInt('VoizeHarmonicSoul_voizeRivenDreamVoiceLoginToken') ??
               _voizeRivenDreamVoiceLoginToken;
     });
     _safeInit(() {
       _voizeNaiyaEchoCompanionUsers = prefs
-              .getStringList('ff_voizeNaiyaEchoCompanionUsers')
+              .getStringList('VoizeHarmonicSoul_voizeNaiyaEchoCompanionUsers')
               ?.map((x) {
                 try {
                   return VoizeCognitiveHarmonyUserStruct.fromSerializableMap(
@@ -41,7 +41,7 @@ class FFAppState extends ChangeNotifier {
     });
     _safeInit(() {
       _voizeSerenEmotionSpiritVideos = prefs
-              .getStringList('ff_voizeSerenEmotionSpiritVideos')
+              .getStringList('VoizeHarmonicSoul_voizeSerenEmotionSpiritVideos')
               ?.map((x) {
                 try {
                   return VoizeHeartWaveContinuityVideoStruct
@@ -57,7 +57,7 @@ class FFAppState extends ChangeNotifier {
     });
     _safeInit(() {
       _voizeAelithBondEntityDynamtics = prefs
-              .getStringList('ff_voizeAelithBondEntityDynamtics')
+              .getStringList('VoizeHarmonicSoul_voizeAelithBondEntityDynamtics')
               ?.map((x) {
                 try {
                   return VoizeSynestheticConnectionDymaticStruct
@@ -73,7 +73,7 @@ class FFAppState extends ChangeNotifier {
     });
     _safeInit(() {
       _voizeKiraSoundOraclePianoNotes = prefs
-              .getStringList('ff_voizeKiraSoundOraclePianoNotes')
+              .getStringList('VoizeHarmonicSoul_voizeKiraSoundOraclePianoNotes')
               ?.map((x) {
                 try {
                   return VoizeEclipticSoulStreamPianoNotesStruct
@@ -89,7 +89,7 @@ class FFAppState extends ChangeNotifier {
     });
     _safeInit(() {
       _voizeVelanEmpathComments = prefs
-              .getStringList('ff_voizeVelanEmpathComments')
+              .getStringList('VoizeHarmonicSoul_voizeVelanEmpathComments')
               ?.map((x) {
                 try {
                   return VoizeSentienceEchoRealmCommentStruct
@@ -105,7 +105,7 @@ class FFAppState extends ChangeNotifier {
     });
     _safeInit(() {
       _VoizeNyraResonanceSirenChats = prefs
-              .getStringList('ff_VoizeNyraResonanceSirenChats')
+              .getStringList('VoizeHarmonicSoul_VoizeNyraResonanceSirenChats')
               ?.map((x) {
                 try {
                   return VoizeEmpathicSignalPlaneChatStruct.fromSerializableMap(
@@ -121,7 +121,7 @@ class FFAppState extends ChangeNotifier {
     });
     _safeInit(() {
       _voizeAerisHeartTunerMessages = prefs
-              .getStringList('ff_voizeAerisHeartTunerMessages')
+              .getStringList('VoizeHarmonicSoul_voizeAerisHeartTunerMessages')
               ?.map((x) {
                 try {
                   return VoizeLioraWhisperMuseMessageStruct.fromSerializableMap(
@@ -137,7 +137,7 @@ class FFAppState extends ChangeNotifier {
     });
     _safeInit(() {
       _voizeSoulReflectionOrbitComments = prefs
-              .getStringList('ff_voizeSoulReflectionOrbitComments')
+              .getStringList('VoizeHarmonicSoul_voizeSoulReflectionOrbitComments')
               ?.map((x) {
                 try {
                   return VoizeSentienceEchoRealmCommentStruct
@@ -153,7 +153,7 @@ class FFAppState extends ChangeNotifier {
     });
     _safeInit(() {
       _voizeAurellSoulDancerPurchases = prefs
-              .getStringList('ff_voizeAurellSoulDancerPurchases')
+              .getStringList('VoizeHarmonicSoul_voizeAurellSoulDancerPurchases')
               ?.map((x) {
                 try {
                   return VoizeNioraDreamListenerPurchaseStruct
@@ -180,7 +180,7 @@ class FFAppState extends ChangeNotifier {
   int get voizeRivenDreamVoiceLoginToken => _voizeRivenDreamVoiceLoginToken;
   set voizeRivenDreamVoiceLoginToken(int value) {
     _voizeRivenDreamVoiceLoginToken = value;
-    prefs.setInt('ff_voizeRivenDreamVoiceLoginToken', value);
+    prefs.setInt('VoizeHarmonicSoul_voizeRivenDreamVoiceLoginToken', value);
   }
 
   List<VoizeCognitiveHarmonyUserStruct> _voizeNaiyaEchoCompanionUsers = [
@@ -205,33 +205,33 @@ class FFAppState extends ChangeNotifier {
     VoizeCognitiveHarmonyUserStruct.fromSerializableMap(jsonDecode(
         '{\"VoizeCognitiveHarmonyUser_id\":\"9\",\"VoizeCognitiveHarmonyUser_email\":\"kevin@voize.com\",\"VoizeCognitiveHarmonyUser_password\":\"123456\",\"VoizeCognitiveHarmonyUser_photo\":\"assets/images/qdfpogjid_xchdfuighidof.jpeg\",\"VoizeCognitiveHarmonyUser_name\":\"kevin\",\"VoizeCognitiveHarmonyUser_about_me\":\"Sharing my piano journey and learning from amazing musicians here! Open to collaborations and always happy to chat about music 🎼🌟\",\"VoizeCognitiveHarmonyUser_diamonds\":\"0\",\"VoizeCognitiveHarmonyUser_followers\":\"[\\\"7\\\",\\\"8\\\"]\",\"VoizeCognitiveHarmonyUser_followings\":\"[\\\"0\\\"]\",\"VoizeCognitiveHarmonyUser_blacklist\":\"[]\"}'))
   ];
-  
+
   List<VoizeCognitiveHarmonyUserStruct> get voizeNaiyaEchoCompanionUsers =>
       _voizeNaiyaEchoCompanionUsers;
   set voizeNaiyaEchoCompanionUsers(
       List<VoizeCognitiveHarmonyUserStruct> value) {
     _voizeNaiyaEchoCompanionUsers = value;
-    prefs.setStringList('ff_voizeNaiyaEchoCompanionUsers',
+    prefs.setStringList('VoizeHarmonicSoul_voizeNaiyaEchoCompanionUsers',
         value.map((x) => x.serialize()).toList());
   }
 
   void addToVoizeNaiyaEchoCompanionUsers(
       VoizeCognitiveHarmonyUserStruct value) {
     voizeNaiyaEchoCompanionUsers.add(value);
-    prefs.setStringList('ff_voizeNaiyaEchoCompanionUsers',
+    prefs.setStringList('VoizeHarmonicSoul_voizeNaiyaEchoCompanionUsers',
         _voizeNaiyaEchoCompanionUsers.map((x) => x.serialize()).toList());
   }
 
   void removeFromVoizeNaiyaEchoCompanionUsers(
       VoizeCognitiveHarmonyUserStruct value) {
     voizeNaiyaEchoCompanionUsers.remove(value);
-    prefs.setStringList('ff_voizeNaiyaEchoCompanionUsers',
+    prefs.setStringList('VoizeHarmonicSoul_voizeNaiyaEchoCompanionUsers',
         _voizeNaiyaEchoCompanionUsers.map((x) => x.serialize()).toList());
   }
 
   void removeAtIndexFromVoizeNaiyaEchoCompanionUsers(int index) {
     voizeNaiyaEchoCompanionUsers.removeAt(index);
-    prefs.setStringList('ff_voizeNaiyaEchoCompanionUsers',
+    prefs.setStringList('VoizeHarmonicSoul_voizeNaiyaEchoCompanionUsers',
         _voizeNaiyaEchoCompanionUsers.map((x) => x.serialize()).toList());
   }
 
@@ -242,7 +242,7 @@ class FFAppState extends ChangeNotifier {
   ) {
     voizeNaiyaEchoCompanionUsers[index] =
         updateFn(_voizeNaiyaEchoCompanionUsers[index]);
-    prefs.setStringList('ff_voizeNaiyaEchoCompanionUsers',
+    prefs.setStringList('VoizeHarmonicSoul_voizeNaiyaEchoCompanionUsers',
         _voizeNaiyaEchoCompanionUsers.map((x) => x.serialize()).toList());
   }
 
@@ -265,27 +265,27 @@ class FFAppState extends ChangeNotifier {
   set voizeSerenEmotionSpiritVideos(
       List<VoizeHeartWaveContinuityVideoStruct> value) {
     _voizeSerenEmotionSpiritVideos = value;
-    prefs.setStringList('ff_voizeSerenEmotionSpiritVideos',
+    prefs.setStringList('VoizeHarmonicSoul_voizeSerenEmotionSpiritVideos',
         value.map((x) => x.serialize()).toList());
   }
 
   void addToVoizeSerenEmotionSpiritVideos(
       VoizeHeartWaveContinuityVideoStruct value) {
     voizeSerenEmotionSpiritVideos.add(value);
-    prefs.setStringList('ff_voizeSerenEmotionSpiritVideos',
+    prefs.setStringList('VoizeHarmonicSoul_voizeSerenEmotionSpiritVideos',
         _voizeSerenEmotionSpiritVideos.map((x) => x.serialize()).toList());
   }
 
   void removeFromVoizeSerenEmotionSpiritVideos(
       VoizeHeartWaveContinuityVideoStruct value) {
     voizeSerenEmotionSpiritVideos.remove(value);
-    prefs.setStringList('ff_voizeSerenEmotionSpiritVideos',
+    prefs.setStringList('VoizeHarmonicSoul_voizeSerenEmotionSpiritVideos',
         _voizeSerenEmotionSpiritVideos.map((x) => x.serialize()).toList());
   }
 
   void removeAtIndexFromVoizeSerenEmotionSpiritVideos(int index) {
     voizeSerenEmotionSpiritVideos.removeAt(index);
-    prefs.setStringList('ff_voizeSerenEmotionSpiritVideos',
+    prefs.setStringList('VoizeHarmonicSoul_voizeSerenEmotionSpiritVideos',
         _voizeSerenEmotionSpiritVideos.map((x) => x.serialize()).toList());
   }
 
@@ -297,34 +297,34 @@ class FFAppState extends ChangeNotifier {
   ) {
     voizeSerenEmotionSpiritVideos[index] =
         updateFn(_voizeSerenEmotionSpiritVideos[index]);
-    prefs.setStringList('ff_voizeSerenEmotionSpiritVideos',
+    prefs.setStringList('VoizeHarmonicSoul_voizeSerenEmotionSpiritVideos',
         _voizeSerenEmotionSpiritVideos.map((x) => x.serialize()).toList());
   }
 
   List<VoizeSynestheticConnectionDymaticStruct>
       _voizeAelithBondEntityDynamtics = [
     VoizeSynestheticConnectionDymaticStruct.fromSerializableMap(jsonDecode(
-        '{\"VoizeSynestheticConnectionDymatic_id\":\"0\",\"VoizeSynestheticConnectionDymatic_show\":\"assets/images/fghioujfghioh_eghruoighghdhufghod.jpeg\",\"VoizeSynestheticConnectionDymatic_create_id\":\"5\",\"VoizeSynestheticConnectionDymatic_describe\":\"Hold a piano concert at home.\",\"VoizeSynestheticConnectionDymatic_create_time\":\"1762409919117\",\"VoizeSynestheticConnectionDymatic_like_users\":\"[]\",\"VoizeSynestheticConnectionDymatic_comments\":\"0\"}')),
+        '{\"VoizeSynestheticConnectionDymatic_id\":\"0\",\"VoizeSynestheticConnectionDymatic_show\":\"assets/images/fghioujfghioh_eghruoighghdhufghod.jpeg\",\"VoizeSynestheticConnectionDymatic_create_id\":\"0\",\"VoizeSynestheticConnectionDymatic_describe\":\"Hold a piano concert at home.\",\"VoizeSynestheticConnectionDymatic_create_time\":\"1762409919117\",\"VoizeSynestheticConnectionDymatic_like_users\":\"[]\",\"VoizeSynestheticConnectionDymatic_comments\":\"0\"}')),
     VoizeSynestheticConnectionDymaticStruct.fromSerializableMap(jsonDecode(
-        '{\"VoizeSynestheticConnectionDymatic_id\":\"1\",\"VoizeSynestheticConnectionDymatic_show\":\"assets/images/fghjojfgiohp_weiurufdhogdfg.jpeg\",\"VoizeSynestheticConnectionDymatic_create_id\":\"6\",\"VoizeSynestheticConnectionDymatic_describe\":\"The atmosphere is French romantic, as you step into the sunset piano room.\",\"VoizeSynestheticConnectionDymatic_create_time\":\"1762409919908\",\"VoizeSynestheticConnectionDymatic_like_users\":\"[]\",\"VoizeSynestheticConnectionDymatic_comments\":\"0\"}')),
+        '{\"VoizeSynestheticConnectionDymatic_id\":\"1\",\"VoizeSynestheticConnectionDymatic_show\":\"assets/images/fghjojfgiohp_weiurufdhogdfg.jpeg\",\"VoizeSynestheticConnectionDymatic_create_id\":\"1\",\"VoizeSynestheticConnectionDymatic_describe\":\"The atmosphere is French romantic, as you step into the sunset piano room.\",\"VoizeSynestheticConnectionDymatic_create_time\":\"1762409919908\",\"VoizeSynestheticConnectionDymatic_like_users\":\"[]\",\"VoizeSynestheticConnectionDymatic_comments\":\"0\"}')),
     VoizeSynestheticConnectionDymaticStruct.fromSerializableMap(jsonDecode(
-        '{\"VoizeSynestheticConnectionDymatic_id\":\"2\",\"VoizeSynestheticConnectionDymatic_show\":\"assets/images/dfguiohdfgo_iuewysgdfyius.jpeg\",\"VoizeSynestheticConnectionDymatic_create_id\":\"7\",\"VoizeSynestheticConnectionDymatic_describe\":\"Every promotion is my reluctant look back.\",\"VoizeSynestheticConnectionDymatic_create_time\":\"1762409920647\",\"VoizeSynestheticConnectionDymatic_like_users\":\"[]\",\"VoizeSynestheticConnectionDymatic_comments\":\"0\"}')),
+        '{\"VoizeSynestheticConnectionDymatic_id\":\"2\",\"VoizeSynestheticConnectionDymatic_show\":\"assets/images/dfguiohdfgo_iuewysgdfyius.jpeg\",\"VoizeSynestheticConnectionDymatic_create_id\":\"2\",\"VoizeSynestheticConnectionDymatic_describe\":\"Every promotion is my reluctant look back.\",\"VoizeSynestheticConnectionDymatic_create_time\":\"1762409920647\",\"VoizeSynestheticConnectionDymatic_like_users\":\"[]\",\"VoizeSynestheticConnectionDymatic_comments\":\"0\"}')),
     VoizeSynestheticConnectionDymaticStruct.fromSerializableMap(jsonDecode(
-        '{\"VoizeSynestheticConnectionDymatic_id\":\"3\",\"VoizeSynestheticConnectionDymatic_show\":\"assets/images/iophgudfhhgiodg_cijvbdfhguiod.jpeg\",\"VoizeSynestheticConnectionDymatic_create_id\":\"8\",\"VoizeSynestheticConnectionDymatic_describe\":\"It\'s been a long time since I last played the piano\",\"VoizeSynestheticConnectionDymatic_create_time\":\"1762409921647\",\"VoizeSynestheticConnectionDymatic_like_users\":\"[]\",\"VoizeSynestheticConnectionDymatic_comments\":\"0\"}'))
+        '{\"VoizeSynestheticConnectionDymatic_id\":\"3\",\"VoizeSynestheticConnectionDymatic_show\":\"assets/images/iophgudfhhgiodg_cijvbdfhguiod.jpeg\",\"VoizeSynestheticConnectionDymatic_create_id\":\"3\",\"VoizeSynestheticConnectionDymatic_describe\":\"It\'s been a long time since I last played the piano\",\"VoizeSynestheticConnectionDymatic_create_time\":\"1762409921647\",\"VoizeSynestheticConnectionDymatic_like_users\":\"[]\",\"VoizeSynestheticConnectionDymatic_comments\":\"0\"}'))
   ];
   List<VoizeSynestheticConnectionDymaticStruct>
       get voizeAelithBondEntityDynamtics => _voizeAelithBondEntityDynamtics;
   set voizeAelithBondEntityDynamtics(
       List<VoizeSynestheticConnectionDymaticStruct> value) {
     _voizeAelithBondEntityDynamtics = value;
-    prefs.setStringList('ff_voizeAelithBondEntityDynamtics',
+    prefs.setStringList('VoizeHarmonicSoul_voizeAelithBondEntityDynamtics',
         value.map((x) => x.serialize()).toList());
   }
 
   void addToVoizeAelithBondEntityDynamtics(
       VoizeSynestheticConnectionDymaticStruct value) {
     voizeAelithBondEntityDynamtics.add(value);
-    prefs.setStringList('ff_voizeAelithBondEntityDynamtics',
+    prefs.setStringList('VoizeHarmonicSoul_voizeAelithBondEntityDynamtics',
         _voizeAelithBondEntityDynamtics.map((x) => x.serialize()).toList());
   }
 
@@ -336,7 +336,7 @@ class FFAppState extends ChangeNotifier {
   ) {
     voizeAelithBondEntityDynamtics[index] =
         updateFn(_voizeAelithBondEntityDynamtics[index]);
-    prefs.setStringList('ff_voizeAelithBondEntityDynamtics',
+    prefs.setStringList('VoizeHarmonicSoul_voizeAelithBondEntityDynamtics',
         _voizeAelithBondEntityDynamtics.map((x) => x.serialize()).toList());
   }
 
@@ -356,27 +356,14 @@ class FFAppState extends ChangeNotifier {
   set voizeKiraSoundOraclePianoNotes(
       List<VoizeEclipticSoulStreamPianoNotesStruct> value) {
     _voizeKiraSoundOraclePianoNotes = value;
-    prefs.setStringList('ff_voizeKiraSoundOraclePianoNotes',
+    prefs.setStringList('VoizeHarmonicSoul_voizeKiraSoundOraclePianoNotes',
         value.map((x) => x.serialize()).toList());
   }
 
   void addToVoizeKiraSoundOraclePianoNotes(
       VoizeEclipticSoulStreamPianoNotesStruct value) {
     voizeKiraSoundOraclePianoNotes.add(value);
-    prefs.setStringList('ff_voizeKiraSoundOraclePianoNotes',
-        _voizeKiraSoundOraclePianoNotes.map((x) => x.serialize()).toList());
-  }
-
-  void removeFromVoizeKiraSoundOraclePianoNotes(
-      VoizeEclipticSoulStreamPianoNotesStruct value) {
-    voizeKiraSoundOraclePianoNotes.remove(value);
-    prefs.setStringList('ff_voizeKiraSoundOraclePianoNotes',
-        _voizeKiraSoundOraclePianoNotes.map((x) => x.serialize()).toList());
-  }
-
-  void removeAtIndexFromVoizeKiraSoundOraclePianoNotes(int index) {
-    voizeKiraSoundOraclePianoNotes.removeAt(index);
-    prefs.setStringList('ff_voizeKiraSoundOraclePianoNotes',
+    prefs.setStringList('VoizeHarmonicSoul_voizeKiraSoundOraclePianoNotes',
         _voizeKiraSoundOraclePianoNotes.map((x) => x.serialize()).toList());
   }
 
@@ -388,14 +375,7 @@ class FFAppState extends ChangeNotifier {
   ) {
     voizeKiraSoundOraclePianoNotes[index] =
         updateFn(_voizeKiraSoundOraclePianoNotes[index]);
-    prefs.setStringList('ff_voizeKiraSoundOraclePianoNotes',
-        _voizeKiraSoundOraclePianoNotes.map((x) => x.serialize()).toList());
-  }
-
-  void insertAtIndexInVoizeKiraSoundOraclePianoNotes(
-      int index, VoizeEclipticSoulStreamPianoNotesStruct value) {
-    voizeKiraSoundOraclePianoNotes.insert(index, value);
-    prefs.setStringList('ff_voizeKiraSoundOraclePianoNotes',
+    prefs.setStringList('VoizeHarmonicSoul_voizeKiraSoundOraclePianoNotes',
         _voizeKiraSoundOraclePianoNotes.map((x) => x.serialize()).toList());
   }
 
@@ -430,27 +410,14 @@ class FFAppState extends ChangeNotifier {
   set voizeVelanEmpathComments(
       List<VoizeSentienceEchoRealmCommentStruct> value) {
     _voizeVelanEmpathComments = value;
-    prefs.setStringList('ff_voizeVelanEmpathComments',
+    prefs.setStringList('VoizeHarmonicSoul_voizeVelanEmpathComments',
         value.map((x) => x.serialize()).toList());
   }
 
   void addToVoizeVelanEmpathComments(
       VoizeSentienceEchoRealmCommentStruct value) {
     voizeVelanEmpathComments.add(value);
-    prefs.setStringList('ff_voizeVelanEmpathComments',
-        _voizeVelanEmpathComments.map((x) => x.serialize()).toList());
-  }
-
-  void removeFromVoizeVelanEmpathComments(
-      VoizeSentienceEchoRealmCommentStruct value) {
-    voizeVelanEmpathComments.remove(value);
-    prefs.setStringList('ff_voizeVelanEmpathComments',
-        _voizeVelanEmpathComments.map((x) => x.serialize()).toList());
-  }
-
-  void removeAtIndexFromVoizeVelanEmpathComments(int index) {
-    voizeVelanEmpathComments.removeAt(index);
-    prefs.setStringList('ff_voizeVelanEmpathComments',
+    prefs.setStringList('VoizeHarmonicSoul_voizeVelanEmpathComments',
         _voizeVelanEmpathComments.map((x) => x.serialize()).toList());
   }
 
@@ -462,14 +429,7 @@ class FFAppState extends ChangeNotifier {
   ) {
     voizeVelanEmpathComments[index] =
         updateFn(_voizeVelanEmpathComments[index]);
-    prefs.setStringList('ff_voizeVelanEmpathComments',
-        _voizeVelanEmpathComments.map((x) => x.serialize()).toList());
-  }
-
-  void insertAtIndexInVoizeVelanEmpathComments(
-      int index, VoizeSentienceEchoRealmCommentStruct value) {
-    voizeVelanEmpathComments.insert(index, value);
-    prefs.setStringList('ff_voizeVelanEmpathComments',
+    prefs.setStringList('VoizeHarmonicSoul_voizeVelanEmpathComments',
         _voizeVelanEmpathComments.map((x) => x.serialize()).toList());
   }
 
@@ -482,14 +442,14 @@ class FFAppState extends ChangeNotifier {
   set VoizeNyraResonanceSirenChats(
       List<VoizeEmpathicSignalPlaneChatStruct> value) {
     _VoizeNyraResonanceSirenChats = value;
-    prefs.setStringList('ff_VoizeNyraResonanceSirenChats',
+    prefs.setStringList('VoizeHarmonicSoul_VoizeNyraResonanceSirenChats',
         value.map((x) => x.serialize()).toList());
   }
 
   void addToVoizeNyraResonanceSirenChats(
       VoizeEmpathicSignalPlaneChatStruct value) {
     VoizeNyraResonanceSirenChats.add(value);
-    prefs.setStringList('ff_VoizeNyraResonanceSirenChats',
+    prefs.setStringList('VoizeHarmonicSoul_VoizeNyraResonanceSirenChats',
         _VoizeNyraResonanceSirenChats.map((x) => x.serialize()).toList());
   }
 
@@ -501,7 +461,7 @@ class FFAppState extends ChangeNotifier {
   ) {
     VoizeNyraResonanceSirenChats[index] =
         updateFn(_VoizeNyraResonanceSirenChats[index]);
-    prefs.setStringList('ff_VoizeNyraResonanceSirenChats',
+    prefs.setStringList('VoizeHarmonicSoul_VoizeNyraResonanceSirenChats',
         _VoizeNyraResonanceSirenChats.map((x) => x.serialize()).toList());
   }
 
@@ -514,14 +474,14 @@ class FFAppState extends ChangeNotifier {
   set voizeAerisHeartTunerMessages(
       List<VoizeLioraWhisperMuseMessageStruct> value) {
     _voizeAerisHeartTunerMessages = value;
-    prefs.setStringList('ff_voizeAerisHeartTunerMessages',
+    prefs.setStringList('VoizeHarmonicSoul_voizeAerisHeartTunerMessages',
         value.map((x) => x.serialize()).toList());
   }
 
   void addToVoizeAerisHeartTunerMessages(
       VoizeLioraWhisperMuseMessageStruct value) {
     voizeAerisHeartTunerMessages.add(value);
-    prefs.setStringList('ff_voizeAerisHeartTunerMessages',
+    prefs.setStringList('VoizeHarmonicSoul_voizeAerisHeartTunerMessages',
         _voizeAerisHeartTunerMessages.map((x) => x.serialize()).toList());
   }
 
@@ -533,7 +493,7 @@ class FFAppState extends ChangeNotifier {
   ) {
     voizeAerisHeartTunerMessages[index] =
         updateFn(_voizeAerisHeartTunerMessages[index]);
-    prefs.setStringList('ff_voizeAerisHeartTunerMessages',
+    prefs.setStringList('VoizeHarmonicSoul_voizeAerisHeartTunerMessages',
         _voizeAerisHeartTunerMessages.map((x) => x.serialize()).toList());
   }
 
@@ -561,27 +521,14 @@ class FFAppState extends ChangeNotifier {
   set voizeSoulReflectionOrbitComments(
       List<VoizeSentienceEchoRealmCommentStruct> value) {
     _voizeSoulReflectionOrbitComments = value;
-    prefs.setStringList('ff_voizeSoulReflectionOrbitComments',
+    prefs.setStringList('VoizeHarmonicSoul_voizeSoulReflectionOrbitComments',
         value.map((x) => x.serialize()).toList());
   }
 
   void addToVoizeSoulReflectionOrbitComments(
       VoizeSentienceEchoRealmCommentStruct value) {
     voizeSoulReflectionOrbitComments.add(value);
-    prefs.setStringList('ff_voizeSoulReflectionOrbitComments',
-        _voizeSoulReflectionOrbitComments.map((x) => x.serialize()).toList());
-  }
-
-  void removeFromVoizeSoulReflectionOrbitComments(
-      VoizeSentienceEchoRealmCommentStruct value) {
-    voizeSoulReflectionOrbitComments.remove(value);
-    prefs.setStringList('ff_voizeSoulReflectionOrbitComments',
-        _voizeSoulReflectionOrbitComments.map((x) => x.serialize()).toList());
-  }
-
-  void removeAtIndexFromVoizeSoulReflectionOrbitComments(int index) {
-    voizeSoulReflectionOrbitComments.removeAt(index);
-    prefs.setStringList('ff_voizeSoulReflectionOrbitComments',
+    prefs.setStringList('VoizeHarmonicSoul_voizeSoulReflectionOrbitComments',
         _voizeSoulReflectionOrbitComments.map((x) => x.serialize()).toList());
   }
 
@@ -593,7 +540,7 @@ class FFAppState extends ChangeNotifier {
   ) {
     voizeSoulReflectionOrbitComments[index] =
         updateFn(_voizeSoulReflectionOrbitComments[index]);
-    prefs.setStringList('ff_voizeSoulReflectionOrbitComments',
+    prefs.setStringList('VoizeHarmonicSoul_voizeSoulReflectionOrbitComments',
         _voizeSoulReflectionOrbitComments.map((x) => x.serialize()).toList());
   }
 
@@ -615,28 +562,8 @@ class FFAppState extends ChangeNotifier {
   set voizeAurellSoulDancerPurchases(
       List<VoizeNioraDreamListenerPurchaseStruct> value) {
     _voizeAurellSoulDancerPurchases = value;
-    prefs.setStringList('ff_voizeAurellSoulDancerPurchases',
+    prefs.setStringList('VoizeHarmonicSoul_voizeAurellSoulDancerPurchases',
         value.map((x) => x.serialize()).toList());
-  }
-
-  void addToVoizeAurellSoulDancerPurchases(
-      VoizeNioraDreamListenerPurchaseStruct value) {
-    voizeAurellSoulDancerPurchases.add(value);
-    prefs.setStringList('ff_voizeAurellSoulDancerPurchases',
-        _voizeAurellSoulDancerPurchases.map((x) => x.serialize()).toList());
-  }
-
-  void removeFromVoizeAurellSoulDancerPurchases(
-      VoizeNioraDreamListenerPurchaseStruct value) {
-    voizeAurellSoulDancerPurchases.remove(value);
-    prefs.setStringList('ff_voizeAurellSoulDancerPurchases',
-        _voizeAurellSoulDancerPurchases.map((x) => x.serialize()).toList());
-  }
-
-  void removeAtIndexFromVoizeAurellSoulDancerPurchases(int index) {
-    voizeAurellSoulDancerPurchases.removeAt(index);
-    prefs.setStringList('ff_voizeAurellSoulDancerPurchases',
-        _voizeAurellSoulDancerPurchases.map((x) => x.serialize()).toList());
   }
 
   void updateVoizeAurellSoulDancerPurchasesAtIndex(
@@ -647,7 +574,7 @@ class FFAppState extends ChangeNotifier {
   ) {
     voizeAurellSoulDancerPurchases[index] =
         updateFn(_voizeAurellSoulDancerPurchases[index]);
-    prefs.setStringList('ff_voizeAurellSoulDancerPurchases',
+    prefs.setStringList('VoizeHarmonicSoul_voizeAurellSoulDancerPurchases',
         _voizeAurellSoulDancerPurchases.map((x) => x.serialize()).toList());
   }
 }

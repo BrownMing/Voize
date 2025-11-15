@@ -47,7 +47,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             )
           : VoizeEmotionSpectrumStartPagesWidget(),
       routes: [
-        FFRoute(
+        VoizeWhisperLattice(
           name: '_initialize',
           path: '/',
           builder: (context, _) => appStateNotifier.showSplashImage
@@ -62,34 +62,34 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 )
               : VoizeEmotionSpectrumStartPagesWidget(),
         ),
-        FFRoute(
+        VoizeWhisperLattice(
           name: VoizeEmotionSpectrumStartPagesWidget.routeName,
           path: VoizeEmotionSpectrumStartPagesWidget.routePath,
           builder: (context, params) => VoizeEmotionSpectrumStartPagesWidget(),
         ),
-        FFRoute(
+        VoizeWhisperLattice(
           name: VoizeHarmonyDimensionLoginWidget.routeName,
           path: VoizeHarmonyDimensionLoginWidget.routePath,
           builder: (context, params) => VoizeHarmonyDimensionLoginWidget(),
         ),
-        FFRoute(
+        VoizeWhisperLattice(
           name: VoizeWhisperEclipticaPulseOdysseySignupWidget.routeName,
           path: VoizeWhisperEclipticaPulseOdysseySignupWidget.routePath,
           builder: (context, params) =>
               VoizeWhisperEclipticaPulseOdysseySignupWidget(),
         ),
-        FFRoute(
+        VoizeWhisperLattice(
           name: VoizeSoulConvergenceForgetPasswordWidget.routeName,
           path: VoizeSoulConvergenceForgetPasswordWidget.routePath,
           builder: (context, params) =>
               VoizeSoulConvergenceForgetPasswordWidget(),
         ),
-        FFRoute(
+        VoizeWhisperLattice(
           name: VoizeMuseOfAffectionHomePagesWidget.routeName,
           path: VoizeMuseOfAffectionHomePagesWidget.routePath,
           builder: (context, params) => VoizeMuseOfAffectionHomePagesWidget(),
         ),
-        FFRoute(
+        VoizeWhisperLattice(
           name: VoizeEveOfEchoesSeraphOfWhispersVideoDetailsWidget.routeName,
           path: VoizeEveOfEchoesSeraphOfWhispersVideoDetailsWidget.routePath,
           builder: (context, params) =>
@@ -104,7 +104,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        VoizeWhisperLattice(
           name: VoizeAerisDreamOracleDiaryDetailsWidget.routeName,
           path: VoizeAerisDreamOracleDiaryDetailsWidget.routePath,
           builder: (context, params) => VoizeAerisDreamOracleDiaryDetailsWidget(
@@ -118,31 +118,31 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        VoizeWhisperLattice(
           name: VoizeWhisperSyncProtocolPostDiarysWidget.routeName,
           path: VoizeWhisperSyncProtocolPostDiarysWidget.routePath,
           builder: (context, params) =>
               VoizeWhisperSyncProtocolPostDiarysWidget(),
         ),
-        FFRoute(
+        VoizeWhisperLattice(
           name: VoizeBondResonatorEnginePostDymaticWidget.routeName,
           path: VoizeBondResonatorEnginePostDymaticWidget.routePath,
           builder: (context, params) =>
               VoizeBondResonatorEnginePostDymaticWidget(),
         ),
-        FFRoute(
+        VoizeWhisperLattice(
           name: VoizeHeartWaveInterfacePostVideoWidget.routeName,
           path: VoizeHeartWaveInterfacePostVideoWidget.routePath,
           builder: (context, params) =>
               VoizeHeartWaveInterfacePostVideoWidget(),
         ),
-        FFRoute(
+        VoizeWhisperLattice(
           name: VoizeEchoTransmissionCoreCommunityWidget.routeName,
           path: VoizeEchoTransmissionCoreCommunityWidget.routePath,
           builder: (context, params) =>
               VoizeEchoTransmissionCoreCommunityWidget(),
         ),
-        FFRoute(
+        VoizeWhisperLattice(
           name: VoizeMemoryChamberVaultDymaticDetailsWidget.routeName,
           path: VoizeMemoryChamberVaultDymaticDetailsWidget.routePath,
           builder: (context, params) =>
@@ -157,7 +157,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        VoizeWhisperLattice(
           name: VoizeAffinityWeaveSystemOtherinfoWidget.routeName,
           path: VoizeAffinityWeaveSystemOtherinfoWidget.routePath,
           builder: (context, params) => VoizeAffinityWeaveSystemOtherinfoWidget(
@@ -167,19 +167,19 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        VoizeWhisperLattice(
           name: VoizeSentientSymphonyProjectReportWidget.routeName,
           path: VoizeSentientSymphonyProjectReportWidget.routePath,
           builder: (context, params) =>
               VoizeSentientSymphonyProjectReportWidget(),
         ),
-        FFRoute(
+        VoizeWhisperLattice(
           name: VoizeEtherealSoundChronicleChatsWidget.routeName,
           path: VoizeEtherealSoundChronicleChatsWidget.routePath,
           builder: (context, params) =>
               VoizeEtherealSoundChronicleChatsWidget(),
         ),
-        FFRoute(
+        VoizeWhisperLattice(
           name: VoizeHeartLinkRevelationMessagesWidget.routeName,
           path: VoizeHeartLinkRevelationMessagesWidget.routePath,
           builder: (context, params) => VoizeHeartLinkRevelationMessagesWidget(
@@ -193,7 +193,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        VoizeWhisperLattice(
           name: VoizeResonanceEternumArchiveChatvideoWidget.routeName,
           path: VoizeResonanceEternumArchiveChatvideoWidget.routePath,
           builder: (context, params) =>
@@ -204,44 +204,43 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        VoizeWhisperLattice(
           name: VoizeCognitionEmberCodeInfomationWidget.routeName,
           path: VoizeCognitionEmberCodeInfomationWidget.routePath,
           builder: (context, params) =>
               VoizeCognitionEmberCodeInfomationWidget(),
         ),
-        FFRoute(
+        VoizeWhisperLattice(
           name: VoizeAffectionContinuityPathEditFileWidget.routeName,
           path: VoizeAffectionContinuityPathEditFileWidget.routePath,
           builder: (context, params) =>
               VoizeAffectionContinuityPathEditFileWidget(),
         ),
-        FFRoute(
+        VoizeWhisperLattice(
           name: VoizeEchoDreamLegacyRechargeWidget.routeName,
           path: VoizeEchoDreamLegacyRechargeWidget.routePath,
           builder: (context, params) => VoizeEchoDreamLegacyRechargeWidget(),
         ),
-        FFRoute(
+        VoizeWhisperLattice(
           name: VoizeLoverResonanceMythosSettingsWidget.routeName,
           path: VoizeLoverResonanceMythosSettingsWidget.routePath,
           builder: (context, params) =>
               VoizeLoverResonanceMythosSettingsWidget(),
         ),
-        FFRoute(
+        VoizeWhisperLattice(
           name: VoizeAffinityContinuumFollowingsWidget.routeName,
           path: VoizeAffinityContinuumFollowingsWidget.routePath,
           builder: (context, params) => VoizeAffinityContinuumFollowingsWidget(
-            initialIndex:
-                params.getParam('initialIndex', ParamType.int) ?? 0,
+            initialIndex: params.getParam('initialIndex', ParamType.int) ?? 0,
           ),
         ),
-        FFRoute(
+        VoizeWhisperLattice(
           name: VoizeWhisperConvergenceBlockedlistWidget.routeName,
           path: VoizeWhisperConvergenceBlockedlistWidget.routePath,
           builder: (context, params) =>
               VoizeWhisperConvergenceBlockedlistWidget(),
         ),
-        FFRoute(
+        VoizeWhisperLattice(
           name: VoizeResonantDreamscapePrivacyWidget.routeName,
           path: VoizeResonantDreamscapePrivacyWidget.routePath,
           builder: (context, params) => VoizeResonantDreamscapePrivacyWidget(
@@ -265,8 +264,6 @@ extension NavParamExtensions on Map<String, String?> {
 
 extension NavigationExtensions on BuildContext {
   void safePop() {
-    // If there is only one route on the stack, navigate to the initial
-    // page instead of popping.
     if (canPop()) {
       pop();
     } else {
@@ -287,16 +284,14 @@ extension _GoRouterStateExtensions on GoRouterState {
       : TransitionInfo.appDefault();
 }
 
-class FFParameters {
-  FFParameters(this.state, [this.asyncParams = const {}]);
+class VoizeAuralSentienceField {
+  VoizeAuralSentienceField(this.state, [this.asyncParams = const {}]);
 
   final GoRouterState state;
   final Map<String, Future<dynamic> Function(String)> asyncParams;
 
   Map<String, dynamic> futureParamValues = {};
 
-  // Parameters are empty if the params map is empty or if the only parameter
-  // present is the special extra parameter reserved for the transition info.
   bool get isEmpty =>
       state.allParams.isEmpty ||
       (state.allParams.length == 1 &&
@@ -331,11 +326,10 @@ class FFParameters {
       return null;
     }
     final param = state.allParams[paramName];
-    // Got parameter from `extras`, so just directly return it.
+
     if (param is! String) {
       return param;
     }
-    // Return serialized value.
     return deserializeParam<T>(
       param,
       type,
@@ -345,8 +339,8 @@ class FFParameters {
   }
 }
 
-class FFRoute {
-  const FFRoute({
+class VoizeWhisperLattice {
+  const VoizeWhisperLattice({
     required this.name,
     required this.path,
     required this.builder,
@@ -359,7 +353,7 @@ class FFRoute {
   final String path;
   final bool requireAuth;
   final Map<String, Future<dynamic> Function(String)> asyncParams;
-  final Widget Function(BuildContext, FFParameters) builder;
+  final Widget Function(BuildContext, VoizeAuralSentienceField) builder;
   final List<GoRoute> routes;
 
   GoRoute toRoute(AppStateNotifier appStateNotifier) => GoRoute(
@@ -367,7 +361,7 @@ class FFRoute {
         path: path,
         pageBuilder: (context, state) {
           fixStatusBarOniOS16AndBelow(context);
-          final ffParams = FFParameters(state, asyncParams);
+          final ffParams = VoizeAuralSentienceField(state, asyncParams);
           final page = ffParams.hasFutures
               ? FutureBuilder(
                   future: ffParams.completeFutures(),

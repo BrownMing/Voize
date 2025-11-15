@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/voize_echo_continuum_voize_resonance_network/voize_dream_signal_voize_cognition_stream_eula/voize_dream_signal_voize_cognition_stream_eula_widget.dart';
 import 'dart:ui';
 import '/index.dart';
+import '/utils/piano_loading.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -66,15 +67,15 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
         curve: const Interval(0.55, 1.0, curve: Curves.easeOut),
       ),
     );
-    _firstButtonOffset = Tween<Offset>(begin: const Offset(0.0, 0.15), end: Offset.zero)
-        .animate(
+    _firstButtonOffset =
+        Tween<Offset>(begin: const Offset(0.0, 0.15), end: Offset.zero).animate(
       CurvedAnimation(
         parent: _introController,
         curve: const Interval(0.55, 0.9, curve: Curves.easeOut),
       ),
     );
-    _secondButtonOffset = Tween<Offset>(begin: const Offset(0.0, 0.2), end: Offset.zero)
-        .animate(
+    _secondButtonOffset =
+        Tween<Offset>(begin: const Offset(0.0, 0.2), end: Offset.zero).animate(
       CurvedAnimation(
         parent: _introController,
         curve: const Interval(0.65, 1.0, curve: Curves.easeOut),
@@ -140,21 +141,22 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                         opacity: _titleOpacity,
                         child: Text(
                           'Voize',
-                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                font: GoogleFonts.archivo(
-                                  fontWeight: FontWeight.w600,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .fontStyle,
-                                ),
-                                color: FlutterFlowTheme.of(context).info,
-                                fontSize: 36.0,
-                                letterSpacing: 0.0,
-                                fontWeight: FontWeight.w600,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .fontStyle,
-                              ),
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    font: GoogleFonts.archivo(
+                                      fontWeight: FontWeight.w600,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .fontStyle,
+                                    ),
+                                    color: FlutterFlowTheme.of(context).info,
+                                    fontSize: 36.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.w600,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .fontStyle,
+                                  ),
                         ),
                       ),
                     ),
@@ -165,21 +167,27 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                         opacity: _buttonsOpacity,
                         child: SlideTransition(
                           position: _firstButtonOffset,
-                          child: InkWell(
-                            splashColor: Colors.transparent,
-                            focusColor: Colors.transparent,
-                            hoverColor: Colors.transparent,
-                            highlightColor: Colors.transparent,
+                          child: GestureDetector(
                             onTap: () async {
-                              FFAppState().voizeRivenDreamVoiceLoginToken = 0;
+                              // 显示 loading
+                              PianoLoading.show(context, message: 'Loading...');
+
+                              // 模拟加载延迟（可选，根据实际需要调整）
+                              await Future.delayed(Duration(milliseconds: 500));
+
+                              FFAppState().voizeRivenDreamVoiceLoginToken = 1;
                               FFAppState().update(() {});
+
+                              // 关闭 loading
+                              PianoLoading.dismiss();
 
                               context.pushNamed(
                                 VoizeMuseOfAffectionHomePagesWidget.routeName,
                                 extra: <String, dynamic>{
                                   kTransitionInfoKey: TransitionInfo(
                                     hasTransition: true,
-                                    transitionType: PageTransitionType.bottomToTop,
+                                    transitionType:
+                                        PageTransitionType.bottomToTop,
                                   ),
                                 },
                               );
@@ -204,11 +212,13 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                                       .override(
                                         font: GoogleFonts.archivo(
                                           fontWeight: FontWeight.w600,
-                                          fontStyle: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .fontStyle,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
                                         ),
-                                        color: FlutterFlowTheme.of(context).info,
+                                        color:
+                                            FlutterFlowTheme.of(context).info,
                                         fontSize: 16.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
@@ -241,7 +251,8 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                                 extra: <String, dynamic>{
                                   kTransitionInfoKey: TransitionInfo(
                                     hasTransition: true,
-                                    transitionType: PageTransitionType.rightToLeft,
+                                    transitionType:
+                                        PageTransitionType.rightToLeft,
                                   ),
                                 },
                               );
@@ -278,14 +289,15 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
-                                            color:
-                                                FlutterFlowTheme.of(context).info,
+                                            color: FlutterFlowTheme.of(context)
+                                                .info,
                                             fontSize: 16.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
-                                            fontStyle: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .fontStyle,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
                                           ),
                                     ),
                                   ),
@@ -387,10 +399,8 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                                         begin: Alignment.topCenter,
                                         end: Alignment.bottomCenter,
                                         colors: [
-                                          Color(
-                                              0xFF8E00ED),
-                                          Color(
-                                              0xFFFC5EB2), 
+                                          Color(0xFF8E00ED),
+                                          Color(0xFFFC5EB2),
                                         ],
                                       )
                                     : null,

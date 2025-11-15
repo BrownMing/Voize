@@ -1,3 +1,5 @@
+import 'package:voize/components/voize_ethereal_sound_codex_following_widget.dart';
+
 import '/flutter_flow/flutter_flow_button_tabbar.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -117,7 +119,7 @@ class _VoizeAffinityContinuumFollowingsWidgetState
                           alignment: Alignment(0.0, 0),
                           child: FlutterFlowButtonTabBar(
                             useToggleButtonStyle: false,
-                              decoration: BoxDecoration(
+                            decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
                               gradient: const LinearGradient(
                                 begin: Alignment.topCenter,
@@ -128,7 +130,7 @@ class _VoizeAffinityContinuumFollowingsWidgetState
                                 ],
                               ),
                             ),
-                              backgroundColor: Color(0xFF8E00ED),
+                            backgroundColor: Color(0xFF8E00ED),
                             labelStyle: FlutterFlowTheme.of(context)
                                 .titleMedium
                                 .override(
@@ -161,7 +163,6 @@ class _VoizeAffinityContinuumFollowingsWidgetState
                                 ),
                             labelColor: FlutterFlowTheme.of(context).info,
                             unselectedLabelColor: Color(0xB3FFFFFF),
-                 
                             unselectedBackgroundColor: Color(0x25FFFFFF),
                             borderWidth: 0.0,
                             borderRadius: 100.0,
@@ -179,7 +180,6 @@ class _VoizeAffinityContinuumFollowingsWidgetState
                               ),
                             ],
                             controller: _model.tabBarController,
-                          
                             onTap: (i) async {
                               [() async {}, () async {}][i]();
                             },
@@ -268,6 +268,28 @@ class _VoizeAffinityContinuumFollowingsWidgetState
                                                     ),
                                               ),
                                             ),
+                                            Flexible(
+                                              child: wrapWithModel(
+                                                model: _model
+                                                    .voizeEtherealSoundCodexFollowingModels
+                                                    .getModel(
+                                                  voizeSarenEchoSeraphItem
+                                                      .toString(),
+                                                  voizeSarenEchoSeraphIndex,
+                                                ),
+                                                updateCallback: () =>
+                                                    safeSetState(() {}),
+                                                updateOnChange: true,
+                                                child:
+                                                    VoizeEtherealSoundCodexFollowingWidget(
+                                                  key: Key(
+                                                    'Keye29_${voizeSarenEchoSeraphItem.toString()}',
+                                                  ),
+                                                  voizeSentientHarmonySagaUserid:
+                                                      voizeSarenEchoSeraphItem,
+                                                ),
+                                              ),
+                                            )
                                           ],
                                         );
                                       },
@@ -354,6 +376,28 @@ class _VoizeAffinityContinuumFollowingsWidgetState
                                                     ),
                                               ),
                                             ),
+                                            Flexible(
+                                              child: wrapWithModel(
+                                                model: _model
+                                                    .voizeEtherealSoundCodexFollowingModels
+                                                    .getModel(
+                                                  voizeKaeliaHeartOracleItem
+                                                      .toString(),
+                                                  voizeKaeliaHeartOracleIndex,
+                                                ),
+                                                updateCallback: () =>
+                                                    safeSetState(() {}),
+                                                updateOnChange: true,
+                                                child:
+                                                    VoizeEtherealSoundCodexFollowingWidget(
+                                                  key: Key(
+                                                    'Keye29_${voizeKaeliaHeartOracleItem.toString()}',
+                                                  ),
+                                                  voizeSentientHarmonySagaUserid:
+                                                      voizeKaeliaHeartOracleItem,
+                                                ),
+                                              ),
+                                            )
                                           ],
                                         );
                                       },

@@ -712,7 +712,7 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                                                         (e) => e
                                                                           ..updateVoizeHeartWaveContinuityVideoLikeUsers(
                                                                             (e) =>
-                                                                                e.remove(FFAppState().voizeRivenDreamVoiceLoginToken),
+                                                                                e.add(FFAppState().voizeRivenDreamVoiceLoginToken),
                                                                           ),
                                                                       );
                                                                       FFAppState()

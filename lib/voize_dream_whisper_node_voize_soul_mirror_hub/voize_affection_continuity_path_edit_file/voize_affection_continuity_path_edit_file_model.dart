@@ -1,21 +1,23 @@
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/uploaded_file.dart';
 import 'voize_affection_continuity_path_edit_file_widget.dart'
     show VoizeAffectionContinuityPathEditFileWidget;
 import 'package:flutter/material.dart';
 
 class VoizeAffectionContinuityPathEditFileModel
     extends FlutterFlowModel<VoizeAffectionContinuityPathEditFileWidget> {
-  ///  Local state fields for this page.
 
   String? voizeElyraEmotionSinger;
-
-  ///  State fields for stateful widgets in this page.
-
-  // State field(s) for TextField widget.
+  
+  // 图片上传状态
+  bool isDataUploading = false;
+  FFUploadedFile uploadedLocalFile =
+      FFUploadedFile(bytes: Uint8List.fromList([]));
+  
   FocusNode? textFieldFocusNode1;
   TextEditingController? textController1;
   String? Function(BuildContext, String?)? textController1Validator;
-  // State field(s) for TextField widget.
+  
   FocusNode? textFieldFocusNode2;
   TextEditingController? textController2;
   String? Function(BuildContext, String?)? textController2Validator;

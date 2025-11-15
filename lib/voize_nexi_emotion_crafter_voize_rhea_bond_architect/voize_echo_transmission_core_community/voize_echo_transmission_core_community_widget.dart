@@ -241,22 +241,60 @@ class _VoizeEchoTransmissionCoreCommunityWidgetState
                                                   mainAxisSize:
                                                       MainAxisSize.max,
                                                   children: [
-                                                    Container(
-                                                      width: 60.0,
-                                                      height: 60.0,
-                                                      clipBehavior:
-                                                          Clip.antiAlias,
-                                                      decoration: BoxDecoration(
-                                                        shape: BoxShape.circle,
-                                                      ),
-                                                      child: Image.asset(
-                                                        FFAppState()
-                                                            .voizeNaiyaEchoCompanionUsers
-                                                            .elementAtOrNull(
-                                                                voizeDreamPulseArchiveItem
-                                                                    .voizeCognitiveHarmonyUserId)!
-                                                            .voizeCognitiveHarmonyUserPhoto,
-                                                        fit: BoxFit.cover,
+                                                    GestureDetector(
+                                                      onTap: () async {
+                                                        if (voizeDreamPulseArchiveItem
+                                                                .voizeCognitiveHarmonyUserId !=
+                                                            FFAppState()
+                                                                .voizeRivenDreamVoiceLoginToken) {
+                                                          context.pushNamed(
+                                                            VoizeAffinityWeaveSystemOtherinfoWidget
+                                                                .routeName,
+                                                            extra: <String,
+                                                                dynamic>{
+                                                              kTransitionInfoKey:
+                                                                  TransitionInfo(
+                                                                hasTransition:
+                                                                    true,
+                                                                transitionType:
+                                                                    PageTransitionType
+                                                                        .rightToLeft,
+                                                              ),
+                                                            },
+                                                            queryParameters: {
+                                                              'voizeLoverResonanceVerseUserid':
+                                                                  serializeParam(
+                                                                FFAppState()
+                                                                    .voizeNaiyaEchoCompanionUsers
+                                                                    .elementAtOrNull(
+                                                                        voizeDreamPulseArchiveItem
+                                                                            .voizeCognitiveHarmonyUserId)!
+                                                                    .voizeCognitiveHarmonyUserId,
+                                                                ParamType.int,
+                                                              ),
+                                                            }.withoutNulls,
+                                                          );
+                                                        }
+                                                      },
+                                                      child: Container(
+                                                        width: 60.0,
+                                                        height: 60.0,
+                                                        clipBehavior:
+                                                            Clip.antiAlias,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          shape:
+                                                              BoxShape.circle,
+                                                        ),
+                                                        child: Image.asset(
+                                                          FFAppState()
+                                                              .voizeNaiyaEchoCompanionUsers
+                                                              .elementAtOrNull(
+                                                                  voizeDreamPulseArchiveItem
+                                                                      .voizeCognitiveHarmonyUserId)!
+                                                              .voizeCognitiveHarmonyUserPhoto,
+                                                          fit: BoxFit.cover,
+                                                        ),
                                                       ),
                                                     ),
                                                     Text(

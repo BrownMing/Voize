@@ -6,12 +6,28 @@ import 'package:flutter/material.dart';
 
 class VoizeHeartLinkRevelationMessagesModel
     extends FlutterFlowModel<VoizeHeartLinkRevelationMessagesWidget> {
-  ///  State fields for stateful widgets in this page.
-
-  // State field(s) for TextField widget.
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;
   String? Function(BuildContext, String?)? textControllerValidator;
+
+  // 当前正在播放的语音消息索引
+  int? playingAudioIndex;
+
+  // 切换播放状态
+  void toggleAudioPlaying(int index) {
+    if (playingAudioIndex == index) {
+      // 如果点击的是正在播放的，则停止播放
+      playingAudioIndex = null;
+    } else {
+      // 否则播放新的
+      playingAudioIndex = index;
+    }
+  }
+
+  // 检查是否正在播放
+  bool isAudioPlaying(int index) {
+    return playingAudioIndex == index;
+  }
 
   @override
   void initState(BuildContext context) {}

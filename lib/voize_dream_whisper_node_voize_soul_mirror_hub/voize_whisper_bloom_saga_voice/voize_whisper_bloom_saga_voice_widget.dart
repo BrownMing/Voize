@@ -21,7 +21,8 @@ class VoizeWhisperBloomSagaVoiceWidget extends StatefulWidget {
 }
 
 class _VoizeWhisperBloomSagaVoiceWidgetState
-    extends State<VoizeWhisperBloomSagaVoiceWidget> {
+    extends State<VoizeWhisperBloomSagaVoiceWidget>
+    with SingleTickerProviderStateMixin {
   late VoizeWhisperBloomSagaVoiceModel _model;
 
   @override
@@ -34,10 +35,23 @@ class _VoizeWhisperBloomSagaVoiceWidgetState
   void initState() {
     super.initState();
     _model = createModel(context, () => VoizeWhisperBloomSagaVoiceModel());
+
+    _model.pulseAnimationController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1000),
+    )..repeat(reverse: true);
+
+    _model.pulseAnimation = Tween<double>(begin: 1.0, end: 1.3).animate(
+      CurvedAnimation(
+        parent: _model.pulseAnimationController!,
+        curve: Curves.easeInOut,
+      ),
+    );
   }
 
   @override
   void dispose() {
+    _model.pulseAnimationController?.dispose();
     _model.maybeDispose();
 
     super.dispose();
@@ -86,18 +100,24 @@ class _VoizeWhisperBloomSagaVoiceWidgetState
             children: [
               Align(
                 alignment: AlignmentDirectional(0.0, 0.0),
-                child: InkWell(
-                  splashColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  hoverColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  onLongPress: () async {
+                child: GestureDetector(
+                  onLongPressStart: (details) async {
+                    // 开始录音
                     if (await getPermissionStatus(microphonePermission)) {
                       await startAudioRecording(
                         context,
                         audioRecorder: _model.audioRecorder ??= AudioRecorder(),
                       );
-
+                      setState(() {
+                        _model.isRecording = true;
+                      });
+                    } else {
+                      await requestPermission(microphonePermission);
+                    }
+                  },
+                  onLongPressEnd: (details) async {
+                    // 停止录音
+                    if (_model.isRecording) {
                       await stopAudioRecording(
                         audioRecorder: _model.audioRecorder,
                         audioName: 'recordedFileBytes',
@@ -120,43 +140,53 @@ class _VoizeWhisperBloomSagaVoiceWidgetState
                       ));
                       FFAppState().update(() {});
                       Navigator.pop(context);
-                    } else {
-                      await requestPermission(microphonePermission);
-                    }
 
-                    safeSetState(() {});
+                      setState(() {
+                        _model.isRecording = false;
+                      });
+                    }
                   },
-                  child: Container(
-                    width: 65.0,
-                    height: 65.0,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        fit: BoxFit.cover,
-                        image: Image.asset(
-                          'assets/images/dgfuhdhfugihdfo_bcvuygdfuygsdhfiod.png',
-                        ).image,
-                      ),
-                      shape: BoxShape.circle,
-                    ),
-                    child: Stack(
-                      children: [
-                        Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
-                          child: Container(
-                            width: 36.0,
-                            height: 36.0,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image: Image.asset(
-                                  'assets/images/iregfyudgfvyusidgfyus_sdigfyushgdufhgosuid.png',
-                                ).image,
-                              ),
+                  child: AnimatedBuilder(
+                    animation: _model.pulseAnimation!,
+                    builder: (context, child) {
+                      return Transform.scale(
+                        scale: _model.isRecording
+                            ? _model.pulseAnimation!.value
+                            : 1.0,
+                        child: Container(
+                          width: 65.0,
+                          height: 65.0,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: Image.asset(
+                                'assets/images/dgfuhdhfugihdfo_bcvuygdfuygsdhfiod.png',
+                              ).image,
                             ),
+                            shape: BoxShape.circle,
+                          ),
+                          child: Stack(
+                            children: [
+                              Align(
+                                alignment: AlignmentDirectional(0.0, 0.0),
+                                child: Container(
+                                  width: 36.0,
+                                  height: 36.0,
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      fit: BoxFit.cover,
+                                      image: Image.asset(
+                                        'assets/images/iregfyudgfvyusidgfyus_sdigfyushgdufhgosuid.png',
+                                      ).image,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
-                      ],
-                    ),
+                      );
+                    },
                   ),
                 ),
               ),

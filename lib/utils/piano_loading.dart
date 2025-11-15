@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-/// 钢琴主题的全局 Loading 和 Toast 服务
-/// 使用方法:
-/// - PianoLoading.show(context, message: '加载中...');
-/// - PianoLoading.dismiss();
-/// - PianoLoading.showSuccess(context, message: '成功!');
-/// - PianoLoading.showError(context, message: '失败!');
-/// - PianoLoading.showInfo(context, message: '提示信息');
 class PianoLoading {
   static OverlayEntry? _overlayEntry;
   static Timer? _timer;

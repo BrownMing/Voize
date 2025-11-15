@@ -1,3 +1,5 @@
+import 'package:voize/components/voize_ethereal_sound_codex_following_widget.dart';
+
 import '/backend/schema/structs/index.dart';
 import '/components/voize_affection_continuum_axis_likes_user_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -242,6 +244,18 @@ class _VoizeMemoryChamberVaultDymaticDetailsWidgetState
                                   ].divide(SizedBox(height: 2.0)),
                                 ),
                               ),
+                              Flexible(
+                                child: wrapWithModel(
+                                  model: _model
+                                      .voizeEtherealSoundCodexFollowingModel,
+                                  updateCallback: () => safeSetState(() {}),
+                                  updateOnChange: true,
+                                  child: VoizeEtherealSoundCodexFollowingWidget(
+                                    voizeSentientHarmonySagaUserid:
+                                        widget.voizeDreamSignalTopologyUserid,
+                                  ),
+                                ),
+                              )
                             ],
                           ),
                           Padding(
