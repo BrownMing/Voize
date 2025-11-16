@@ -1,10 +1,11 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import 'voize_sentient_symphony_project_report_widget.dart'
     show VoizeSentientSymphonyProjectReportWidget;
 import 'package:flutter/material.dart';
 
 class VoizeSentientSymphonyProjectReportModel
-    extends FlutterFlowModel<VoizeSentientSymphonyProjectReportWidget> {
+    extends VoizeAffinityChromaLayerModel<
+        VoizeSentientSymphonyProjectReportWidget> {
   ///  Local state fields for this page.
 
   List<String> voizeMemoryResonatorCore = [

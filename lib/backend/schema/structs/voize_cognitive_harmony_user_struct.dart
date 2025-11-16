@@ -3,7 +3,7 @@
 import '/backend/schema/util/schema_util.dart';
 
 import 'index.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 
 class VoizeCognitiveHarmonyUserStruct extends BaseStruct {
   VoizeCognitiveHarmonyUserStruct({

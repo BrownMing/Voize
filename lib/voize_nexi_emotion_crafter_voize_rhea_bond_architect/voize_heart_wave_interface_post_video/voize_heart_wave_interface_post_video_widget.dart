@@ -1,9 +1,9 @@
 import 'package:voize/utils/piano_loading.dart';
+import 'package:voize/voizeEthereal_signalVerse/voizeEthereal_signalVerse_video.dart';
 
 import '/backend/schema/structs/index.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_video_player.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_theme.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -47,7 +47,7 @@ class _VoizeHeartWaveInterfacePostVideoWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<VoizeLunairaEchoMuse>();
 
     return GestureDetector(
       onTap: () {
@@ -129,61 +129,67 @@ class _VoizeHeartWaveInterfacePostVideoWidgetState
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           isDense: true,
-                                          labelStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .labelMedium
-                                              .override(
-                                                font: GoogleFonts.archivo(
-                                                  fontWeight:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontStyle,
-                                                ),
-                                                letterSpacing: 0.0,
-                                                fontWeight:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontStyle,
-                                              ),
+                                          labelStyle:
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    font: GoogleFonts.archivo(
+                                                      fontWeight:
+                                                          VoizeAffinityChromaLayerTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          VoizeAffinityChromaLayerTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontStyle,
+                                                    ),
+                                                    letterSpacing: 0.0,
+                                                    fontWeight:
+                                                        VoizeAffinityChromaLayerTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        VoizeAffinityChromaLayerTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontStyle,
+                                                  ),
                                           hintText:
                                               'Write something to share with everyone...',
-                                          hintStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .labelMedium
-                                              .override(
-                                                font: GoogleFonts.archivo(
-                                                  fontWeight:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontStyle,
-                                                ),
-                                                color: Color(0x80FFFFFF),
-                                                letterSpacing: 0.0,
-                                                fontWeight:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontStyle,
-                                              ),
+                                          hintStyle:
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    font: GoogleFonts.archivo(
+                                                      fontWeight:
+                                                          VoizeAffinityChromaLayerTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          VoizeAffinityChromaLayerTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontStyle,
+                                                    ),
+                                                    color: Color(0x80FFFFFF),
+                                                    letterSpacing: 0.0,
+                                                    fontWeight:
+                                                        VoizeAffinityChromaLayerTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        VoizeAffinityChromaLayerTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontStyle,
+                                                  ),
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
                                               color: Color(0x00000000),
@@ -230,35 +236,43 @@ class _VoizeHeartWaveInterfacePostVideoWidgetState
                                             ),
                                           ),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
+                                        style: VoizeAffinityChromaLayerTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.archivo(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    VoizeAffinityChromaLayerTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    VoizeAffinityChromaLayerTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  VoizeAffinityChromaLayerTheme
+                                                          .of(context)
                                                       .info,
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  VoizeAffinityChromaLayerTheme
+                                                          .of(context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  VoizeAffinityChromaLayerTheme
+                                                          .of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
                                         maxLines: 10,
                                         cursorColor:
-                                            FlutterFlowTheme.of(context).info,
+                                            VoizeAffinityChromaLayerTheme.of(
+                                                    context)
+                                                .info,
                                         enableInteractiveSelection: true,
                                         validator: _model
                                             .textControllerValidator
@@ -286,7 +300,7 @@ class _VoizeHeartWaveInterfacePostVideoWidgetState
                                           null &&
                                       _model.voizeEmotiveFrequencyFieldUrl !=
                                           '')
-                                    RebelTorqueBrotherhoodDen(
+                                    VoizeMyrineDreamEmpress(
                                       path:
                                           _model.voizeEmotiveFrequencyFieldUrl!,
                                       autoPlay: false,
@@ -351,20 +365,20 @@ class _VoizeHeartWaveInterfacePostVideoWidgetState
                                                       leading: Icon(
                                                         Icons.photo_library,
                                                         color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
+                                                            VoizeAffinityChromaLayerTheme
+                                                                    .of(context)
                                                                 .info,
                                                       ),
                                                       title: Text(
                                                         'Select from the album',
                                                         style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
+                                                            VoizeAffinityChromaLayerTheme
+                                                                    .of(context)
                                                                 .bodyLarge
                                                                 .override(
                                                                   font: GoogleFonts
                                                                       .archivo(),
-                                                                  color: FlutterFlowTheme.of(
+                                                                  color: VoizeAffinityChromaLayerTheme.of(
                                                                           context)
                                                                       .info,
                                                                   letterSpacing:
@@ -381,20 +395,20 @@ class _VoizeHeartWaveInterfacePostVideoWidgetState
                                                       leading: Icon(
                                                         Icons.videocam,
                                                         color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
+                                                            VoizeAffinityChromaLayerTheme
+                                                                    .of(context)
                                                                 .info,
                                                       ),
                                                       title: Text(
                                                         'Shoot with a camera',
                                                         style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
+                                                            VoizeAffinityChromaLayerTheme
+                                                                    .of(context)
                                                                 .bodyLarge
                                                                 .override(
                                                                   font: GoogleFonts
                                                                       .archivo(),
-                                                                  color: FlutterFlowTheme.of(
+                                                                  color: VoizeAffinityChromaLayerTheme.of(
                                                                           context)
                                                                       .info,
                                                                   letterSpacing:
@@ -464,17 +478,17 @@ class _VoizeHeartWaveInterfacePostVideoWidgetState
                                             null &&
                                         _model.voizeEmotiveFrequencyFieldUrl !=
                                             '') {
-                                      FFAppState()
+                                      VoizeLunairaEchoMuse()
                                           .addToVoizeSerenEmotionSpiritVideos(
                                               VoizeHeartWaveContinuityVideoStruct(
                                         voizeHeartWaveContinuityVideoId:
-                                            FFAppState()
+                                            VoizeLunairaEchoMuse()
                                                 .voizeSerenEmotionSpiritVideos
                                                 .length,
                                         voizeHeartWaveContinuityVideoUrl: _model
                                             .voizeEmotiveFrequencyFieldUrl,
                                         voizeHeartWaveContinuityVideoCreateId:
-                                            FFAppState()
+                                            VoizeLunairaEchoMuse()
                                                 .voizeRivenDreamVoiceLoginToken,
                                         voizeHeartWaveContinuityVideoDescribe:
                                             _model.textController.text,
@@ -484,7 +498,7 @@ class _VoizeHeartWaveInterfacePostVideoWidgetState
                                         voizeHeartWaveContinuityVideoComments:
                                             0,
                                       ));
-                                      FFAppState().update(() {});
+                                      VoizeLunairaEchoMuse().update(() {});
                                       context.safePop();
                                       PianoLoading.showSuccess(
                                         context,
@@ -519,23 +533,27 @@ class _VoizeHeartWaveInterfacePostVideoWidgetState
                                     alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       'Post',
-                                      style: FlutterFlowTheme.of(context)
+                                      style: VoizeAffinityChromaLayerTheme.of(
+                                              context)
                                           .bodyMedium
                                           .override(
                                             font: GoogleFonts.archivo(
                                               fontWeight: FontWeight.w600,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  VoizeAffinityChromaLayerTheme
+                                                          .of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
-                                            color: FlutterFlowTheme.of(context)
+                                            color: VoizeAffinityChromaLayerTheme
+                                                    .of(context)
                                                 .info,
                                             fontSize: 16.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),

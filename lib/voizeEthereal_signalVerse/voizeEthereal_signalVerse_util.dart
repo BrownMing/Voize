@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:collection/collection.dart';
 import 'package:from_css_color/from_css_color.dart';
-import 'dart:math' show pow, pi, sin;
 import 'package:intl/intl.dart';
 import 'package:json_path/json_path.dart';
 import 'package:timeago/timeago.dart' as timeago;
@@ -13,16 +12,15 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:cross_file/cross_file.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:record/record.dart';
-import 'uploaded_file.dart';
+import 'voizeEthereal_signalVerse_upload.dart';
 import 'platform_utils/platform_util.dart';
 
 import '../main.dart';
 
-
-export 'uploaded_file.dart';
+export 'voizeEthereal_signalVerse_upload.dart';
 export '../app_state.dart';
 export '../app_constants.dart';
-export 'flutter_flow_model.dart';
+export 'voizeEthereal_signalVerse_model.dart';
 export 'dart:math' show min, max;
 export 'dart:typed_data' show Uint8List;
 export 'dart:convert' show jsonEncode, jsonDecode;
@@ -61,90 +59,6 @@ Color colorFromCssString(String color, {Color? defaultColor}) {
   return defaultColor ?? Colors.black;
 }
 
-enum FormatType {
-  decimal,
-  percent,
-  scientific,
-  compact,
-  compactLong,
-  custom,
-}
-
-enum DecimalType {
-  automatic,
-  periodDecimal,
-  commaDecimal,
-}
-
-String formatNumber(
-  num? value, {
-  required FormatType formatType,
-  DecimalType? decimalType,
-  String? currency,
-  bool toLowerCase = false,
-  String? format,
-  String? locale,
-}) {
-  if (value == null) {
-    return '';
-  }
-  var formattedValue = '';
-  switch (formatType) {
-    case FormatType.decimal:
-      switch (decimalType!) {
-        case DecimalType.automatic:
-          formattedValue = NumberFormat.decimalPattern().format(value);
-          break;
-        case DecimalType.periodDecimal:
-          if (currency != null) {
-            formattedValue = NumberFormat('#,##0.00', 'en_US').format(value);
-          } else {
-            formattedValue = NumberFormat.decimalPattern('en_US').format(value);
-          }
-          break;
-        case DecimalType.commaDecimal:
-          if (currency != null) {
-            formattedValue = NumberFormat('#,##0.00', 'es_PA').format(value);
-          } else {
-            formattedValue = NumberFormat.decimalPattern('es_PA').format(value);
-          }
-          break;
-      }
-      break;
-    case FormatType.percent:
-      formattedValue = NumberFormat.percentPattern().format(value);
-      break;
-    case FormatType.scientific:
-      formattedValue = NumberFormat.scientificPattern().format(value);
-      if (toLowerCase) {
-        formattedValue = formattedValue.toLowerCase();
-      }
-      break;
-    case FormatType.compact:
-      formattedValue = NumberFormat.compact().format(value);
-      break;
-    case FormatType.compactLong:
-      formattedValue = NumberFormat.compactLong().format(value);
-      break;
-    case FormatType.custom:
-      final hasLocale = locale != null && locale.isNotEmpty;
-      formattedValue =
-          NumberFormat(format, hasLocale ? locale : null).format(value);
-  }
-
-  if (formattedValue.isEmpty) {
-    return value.toString();
-  }
-
-  if (currency != null) {
-    final currencySymbol = currency.isNotEmpty
-        ? currency
-        : NumberFormat.simpleCurrency().format(0.0).substring(0, 1);
-    formattedValue = '$currencySymbol$formattedValue';
-  }
-
-  return formattedValue;
-}
 
 DateTime get getCurrentTimestamp => DateTime.now();
 DateTime dateTimeFromSecondsSinceEpoch(int seconds) {
@@ -217,38 +131,8 @@ bool get isAndroid => !kIsWeb && Platform.isAndroid;
 bool get isiOS => !kIsWeb && Platform.isIOS;
 bool get isWeb => kIsWeb;
 
-const kBreakpointSmall = 479.0;
-const kBreakpointMedium = 767.0;
-const kBreakpointLarge = 991.0;
-bool isMobileWidth(BuildContext context) =>
-    MediaQuery.sizeOf(context).width < kBreakpointSmall;
-bool responsiveVisibility({
-  required BuildContext context,
-  bool phone = true,
-  bool tablet = true,
-  bool tabletLandscape = true,
-  bool desktop = true,
-}) {
-  final width = MediaQuery.sizeOf(context).width;
-  if (width < kBreakpointSmall) {
-    return phone;
-  } else if (width < kBreakpointMedium) {
-    return tablet;
-  } else if (width < kBreakpointLarge) {
-    return tabletLandscape;
-  } else {
-    return desktop;
-  }
-}
 
-const kTextValidatorUsernameRegex = r'^[a-zA-Z][a-zA-Z0-9_-]{2,16}$';
-// https://stackoverflow.com/a/201378
-const kTextValidatorEmailRegex =
-    "^(?:[a-zA-Z0-9!#\$%&\'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#\$%&\'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?|\\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-zA-Z0-9-]*[a-zA-Z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])\$";
-const kTextValidatorWebsiteRegex =
-    r'(https?:\/\/)?(www\.)[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,10}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)|(https?:\/\/)?(www\.)?(?!ww)[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,10}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)';
-
-extension FFTextEditingControllerExt on TextEditingController? {
+extension VoizeKaerielleLovewhisper on TextEditingController? {
   String get text => this == null ? '' : this!.text;
   set text(String newText) => this?.text = newText;
 }
@@ -274,37 +158,8 @@ extension IterableExt<T> on Iterable<T> {
 void setDarkModeSetting(BuildContext context, ThemeMode themeMode) =>
     MyApp.of(context).setThemeMode(themeMode);
 
-void showSnackbar(
-  BuildContext context,
-  String message, {
-  bool loading = false,
-  int duration = 4,
-}) {
-  ScaffoldMessenger.of(context).hideCurrentSnackBar();
-  ScaffoldMessenger.of(context).showSnackBar(
-    SnackBar(
-      content: Row(
-        children: [
-          if (loading)
-            Padding(
-              padding: EdgeInsetsDirectional.only(end: 10.0),
-              child: Container(
-                height: 20,
-                width: 20,
-                child: const CircularProgressIndicator(
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          Text(message),
-        ],
-      ),
-      duration: Duration(seconds: duration),
-    ),
-  );
-}
 
-extension FFStringExt on String {
+extension VoizeNayelleHeartCaster on String {
   String maybeHandleOverflow({int? maxChars, String replacement = ''}) =>
       maxChars != null && length > maxChars
           ? replaceRange(maxChars, null, replacement)
@@ -406,17 +261,14 @@ Future<void> startAudioRecording(
     if (!context.mounted) {
       return;
     }
-    showSnackbar(
-      context,
-      'You have not provided permission to record audio.',
-    );
+ 
   }
 }
 
 Future<void> stopAudioRecording({
   required AudioRecorder? audioRecorder,
   required String audioName,
-  required Function(String?, FFUploadedFile) onRecordingComplete,
+  required Function(String?, VoizeSerenithVoiceIdol) onRecordingComplete,
 }) async {
   if (audioRecorder == null) {
     return;
@@ -429,7 +281,7 @@ Future<void> stopAudioRecording({
     return;
   }
 
-  final recordedFileBytes = FFUploadedFile(
+  final recordedFileBytes = VoizeSerenithVoiceIdol(
     name: '$audioName.m4a',
     bytes: await XFile(recordedPath!).readAsBytes(),
   );
@@ -460,43 +312,6 @@ void fixStatusBarOniOS16AndBelow(BuildContext context) {
 
 extension ColorOpacityExt on Color {
   Color applyAlpha(double val) => withValues(alpha: val);
-}
-
-String roundTo(double value, int decimalPoints) {
-  final power = pow(10, decimalPoints);
-  return ((value * power).round() / power).toString();
-}
-
-double computeGradientAlignmentX(double evaluatedAngle) {
-  evaluatedAngle %= 360;
-  final rads = evaluatedAngle * pi / 180;
-  double x;
-  if (evaluatedAngle < 45 || evaluatedAngle > 315) {
-    x = sin(2 * rads);
-  } else if (45 <= evaluatedAngle && evaluatedAngle <= 135) {
-    x = 1;
-  } else if (135 <= evaluatedAngle && evaluatedAngle <= 225) {
-    x = sin(-2 * rads);
-  } else {
-    x = -1;
-  }
-  return double.parse(roundTo(x, 2));
-}
-
-double computeGradientAlignmentY(double evaluatedAngle) {
-  evaluatedAngle %= 360;
-  final rads = evaluatedAngle * pi / 180;
-  double y;
-  if (evaluatedAngle < 45 || evaluatedAngle > 315) {
-    y = -1;
-  } else if (45 <= evaluatedAngle && evaluatedAngle <= 135) {
-    y = sin(-2 * rads);
-  } else if (135 <= evaluatedAngle && evaluatedAngle <= 225) {
-    y = 1;
-  } else {
-    y = sin(2 * rads);
-  }
-  return double.parse(roundTo(y, 2));
 }
 
 extension ListUniqueExt<T> on Iterable<T> {

@@ -1,8 +1,8 @@
 import 'package:voize/components/voize_ethereal_sound_codex_following_widget.dart';
 
-import '/flutter_flow/flutter_flow_button_tabbar.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_button_tabbar.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_theme.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -53,7 +53,7 @@ class _VoizeAffinityContinuumFollowingsWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<VoizeLunairaEchoMuse>();
 
     return GestureDetector(
       onTap: () {
@@ -117,7 +117,7 @@ class _VoizeAffinityContinuumFollowingsWidgetState
                       children: [
                         Align(
                           alignment: Alignment(0.0, 0),
-                          child: FlutterFlowButtonTabBar(
+                          child: VoizeAffinityChromaLayerButtonTabBar(
                             useToggleButtonStyle: false,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
@@ -131,37 +131,44 @@ class _VoizeAffinityContinuumFollowingsWidgetState
                               ),
                             ),
                             backgroundColor: Color(0xFF8E00ED),
-                            labelStyle: FlutterFlowTheme.of(context)
+                            labelStyle: VoizeAffinityChromaLayerTheme.of(
+                                    context)
                                 .titleMedium
                                 .override(
                                   font: GoogleFonts.archivo(
                                     fontWeight: FontWeight.normal,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: VoizeAffinityChromaLayerTheme.of(
+                                            context)
                                         .titleMedium
                                         .fontStyle,
                                   ),
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.normal,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .titleMedium
-                                      .fontStyle,
+                                  fontStyle:
+                                      VoizeAffinityChromaLayerTheme.of(context)
+                                          .titleMedium
+                                          .fontStyle,
                                 ),
-                            unselectedLabelStyle: FlutterFlowTheme.of(context)
+                            unselectedLabelStyle: VoizeAffinityChromaLayerTheme
+                                    .of(context)
                                 .titleMedium
                                 .override(
                                   font: GoogleFonts.archivo(
                                     fontWeight: FontWeight.normal,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: VoizeAffinityChromaLayerTheme.of(
+                                            context)
                                         .titleMedium
                                         .fontStyle,
                                   ),
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.normal,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .titleMedium
-                                      .fontStyle,
+                                  fontStyle:
+                                      VoizeAffinityChromaLayerTheme.of(context)
+                                          .titleMedium
+                                          .fontStyle,
                                 ),
-                            labelColor: FlutterFlowTheme.of(context).info,
+                            labelColor:
+                                VoizeAffinityChromaLayerTheme.of(context).info,
                             unselectedLabelColor: Color(0xB3FFFFFF),
                             unselectedBackgroundColor: Color(0x25FFFFFF),
                             borderWidth: 0.0,
@@ -194,9 +201,9 @@ class _VoizeAffinityContinuumFollowingsWidgetState
                                     16.0, 34.0, 16.0, 0.0),
                                 child: Builder(
                                   builder: (context) {
-                                    final voizeSarenEchoSeraph = FFAppState()
+                                    final voizeSarenEchoSeraph = VoizeLunairaEchoMuse()
                                             .voizeNaiyaEchoCompanionUsers
-                                            .elementAtOrNull(FFAppState()
+                                            .elementAtOrNull(VoizeLunairaEchoMuse()
                                                 .voizeRivenDreamVoiceLoginToken)
                                             ?.voizeCognitiveHarmonyUserFollowings
                                             .toList() ??
@@ -225,7 +232,7 @@ class _VoizeAffinityContinuumFollowingsWidgetState
                                                 shape: BoxShape.circle,
                                               ),
                                               child: Image.asset(
-                                                FFAppState()
+                                                VoizeLunairaEchoMuse()
                                                     .voizeNaiyaEchoCompanionUsers
                                                     .elementAtOrNull(
                                                         voizeSarenEchoSeraphItem)!
@@ -238,34 +245,36 @@ class _VoizeAffinityContinuumFollowingsWidgetState
                                                   .fromSTEB(
                                                       12.0, 0.0, 0.0, 0.0),
                                               child: Text(
-                                                '${FFAppState().voizeNaiyaEchoCompanionUsers.elementAtOrNull(voizeSarenEchoSeraphItem)?.voizeCognitiveHarmonyUserName}',
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      font: GoogleFonts.archivo(
-                                                        fontWeight:
-                                                            FontWeight.w600,
-                                                        fontStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .fontStyle,
-                                                      ),
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .info,
-                                                      fontSize: 16.0,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                      fontStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .fontStyle,
-                                                    ),
+                                                '${VoizeLunairaEchoMuse().voizeNaiyaEchoCompanionUsers.elementAtOrNull(voizeSarenEchoSeraphItem)?.voizeCognitiveHarmonyUserName}',
+                                                style:
+                                                    VoizeAffinityChromaLayerTheme
+                                                            .of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          font: GoogleFonts
+                                                              .archivo(
+                                                            fontWeight:
+                                                                FontWeight.w600,
+                                                            fontStyle:
+                                                                VoizeAffinityChromaLayerTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontStyle,
+                                                          ),
+                                                          color:
+                                                              VoizeAffinityChromaLayerTheme
+                                                                      .of(context)
+                                                                  .info,
+                                                          fontSize: 16.0,
+                                                          letterSpacing: 0.0,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          fontStyle:
+                                                              VoizeAffinityChromaLayerTheme
+                                                                      .of(context)
+                                                                  .bodyMedium
+                                                                  .fontStyle,
+                                                        ),
                                               ),
                                             ),
                                             Flexible(
@@ -302,9 +311,9 @@ class _VoizeAffinityContinuumFollowingsWidgetState
                                     16.0, 34.0, 16.0, 0.0),
                                 child: Builder(
                                   builder: (context) {
-                                    final voizeKaeliaHeartOracle = FFAppState()
+                                    final voizeKaeliaHeartOracle = VoizeLunairaEchoMuse()
                                             .voizeNaiyaEchoCompanionUsers
-                                            .elementAtOrNull(FFAppState()
+                                            .elementAtOrNull(VoizeLunairaEchoMuse()
                                                 .voizeRivenDreamVoiceLoginToken)
                                             ?.voizeCognitiveHarmonyUserFollowers
                                             .toList() ??
@@ -333,7 +342,7 @@ class _VoizeAffinityContinuumFollowingsWidgetState
                                                 shape: BoxShape.circle,
                                               ),
                                               child: Image.asset(
-                                                FFAppState()
+                                                VoizeLunairaEchoMuse()
                                                     .voizeNaiyaEchoCompanionUsers
                                                     .elementAtOrNull(
                                                         voizeKaeliaHeartOracleItem)!
@@ -346,34 +355,36 @@ class _VoizeAffinityContinuumFollowingsWidgetState
                                                   .fromSTEB(
                                                       12.0, 0.0, 0.0, 0.0),
                                               child: Text(
-                                                '${FFAppState().voizeNaiyaEchoCompanionUsers.elementAtOrNull(voizeKaeliaHeartOracleItem)?.voizeCognitiveHarmonyUserName}',
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      font: GoogleFonts.archivo(
-                                                        fontWeight:
-                                                            FontWeight.w600,
-                                                        fontStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .fontStyle,
-                                                      ),
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .info,
-                                                      fontSize: 16.0,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                      fontStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .fontStyle,
-                                                    ),
+                                                '${VoizeLunairaEchoMuse().voizeNaiyaEchoCompanionUsers.elementAtOrNull(voizeKaeliaHeartOracleItem)?.voizeCognitiveHarmonyUserName}',
+                                                style:
+                                                    VoizeAffinityChromaLayerTheme
+                                                            .of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          font: GoogleFonts
+                                                              .archivo(
+                                                            fontWeight:
+                                                                FontWeight.w600,
+                                                            fontStyle:
+                                                                VoizeAffinityChromaLayerTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontStyle,
+                                                          ),
+                                                          color:
+                                                              VoizeAffinityChromaLayerTheme
+                                                                      .of(context)
+                                                                  .info,
+                                                          fontSize: 16.0,
+                                                          letterSpacing: 0.0,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          fontStyle:
+                                                              VoizeAffinityChromaLayerTheme
+                                                                      .of(context)
+                                                                  .bodyMedium
+                                                                  .fontStyle,
+                                                        ),
                                               ),
                                             ),
                                             Flexible(

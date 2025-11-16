@@ -1,4 +1,4 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import '/voize_nexi_emotion_crafter_voize_rhea_bond_architect/voize_velin_heart_singer_noenough_coins/voize_velin_heart_singer_noenough_coins_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -43,7 +43,7 @@ class _VoizeNyraResonantSpiritUnlockWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<VoizeLunairaEchoMuse>();
 
     return Align(
       alignment: AlignmentDirectional(0.0, 0.0),
@@ -115,24 +115,24 @@ class _VoizeNyraResonantSpiritUnlockWidgetState
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              if (FFAppState()
+                              if (VoizeLunairaEchoMuse()
                                       .voizeNaiyaEchoCompanionUsers
-                                      .elementAtOrNull(FFAppState()
+                                      .elementAtOrNull(VoizeLunairaEchoMuse()
                                           .voizeRivenDreamVoiceLoginToken)!
                                       .voizeCognitiveHarmonyUserDiamonds >=
                                   200) {
-                                FFAppState()
+                                VoizeLunairaEchoMuse()
                                     .updateVoizeKiraSoundOraclePianoNotesAtIndex(
                                   widget.voizeBondConvergencePlane!,
                                   (e) => e
                                     ..updateVoizeEclipticSoulStreamPianoNotesUnlock(
-                                      (e) => e.add(FFAppState()
+                                      (e) => e.add(VoizeLunairaEchoMuse()
                                           .voizeRivenDreamVoiceLoginToken),
                                     )
                                     ..voizeEclipticSoulStreamPianoNotesUnlockShow =
                                         false,
                                 );
-                                FFAppState().update(() {});
+                                VoizeLunairaEchoMuse().update(() {});
                                 Navigator.pop(context);
                               } else {
                                 await showDialog(

@@ -1,11 +1,11 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import 'voize_bond_resonator_engine_post_dymatic_widget.dart'
     show VoizeBondResonatorEnginePostDymaticWidget;
 import 'package:flutter/material.dart';
 
 class VoizeBondResonatorEnginePostDymaticModel
-    extends FlutterFlowModel<VoizeBondResonatorEnginePostDymaticWidget> {
-
+    extends VoizeAffinityChromaLayerModel<
+        VoizeBondResonatorEnginePostDymaticWidget> {
   String? voizeEclipticaLoverVersePhoto;
 
   FocusNode? textFieldFocusNode;

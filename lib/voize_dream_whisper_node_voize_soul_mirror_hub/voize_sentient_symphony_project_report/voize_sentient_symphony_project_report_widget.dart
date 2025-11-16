@@ -1,8 +1,8 @@
 import 'package:voize/utils/piano_loading.dart';
 import 'dart:ui';
 
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_theme.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'voize_sentient_symphony_project_report_model.dart';
@@ -106,20 +106,25 @@ class _VoizeSentientSymphonyProjectReportWidgetState
                             decoration: BoxDecoration(),
                             child: Text(
                               'Please select the reason for reporting this user:',
-                              style: FlutterFlowTheme.of(context)
+                              style: VoizeAffinityChromaLayerTheme.of(context)
                                   .bodyMedium
                                   .override(
                                     font: GoogleFonts.archivo(
                                       fontWeight: FontWeight.w600,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
+                                      fontStyle:
+                                          VoizeAffinityChromaLayerTheme.of(
+                                                  context)
+                                              .bodyMedium
+                                              .fontStyle,
                                     ),
-                                    color: FlutterFlowTheme.of(context).info,
+                                    color: VoizeAffinityChromaLayerTheme.of(
+                                            context)
+                                        .info,
                                     fontSize: 20.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w600,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: VoizeAffinityChromaLayerTheme.of(
+                                            context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
@@ -198,7 +203,7 @@ class _VoizeSentientSymphonyProjectReportWidgetState
                                                         border: isChecked
                                                             ? null
                                                             : Border.all(
-                                                                color: FlutterFlowTheme.of(
+                                                                color: VoizeAffinityChromaLayerTheme.of(
                                                                         context)
                                                                     .alternate,
                                                                 width: 2,
@@ -208,7 +213,7 @@ class _VoizeSentientSymphonyProjectReportWidgetState
                                                           ? Icon(
                                                               Icons.check,
                                                               size: 14.0,
-                                                              color: FlutterFlowTheme
+                                                              color: VoizeAffinityChromaLayerTheme
                                                                       .of(context)
                                                                   .info,
                                                             )
@@ -223,34 +228,36 @@ class _VoizeSentientSymphonyProjectReportWidgetState
                                         Flexible(
                                           child: Text(
                                             '${voizeConnectionHarmonyGridItem}',
-                                            style: FlutterFlowTheme.of(context)
+                                            style: VoizeAffinityChromaLayerTheme
+                                                    .of(context)
                                                 .bodyMedium
                                                 .override(
                                                   font: GoogleFonts.archivo(
                                                     fontWeight:
-                                                        FlutterFlowTheme.of(
-                                                                context)
+                                                        VoizeAffinityChromaLayerTheme
+                                                                .of(context)
                                                             .bodyMedium
                                                             .fontWeight,
                                                     fontStyle:
-                                                        FlutterFlowTheme.of(
-                                                                context)
+                                                        VoizeAffinityChromaLayerTheme
+                                                                .of(context)
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .info,
+                                                  color:
+                                                      VoizeAffinityChromaLayerTheme
+                                                              .of(context)
+                                                          .info,
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      VoizeAffinityChromaLayerTheme
+                                                              .of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      VoizeAffinityChromaLayerTheme
+                                                              .of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -289,60 +296,66 @@ class _VoizeSentientSymphonyProjectReportWidgetState
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           isDense: true,
-                                          labelStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .labelMedium
-                                              .override(
-                                                font: GoogleFonts.archivo(
-                                                  fontWeight:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontStyle,
-                                                ),
-                                                letterSpacing: 0.0,
-                                                fontWeight:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontStyle,
-                                              ),
+                                          labelStyle:
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    font: GoogleFonts.archivo(
+                                                      fontWeight:
+                                                          VoizeAffinityChromaLayerTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          VoizeAffinityChromaLayerTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontStyle,
+                                                    ),
+                                                    letterSpacing: 0.0,
+                                                    fontWeight:
+                                                        VoizeAffinityChromaLayerTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        VoizeAffinityChromaLayerTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontStyle,
+                                                  ),
                                           hintText: 'Enter your reason here...',
-                                          hintStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .labelMedium
-                                              .override(
-                                                font: GoogleFonts.archivo(
-                                                  fontWeight:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontStyle,
-                                                ),
-                                                color: Color(0x80FFFFFF),
-                                                letterSpacing: 0.0,
-                                                fontWeight:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontStyle,
-                                              ),
+                                          hintStyle:
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    font: GoogleFonts.archivo(
+                                                      fontWeight:
+                                                          VoizeAffinityChromaLayerTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          VoizeAffinityChromaLayerTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontStyle,
+                                                    ),
+                                                    color: Color(0x80FFFFFF),
+                                                    letterSpacing: 0.0,
+                                                    fontWeight:
+                                                        VoizeAffinityChromaLayerTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        VoizeAffinityChromaLayerTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontStyle,
+                                                  ),
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
                                               color: Color(0x00000000),
@@ -377,35 +390,43 @@ class _VoizeSentientSymphonyProjectReportWidgetState
                                                 BorderRadius.circular(16.0),
                                           ),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
+                                        style: VoizeAffinityChromaLayerTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.archivo(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    VoizeAffinityChromaLayerTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    VoizeAffinityChromaLayerTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  VoizeAffinityChromaLayerTheme
+                                                          .of(context)
                                                       .info,
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  VoizeAffinityChromaLayerTheme
+                                                          .of(context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  VoizeAffinityChromaLayerTheme
+                                                          .of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
                                         maxLines: 9,
                                         cursorColor:
-                                            FlutterFlowTheme.of(context).info,
+                                            VoizeAffinityChromaLayerTheme.of(
+                                                    context)
+                                                .info,
                                         enableInteractiveSelection: true,
                                         validator: _model
                                             .textControllerValidator
@@ -447,23 +468,28 @@ class _VoizeSentientSymphonyProjectReportWidgetState
                                   alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Text(
                                     'Submit',
-                                    style: FlutterFlowTheme.of(context)
+                                    style: VoizeAffinityChromaLayerTheme.of(
+                                            context)
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.archivo(
                                             fontWeight: FontWeight.w600,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
                                           color:
-                                              FlutterFlowTheme.of(context).info,
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
+                                                  .info,
                                           fontSize: 16.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),

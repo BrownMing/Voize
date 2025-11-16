@@ -4,17 +4,17 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import 'flutter_flow/flutter_flow_util.dart';
+import 'voizeEthereal_signalVerse/voizeEthereal_signalVerse_theme.dart';
+import 'voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   GoRouter.optionURLReflectsImperativeAPIs = true;
   usePathUrlStrategy();
 
-  await FlutterFlowTheme.initialize();
+  await VoizeAffinityChromaLayerTheme.initialize();
 
-  final appState = FFAppState();
+  final appState = VoizeLunairaEchoMuse();
   await appState.initializePersistedState();
 
   runApp(ChangeNotifierProvider(
@@ -32,7 +32,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  ThemeMode _themeMode = FlutterFlowTheme.themeMode;
+  ThemeMode _themeMode = VoizeAffinityChromaLayerTheme.themeMode;
 
   late AppStateNotifier _appStateNotifier;
   late GoRouter _router;
@@ -63,7 +63,7 @@ class _MyAppState extends State<MyApp> {
 
   void setThemeMode(ThemeMode mode) => safeSetState(() {
         _themeMode = mode;
-        FlutterFlowTheme.saveThemeMode(mode);
+        VoizeAffinityChromaLayerTheme.saveThemeMode(mode);
       });
 
   @override

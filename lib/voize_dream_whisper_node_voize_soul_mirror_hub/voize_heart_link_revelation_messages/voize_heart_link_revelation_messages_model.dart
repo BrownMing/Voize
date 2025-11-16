@@ -1,11 +1,12 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import '/index.dart';
 import 'voize_heart_link_revelation_messages_widget.dart'
     show VoizeHeartLinkRevelationMessagesWidget;
 import 'package:flutter/material.dart';
 
 class VoizeHeartLinkRevelationMessagesModel
-    extends FlutterFlowModel<VoizeHeartLinkRevelationMessagesWidget> {
+    extends VoizeAffinityChromaLayerModel<
+        VoizeHeartLinkRevelationMessagesWidget> {
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;
   String? Function(BuildContext, String?)? textControllerValidator;

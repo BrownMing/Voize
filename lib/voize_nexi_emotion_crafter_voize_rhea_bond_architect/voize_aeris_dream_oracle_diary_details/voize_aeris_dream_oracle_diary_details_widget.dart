@@ -1,6 +1,6 @@
 import '../../components/voize_ethereal_sound_codex_following_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_theme.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import '/voize_echo_continuum_voize_resonance_network/voize_connection_circuitry_report_block/voize_connection_circuitry_report_block_widget.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
@@ -49,7 +49,7 @@ class _VoizeAerisDreamOracleDiaryDetailsWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<VoizeLunairaEchoMuse>();
 
     return GestureDetector(
       onTap: () {
@@ -65,7 +65,7 @@ class _VoizeAerisDreamOracleDiaryDetailsWidgetState
               children: [
                 Builder(
                   builder: (context) {
-                    final voizeEchoSoulChronicle = FFAppState()
+                    final voizeEchoSoulChronicle = VoizeLunairaEchoMuse()
                             .voizeKiraSoundOraclePianoNotes
                             .elementAtOrNull(widget.voizeAffinityResonatorRef!)
                             ?.voizeEclipticSoulStreamPianoNotesShow
@@ -75,9 +75,7 @@ class _VoizeAerisDreamOracleDiaryDetailsWidgetState
                     final pageController = _model.pageViewController ??=
                         PageController(
                             initialPage: max(
-                                0,
-                                min(0,
-                                    voizeEchoSoulChronicle.length - 1)));
+                                0, min(0, voizeEchoSoulChronicle.length - 1)));
 
                     return Container(
                       width: double.infinity,
@@ -109,8 +107,7 @@ class _VoizeAerisDreamOracleDiaryDetailsWidgetState
                               child: AnimatedBuilder(
                                 animation: pageController,
                                 builder: (context, child) {
-                                  final hasClients =
-                                      pageController.hasClients;
+                                  final hasClients = pageController.hasClients;
                                   final currentPage = hasClients &&
                                           pageController.page != null
                                       ? pageController.page!
@@ -118,8 +115,7 @@ class _VoizeAerisDreamOracleDiaryDetailsWidgetState
                                   return Row(
                                     mainAxisSize: MainAxisSize.min,
                                     children: List.generate(
-                                        voizeEchoSoulChronicle.length,
-                                        (index) {
+                                        voizeEchoSoulChronicle.length, (index) {
                                       final isActive =
                                           (currentPage - index).abs() < 0.5;
                                       return GestureDetector(
@@ -132,8 +128,8 @@ class _VoizeAerisDreamOracleDiaryDetailsWidgetState
                                           );
                                         },
                                         child: AnimatedContainer(
-                                          duration: const Duration(
-                                              milliseconds: 220),
+                                          duration:
+                                              const Duration(milliseconds: 220),
                                           width: isActive ? 16.0 : 8.0,
                                           height: 8.0,
                                           margin: EdgeInsetsDirectional.only(
@@ -160,7 +156,8 @@ class _VoizeAerisDreamOracleDiaryDetailsWidgetState
                                                     fit: StackFit.expand,
                                                     children: [
                                                       BackdropFilter(
-                                                        filter: ImageFilter.blur(
+                                                        filter:
+                                                            ImageFilter.blur(
                                                           sigmaX: 8.0,
                                                           sigmaY: 8.0,
                                                         ),
@@ -238,7 +235,7 @@ class _VoizeAerisDreamOracleDiaryDetailsWidgetState
                                   shape: BoxShape.circle,
                                 ),
                                 child: Image.asset(
-                                  FFAppState()
+                                  VoizeLunairaEchoMuse()
                                       .voizeNaiyaEchoCompanionUsers
                                       .elementAtOrNull(
                                           widget.voizeAffinityResonatorUserid!)!
@@ -254,24 +251,28 @@ class _VoizeAerisDreamOracleDiaryDetailsWidgetState
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      '${FFAppState().voizeNaiyaEchoCompanionUsers.elementAtOrNull(widget.voizeAffinityResonatorUserid!)?.voizeCognitiveHarmonyUserName}',
-                                      style: FlutterFlowTheme.of(context)
+                                      '${VoizeLunairaEchoMuse().voizeNaiyaEchoCompanionUsers.elementAtOrNull(widget.voizeAffinityResonatorUserid!)?.voizeCognitiveHarmonyUserName}',
+                                      style: VoizeAffinityChromaLayerTheme.of(
+                                              context)
                                           .bodyMedium
                                           .override(
                                             font: GoogleFonts.archivo(
                                               fontWeight: FontWeight.w600,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  VoizeAffinityChromaLayerTheme
+                                                          .of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
-                                            color: FlutterFlowTheme.of(context)
+                                            color: VoizeAffinityChromaLayerTheme
+                                                    .of(context)
                                                 .info,
                                             fontSize: 16.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
@@ -279,21 +280,24 @@ class _VoizeAerisDreamOracleDiaryDetailsWidgetState
                                     Text(
                                       dateTimeFormat(
                                           "relative",
-                                          FFAppState()
+                                          VoizeLunairaEchoMuse()
                                               .voizeKiraSoundOraclePianoNotes
                                               .elementAtOrNull(widget
                                                   .voizeAffinityResonatorRef!)!
                                               .voizeEclipticSoulStreamPianoNotesCreateTime!),
-                                      style: FlutterFlowTheme.of(context)
+                                      style: VoizeAffinityChromaLayerTheme.of(
+                                              context)
                                           .bodyMedium
                                           .override(
                                             font: GoogleFonts.archivo(
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  VoizeAffinityChromaLayerTheme
+                                                          .of(context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  VoizeAffinityChromaLayerTheme
+                                                          .of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
@@ -301,11 +305,13 @@ class _VoizeAerisDreamOracleDiaryDetailsWidgetState
                                             fontSize: 12.0,
                                             letterSpacing: 0.0,
                                             fontWeight:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .fontWeight,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
@@ -331,21 +337,26 @@ class _VoizeAerisDreamOracleDiaryDetailsWidgetState
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 24.0, 0.0, 0.0),
                             child: Text(
-                              '${FFAppState().voizeKiraSoundOraclePianoNotes.elementAtOrNull(widget.voizeAffinityResonatorRef!)?.voizeEclipticSoulStreamPianoNotesTitle}',
-                              style: FlutterFlowTheme.of(context)
+                              '${VoizeLunairaEchoMuse().voizeKiraSoundOraclePianoNotes.elementAtOrNull(widget.voizeAffinityResonatorRef!)?.voizeEclipticSoulStreamPianoNotesTitle}',
+                              style: VoizeAffinityChromaLayerTheme.of(context)
                                   .bodyMedium
                                   .override(
                                     font: GoogleFonts.archivo(
                                       fontWeight: FontWeight.w600,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
+                                      fontStyle:
+                                          VoizeAffinityChromaLayerTheme.of(
+                                                  context)
+                                              .bodyMedium
+                                              .fontStyle,
                                     ),
-                                    color: FlutterFlowTheme.of(context).info,
+                                    color: VoizeAffinityChromaLayerTheme.of(
+                                            context)
+                                        .info,
                                     fontSize: 24.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w600,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: VoizeAffinityChromaLayerTheme.of(
+                                            context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
@@ -356,27 +367,35 @@ class _VoizeAerisDreamOracleDiaryDetailsWidgetState
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 16.0, 0.0, 0.0),
                               child: Text(
-                                '${FFAppState().voizeKiraSoundOraclePianoNotes.elementAtOrNull(widget.voizeAffinityResonatorRef!)?.voizeEclipticSoulStreamPianoNotesDescribe}',
-                                style: FlutterFlowTheme.of(context)
+                                '${VoizeLunairaEchoMuse().voizeKiraSoundOraclePianoNotes.elementAtOrNull(widget.voizeAffinityResonatorRef!)?.voizeEclipticSoulStreamPianoNotesDescribe}',
+                                style: VoizeAffinityChromaLayerTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       font: GoogleFonts.archivo(
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
+                                        fontWeight:
+                                            VoizeAffinityChromaLayerTheme.of(
+                                                    context)
+                                                .bodyMedium
+                                                .fontWeight,
+                                        fontStyle:
+                                            VoizeAffinityChromaLayerTheme.of(
+                                                    context)
+                                                .bodyMedium
+                                                .fontStyle,
                                       ),
                                       color: Color(0x80FFFFFF),
                                       fontSize: 11.0,
                                       letterSpacing: 0.0,
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
+                                      fontWeight:
+                                          VoizeAffinityChromaLayerTheme.of(
+                                                  context)
+                                              .bodyMedium
+                                              .fontWeight,
+                                      fontStyle:
+                                          VoizeAffinityChromaLayerTheme.of(
+                                                  context)
+                                              .bodyMedium
+                                              .fontStyle,
                                     ),
                               ),
                             ),
@@ -386,12 +405,12 @@ class _VoizeAerisDreamOracleDiaryDetailsWidgetState
                               alignment: AlignmentDirectional(0.0, 1.0),
                               child: Builder(
                                 builder: (context) {
-                                  if (FFAppState()
+                                  if (VoizeLunairaEchoMuse()
                                           .voizeKiraSoundOraclePianoNotes
                                           .elementAtOrNull(
                                               widget.voizeAffinityResonatorRef!)
                                           ?.voizeEclipticSoulStreamPianoNotesLikeUsers
-                                          .contains(FFAppState()
+                                          .contains(VoizeLunairaEchoMuse()
                                               .voizeRivenDreamVoiceLoginToken) ??
                                       false) {
                                     return Padding(
@@ -403,16 +422,17 @@ class _VoizeAerisDreamOracleDiaryDetailsWidgetState
                                         hoverColor: Colors.transparent,
                                         highlightColor: Colors.transparent,
                                         onTap: () async {
-                                          FFAppState()
+                                          VoizeLunairaEchoMuse()
                                               .updateVoizeKiraSoundOraclePianoNotesAtIndex(
                                             widget.voizeAffinityResonatorRef!,
                                             (e) => e
                                               ..updateVoizeEclipticSoulStreamPianoNotesLikeUsers(
-                                                (e) => e.remove(FFAppState()
-                                                    .voizeRivenDreamVoiceLoginToken),
+                                                (e) => e.remove(
+                                                    VoizeLunairaEchoMuse()
+                                                        .voizeRivenDreamVoiceLoginToken),
                                               ),
                                           );
-                                          FFAppState().update(() {});
+                                          VoizeLunairaEchoMuse().update(() {});
                                         },
                                         child: AnimatedContainer(
                                           duration: Duration(milliseconds: 300),
@@ -433,16 +453,16 @@ class _VoizeAerisDreamOracleDiaryDetailsWidgetState
                                   } else {
                                     return GestureDetector(
                                       onTap: () async {
-                                        FFAppState()
+                                        VoizeLunairaEchoMuse()
                                             .updateVoizeKiraSoundOraclePianoNotesAtIndex(
                                           widget.voizeAffinityResonatorRef!,
                                           (e) => e
                                             ..updateVoizeEclipticSoulStreamPianoNotesLikeUsers(
-                                              (e) => e.add(FFAppState()
+                                              (e) => e.add(VoizeLunairaEchoMuse()
                                                   .voizeRivenDreamVoiceLoginToken),
                                             ),
                                         );
-                                        FFAppState().update(() {});
+                                        VoizeLunairaEchoMuse().update(() {});
                                       },
                                       child: ClipRRect(
                                         borderRadius:

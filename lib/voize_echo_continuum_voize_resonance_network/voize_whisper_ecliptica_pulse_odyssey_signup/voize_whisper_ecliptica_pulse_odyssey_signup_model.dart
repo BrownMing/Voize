@@ -1,11 +1,12 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import '/index.dart';
 import 'voize_whisper_ecliptica_pulse_odyssey_signup_widget.dart'
     show VoizeWhisperEclipticaPulseOdysseySignupWidget;
 import 'package:flutter/material.dart';
 
 class VoizeWhisperEclipticaPulseOdysseySignupModel
-    extends FlutterFlowModel<VoizeWhisperEclipticaPulseOdysseySignupWidget> {
+    extends VoizeAffinityChromaLayerModel<
+        VoizeWhisperEclipticaPulseOdysseySignupWidget> {
   FocusNode? textFieldFocusNode1;
   TextEditingController? textController1;
   String? Function(BuildContext, String?)? textController1Validator;

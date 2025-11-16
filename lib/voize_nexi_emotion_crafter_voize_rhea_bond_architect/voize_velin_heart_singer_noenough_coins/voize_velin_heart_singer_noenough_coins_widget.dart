@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_theme.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -74,20 +74,24 @@ class _VoizeVelinHeartSingerNoenoughCoinsWidgetState
                     children: [
                       Text(
                         'Insufficient diamonds',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: VoizeAffinityChromaLayerTheme.of(context)
+                            .bodyMedium
+                            .override(
                               font: GoogleFonts.archivo(
                                 fontWeight: FontWeight.bold,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .fontStyle,
+                                fontStyle:
+                                    VoizeAffinityChromaLayerTheme.of(context)
+                                        .bodyMedium
+                                        .fontStyle,
                               ),
                               color: Color(0xFF0D002A),
                               fontSize: 28.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .fontStyle,
+                              fontStyle:
+                                  VoizeAffinityChromaLayerTheme.of(context)
+                                      .bodyMedium
+                                      .fontStyle,
                             ),
                       ),
                       Padding(
@@ -96,26 +100,31 @@ class _VoizeVelinHeartSingerNoenoughCoinsWidgetState
                         child: Text(
                           'You currently don\'t have enough coins to unlock this note. You can recharge to get more coins',
                           textAlign: TextAlign.center,
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.archivo(
-                                      fontWeight: FlutterFlowTheme.of(context)
+                          style: VoizeAffinityChromaLayerTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                font: GoogleFonts.archivo(
+                                  fontWeight:
+                                      VoizeAffinityChromaLayerTheme.of(context)
                                           .bodyMedium
                                           .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                                  fontStyle:
+                                      VoizeAffinityChromaLayerTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
-                                    ),
-                                    color: Color(0xFF808080),
-                                    fontSize: 16.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                ),
+                                color: Color(0xFF808080),
+                                fontSize: 16.0,
+                                letterSpacing: 0.0,
+                                fontWeight:
+                                    VoizeAffinityChromaLayerTheme.of(context)
                                         .bodyMedium
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                fontStyle:
+                                    VoizeAffinityChromaLayerTheme.of(context)
                                         .bodyMedium
                                         .fontStyle,
-                                  ),
+                              ),
                         ),
                       ),
                       Padding(

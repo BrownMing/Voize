@@ -1,8 +1,8 @@
 import 'package:voize/utils/piano_loading.dart';
 
 import '/backend/schema/structs/index.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_theme.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -47,7 +47,7 @@ class _VoizeBondResonatorEnginePostDymaticWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<VoizeLunairaEchoMuse>();
 
     return GestureDetector(
       onTap: () {
@@ -133,61 +133,67 @@ class _VoizeBondResonatorEnginePostDymaticWidgetState
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           isDense: true,
-                                          labelStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .labelMedium
-                                              .override(
-                                                font: GoogleFonts.archivo(
-                                                  fontWeight:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontStyle,
-                                                ),
-                                                letterSpacing: 0.0,
-                                                fontWeight:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontStyle,
-                                              ),
+                                          labelStyle:
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    font: GoogleFonts.archivo(
+                                                      fontWeight:
+                                                          VoizeAffinityChromaLayerTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          VoizeAffinityChromaLayerTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontStyle,
+                                                    ),
+                                                    letterSpacing: 0.0,
+                                                    fontWeight:
+                                                        VoizeAffinityChromaLayerTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        VoizeAffinityChromaLayerTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontStyle,
+                                                  ),
                                           hintText:
                                               'Write something to share with everyone...',
-                                          hintStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .labelMedium
-                                              .override(
-                                                font: GoogleFonts.archivo(
-                                                  fontWeight:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontStyle,
-                                                ),
-                                                color: Color(0x80FFFFFF),
-                                                letterSpacing: 0.0,
-                                                fontWeight:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontStyle,
-                                              ),
+                                          hintStyle:
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    font: GoogleFonts.archivo(
+                                                      fontWeight:
+                                                          VoizeAffinityChromaLayerTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          VoizeAffinityChromaLayerTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontStyle,
+                                                    ),
+                                                    color: Color(0x80FFFFFF),
+                                                    letterSpacing: 0.0,
+                                                    fontWeight:
+                                                        VoizeAffinityChromaLayerTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        VoizeAffinityChromaLayerTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontStyle,
+                                                  ),
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
                                               color: Color(0x00000000),
@@ -234,35 +240,43 @@ class _VoizeBondResonatorEnginePostDymaticWidgetState
                                             ),
                                           ),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
+                                        style: VoizeAffinityChromaLayerTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.archivo(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    VoizeAffinityChromaLayerTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    VoizeAffinityChromaLayerTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  VoizeAffinityChromaLayerTheme
+                                                          .of(context)
                                                       .info,
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  VoizeAffinityChromaLayerTheme
+                                                          .of(context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  VoizeAffinityChromaLayerTheme
+                                                          .of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
                                         maxLines: 10,
                                         cursorColor:
-                                            FlutterFlowTheme.of(context).info,
+                                            VoizeAffinityChromaLayerTheme.of(
+                                                    context)
+                                                .info,
                                         enableInteractiveSelection: true,
                                         validator: _model
                                             .textControllerValidator
@@ -295,20 +309,26 @@ class _VoizeBondResonatorEnginePostDymaticWidgetState
                                           highlightColor: Colors.transparent,
                                           onTap: () async {
                                             final ImageSource? source =
-                                                await showModalBottomSheet<ImageSource>(
+                                                await showModalBottomSheet<
+                                                    ImageSource>(
                                               context: context,
-                                              backgroundColor: Colors.transparent,
+                                              backgroundColor:
+                                                  Colors.transparent,
                                               builder: (context) => Container(
                                                 decoration: BoxDecoration(
                                                   color: Color(0x27FFFFFF),
-                                                  borderRadius: BorderRadius.only(
-                                                    topLeft: Radius.circular(20.0),
-                                                    topRight: Radius.circular(20.0),
+                                                  borderRadius:
+                                                      BorderRadius.only(
+                                                    topLeft:
+                                                        Radius.circular(20.0),
+                                                    topRight:
+                                                        Radius.circular(20.0),
                                                   ),
                                                 ),
                                                 child: SafeArea(
                                                   child: Column(
-                                                    mainAxisSize: MainAxisSize.min,
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
                                                     children: [
                                                       Padding(
                                                         padding:
@@ -323,34 +343,38 @@ class _VoizeBondResonatorEnginePostDymaticWidgetState
                                                           height: 4.0,
                                                           decoration:
                                                               BoxDecoration(
-                                                            color: Color(0x80FFFFFF),
+                                                            color: Color(
+                                                                0x80FFFFFF),
                                                             borderRadius:
                                                                 BorderRadius
-                                                                    .circular(2.0),
+                                                                    .circular(
+                                                                        2.0),
                                                           ),
                                                         ),
                                                       ),
                                                       ListTile(
                                                         leading: Icon(
                                                           Icons.photo_library,
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .info,
+                                                          color:
+                                                              VoizeAffinityChromaLayerTheme
+                                                                      .of(context)
+                                                                  .info,
                                                         ),
                                                         title: Text(
                                                           'Select from the album',
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyLarge
-                                                              .override(
-                                                                font: GoogleFonts
-                                                                    .archivo(),
-                                                                color: FlutterFlowTheme
-                                                                        .of(context)
-                                                                    .info,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                              ),
+                                                          style:
+                                                              VoizeAffinityChromaLayerTheme
+                                                                      .of(context)
+                                                                  .bodyLarge
+                                                                  .override(
+                                                                    font: GoogleFonts
+                                                                        .archivo(),
+                                                                    color: VoizeAffinityChromaLayerTheme.of(
+                                                                            context)
+                                                                        .info,
+                                                                    letterSpacing:
+                                                                        0.0,
+                                                                  ),
                                                         ),
                                                         onTap: () =>
                                                             Navigator.pop(
@@ -361,24 +385,26 @@ class _VoizeBondResonatorEnginePostDymaticWidgetState
                                                       ListTile(
                                                         leading: Icon(
                                                           Icons.camera_alt,
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .info,
+                                                          color:
+                                                              VoizeAffinityChromaLayerTheme
+                                                                      .of(context)
+                                                                  .info,
                                                         ),
                                                         title: Text(
                                                           'Shoot with a camera',
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyLarge
-                                                              .override(
-                                                                font: GoogleFonts
-                                                                    .archivo(),
-                                                                color: FlutterFlowTheme
-                                                                        .of(context)
-                                                                    .info,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                              ),
+                                                          style:
+                                                              VoizeAffinityChromaLayerTheme
+                                                                      .of(context)
+                                                                  .bodyLarge
+                                                                  .override(
+                                                                    font: GoogleFonts
+                                                                        .archivo(),
+                                                                    color: VoizeAffinityChromaLayerTheme.of(
+                                                                            context)
+                                                                        .info,
+                                                                    letterSpacing:
+                                                                        0.0,
+                                                                  ),
                                                         ),
                                                         onTap: () =>
                                                             Navigator.pop(
@@ -412,33 +438,33 @@ class _VoizeBondResonatorEnginePostDymaticWidgetState
                                             }
                                           },
                                           child: Container(
-                                          width: 68.0,
-                                          height: 68.0,
-                                          decoration: BoxDecoration(
-                                            color: Color(0x25FFFFFF),
-                                            borderRadius:
-                                                BorderRadius.circular(16.0),
-                                          ),
-                                          child: Stack(
-                                            children: [
-                                              Align(
+                                            width: 68.0,
+                                            height: 68.0,
+                                            decoration: BoxDecoration(
+                                              color: Color(0x25FFFFFF),
+                                              borderRadius:
+                                                  BorderRadius.circular(16.0),
+                                            ),
+                                            child: Stack(
+                                              children: [
+                                                Align(
                                                   alignment:
                                                       AlignmentDirectional(
-                                                    0.0, 0.0),
-                                                child: Container(
-                                                  width: 30.0,
-                                                  height: 30.0,
-                                                  decoration: BoxDecoration(
-                                                    image: DecorationImage(
-                                                      fit: BoxFit.cover,
-                                                      image: Image.asset(
-                                                        'assets/images/cxvbuisdyfgiuys_weiygsduyfgsduifs.png',
-                                                      ).image,
+                                                          0.0, 0.0),
+                                                  child: Container(
+                                                    width: 30.0,
+                                                    height: 30.0,
+                                                    decoration: BoxDecoration(
+                                                      image: DecorationImage(
+                                                        fit: BoxFit.cover,
+                                                        image: Image.asset(
+                                                          'assets/images/cxvbuisdyfgiuys_weiygsduyfgsduifs.png',
+                                                        ).image,
+                                                      ),
                                                     ),
                                                   ),
                                                 ),
-                                              ),
-                                            ],
+                                              ],
                                             ),
                                           ),
                                         );
@@ -453,13 +479,13 @@ class _VoizeBondResonatorEnginePostDymaticWidgetState
                                                       .voizeEclipticaLoverVersePhoto!
                                                       .startsWith('assets/')
                                                   ? Image.asset(
-                                                _model
-                                                    .voizeEclipticaLoverVersePhoto!,
+                                                      _model
+                                                          .voizeEclipticaLoverVersePhoto!,
                                                     ).image
                                                   : Image.file(
                                                       File(_model
                                                           .voizeEclipticaLoverVersePhoto!),
-                                              ).image,
+                                                    ).image,
                                             ),
                                             borderRadius:
                                                 BorderRadius.circular(16.0),
@@ -521,17 +547,17 @@ class _VoizeBondResonatorEnginePostDymaticWidgetState
                                           null &&
                                       _model.voizeEclipticaLoverVersePhoto !=
                                           '') {
-                                    FFAppState()
+                                    VoizeLunairaEchoMuse()
                                         .addToVoizeAelithBondEntityDynamtics(
                                             VoizeSynestheticConnectionDymaticStruct(
                                       voizeSynestheticConnectionDymaticId:
-                                          FFAppState()
+                                          VoizeLunairaEchoMuse()
                                               .voizeAelithBondEntityDynamtics
                                               .length,
                                       voizeSynestheticConnectionDymaticShow:
                                           _model.voizeEclipticaLoverVersePhoto,
                                       voizeSynestheticConnectionDymaticCreateId:
-                                          FFAppState()
+                                          VoizeLunairaEchoMuse()
                                               .voizeRivenDreamVoiceLoginToken,
                                       voizeSynestheticConnectionDymaticDescribe:
                                           _model.textController.text,
@@ -541,7 +567,7 @@ class _VoizeBondResonatorEnginePostDymaticWidgetState
                                       voizeSynestheticConnectionDymaticComments:
                                           0,
                                     ));
-                                    FFAppState().update(() {});
+                                    VoizeLunairaEchoMuse().update(() {});
                                     context.safePop();
                                     PianoLoading.showSuccess(
                                       context,
@@ -560,7 +586,8 @@ class _VoizeBondResonatorEnginePostDymaticWidgetState
                                 } else {
                                   PianoLoading.showWarning(
                                     context,
-                                    message: 'Please fill in the dynamic description!',
+                                    message:
+                                        'Please fill in the dynamic description!',
                                     duration:
                                         const Duration(milliseconds: 1500),
                                   );
@@ -581,23 +608,28 @@ class _VoizeBondResonatorEnginePostDymaticWidgetState
                                   alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Text(
                                     'Post',
-                                    style: FlutterFlowTheme.of(context)
+                                    style: VoizeAffinityChromaLayerTheme.of(
+                                            context)
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.archivo(
                                             fontWeight: FontWeight.w600,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
                                           color:
-                                              FlutterFlowTheme.of(context).info,
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
+                                                  .info,
                                           fontSize: 16.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),

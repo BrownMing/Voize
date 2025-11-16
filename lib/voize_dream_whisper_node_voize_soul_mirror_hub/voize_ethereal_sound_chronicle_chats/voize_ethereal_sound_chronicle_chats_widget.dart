@@ -1,6 +1,6 @@
 import '../voize_emotive_frequency_grid_empty/voize_emotive_frequency_grid_empty_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_theme.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -41,7 +41,7 @@ class _VoizeEtherealSoundChronicleChatsWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<VoizeLunairaEchoMuse>();
 
     return GestureDetector(
       onTap: () {
@@ -97,22 +97,26 @@ class _VoizeEtherealSoundChronicleChatsWidgetState
                         ),
                         Text(
                           'Message',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.archivo(
-                                      fontWeight: FontWeight.w600,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                          style: VoizeAffinityChromaLayerTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                font: GoogleFonts.archivo(
+                                  fontWeight: FontWeight.w600,
+                                  fontStyle:
+                                      VoizeAffinityChromaLayerTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
-                                    ),
-                                    color: FlutterFlowTheme.of(context).info,
-                                    fontSize: 20.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.w600,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                ),
+                                color: VoizeAffinityChromaLayerTheme.of(context)
+                                    .info,
+                                fontSize: 20.0,
+                                letterSpacing: 0.0,
+                                fontWeight: FontWeight.w600,
+                                fontStyle:
+                                    VoizeAffinityChromaLayerTheme.of(context)
                                         .bodyMedium
                                         .fontStyle,
-                                  ),
+                              ),
                         ),
                         Container(
                           width: 32.0,
@@ -128,15 +132,15 @@ class _VoizeEtherealSoundChronicleChatsWidgetState
                           EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 0.0),
                       child: Builder(
                         builder: (context) {
-                          final voizeMythraEchoComposer = FFAppState()
+                          final voizeMythraEchoComposer = VoizeLunairaEchoMuse()
                               .VoizeNyraResonanceSirenChats
                               .where((e) =>
                                   (e.voizeEmpathicSignalPlaneChatSendUser ==
-                                      FFAppState()
+                                      VoizeLunairaEchoMuse()
                                           .voizeRivenDreamVoiceLoginToken) &&
-                                  !FFAppState()
+                                  !VoizeLunairaEchoMuse()
                                       .voizeNaiyaEchoCompanionUsers
-                                      .elementAtOrNull(FFAppState()
+                                      .elementAtOrNull(VoizeLunairaEchoMuse()
                                           .voizeRivenDreamVoiceLoginToken)!
                                       .voizeCognitiveHarmonyUserBlacklist
                                       .contains(e
@@ -163,7 +167,7 @@ class _VoizeEtherealSoundChronicleChatsWidgetState
                                 hoverColor: Colors.transparent,
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
-                                  FFAppState()
+                                  VoizeLunairaEchoMuse()
                                       .updateVoizeNyraResonanceSirenChatsAtIndex(
                                     voizeMythraEchoComposerItem
                                         .voizeEmpathicSignalPlaneChatId,
@@ -171,7 +175,7 @@ class _VoizeEtherealSoundChronicleChatsWidgetState
                                       ..voizeEmpathicSignalPlaneChatUnread =
                                           null,
                                   );
-                                  FFAppState().update(() {});
+                                  VoizeLunairaEchoMuse().update(() {});
                                   context.pushNamed(
                                     VoizeHeartLinkRevelationMessagesWidget
                                         .routeName,
@@ -222,7 +226,7 @@ class _VoizeEtherealSoundChronicleChatsWidgetState
                                                 shape: BoxShape.circle,
                                               ),
                                               child: Image.asset(
-                                                FFAppState()
+                                                VoizeLunairaEchoMuse()
                                                     .voizeNaiyaEchoCompanionUsers
                                                     .elementAtOrNull(
                                                         voizeMythraEchoComposerItem
@@ -243,10 +247,10 @@ class _VoizeEtherealSoundChronicleChatsWidgetState
                                                       CrossAxisAlignment.start,
                                                   children: [
                                                     Text(
-                                                      '${FFAppState().voizeNaiyaEchoCompanionUsers.elementAtOrNull(voizeMythraEchoComposerItem.voizeEmpathicSignalPlaneChatReceiveUser)?.voizeCognitiveHarmonyUserName}',
+                                                      '${VoizeLunairaEchoMuse().voizeNaiyaEchoCompanionUsers.elementAtOrNull(voizeMythraEchoComposerItem.voizeEmpathicSignalPlaneChatReceiveUser)?.voizeCognitiveHarmonyUserName}',
                                                       style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                          VoizeAffinityChromaLayerTheme
+                                                                  .of(context)
                                                               .bodyMedium
                                                               .override(
                                                                 font: GoogleFonts
@@ -254,12 +258,12 @@ class _VoizeEtherealSoundChronicleChatsWidgetState
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w600,
-                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                  fontStyle: VoizeAffinityChromaLayerTheme.of(
                                                                           context)
                                                                       .bodyMedium
                                                                       .fontStyle,
                                                                 ),
-                                                                color: FlutterFlowTheme.of(
+                                                                color: VoizeAffinityChromaLayerTheme.of(
                                                                         context)
                                                                     .info,
                                                                 fontSize: 16.0,
@@ -268,7 +272,7 @@ class _VoizeEtherealSoundChronicleChatsWidgetState
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .w600,
-                                                                fontStyle: FlutterFlowTheme.of(
+                                                                fontStyle: VoizeAffinityChromaLayerTheme.of(
                                                                         context)
                                                                     .bodyMedium
                                                                     .fontStyle,
@@ -277,17 +281,17 @@ class _VoizeEtherealSoundChronicleChatsWidgetState
                                                     Text(
                                                       '${voizeMythraEchoComposerItem.voizeEmpathicSignalPlaneChatSendMessage}',
                                                       style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                          VoizeAffinityChromaLayerTheme
+                                                                  .of(context)
                                                               .bodyMedium
                                                               .override(
                                                                 font: GoogleFonts
                                                                     .archivo(
-                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                  fontWeight: VoizeAffinityChromaLayerTheme.of(
                                                                           context)
                                                                       .bodyMedium
                                                                       .fontWeight,
-                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                  fontStyle: VoizeAffinityChromaLayerTheme.of(
                                                                           context)
                                                                       .bodyMedium
                                                                       .fontStyle,
@@ -297,11 +301,11 @@ class _VoizeEtherealSoundChronicleChatsWidgetState
                                                                 fontSize: 12.0,
                                                                 letterSpacing:
                                                                     0.0,
-                                                                fontWeight: FlutterFlowTheme.of(
+                                                                fontWeight: VoizeAffinityChromaLayerTheme.of(
                                                                         context)
                                                                     .bodyMedium
                                                                     .fontWeight,
-                                                                fontStyle: FlutterFlowTheme.of(
+                                                                fontStyle: VoizeAffinityChromaLayerTheme.of(
                                                                         context)
                                                                     .bodyMedium
                                                                     .fontStyle,
@@ -322,38 +326,39 @@ class _VoizeEtherealSoundChronicleChatsWidgetState
                                                       "EEEE",
                                                       voizeMythraEchoComposerItem
                                                           .voizeEmpathicSignalPlaneChatSendTime!),
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        font:
-                                                            GoogleFonts.archivo(
-                                                          fontWeight:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontWeight,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontStyle,
-                                                        ),
-                                                        color:
-                                                            Color(0x80FFFFFF),
-                                                        fontSize: 10.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .fontWeight,
-                                                        fontStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .fontStyle,
-                                                      ),
+                                                  style:
+                                                      VoizeAffinityChromaLayerTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .archivo(
+                                                              fontWeight:
+                                                                  VoizeAffinityChromaLayerTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontWeight,
+                                                              fontStyle:
+                                                                  VoizeAffinityChromaLayerTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontStyle,
+                                                            ),
+                                                            color: Color(
+                                                                0x80FFFFFF),
+                                                            fontSize: 10.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                VoizeAffinityChromaLayerTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontWeight,
+                                                            fontStyle:
+                                                                VoizeAffinityChromaLayerTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontStyle,
+                                                          ),
                                                 ),
                                                 if (voizeMythraEchoComposerItem
                                                         .voizeEmpathicSignalPlaneChatUnread >
@@ -372,33 +377,33 @@ class _VoizeEtherealSoundChronicleChatsWidgetState
                                                       child: Text(
                                                         '${voizeMythraEchoComposerItem.voizeEmpathicSignalPlaneChatUnread.toString()}',
                                                         style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
+                                                            VoizeAffinityChromaLayerTheme
+                                                                    .of(context)
                                                                 .bodyMedium
                                                                 .override(
                                                                   font: GoogleFonts
                                                                       .archivo(
-                                                                    fontWeight: FlutterFlowTheme.of(
+                                                                    fontWeight: VoizeAffinityChromaLayerTheme.of(
                                                                             context)
                                                                         .bodyMedium
                                                                         .fontWeight,
-                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                    fontStyle: VoizeAffinityChromaLayerTheme.of(
                                                                             context)
                                                                         .bodyMedium
                                                                         .fontStyle,
                                                                   ),
-                                                                  color: FlutterFlowTheme.of(
+                                                                  color: VoizeAffinityChromaLayerTheme.of(
                                                                           context)
                                                                       .info,
                                                                   fontSize:
                                                                       10.0,
                                                                   letterSpacing:
                                                                       0.0,
-                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                  fontWeight: VoizeAffinityChromaLayerTheme.of(
                                                                           context)
                                                                       .bodyMedium
                                                                       .fontWeight,
-                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                  fontStyle: VoizeAffinityChromaLayerTheme.of(
                                                                           context)
                                                                       .bodyMedium
                                                                       .fontStyle,

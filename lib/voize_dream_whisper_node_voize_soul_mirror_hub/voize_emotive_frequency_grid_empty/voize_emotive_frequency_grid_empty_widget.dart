@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_theme.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'voize_emotive_frequency_grid_empty_model.dart';
@@ -94,19 +94,26 @@ class _VoizeEmotiveFrequencyGridEmptyWidgetState
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
               child: Text(
                 'There is no content for the moment.',
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                style: VoizeAffinityChromaLayerTheme.of(context)
+                    .bodyMedium
+                    .override(
                       font: GoogleFonts.archivo(
-                        fontWeight:
-                            FlutterFlowTheme.of(context).bodyMedium.fontWeight,
-                        fontStyle:
-                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        fontWeight: VoizeAffinityChromaLayerTheme.of(context)
+                            .bodyMedium
+                            .fontWeight,
+                        fontStyle: VoizeAffinityChromaLayerTheme.of(context)
+                            .bodyMedium
+                            .fontStyle,
                       ),
                       color: Color(0x80FFFFFF),
                       fontSize: 12.0,
                       letterSpacing: 0.0,
-                      fontWeight:
-                          FlutterFlowTheme.of(context).bodyMedium.fontWeight,
-                      fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      fontWeight: VoizeAffinityChromaLayerTheme.of(context)
+                          .bodyMedium
+                          .fontWeight,
+                      fontStyle: VoizeAffinityChromaLayerTheme.of(context)
+                          .bodyMedium
+                          .fontStyle,
                     ),
               ),
             ),

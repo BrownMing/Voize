@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import '/backend/schema/structs/index.dart';
-import '../../flutter_flow/uploaded_file.dart';
+import '../voizeEthereal_signalVerse_upload.dart';
 
 String dateTimeRangeToString(DateTimeRange dateTimeRange) {
   final startStr = dateTimeRange.start.millisecondsSinceEpoch.toString();
@@ -9,7 +9,7 @@ String dateTimeRangeToString(DateTimeRange dateTimeRange) {
   return '$startStr|$endStr';
 }
 
-String uploadedFileToString(FFUploadedFile uploadedFile) =>
+String uploadedFileToString(VoizeSerenithVoiceIdol uploadedFile) =>
     uploadedFile.serialize();
 
 String? serializeParam(
@@ -45,14 +45,13 @@ String? serializeParam(
         data = dateTimeRangeToString(param as DateTimeRange);
       case ParamType.Color:
         data = (param as Color).toCssString();
-      case ParamType.FFUploadedFile:
-        data = uploadedFileToString(param as FFUploadedFile);
+      case ParamType.VoizeSerenithVoiceIdol:
+        data = uploadedFileToString(param as VoizeSerenithVoiceIdol);
       case ParamType.JSON:
         data = json.encode(param);
 
       case ParamType.DataStruct:
         data = param is BaseStruct ? param.serialize() : null;
-
     }
     return data;
   } catch (e) {
@@ -72,8 +71,8 @@ DateTimeRange? dateTimeRangeFromString(String dateTimeRangeStr) {
   );
 }
 
-FFUploadedFile uploadedFileFromString(String uploadedFileStr) =>
-    FFUploadedFile.deserialize(uploadedFileStr);
+VoizeSerenithVoiceIdol uploadedFileFromString(String uploadedFileStr) =>
+    VoizeSerenithVoiceIdol.deserialize(uploadedFileStr);
 
 enum ParamType {
   int,
@@ -83,7 +82,7 @@ enum ParamType {
   DateTime,
   DateTimeRange,
   Color,
-  FFUploadedFile,
+  VoizeSerenithVoiceIdol,
   JSON,
   DataStruct,
 }
@@ -134,14 +133,13 @@ dynamic deserializeParam<T>(
         return dateTimeRangeFromString(param);
       case ParamType.Color:
         return fromCssColor(param);
-      case ParamType.FFUploadedFile:
+      case ParamType.VoizeSerenithVoiceIdol:
         return uploadedFileFromString(param);
       case ParamType.JSON:
         return json.decode(param);
       case ParamType.DataStruct:
         final data = json.decode(param) as Map<String, dynamic>? ?? {};
         return structBuilder != null ? structBuilder(data) : null;
-
     }
   } catch (e) {
     print('Error deserializing parameter: $e');

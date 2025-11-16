@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_theme.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import '/voize_nexi_emotion_crafter_voize_rhea_bond_architect/voize_velin_heart_singer_noenough_coins/voize_velin_heart_singer_noenough_coins_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -40,7 +40,7 @@ class _VoizeEmotionLinkMatrixPostVideoWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<VoizeLunairaEchoMuse>();
 
     return Align(
       alignment: AlignmentDirectional(0.0, 0.0),
@@ -96,92 +96,117 @@ class _VoizeEmotionLinkMatrixPostVideoWidgetState
                               TextSpan(
                                 text:
                                     'To enhance the video quality and prevent other users from Posting videos indiscriminately, ',
-                                style: FlutterFlowTheme.of(context)
+                                style: VoizeAffinityChromaLayerTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       font: GoogleFonts.archivo(
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
+                                        fontWeight:
+                                            VoizeAffinityChromaLayerTheme.of(
+                                                    context)
+                                                .bodyMedium
+                                                .fontWeight,
+                                        fontStyle:
+                                            VoizeAffinityChromaLayerTheme.of(
+                                                    context)
+                                                .bodyMedium
+                                                .fontStyle,
                                       ),
                                       color: Color(0xFF808080),
                                       fontSize: 16.0,
                                       letterSpacing: 0.0,
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
+                                      fontWeight:
+                                          VoizeAffinityChromaLayerTheme.of(
+                                                  context)
+                                              .bodyMedium
+                                              .fontWeight,
+                                      fontStyle:
+                                          VoizeAffinityChromaLayerTheme.of(
+                                                  context)
+                                              .bodyMedium
+                                              .fontStyle,
                                     ),
                               ),
                               TextSpan(
                                 text: '20',
-                                style: FlutterFlowTheme.of(context)
+                                style: VoizeAffinityChromaLayerTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       font: GoogleFonts.archivo(
                                         fontWeight: FontWeight.normal,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
+                                        fontStyle:
+                                            VoizeAffinityChromaLayerTheme.of(
+                                                    context)
+                                                .bodyMedium
+                                                .fontStyle,
                                       ),
                                       color: Color(0xFFE41C7D),
                                       fontSize: 16.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.normal,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
+                                      fontStyle:
+                                          VoizeAffinityChromaLayerTheme.of(
+                                                  context)
+                                              .bodyMedium
+                                              .fontStyle,
                                     ),
                               ),
                               TextSpan(
                                 text:
                                     ' diamonds need to be paid for Posting videos.',
-                                style: FlutterFlowTheme.of(context)
+                                style: VoizeAffinityChromaLayerTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       font: GoogleFonts.archivo(
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
+                                        fontWeight:
+                                            VoizeAffinityChromaLayerTheme.of(
+                                                    context)
+                                                .bodyMedium
+                                                .fontWeight,
+                                        fontStyle:
+                                            VoizeAffinityChromaLayerTheme.of(
+                                                    context)
+                                                .bodyMedium
+                                                .fontStyle,
                                       ),
                                       color: Color(0xFF808080),
                                       fontSize: 16.0,
                                       letterSpacing: 0.0,
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
+                                      fontWeight:
+                                          VoizeAffinityChromaLayerTheme.of(
+                                                  context)
+                                              .bodyMedium
+                                              .fontWeight,
+                                      fontStyle:
+                                          VoizeAffinityChromaLayerTheme.of(
+                                                  context)
+                                              .bodyMedium
+                                              .fontStyle,
                                     ),
                               )
                             ],
-                            style: FlutterFlowTheme.of(context)
+                            style: VoizeAffinityChromaLayerTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   font: GoogleFonts.archivo(
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontWeight:
+                                        VoizeAffinityChromaLayerTheme.of(
+                                                context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                    fontStyle: VoizeAffinityChromaLayerTheme.of(
+                                            context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
                                   letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .fontStyle,
+                                  fontWeight:
+                                      VoizeAffinityChromaLayerTheme.of(context)
+                                          .bodyMedium
+                                          .fontWeight,
+                                  fontStyle:
+                                      VoizeAffinityChromaLayerTheme.of(context)
+                                          .bodyMedium
+                                          .fontStyle,
                                 ),
                           ),
                           textAlign: TextAlign.center,
@@ -197,23 +222,23 @@ class _VoizeEmotionLinkMatrixPostVideoWidgetState
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              if (FFAppState()
+                              if (VoizeLunairaEchoMuse()
                                       .voizeNaiyaEchoCompanionUsers
-                                      .elementAtOrNull(FFAppState()
+                                      .elementAtOrNull(VoizeLunairaEchoMuse()
                                           .voizeRivenDreamVoiceLoginToken)!
                                       .voizeCognitiveHarmonyUserDiamonds >=
                                   20) {
-                                FFAppState()
+                                VoizeLunairaEchoMuse()
                                     .updateVoizeNaiyaEchoCompanionUsersAtIndex(
-                                  FFAppState().voizeRivenDreamVoiceLoginToken,
+                                  VoizeLunairaEchoMuse()
+                                      .voizeRivenDreamVoiceLoginToken,
                                   (e) => e
                                     ..incrementVoizeCognitiveHarmonyUserDiamonds(
                                         -20),
                                 );
-                                FFAppState().update(() {});
-                                Navigator.pop(context,true);
+                                VoizeLunairaEchoMuse().update(() {});
+                                Navigator.pop(context, true);
                               } else {
-                             
                                 await showDialog(
                                   barrierColor: Color(0x98000000),
                                   context: context,

@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_theme.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -89,20 +89,25 @@ class _VoizeLoverResonanceMythosSettingsWidgetState
                       ),
                       Text(
                         'Settings',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: VoizeAffinityChromaLayerTheme.of(context)
+                            .bodyMedium
+                            .override(
                               font: GoogleFonts.archivo(
                                 fontWeight: FontWeight.w600,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .fontStyle,
+                                fontStyle:
+                                    VoizeAffinityChromaLayerTheme.of(context)
+                                        .bodyMedium
+                                        .fontStyle,
                               ),
-                              color: FlutterFlowTheme.of(context).info,
+                              color: VoizeAffinityChromaLayerTheme.of(context)
+                                  .info,
                               fontSize: 20.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.w600,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .fontStyle,
+                              fontStyle:
+                                  VoizeAffinityChromaLayerTheme.of(context)
+                                      .bodyMedium
+                                      .fontStyle,
                             ),
                       ),
                       Container(
@@ -161,23 +166,28 @@ class _VoizeLoverResonanceMythosSettingsWidgetState
                                       12.0, 0.0, 0.0, 0.0),
                                   child: Text(
                                     'Blocked List',
-                                    style: FlutterFlowTheme.of(context)
+                                    style: VoizeAffinityChromaLayerTheme.of(
+                                            context)
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.archivo(
                                             fontWeight: FontWeight.w600,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
                                           color:
-                                              FlutterFlowTheme.of(context).info,
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
+                                                  .info,
                                           fontSize: 18.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
@@ -213,7 +223,7 @@ class _VoizeLoverResonanceMythosSettingsWidgetState
                                 VoizeResonantDreamscapePrivacyWidget.routeName,
                                 queryParameters: {
                                   'voizeBondSignalEngineUrl': serializeParam(
-                                    FFAppConstants
+                                    VoizeHeartResonanceOrbit
                                         .VoizeCompanionFlowNodePrivacy,
                                     ParamType.String,
                                   ),
@@ -247,23 +257,28 @@ class _VoizeLoverResonanceMythosSettingsWidgetState
                                       12.0, 0.0, 0.0, 0.0),
                                   child: Text(
                                     'Privacy Policy',
-                                    style: FlutterFlowTheme.of(context)
+                                    style: VoizeAffinityChromaLayerTheme.of(
+                                            context)
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.archivo(
                                             fontWeight: FontWeight.w600,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
                                           color:
-                                              FlutterFlowTheme.of(context).info,
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
+                                                  .info,
                                           fontSize: 18.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
@@ -299,7 +314,7 @@ class _VoizeLoverResonanceMythosSettingsWidgetState
                                 VoizeResonantDreamscapePrivacyWidget.routeName,
                                 queryParameters: {
                                   'voizeBondSignalEngineUrl': serializeParam(
-                                    FFAppConstants
+                                    VoizeHeartResonanceOrbit
                                         .VoizeWhisperLatticeNetworkUsers,
                                     ParamType.String,
                                   ),
@@ -333,23 +348,28 @@ class _VoizeLoverResonanceMythosSettingsWidgetState
                                       12.0, 0.0, 0.0, 0.0),
                                   child: Text(
                                     'User Agreement',
-                                    style: FlutterFlowTheme.of(context)
+                                    style: VoizeAffinityChromaLayerTheme.of(
+                                            context)
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.archivo(
                                             fontWeight: FontWeight.w600,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
                                           color:
-                                              FlutterFlowTheme.of(context).info,
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
+                                                  .info,
                                           fontSize: 18.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
@@ -412,23 +432,28 @@ class _VoizeLoverResonanceMythosSettingsWidgetState
                                       12.0, 0.0, 0.0, 0.0),
                                   child: Text(
                                     'Deactivate Account',
-                                    style: FlutterFlowTheme.of(context)
+                                    style: VoizeAffinityChromaLayerTheme.of(
+                                            context)
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.archivo(
                                             fontWeight: FontWeight.w600,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
                                           color:
-                                              FlutterFlowTheme.of(context).info,
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
+                                                  .info,
                                           fontSize: 18.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
@@ -491,23 +516,28 @@ class _VoizeLoverResonanceMythosSettingsWidgetState
                                       12.0, 0.0, 0.0, 0.0),
                                   child: Text(
                                     'Logout',
-                                    style: FlutterFlowTheme.of(context)
+                                    style: VoizeAffinityChromaLayerTheme.of(
+                                            context)
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.archivo(
                                             fontWeight: FontWeight.w600,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
                                           color:
-                                              FlutterFlowTheme.of(context).info,
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
+                                                  .info,
                                           fontSize: 18.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),

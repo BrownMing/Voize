@@ -1,6 +1,6 @@
 import '/backend/schema/structs/index.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/permissions_util.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_permissions.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:record/record.dart';
@@ -59,7 +59,7 @@ class _VoizeWhisperBloomSagaVoiceWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<VoizeLunairaEchoMuse>();
 
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -127,10 +127,11 @@ class _VoizeWhisperBloomSagaVoiceWidgetState
                         },
                       );
 
-                      FFAppState().addToVoizeAerisHeartTunerMessages(
+                      VoizeLunairaEchoMuse().addToVoizeAerisHeartTunerMessages(
                           VoizeLioraWhisperMuseMessageStruct(
                         voizeLioraWhisperMuseMessageCreateId:
-                            FFAppState().voizeRivenDreamVoiceLoginToken,
+                            VoizeLunairaEchoMuse()
+                                .voizeRivenDreamVoiceLoginToken,
                         voizeLioraWhisperMuseMessageCreateTime:
                             getCurrentTimestamp,
                         voizeLioraWhisperMuseMessageAudio:
@@ -138,7 +139,7 @@ class _VoizeWhisperBloomSagaVoiceWidgetState
                         voizeLioraWhisperMuseMessageChatRef:
                             widget.voizeSentiencePulseEngineChat,
                       ));
-                      FFAppState().update(() {});
+                      VoizeLunairaEchoMuse().update(() {});
                       Navigator.pop(context);
 
                       setState(() {

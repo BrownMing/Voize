@@ -1,10 +1,11 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import 'voize_whisper_sync_protocol_post_diarys_widget.dart'
     show VoizeWhisperSyncProtocolPostDiarysWidget;
 import 'package:flutter/material.dart';
 
 class VoizeWhisperSyncProtocolPostDiarysModel
-    extends FlutterFlowModel<VoizeWhisperSyncProtocolPostDiarysWidget> {
+    extends VoizeAffinityChromaLayerModel<
+        VoizeWhisperSyncProtocolPostDiarysWidget> {
   List<String> voizeNeraiWhisperIdolPhoto = [];
   void addToVoizeNeraiWhisperIdolPhoto(String item) =>
       voizeNeraiWhisperIdolPhoto.add(item);

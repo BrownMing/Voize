@@ -1,8 +1,7 @@
+import 'package:voize/voizeEthereal_signalVerse/voizeEthereal_signalVerse_video.dart';
 import 'package:voize/voize_nexi_emotion_crafter_voize_rhea_bond_architect/voize_affinity_weave_system_otherinfo/voize_affinity_weave_system_otherinfo_widget.dart';
-
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_video_player.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_theme.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import '/voize_echo_continuum_voize_resonance_network/voize_connection_circuitry_report_block/voize_connection_circuitry_report_block_widget.dart';
 import '/voize_echo_continuum_voize_resonance_network/voize_luma_empath_entity_comments/voize_luma_empath_entity_comments_widget.dart';
 import 'package:flutter/material.dart';
@@ -53,7 +52,7 @@ class _VoizeEveOfEchoesSeraphOfWhispersVideoDetailsWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<VoizeLunairaEchoMuse>();
 
     return GestureDetector(
       onTap: () {
@@ -85,8 +84,8 @@ class _VoizeEveOfEchoesSeraphOfWhispersVideoDetailsWidgetState
               decoration: BoxDecoration(),
               child: Stack(
                 children: [
-                  RebelTorqueBrotherhoodDen(
-                    path: FFAppState()
+                  VoizeMyrineDreamEmpress(
+                    path: VoizeLunairaEchoMuse()
                         .voizeSerenEmotionSpiritVideos
                         .elementAtOrNull(widget.voizeHeartSyncProtocolPost!)!
                         .voizeHeartWaveContinuityVideoUrl,
@@ -124,7 +123,7 @@ class _VoizeEveOfEchoesSeraphOfWhispersVideoDetailsWidgetState
                         ),
                       ),
                       if (widget.voizeWhisperMemoryHubUserid !=
-                          FFAppState().voizeRivenDreamVoiceLoginToken)
+                          VoizeLunairaEchoMuse().voizeRivenDreamVoiceLoginToken)
                         InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -148,11 +147,12 @@ class _VoizeEveOfEchoesSeraphOfWhispersVideoDetailsWidgetState
                                     padding: MediaQuery.viewInsetsOf(context),
                                     child:
                                         VoizeConnectionCircuitryReportBlockWidget(
-                                      voizeNoelleVocalLoverUserid: FFAppState()
-                                          .voizeSerenEmotionSpiritVideos
-                                          .elementAtOrNull(widget
-                                              .voizeHeartSyncProtocolPost!)!
-                                          .voizeHeartWaveContinuityVideoCreateId,
+                                      voizeNoelleVocalLoverUserid:
+                                          VoizeLunairaEchoMuse()
+                                              .voizeSerenEmotionSpiritVideos
+                                              .elementAtOrNull(widget
+                                                  .voizeHeartSyncProtocolPost!)!
+                                              .voizeHeartWaveContinuityVideoCreateId,
                                     ),
                                   ),
                                 );
@@ -189,12 +189,12 @@ class _VoizeEveOfEchoesSeraphOfWhispersVideoDetailsWidgetState
                           children: [
                             Builder(
                               builder: (context) {
-                                if (FFAppState()
+                                if (VoizeLunairaEchoMuse()
                                         .voizeSerenEmotionSpiritVideos
                                         .elementAtOrNull(
                                             widget.voizeHeartSyncProtocolPost!)
                                         ?.voizeHeartWaveContinuityVideoLikeUsers
-                                        .contains(FFAppState()
+                                        .contains(VoizeLunairaEchoMuse()
                                             .voizeRivenDreamVoiceLoginToken) ??
                                     false) {
                                   return InkWell(
@@ -204,16 +204,16 @@ class _VoizeEveOfEchoesSeraphOfWhispersVideoDetailsWidgetState
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
                                       HapticFeedback.heavyImpact();
-                                      FFAppState()
+                                      VoizeLunairaEchoMuse()
                                           .updateVoizeSerenEmotionSpiritVideosAtIndex(
                                         widget.voizeHeartSyncProtocolPost!,
                                         (e) => e
                                           ..updateVoizeHeartWaveContinuityVideoLikeUsers(
-                                            (e) => e.remove(FFAppState()
+                                            (e) => e.remove(VoizeLunairaEchoMuse()
                                                 .voizeRivenDreamVoiceLoginToken),
                                           ),
                                       );
-                                      FFAppState().update(() {});
+                                      VoizeLunairaEchoMuse().update(() {});
                                     },
                                     child: AnimatedContainer(
                                       duration: Duration(milliseconds: 300),
@@ -238,16 +238,16 @@ class _VoizeEveOfEchoesSeraphOfWhispersVideoDetailsWidgetState
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
                                       HapticFeedback.heavyImpact();
-                                      FFAppState()
+                                      VoizeLunairaEchoMuse()
                                           .updateVoizeSerenEmotionSpiritVideosAtIndex(
                                         widget.voizeHeartSyncProtocolPost!,
                                         (e) => e
                                           ..updateVoizeHeartWaveContinuityVideoLikeUsers(
-                                            (e) => e.add(FFAppState()
+                                            (e) => e.add(VoizeLunairaEchoMuse()
                                                 .voizeRivenDreamVoiceLoginToken),
                                           ),
                                       );
-                                      FFAppState().update(() {});
+                                      VoizeLunairaEchoMuse().update(() {});
                                     },
                                     child: AnimatedContainer(
                                       duration: Duration(milliseconds: 300),
@@ -268,21 +268,24 @@ class _VoizeEveOfEchoesSeraphOfWhispersVideoDetailsWidgetState
                               },
                             ),
                             Text(
-                              '${FFAppState().voizeSerenEmotionSpiritVideos.elementAtOrNull(widget.voizeHeartSyncProtocolPost!)?.voizeHeartWaveContinuityVideoLikeUsers.length.toString()}',
-                              style: FlutterFlowTheme.of(context)
+                              '${VoizeLunairaEchoMuse().voizeSerenEmotionSpiritVideos.elementAtOrNull(widget.voizeHeartSyncProtocolPost!)?.voizeHeartWaveContinuityVideoLikeUsers.length.toString()}',
+                              style: VoizeAffinityChromaLayerTheme.of(context)
                                   .bodyMedium
                                   .override(
                                     font: GoogleFonts.archivo(
                                       fontWeight: FontWeight.w500,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
+                                      fontStyle:
+                                          VoizeAffinityChromaLayerTheme.of(
+                                                  context)
+                                              .bodyMedium
+                                              .fontStyle,
                                     ),
                                     color: Color(0xB2FFFFFF),
                                     fontSize: 12.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: VoizeAffinityChromaLayerTheme.of(
+                                            context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
@@ -338,13 +341,14 @@ class _VoizeEveOfEchoesSeraphOfWhispersVideoDetailsWidgetState
                             ),
                           ),
                           Text(
-                            '${FFAppState().voizeVelanEmpathComments.where((e) => (widget.voizeHeartSyncProtocolPost == e.voizeSentienceEchoRealmCommentPostRef)).length.toString()}',
-                            style: FlutterFlowTheme.of(context)
+                            '${VoizeLunairaEchoMuse().voizeVelanEmpathComments.where((e) => (widget.voizeHeartSyncProtocolPost == e.voizeSentienceEchoRealmCommentPostRef)).length.toString()}',
+                            style: VoizeAffinityChromaLayerTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   font: GoogleFonts.archivo(
                                     fontWeight: FontWeight.w500,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: VoizeAffinityChromaLayerTheme.of(
+                                            context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
@@ -352,9 +356,10 @@ class _VoizeEveOfEchoesSeraphOfWhispersVideoDetailsWidgetState
                                   fontSize: 12.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.w500,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .fontStyle,
+                                  fontStyle:
+                                      VoizeAffinityChromaLayerTheme.of(context)
+                                          .bodyMedium
+                                          .fontStyle,
                                 ),
                           ),
                         ].divide(SizedBox(height: 6.0)),
@@ -372,7 +377,7 @@ class _VoizeEveOfEchoesSeraphOfWhispersVideoDetailsWidgetState
                                 GestureDetector(
                                   onTap: () async {
                                     if (widget.voizeWhisperMemoryHubUserid !=
-                                        FFAppState()
+                                        VoizeLunairaEchoMuse()
                                             .voizeRivenDreamVoiceLoginToken) {
                                       context.pushNamed(
                                         VoizeAffinityWeaveSystemOtherinfoWidget
@@ -387,7 +392,7 @@ class _VoizeEveOfEchoesSeraphOfWhispersVideoDetailsWidgetState
                                         queryParameters: {
                                           'voizeLoverResonanceVerseUserid':
                                               serializeParam(
-                                            FFAppState()
+                                            VoizeLunairaEchoMuse()
                                                 .voizeNaiyaEchoCompanionUsers
                                                 .elementAtOrNull(widget
                                                     .voizeWhisperMemoryHubUserid!)!
@@ -406,7 +411,7 @@ class _VoizeEveOfEchoesSeraphOfWhispersVideoDetailsWidgetState
                                       shape: BoxShape.circle,
                                     ),
                                     child: Image.asset(
-                                      FFAppState()
+                                      VoizeLunairaEchoMuse()
                                           .voizeNaiyaEchoCompanionUsers
                                           .elementAtOrNull(widget
                                               .voizeWhisperMemoryHubUserid!)!
@@ -424,25 +429,29 @@ class _VoizeEveOfEchoesSeraphOfWhispersVideoDetailsWidgetState
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        '${FFAppState().voizeNaiyaEchoCompanionUsers.elementAtOrNull(widget.voizeWhisperMemoryHubUserid!)?.voizeCognitiveHarmonyUserName}',
-                                        style: FlutterFlowTheme.of(context)
+                                        '${VoizeLunairaEchoMuse().voizeNaiyaEchoCompanionUsers.elementAtOrNull(widget.voizeWhisperMemoryHubUserid!)?.voizeCognitiveHarmonyUserName}',
+                                        style: VoizeAffinityChromaLayerTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.archivo(
                                                 fontWeight: FontWeight.w600,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    VoizeAffinityChromaLayerTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  VoizeAffinityChromaLayerTheme
+                                                          .of(context)
                                                       .info,
                                               fontSize: 16.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.w600,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  VoizeAffinityChromaLayerTheme
+                                                          .of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
@@ -450,21 +459,24 @@ class _VoizeEveOfEchoesSeraphOfWhispersVideoDetailsWidgetState
                                       Text(
                                         dateTimeFormat(
                                             "relative",
-                                            FFAppState()
+                                            VoizeLunairaEchoMuse()
                                                 .voizeSerenEmotionSpiritVideos
                                                 .elementAtOrNull(widget
                                                     .voizeHeartSyncProtocolPost!)!
                                                 .voizeHeartWaveContinuityVideoCreateTime!),
-                                        style: FlutterFlowTheme.of(context)
+                                        style: VoizeAffinityChromaLayerTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.archivo(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    VoizeAffinityChromaLayerTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    VoizeAffinityChromaLayerTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
@@ -472,11 +484,13 @@ class _VoizeEveOfEchoesSeraphOfWhispersVideoDetailsWidgetState
                                               fontSize: 12.0,
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  VoizeAffinityChromaLayerTheme
+                                                          .of(context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  VoizeAffinityChromaLayerTheme
+                                                          .of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
@@ -487,24 +501,31 @@ class _VoizeEveOfEchoesSeraphOfWhispersVideoDetailsWidgetState
                               ],
                             ),
                             Text(
-                              '${FFAppState().voizeSerenEmotionSpiritVideos.elementAtOrNull(widget.voizeHeartSyncProtocolPost!)?.voizeHeartWaveContinuityVideoDescribe}',
-                              style: FlutterFlowTheme.of(context)
+                              '${VoizeLunairaEchoMuse().voizeSerenEmotionSpiritVideos.elementAtOrNull(widget.voizeHeartSyncProtocolPost!)?.voizeHeartWaveContinuityVideoDescribe}',
+                              style: VoizeAffinityChromaLayerTheme.of(context)
                                   .bodyMedium
                                   .override(
                                     font: GoogleFonts.archivo(
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
+                                      fontWeight:
+                                          VoizeAffinityChromaLayerTheme.of(
+                                                  context)
+                                              .bodyMedium
+                                              .fontWeight,
+                                      fontStyle:
+                                          VoizeAffinityChromaLayerTheme.of(
+                                                  context)
+                                              .bodyMedium
+                                              .fontStyle,
                                     ),
                                     color: Color(0xB2FFFFFF),
                                     letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontWeight:
+                                        VoizeAffinityChromaLayerTheme.of(
+                                                context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                    fontStyle: VoizeAffinityChromaLayerTheme.of(
+                                            context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),

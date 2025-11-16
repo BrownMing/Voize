@@ -1,7 +1,8 @@
+import 'package:voize/voizeEthereal_signalVerse/voizeEthereal_signalVerse_video.dart';
+
 import '/components/voize_ethereal_sound_codex_following_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_video_player.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_theme.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import '/voize_echo_continuum_voize_resonance_network/voize_connection_circuitry_report_block/voize_connection_circuitry_report_block_widget.dart';
 import '/voize_nexi_emotion_crafter_voize_rhea_bond_architect/voize_kael_whisper_soul_posts_group/voize_kael_whisper_soul_posts_group_widget.dart';
 import '/voize_nexi_emotion_crafter_voize_rhea_bond_architect/voize_nyra_resonant_spirit_unlock/voize_nyra_resonant_spirit_unlock_widget.dart';
@@ -46,7 +47,7 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<VoizeLunairaEchoMuse>();
 
     return GestureDetector(
       onTap: () {
@@ -93,9 +94,9 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(100.0),
                           child: Image.asset(
-                            FFAppState()
+                            VoizeLunairaEchoMuse()
                                 .voizeNaiyaEchoCompanionUsers
-                                .elementAtOrNull(FFAppState()
+                                .elementAtOrNull(VoizeLunairaEchoMuse()
                                     .voizeRivenDreamVoiceLoginToken)!
                                 .voizeCognitiveHarmonyUserPhoto,
                             width: 32.0,
@@ -106,20 +107,25 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                       ),
                       Text(
                         'Voize',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: VoizeAffinityChromaLayerTheme.of(context)
+                            .bodyMedium
+                            .override(
                               font: GoogleFonts.archivo(
                                 fontWeight: FontWeight.w600,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .fontStyle,
+                                fontStyle:
+                                    VoizeAffinityChromaLayerTheme.of(context)
+                                        .bodyMedium
+                                        .fontStyle,
                               ),
-                              color: FlutterFlowTheme.of(context).info,
+                              color: VoizeAffinityChromaLayerTheme.of(context)
+                                  .info,
                               fontSize: 20.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.w600,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .fontStyle,
+                              fontStyle:
+                                  VoizeAffinityChromaLayerTheme.of(context)
+                                      .bodyMedium
+                                      .fontStyle,
                             ),
                       ),
                       InkWell(
@@ -203,24 +209,29 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                   children: [
                                     Text(
                                       'Go to the Community',
-                                      style: FlutterFlowTheme.of(context)
+                                      style: VoizeAffinityChromaLayerTheme.of(
+                                              context)
                                           .bodyMedium
                                           .override(
                                         font: GoogleFonts.archivo(
                                           fontWeight: FontWeight.bold,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
+                                        color: VoizeAffinityChromaLayerTheme.of(
+                                                context)
+                                            .info,
                                         fontSize: 16.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.bold,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
+                                        fontStyle:
+                                            VoizeAffinityChromaLayerTheme.of(
+                                                    context)
+                                                .bodyMedium
+                                                .fontStyle,
                                         shadows: [
                                           Shadow(
                                             color: Color(0xFFF97D3F),
@@ -240,18 +251,19 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                           decoration: BoxDecoration(),
                                           child: Text(
                                             'You can meet more piano enthusiasts here!',
-                                            style: FlutterFlowTheme.of(context)
+                                            style: VoizeAffinityChromaLayerTheme
+                                                    .of(context)
                                                 .bodyMedium
                                                 .override(
                                                   font: GoogleFonts.archivo(
                                                     fontWeight:
-                                                        FlutterFlowTheme.of(
-                                                                context)
+                                                        VoizeAffinityChromaLayerTheme
+                                                                .of(context)
                                                             .bodyMedium
                                                             .fontWeight,
                                                     fontStyle:
-                                                        FlutterFlowTheme.of(
-                                                                context)
+                                                        VoizeAffinityChromaLayerTheme
+                                                                .of(context)
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
@@ -259,13 +271,13 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                                   fontSize: 10.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      VoizeAffinityChromaLayerTheme
+                                                              .of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      VoizeAffinityChromaLayerTheme
+                                                              .of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -289,31 +301,32 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                               AlignmentDirectional(0.0, 0.0),
                                           child: GradientText(
                                             'Let\'s Go',
-                                            style: FlutterFlowTheme.of(context)
+                                            style: VoizeAffinityChromaLayerTheme
+                                                    .of(context)
                                                 .bodyMedium
                                                 .override(
                                                   font: GoogleFonts.archivo(
                                                     fontWeight:
-                                                        FlutterFlowTheme.of(
-                                                                context)
+                                                        VoizeAffinityChromaLayerTheme
+                                                                .of(context)
                                                             .bodyMedium
                                                             .fontWeight,
                                                     fontStyle:
-                                                        FlutterFlowTheme.of(
-                                                                context)
+                                                        VoizeAffinityChromaLayerTheme
+                                                                .of(context)
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
                                                   fontSize: 12.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      VoizeAffinityChromaLayerTheme
+                                                              .of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      VoizeAffinityChromaLayerTheme
+                                                              .of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -344,22 +357,28 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                             children: [
                               Text(
                                 'Popular Video',
-                                style: FlutterFlowTheme.of(context)
+                                style: VoizeAffinityChromaLayerTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       font: GoogleFonts.archivo(
                                         fontWeight: FontWeight.w600,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
+                                        fontStyle:
+                                            VoizeAffinityChromaLayerTheme.of(
+                                                    context)
+                                                .bodyMedium
+                                                .fontStyle,
                                       ),
-                                      color: FlutterFlowTheme.of(context).info,
+                                      color: VoizeAffinityChromaLayerTheme.of(
+                                              context)
+                                          .info,
                                       fontSize: 16.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w600,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
+                                      fontStyle:
+                                          VoizeAffinityChromaLayerTheme.of(
+                                                  context)
+                                              .bodyMedium
+                                              .fontStyle,
                                     ),
                               ),
                             ],
@@ -370,11 +389,11 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                               16.0, 12.0, 0.0, 0.0),
                           child: Builder(
                             builder: (context) {
-                              final voizeAffectionEchoLink = FFAppState()
+                              final voizeAffectionEchoLink = VoizeLunairaEchoMuse()
                                   .voizeSerenEmotionSpiritVideos
-                                  .where((e) => !FFAppState()
+                                  .where((e) => !VoizeLunairaEchoMuse()
                                       .voizeNaiyaEchoCompanionUsers
-                                      .elementAtOrNull(FFAppState()
+                                      .elementAtOrNull(VoizeLunairaEchoMuse()
                                           .voizeRivenDreamVoiceLoginToken)!
                                       .voizeCognitiveHarmonyUserBlacklist
                                       .contains(e
@@ -432,7 +451,7 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                         ),
                                         child: Stack(
                                           children: [
-                                            RebelTorqueBrotherhoodDen(
+                                            VoizeMyrineDreamEmpress(
                                               path: voizeAffectionEchoLinkItem
                                                   .voizeHeartWaveContinuityVideoUrl,
                                               autoPlay: false,
@@ -462,7 +481,7 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                                               BoxShape.circle,
                                                         ),
                                                         child: Image.asset(
-                                                          FFAppState()
+                                                          VoizeLunairaEchoMuse()
                                                               .voizeNaiyaEchoCompanionUsers
                                                               .elementAtOrNull(
                                                                   voizeAffectionEchoLinkItem
@@ -487,8 +506,8 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                                                   .start,
                                                           children: [
                                                             Text(
-                                                              '${FFAppState().voizeNaiyaEchoCompanionUsers.elementAtOrNull(voizeAffectionEchoLinkItem.voizeHeartWaveContinuityVideoCreateId)?.voizeCognitiveHarmonyUserName}',
-                                                              style: FlutterFlowTheme
+                                                              '${VoizeLunairaEchoMuse().voizeNaiyaEchoCompanionUsers.elementAtOrNull(voizeAffectionEchoLinkItem.voizeHeartWaveContinuityVideoCreateId)?.voizeCognitiveHarmonyUserName}',
+                                                              style: VoizeAffinityChromaLayerTheme
                                                                       .of(context)
                                                                   .bodyMedium
                                                                   .override(
@@ -497,12 +516,12 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                                                       fontWeight:
                                                                           FontWeight
                                                                               .w600,
-                                                                      fontStyle: FlutterFlowTheme.of(
+                                                                      fontStyle: VoizeAffinityChromaLayerTheme.of(
                                                                               context)
                                                                           .bodyMedium
                                                                           .fontStyle,
                                                                     ),
-                                                                    color: FlutterFlowTheme.of(
+                                                                    color: VoizeAffinityChromaLayerTheme.of(
                                                                             context)
                                                                         .info,
                                                                     letterSpacing:
@@ -510,7 +529,7 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w600,
-                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                    fontStyle: VoizeAffinityChromaLayerTheme.of(
                                                                             context)
                                                                         .bodyMedium
                                                                         .fontStyle,
@@ -521,17 +540,17 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                                                   "relative",
                                                                   voizeAffectionEchoLinkItem
                                                                       .voizeHeartWaveContinuityVideoCreateTime!),
-                                                              style: FlutterFlowTheme
+                                                              style: VoizeAffinityChromaLayerTheme
                                                                       .of(context)
                                                                   .bodyMedium
                                                                   .override(
                                                                     font: GoogleFonts
                                                                         .archivo(
-                                                                      fontWeight: FlutterFlowTheme.of(
+                                                                      fontWeight: VoizeAffinityChromaLayerTheme.of(
                                                                               context)
                                                                           .bodyMedium
                                                                           .fontWeight,
-                                                                      fontStyle: FlutterFlowTheme.of(
+                                                                      fontStyle: VoizeAffinityChromaLayerTheme.of(
                                                                               context)
                                                                           .bodyMedium
                                                                           .fontStyle,
@@ -542,11 +561,11 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                                                         10.0,
                                                                     letterSpacing:
                                                                         0.0,
-                                                                    fontWeight: FlutterFlowTheme.of(
+                                                                    fontWeight: VoizeAffinityChromaLayerTheme.of(
                                                                             context)
                                                                         .bodyMedium
                                                                         .fontWeight,
-                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                    fontStyle: VoizeAffinityChromaLayerTheme.of(
                                                                             context)
                                                                         .bodyMedium
                                                                         .fontStyle,
@@ -613,18 +632,18 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                                             onTap: () async {
                                                               HapticFeedback
                                                                   .heavyImpact();
-                                                              FFAppState()
+                                                              VoizeLunairaEchoMuse()
                                                                   .updateVoizeSerenEmotionSpiritVideosAtIndex(
                                                                 voizeAffectionEchoLinkItem
                                                                     .voizeHeartWaveContinuityVideoId,
                                                                 (e) => e
                                                                   ..updateVoizeHeartWaveContinuityVideoLikeUsers(
                                                                     (e) => e.add(
-                                                                        FFAppState()
+                                                                        VoizeLunairaEchoMuse()
                                                                             .voizeRivenDreamVoiceLoginToken),
                                                                   ),
                                                               );
-                                                              FFAppState()
+                                                              VoizeLunairaEchoMuse()
                                                                   .update(
                                                                       () {});
                                                             },
@@ -634,7 +653,7 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                                                 if (voizeAffectionEchoLinkItem
                                                                     .voizeHeartWaveContinuityVideoLikeUsers
                                                                     .contains(
-                                                                        FFAppState()
+                                                                        VoizeLunairaEchoMuse()
                                                                             .voizeRivenDreamVoiceLoginToken)) {
                                                                   return InkWell(
                                                                     splashColor:
@@ -653,17 +672,17 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                                                         () async {
                                                                       HapticFeedback
                                                                           .heavyImpact();
-                                                                      FFAppState()
+                                                                      VoizeLunairaEchoMuse()
                                                                           .updateVoizeSerenEmotionSpiritVideosAtIndex(
                                                                         voizeAffectionEchoLinkItem
                                                                             .voizeHeartWaveContinuityVideoId,
                                                                         (e) => e
                                                                           ..updateVoizeHeartWaveContinuityVideoLikeUsers(
                                                                             (e) =>
-                                                                                e.remove(FFAppState().voizeRivenDreamVoiceLoginToken),
+                                                                                e.remove(VoizeLunairaEchoMuse().voizeRivenDreamVoiceLoginToken),
                                                                           ),
                                                                       );
-                                                                      FFAppState()
+                                                                      VoizeLunairaEchoMuse()
                                                                           .update(
                                                                               () {});
                                                                     },
@@ -705,17 +724,17 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                                                         () async {
                                                                       HapticFeedback
                                                                           .heavyImpact();
-                                                                      FFAppState()
+                                                                      VoizeLunairaEchoMuse()
                                                                           .updateVoizeSerenEmotionSpiritVideosAtIndex(
                                                                         voizeAffectionEchoLinkItem
                                                                             .voizeHeartWaveContinuityVideoId,
                                                                         (e) => e
                                                                           ..updateVoizeHeartWaveContinuityVideoLikeUsers(
                                                                             (e) =>
-                                                                                e.add(FFAppState().voizeRivenDreamVoiceLoginToken),
+                                                                                e.add(VoizeLunairaEchoMuse().voizeRivenDreamVoiceLoginToken),
                                                                           ),
                                                                       );
-                                                                      FFAppState()
+                                                                      VoizeLunairaEchoMuse()
                                                                           .update(
                                                                               () {});
                                                                     },
@@ -753,7 +772,7 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                                                         0.0),
                                                             child: Text(
                                                               '${voizeAffectionEchoLinkItem.voizeHeartWaveContinuityVideoLikeUsers.length.toString()}',
-                                                              style: FlutterFlowTheme
+                                                              style: VoizeAffinityChromaLayerTheme
                                                                       .of(context)
                                                                   .bodyMedium
                                                                   .override(
@@ -762,7 +781,7 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                                                       fontWeight:
                                                                           FontWeight
                                                                               .w500,
-                                                                      fontStyle: FlutterFlowTheme.of(
+                                                                      fontStyle: VoizeAffinityChromaLayerTheme.of(
                                                                               context)
                                                                           .bodyMedium
                                                                           .fontStyle,
@@ -776,7 +795,7 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
-                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                    fontStyle: VoizeAffinityChromaLayerTheme.of(
                                                                             context)
                                                                         .bodyMedium
                                                                         .fontStyle,
@@ -814,8 +833,8 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                                                         0.0,
                                                                         0.0),
                                                             child: Text(
-                                                              '${FFAppState().voizeVelanEmpathComments.where((e) => (voizeAffectionEchoLinkItem.voizeHeartWaveContinuityVideoId == e.voizeSentienceEchoRealmCommentPostRef)).length.toString()}',
-                                                              style: FlutterFlowTheme
+                                                              '${VoizeLunairaEchoMuse().voizeVelanEmpathComments.where((e) => (voizeAffectionEchoLinkItem.voizeHeartWaveContinuityVideoId == e.voizeSentienceEchoRealmCommentPostRef)).length.toString()}',
+                                                              style: VoizeAffinityChromaLayerTheme
                                                                       .of(context)
                                                                   .bodyMedium
                                                                   .override(
@@ -824,7 +843,7 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                                                       fontWeight:
                                                                           FontWeight
                                                                               .w500,
-                                                                      fontStyle: FlutterFlowTheme.of(
+                                                                      fontStyle: VoizeAffinityChromaLayerTheme.of(
                                                                               context)
                                                                           .bodyMedium
                                                                           .fontStyle,
@@ -838,7 +857,7 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
-                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                    fontStyle: VoizeAffinityChromaLayerTheme.of(
                                                                             context)
                                                                         .bodyMedium
                                                                         .fontStyle,
@@ -931,22 +950,26 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                               16.0, 24.0, 0.0, 0.0),
                           child: Text(
                             'Notes on Piano Growth',
-                            style: FlutterFlowTheme.of(context)
+                            style: VoizeAffinityChromaLayerTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   font: GoogleFonts.archivo(
                                     fontWeight: FontWeight.w600,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: VoizeAffinityChromaLayerTheme.of(
+                                            context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
-                                  color: FlutterFlowTheme.of(context).info,
+                                  color:
+                                      VoizeAffinityChromaLayerTheme.of(context)
+                                          .info,
                                   fontSize: 16.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.w600,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .fontStyle,
+                                  fontStyle:
+                                      VoizeAffinityChromaLayerTheme.of(context)
+                                          .bodyMedium
+                                          .fontStyle,
                                 ),
                           ),
                         ),
@@ -955,15 +978,15 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                               16.0, 12.0, 0.0, 0.0),
                           child: Builder(
                             builder: (context) {
-                              final voizeEmotionFeedbackLoop = FFAppState()
+                              final voizeEmotionFeedbackLoop = VoizeLunairaEchoMuse()
                                   .voizeKiraSoundOraclePianoNotes
                                   .where((e) =>
                                       e.voizeEclipticSoulStreamPianoNotesCreateId !=
-                                          FFAppState()
+                                          VoizeLunairaEchoMuse()
                                               .voizeRivenDreamVoiceLoginToken &&
-                                      !FFAppState()
+                                      !VoizeLunairaEchoMuse()
                                           .voizeNaiyaEchoCompanionUsers[
-                                              FFAppState()
+                                              VoizeLunairaEchoMuse()
                                                   .voizeRivenDreamVoiceLoginToken]
                                           .voizeCognitiveHarmonyUserBlacklist
                                           .contains(e
@@ -989,7 +1012,7 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                         onTap: () async {
                                           if (voizeEmotionFeedbackLoopItem
                                               .voizeEclipticSoulStreamPianoNotesUnlock
-                                              .contains(FFAppState()
+                                              .contains(VoizeLunairaEchoMuse()
                                                   .voizeRivenDreamVoiceLoginToken)) {
                                             context.pushNamed(
                                               VoizeAerisDreamOracleDiaryDetailsWidget
@@ -1077,38 +1100,39 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                                 ),
                                                 Text(
                                                   '${voizeEmotionFeedbackLoopItem.voizeEclipticSoulStreamPianoNotesTitle}',
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        font:
-                                                            GoogleFonts.archivo(
-                                                          fontWeight:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontWeight,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontStyle,
-                                                        ),
-                                                        color:
-                                                            Color(0xB2FFFFFF),
-                                                        fontSize: 12.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .fontWeight,
-                                                        fontStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .fontStyle,
-                                                      ),
+                                                  style:
+                                                      VoizeAffinityChromaLayerTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .archivo(
+                                                              fontWeight:
+                                                                  VoizeAffinityChromaLayerTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontWeight,
+                                                              fontStyle:
+                                                                  VoizeAffinityChromaLayerTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontStyle,
+                                                            ),
+                                                            color: Color(
+                                                                0xB2FFFFFF),
+                                                            fontSize: 12.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                VoizeAffinityChromaLayerTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontWeight,
+                                                            fontStyle:
+                                                                VoizeAffinityChromaLayerTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontStyle,
+                                                          ),
                                                 ),
                                               ].divide(SizedBox(height: 8.0)),
                                             ),
@@ -1117,7 +1141,7 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                                     false) &&
                                                 !voizeEmotionFeedbackLoopItem
                                                     .voizeEclipticSoulStreamPianoNotesUnlock
-                                                    .contains(FFAppState()
+                                                    .contains(VoizeLunairaEchoMuse()
                                                         .voizeRivenDreamVoiceLoginToken))
                                               Column(
                                                 mainAxisSize: MainAxisSize.max,
@@ -1136,33 +1160,36 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                                   ),
                                                   Text(
                                                     'UNLOCK',
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          font: GoogleFonts
-                                                              .archivo(
-                                                            fontWeight:
-                                                                FontWeight.w500,
-                                                            fontStyle:
-                                                                FlutterFlowTheme.of(
+                                                    style:
+                                                        VoizeAffinityChromaLayerTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
+                                                              font: GoogleFonts
+                                                                  .archivo(
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w500,
+                                                                fontStyle: VoizeAffinityChromaLayerTheme.of(
                                                                         context)
                                                                     .bodyMedium
                                                                     .fontStyle,
-                                                          ),
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .info,
-                                                          fontSize: 10.0,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.w500,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontStyle,
-                                                        ),
+                                                              ),
+                                                              color: VoizeAffinityChromaLayerTheme
+                                                                      .of(context)
+                                                                  .info,
+                                                              fontSize: 10.0,
+                                                              letterSpacing:
+                                                                  0.0,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w500,
+                                                              fontStyle:
+                                                                  VoizeAffinityChromaLayerTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontStyle,
+                                                            ),
                                                   ),
                                                 ].divide(SizedBox(height: 6.0)),
                                               ),

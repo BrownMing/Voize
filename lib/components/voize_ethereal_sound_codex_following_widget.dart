@@ -1,4 +1,4 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -44,15 +44,16 @@ class _VoizeEtherealSoundCodexFollowingWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<VoizeLunairaEchoMuse>();
 
     return Align(
       alignment: AlignmentDirectional(1.0, -1.0),
       child: Builder(
         builder: (context) {
-          if (!FFAppState()
+          if (!VoizeLunairaEchoMuse()
               .voizeNaiyaEchoCompanionUsers
-              .elementAtOrNull(FFAppState().voizeRivenDreamVoiceLoginToken)!
+              .elementAtOrNull(
+                  VoizeLunairaEchoMuse().voizeRivenDreamVoiceLoginToken)!
               .voizeCognitiveHarmonyUserFollowings
               .contains(widget.voizeSentientHarmonySagaUserid)) {
             return InkWell(
@@ -62,22 +63,25 @@ class _VoizeEtherealSoundCodexFollowingWidgetState
               highlightColor: Colors.transparent,
               onTap: () async {
                 HapticFeedback.heavyImpact();
-                FFAppState().updateVoizeNaiyaEchoCompanionUsersAtIndex(
-                  FFAppState().voizeRivenDreamVoiceLoginToken,
+                VoizeLunairaEchoMuse()
+                    .updateVoizeNaiyaEchoCompanionUsersAtIndex(
+                  VoizeLunairaEchoMuse().voizeRivenDreamVoiceLoginToken,
                   (e) => e
                     ..updateVoizeCognitiveHarmonyUserFollowings(
                       (e) => e.add(widget.voizeSentientHarmonySagaUserid!),
                     ),
                 );
-                FFAppState().update(() {});
-                FFAppState().updateVoizeNaiyaEchoCompanionUsersAtIndex(
+                VoizeLunairaEchoMuse().update(() {});
+                VoizeLunairaEchoMuse()
+                    .updateVoizeNaiyaEchoCompanionUsersAtIndex(
                   widget.voizeSentientHarmonySagaUserid!,
                   (e) => e
                     ..updateVoizeCognitiveHarmonyUserFollowers(
-                      (e) => e.add(FFAppState().voizeRivenDreamVoiceLoginToken),
+                      (e) => e.add(VoizeLunairaEchoMuse()
+                          .voizeRivenDreamVoiceLoginToken),
                     ),
                 );
-                FFAppState().update(() {});
+                VoizeLunairaEchoMuse().update(() {});
               },
               child: AnimatedContainer(
                 duration: Duration(milliseconds: 200),
@@ -102,23 +106,25 @@ class _VoizeEtherealSoundCodexFollowingWidgetState
               highlightColor: Colors.transparent,
               onTap: () async {
                 HapticFeedback.heavyImpact();
-                FFAppState().updateVoizeNaiyaEchoCompanionUsersAtIndex(
-                  FFAppState().voizeRivenDreamVoiceLoginToken,
+                VoizeLunairaEchoMuse()
+                    .updateVoizeNaiyaEchoCompanionUsersAtIndex(
+                  VoizeLunairaEchoMuse().voizeRivenDreamVoiceLoginToken,
                   (e) => e
                     ..updateVoizeCognitiveHarmonyUserFollowings(
                       (e) => e.remove(widget.voizeSentientHarmonySagaUserid),
                     ),
                 );
-                FFAppState().update(() {});
-                FFAppState().updateVoizeNaiyaEchoCompanionUsersAtIndex(
+                VoizeLunairaEchoMuse().update(() {});
+                VoizeLunairaEchoMuse()
+                    .updateVoizeNaiyaEchoCompanionUsersAtIndex(
                   widget.voizeSentientHarmonySagaUserid!,
                   (e) => e
                     ..updateVoizeCognitiveHarmonyUserFollowers(
-                      (e) =>
-                          e.remove(FFAppState().voizeRivenDreamVoiceLoginToken),
+                      (e) => e.remove(VoizeLunairaEchoMuse()
+                          .voizeRivenDreamVoiceLoginToken),
                     ),
                 );
-                FFAppState().update(() {});
+                VoizeLunairaEchoMuse().update(() {});
               },
               child: AnimatedContainer(
                 duration: Duration(milliseconds: 200),

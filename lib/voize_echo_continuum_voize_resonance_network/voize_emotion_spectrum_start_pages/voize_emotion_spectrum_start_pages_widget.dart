@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_theme.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import '/voize_echo_continuum_voize_resonance_network/voize_dream_signal_voize_cognition_stream_eula/voize_dream_signal_voize_cognition_stream_eula_widget.dart';
 import 'dart:ui';
 import '/index.dart';
@@ -141,22 +141,26 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                         opacity: _titleOpacity,
                         child: Text(
                           'Voize',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.archivo(
-                                      fontWeight: FontWeight.w600,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                          style: VoizeAffinityChromaLayerTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                font: GoogleFonts.archivo(
+                                  fontWeight: FontWeight.w600,
+                                  fontStyle:
+                                      VoizeAffinityChromaLayerTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
-                                    ),
-                                    color: FlutterFlowTheme.of(context).info,
-                                    fontSize: 36.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.w600,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                ),
+                                color: VoizeAffinityChromaLayerTheme.of(context)
+                                    .info,
+                                fontSize: 36.0,
+                                letterSpacing: 0.0,
+                                fontWeight: FontWeight.w600,
+                                fontStyle:
+                                    VoizeAffinityChromaLayerTheme.of(context)
                                         .bodyMedium
                                         .fontStyle,
-                                  ),
+                              ),
                         ),
                       ),
                     ),
@@ -175,8 +179,9 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                               // 模拟加载延迟（可选，根据实际需要调整）
                               await Future.delayed(Duration(milliseconds: 500));
 
-                              FFAppState().voizeRivenDreamVoiceLoginToken = 1;
-                              FFAppState().update(() {});
+                              VoizeLunairaEchoMuse()
+                                  .voizeRivenDreamVoiceLoginToken = 1;
+                              VoizeLunairaEchoMuse().update(() {});
 
                               // 关闭 loading
                               PianoLoading.dismiss();
@@ -207,24 +212,29 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                                 alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Text(
                                   'I\'m New',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: VoizeAffinityChromaLayerTheme.of(
+                                          context)
                                       .bodyMedium
                                       .override(
                                         font: GoogleFonts.archivo(
                                           fontWeight: FontWeight.w600,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
+                                        color: VoizeAffinityChromaLayerTheme.of(
+                                                context)
+                                            .info,
                                         fontSize: 16.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
+                                        fontStyle:
+                                            VoizeAffinityChromaLayerTheme.of(
+                                                    context)
+                                                .bodyMedium
+                                                .fontStyle,
                                       ),
                                 ),
                               ),
@@ -279,23 +289,27 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                                     alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       'Login',
-                                      style: FlutterFlowTheme.of(context)
+                                      style: VoizeAffinityChromaLayerTheme.of(
+                                              context)
                                           .bodyMedium
                                           .override(
                                             font: GoogleFonts.archivo(
                                               fontWeight: FontWeight.w600,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  VoizeAffinityChromaLayerTheme
+                                                          .of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
-                                            color: FlutterFlowTheme.of(context)
+                                            color: VoizeAffinityChromaLayerTheme
+                                                    .of(context)
                                                 .info,
                                             fontSize: 16.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
@@ -331,36 +345,42 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                         children: [
                           Text(
                             'Don\'t have an account yet? ',
-                            style: FlutterFlowTheme.of(context)
+                            style: VoizeAffinityChromaLayerTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   font: GoogleFonts.archivo(
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontWeight:
+                                        VoizeAffinityChromaLayerTheme.of(
+                                                context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                    fontStyle: VoizeAffinityChromaLayerTheme.of(
+                                            context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
                                   color: Color(0x7FFFFFFF),
                                   fontSize: 12.0,
                                   letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .fontStyle,
+                                  fontWeight:
+                                      VoizeAffinityChromaLayerTheme.of(context)
+                                          .bodyMedium
+                                          .fontWeight,
+                                  fontStyle:
+                                      VoizeAffinityChromaLayerTheme.of(context)
+                                          .bodyMedium
+                                          .fontStyle,
                                 ),
                           ),
                           Text(
                             'Register',
-                            style: FlutterFlowTheme.of(context)
+                            style: VoizeAffinityChromaLayerTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   font: GoogleFonts.archivo(
                                     fontWeight: FontWeight.w600,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: VoizeAffinityChromaLayerTheme.of(
+                                            context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
@@ -368,9 +388,10 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                                   fontSize: 14.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.w600,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .fontStyle,
+                                  fontStyle:
+                                      VoizeAffinityChromaLayerTheme.of(context)
+                                          .bodyMedium
+                                          .fontStyle,
                                 ),
                           ),
                         ],
@@ -406,12 +427,14 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                                     : null,
                                 color: (_model.checkboxValue ?? true)
                                     ? null
-                                    : FlutterFlowTheme.of(context).alternate,
+                                    : VoizeAffinityChromaLayerTheme.of(context)
+                                        .alternate,
                                 border: (_model.checkboxValue ?? true)
                                     ? null
                                     : Border.all(
                                         width: 2,
-                                        color: FlutterFlowTheme.of(context)
+                                        color: VoizeAffinityChromaLayerTheme.of(
+                                                context)
                                             .alternate,
                                       ),
                               ),
@@ -431,16 +454,19 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                                 children: [
                                   TextSpan(
                                     text: 'By continuing you agree to our  ',
-                                    style: FlutterFlowTheme.of(context)
+                                    style: VoizeAffinityChromaLayerTheme.of(
+                                            context)
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.archivo(
                                             fontWeight:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .fontWeight,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
@@ -448,24 +474,28 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                                           fontSize: 12.0,
                                           letterSpacing: 0.0,
                                           fontWeight:
-                                              FlutterFlowTheme.of(context)
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontWeight,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
                                   ),
                                   TextSpan(
                                     text: 'Terms of Service ',
-                                    style: FlutterFlowTheme.of(context)
+                                    style: VoizeAffinityChromaLayerTheme.of(
+                                            context)
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.archivo(
                                             fontWeight: FontWeight.normal,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
@@ -474,7 +504,8 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.normal,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                           decoration: TextDecoration.underline,
@@ -488,7 +519,7 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                                           queryParameters: {
                                             'voizeBondSignalEngineUrl':
                                                 serializeParam(
-                                              FFAppConstants
+                                              VoizeHeartResonanceOrbit
                                                   .VoizeWhisperLatticeNetworkUsers,
                                               ParamType.String,
                                             ),
@@ -505,16 +536,19 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                                   ),
                                   TextSpan(
                                     text: ' and  ',
-                                    style: FlutterFlowTheme.of(context)
+                                    style: VoizeAffinityChromaLayerTheme.of(
+                                            context)
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.archivo(
                                             fontWeight:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .fontWeight,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
@@ -522,27 +556,32 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                                           fontSize: 12.0,
                                           letterSpacing: 0.0,
                                           fontWeight:
-                                              FlutterFlowTheme.of(context)
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontWeight,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
                                   ),
                                   TextSpan(
                                     text: 'Privacy Policy',
-                                    style: FlutterFlowTheme.of(context)
+                                    style: VoizeAffinityChromaLayerTheme.of(
+                                            context)
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.archivo(
                                             fontWeight:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .fontWeight,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
@@ -550,11 +589,13 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                                           fontSize: 12.0,
                                           letterSpacing: 0.0,
                                           fontWeight:
-                                              FlutterFlowTheme.of(context)
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontWeight,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                           decoration: TextDecoration.underline,
@@ -568,7 +609,7 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                                           queryParameters: {
                                             'voizeBondSignalEngineUrl':
                                                 serializeParam(
-                                              FFAppConstants
+                                              VoizeHeartResonanceOrbit
                                                   .VoizeCompanionFlowNodePrivacy,
                                               ParamType.String,
                                             ),
@@ -584,24 +625,32 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                                       },
                                   )
                                 ],
-                                style: FlutterFlowTheme.of(context)
+                                style: VoizeAffinityChromaLayerTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       font: GoogleFonts.archivo(
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
+                                        fontWeight:
+                                            VoizeAffinityChromaLayerTheme.of(
+                                                    context)
+                                                .bodyMedium
+                                                .fontWeight,
+                                        fontStyle:
+                                            VoizeAffinityChromaLayerTheme.of(
+                                                    context)
+                                                .bodyMedium
+                                                .fontStyle,
                                       ),
                                       letterSpacing: 0.0,
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
+                                      fontWeight:
+                                          VoizeAffinityChromaLayerTheme.of(
+                                                  context)
+                                              .bodyMedium
+                                              .fontWeight,
+                                      fontStyle:
+                                          VoizeAffinityChromaLayerTheme.of(
+                                                  context)
+                                              .bodyMedium
+                                              .fontStyle,
                                     ),
                               ),
                               textAlign: TextAlign.center,
@@ -652,17 +701,21 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                     },
                     child: Text(
                       'EULA',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      style: VoizeAffinityChromaLayerTheme.of(context)
+                          .bodyMedium
+                          .override(
                             font: GoogleFonts.archivo(
                               fontWeight: FontWeight.w600,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .fontStyle,
+                              fontStyle:
+                                  VoizeAffinityChromaLayerTheme.of(context)
+                                      .bodyMedium
+                                      .fontStyle,
                             ),
-                            color: FlutterFlowTheme.of(context).info,
+                            color:
+                                VoizeAffinityChromaLayerTheme.of(context).info,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.w600,
-                            fontStyle: FlutterFlowTheme.of(context)
+                            fontStyle: VoizeAffinityChromaLayerTheme.of(context)
                                 .bodyMedium
                                 .fontStyle,
                             decoration: TextDecoration.underline,

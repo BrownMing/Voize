@@ -2,7 +2,7 @@ import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:voize/backend/schema/structs/voize_niora_dream_listener_purchase_struct.dart';
 import 'package:voize/utils/piano_loading.dart';
 
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import 'voize_echo_dream_legacy_recharge_widget.dart'
     show VoizeEchoDreamLegacyRechargeWidget;
 import 'package:flutter/material.dart';
@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 import 'voize_echowave_continuity_utils.dart';
 
 class VoizeEchoDreamLegacyRechargeModel
-    extends FlutterFlowModel<VoizeEchoDreamLegacyRechargeWidget> {
+    extends VoizeAffinityChromaLayerModel<VoizeEchoDreamLegacyRechargeWidget> {
   final IAPService _iapService = IAPService();
 
   VoidCallback? _onStateChanged;
@@ -112,7 +112,7 @@ class VoizeEchoDreamLegacyRechargeModel
 
       try {
         final voizeDreamwaveDimension =
-            FFAppState().voizeAurellSoulDancerPurchases.firstWhere(
+            VoizeLunairaEchoMuse().voizeAurellSoulDancerPurchases.firstWhere(
                   (product) =>
                       product.voizeNioraDreamListenerPurchaseProductid ==
                       purchaseDetails.productID,
@@ -120,8 +120,8 @@ class VoizeEchoDreamLegacyRechargeModel
         final coinsToAdd =
             voizeDreamwaveDimension.voizeNioraDreamListenerPurchasePrince;
 
-        FFAppState().updateVoizeNaiyaEchoCompanionUsersAtIndex(
-          FFAppState().voizeRivenDreamVoiceLoginToken,
+        VoizeLunairaEchoMuse().updateVoizeNaiyaEchoCompanionUsersAtIndex(
+          VoizeLunairaEchoMuse().voizeRivenDreamVoiceLoginToken,
           (user) =>
               user..incrementVoizeCognitiveHarmonyUserDiamonds(coinsToAdd),
         );
@@ -235,7 +235,7 @@ class VoizeEchoDreamLegacyRechargeModel
       }
 
       // 重新加载商品
-      await loadProducts(FFAppState().voizeAurellSoulDancerPurchases);
+      await loadProducts(VoizeLunairaEchoMuse().voizeAurellSoulDancerPurchases);
 
       PianoLoading.dismiss();
 

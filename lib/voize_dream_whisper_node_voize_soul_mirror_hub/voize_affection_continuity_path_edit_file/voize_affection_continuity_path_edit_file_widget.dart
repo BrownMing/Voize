@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_theme.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import '/utils/piano_loading.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -47,7 +47,7 @@ class _VoizeAffectionContinuityPathEditFileWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<VoizeLunairaEchoMuse>();
 
     return GestureDetector(
       onTap: () {
@@ -103,22 +103,26 @@ class _VoizeAffectionContinuityPathEditFileWidgetState
                         ),
                         Text(
                           'Edit Profile',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.archivo(
-                                      fontWeight: FontWeight.w600,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                          style: VoizeAffinityChromaLayerTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                font: GoogleFonts.archivo(
+                                  fontWeight: FontWeight.w600,
+                                  fontStyle:
+                                      VoizeAffinityChromaLayerTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
-                                    ),
-                                    color: FlutterFlowTheme.of(context).info,
-                                    fontSize: 20.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.w600,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                ),
+                                color: VoizeAffinityChromaLayerTheme.of(context)
+                                    .info,
+                                fontSize: 20.0,
+                                letterSpacing: 0.0,
+                                fontWeight: FontWeight.w600,
+                                fontStyle:
+                                    VoizeAffinityChromaLayerTheme.of(context)
                                         .bodyMedium
                                         .fontStyle,
-                                  ),
+                              ),
                         ),
                         Container(
                           width: 32.0,
@@ -148,7 +152,9 @@ class _VoizeAffectionContinuityPathEditFileWidgetState
                                   builder: (BuildContext context) {
                                     return Container(
                                       decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                                        color: VoizeAffinityChromaLayerTheme.of(
+                                                context)
+                                            .secondaryBackground,
                                         borderRadius: BorderRadius.only(
                                           topLeft: Radius.circular(20.0),
                                           topRight: Radius.circular(20.0),
@@ -161,33 +167,45 @@ class _VoizeAffectionContinuityPathEditFileWidgetState
                                             ListTile(
                                               leading: Icon(
                                                 Icons.camera_alt,
-                                                color: FlutterFlowTheme.of(context).primaryText,
+                                                color:
+                                                    VoizeAffinityChromaLayerTheme
+                                                            .of(context)
+                                                        .primaryText,
                                               ),
                                               title: Text(
                                                 'Take Photo',
-                                                style: FlutterFlowTheme.of(context).bodyLarge,
+                                                style:
+                                                    VoizeAffinityChromaLayerTheme
+                                                            .of(context)
+                                                        .bodyLarge,
                                               ),
                                               onTap: () async {
                                                 Navigator.pop(context);
-                                                final ImagePicker picker = ImagePicker();
-                                                final XFile? image = await picker.pickImage(
+                                                final ImagePicker picker =
+                                                    ImagePicker();
+                                                final XFile? image =
+                                                    await picker.pickImage(
                                                   source: ImageSource.camera,
                                                   imageQuality: 80,
                                                 );
-                                                
+
                                                 if (image != null) {
-                                                  safeSetState(() => _model.isDataUploading = true);
-                                                  
+                                                  safeSetState(() => _model
+                                                      .isDataUploading = true);
+
                                                   try {
-                                                    final bytes = await image.readAsBytes();
-                                                    _model.uploadedLocalFile = FFUploadedFile(
+                                                    final bytes = await image
+                                                        .readAsBytes();
+                                                    _model.uploadedLocalFile =
+                                                        VoizeSerenithVoiceIdol(
                                                       name: image.name,
                                                       bytes: bytes,
                                                     );
                                                   } finally {
-                                                    _model.isDataUploading = false;
+                                                    _model.isDataUploading =
+                                                        false;
                                                   }
-                                                  
+
                                                   safeSetState(() {});
                                                 }
                                               },
@@ -196,33 +214,45 @@ class _VoizeAffectionContinuityPathEditFileWidgetState
                                             ListTile(
                                               leading: Icon(
                                                 Icons.photo_library,
-                                                color: FlutterFlowTheme.of(context).primaryText,
+                                                color:
+                                                    VoizeAffinityChromaLayerTheme
+                                                            .of(context)
+                                                        .primaryText,
                                               ),
                                               title: Text(
                                                 'Choose from Gallery',
-                                                style: FlutterFlowTheme.of(context).bodyLarge,
+                                                style:
+                                                    VoizeAffinityChromaLayerTheme
+                                                            .of(context)
+                                                        .bodyLarge,
                                               ),
                                               onTap: () async {
                                                 Navigator.pop(context);
-                                                final ImagePicker picker = ImagePicker();
-                                                final XFile? image = await picker.pickImage(
+                                                final ImagePicker picker =
+                                                    ImagePicker();
+                                                final XFile? image =
+                                                    await picker.pickImage(
                                                   source: ImageSource.gallery,
                                                   imageQuality: 80,
                                                 );
-                                                
+
                                                 if (image != null) {
-                                                  safeSetState(() => _model.isDataUploading = true);
-                                                  
+                                                  safeSetState(() => _model
+                                                      .isDataUploading = true);
+
                                                   try {
-                                                    final bytes = await image.readAsBytes();
-                                                    _model.uploadedLocalFile = FFUploadedFile(
+                                                    final bytes = await image
+                                                        .readAsBytes();
+                                                    _model.uploadedLocalFile =
+                                                        VoizeSerenithVoiceIdol(
                                                       name: image.name,
                                                       bytes: bytes,
                                                     );
                                                   } finally {
-                                                    _model.isDataUploading = false;
+                                                    _model.isDataUploading =
+                                                        false;
                                                   }
-                                                  
+
                                                   safeSetState(() {});
                                                 }
                                               },
@@ -230,14 +260,24 @@ class _VoizeAffectionContinuityPathEditFileWidgetState
                                             ListTile(
                                               leading: Icon(
                                                 Icons.close,
-                                                color: FlutterFlowTheme.of(context).secondaryText,
+                                                color:
+                                                    VoizeAffinityChromaLayerTheme
+                                                            .of(context)
+                                                        .secondaryText,
                                               ),
                                               title: Text(
                                                 'Cancel',
-                                                style: FlutterFlowTheme.of(context).bodyLarge.override(
-                                                  font: GoogleFonts.archivo(),
-                                                  color: FlutterFlowTheme.of(context).secondaryText,
-                                                ),
+                                                style:
+                                                    VoizeAffinityChromaLayerTheme
+                                                            .of(context)
+                                                        .bodyLarge
+                                                        .override(
+                                                          font: GoogleFonts
+                                                              .archivo(),
+                                                          color: VoizeAffinityChromaLayerTheme
+                                                                  .of(context)
+                                                              .secondaryText,
+                                                        ),
                                               ),
                                               onTap: () {
                                                 Navigator.pop(context);
@@ -256,13 +296,17 @@ class _VoizeAffectionContinuityPathEditFileWidgetState
                                 decoration: BoxDecoration(
                                   image: DecorationImage(
                                     fit: BoxFit.cover,
-                                    image: _model.uploadedLocalFile.bytes?.isNotEmpty ?? false
-                                        ? MemoryImage(_model.uploadedLocalFile.bytes!)
+                                    image: _model.uploadedLocalFile.bytes
+                                                ?.isNotEmpty ??
+                                            false
+                                        ? MemoryImage(
+                                            _model.uploadedLocalFile.bytes!)
                                         : Image.asset(
-                                            FFAppState()
+                                            VoizeLunairaEchoMuse()
                                                 .voizeNaiyaEchoCompanionUsers
-                                                .elementAtOrNull(FFAppState()
-                                                    .voizeRivenDreamVoiceLoginToken)!
+                                                .elementAtOrNull(
+                                                    VoizeLunairaEchoMuse()
+                                                        .voizeRivenDreamVoiceLoginToken)!
                                                 .voizeCognitiveHarmonyUserPhoto,
                                           ).image,
                                   ),
@@ -298,23 +342,28 @@ class _VoizeAffectionContinuityPathEditFileWidgetState
                                 children: [
                                   Text(
                                     'Nickname',
-                                    style: FlutterFlowTheme.of(context)
+                                    style: VoizeAffinityChromaLayerTheme.of(
+                                            context)
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.archivo(
                                             fontWeight: FontWeight.w600,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
                                           color:
-                                              FlutterFlowTheme.of(context).info,
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
+                                                  .info,
                                           fontSize: 18.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
@@ -341,67 +390,70 @@ class _VoizeAffectionContinuityPathEditFileWidgetState
                                           decoration: InputDecoration(
                                             isDense: true,
                                             labelStyle:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .labelMedium
                                                     .override(
                                                       font: GoogleFonts.archivo(
                                                         fontWeight:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
+                                                            VoizeAffinityChromaLayerTheme
+                                                                    .of(context)
                                                                 .labelMedium
                                                                 .fontWeight,
                                                         fontStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
+                                                            VoizeAffinityChromaLayerTheme
+                                                                    .of(context)
                                                                 .labelMedium
                                                                 .fontStyle,
                                                       ),
                                                       letterSpacing: 0.0,
                                                       fontWeight:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                          VoizeAffinityChromaLayerTheme
+                                                                  .of(context)
                                                               .labelMedium
                                                               .fontWeight,
                                                       fontStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                          VoizeAffinityChromaLayerTheme
+                                                                  .of(context)
                                                               .labelMedium
                                                               .fontStyle,
                                                     ),
-                                            hintText: FFAppState()
+                                            hintText: VoizeLunairaEchoMuse()
                                                 .voizeNaiyaEchoCompanionUsers
-                                                .elementAtOrNull(FFAppState()
-                                                    .voizeRivenDreamVoiceLoginToken)
+                                                .elementAtOrNull(
+                                                    VoizeLunairaEchoMuse()
+                                                        .voizeRivenDreamVoiceLoginToken)
                                                 ?.voizeCognitiveHarmonyUserName,
                                             hintStyle:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .labelMedium
                                                     .override(
                                                       font: GoogleFonts.archivo(
                                                         fontWeight:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
+                                                            VoizeAffinityChromaLayerTheme
+                                                                    .of(context)
                                                                 .labelMedium
                                                                 .fontWeight,
                                                         fontStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
+                                                            VoizeAffinityChromaLayerTheme
+                                                                    .of(context)
                                                                 .labelMedium
                                                                 .fontStyle,
                                                       ),
                                                       color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                          VoizeAffinityChromaLayerTheme
+                                                                  .of(context)
                                                               .info,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                          VoizeAffinityChromaLayerTheme
+                                                                  .of(context)
                                                               .labelMedium
                                                               .fontWeight,
                                                       fontStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                          VoizeAffinityChromaLayerTheme
+                                                                  .of(context)
                                                               .labelMedium
                                                               .fontStyle,
                                                     ),
@@ -439,36 +491,43 @@ class _VoizeAffectionContinuityPathEditFileWidgetState
                                                   BorderRadius.circular(16.0),
                                             ),
                                           ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                font: GoogleFonts.archivo(
-                                                  fontWeight:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .bodyMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .bodyMedium
-                                                          .fontStyle,
-                                                ),
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .info,
-                                                letterSpacing: 0.0,
-                                                fontWeight:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontStyle,
-                                              ),
+                                          style:
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
+                                                  .bodyMedium
+                                                  .override(
+                                                    font: GoogleFonts.archivo(
+                                                      fontWeight:
+                                                          VoizeAffinityChromaLayerTheme
+                                                                  .of(context)
+                                                              .bodyMedium
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          VoizeAffinityChromaLayerTheme
+                                                                  .of(context)
+                                                              .bodyMedium
+                                                              .fontStyle,
+                                                    ),
+                                                    color:
+                                                        VoizeAffinityChromaLayerTheme
+                                                                .of(context)
+                                                            .info,
+                                                    letterSpacing: 0.0,
+                                                    fontWeight:
+                                                        VoizeAffinityChromaLayerTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        VoizeAffinityChromaLayerTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .fontStyle,
+                                                  ),
                                           cursorColor:
-                                              FlutterFlowTheme.of(context).info,
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
+                                                  .info,
                                           enableInteractiveSelection: true,
                                           validator: _model
                                               .textController1Validator
@@ -489,23 +548,28 @@ class _VoizeAffectionContinuityPathEditFileWidgetState
                                 children: [
                                   Text(
                                     'Describe',
-                                    style: FlutterFlowTheme.of(context)
+                                    style: VoizeAffinityChromaLayerTheme.of(
+                                            context)
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.archivo(
                                             fontWeight: FontWeight.w600,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
                                           color:
-                                              FlutterFlowTheme.of(context).info,
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
+                                                  .info,
                                           fontSize: 18.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
@@ -537,68 +601,73 @@ class _VoizeAffectionContinuityPathEditFileWidgetState
                                             decoration: InputDecoration(
                                               isDense: true,
                                               labelStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  VoizeAffinityChromaLayerTheme
+                                                          .of(context)
                                                       .labelMedium
                                                       .override(
                                                         font:
                                                             GoogleFonts.archivo(
                                                           fontWeight:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
+                                                              VoizeAffinityChromaLayerTheme
+                                                                      .of(context)
                                                                   .labelMedium
                                                                   .fontWeight,
                                                           fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
+                                                              VoizeAffinityChromaLayerTheme
+                                                                      .of(context)
                                                                   .labelMedium
                                                                   .fontStyle,
                                                         ),
                                                         letterSpacing: 0.0,
                                                         fontWeight:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
+                                                            VoizeAffinityChromaLayerTheme
+                                                                    .of(context)
                                                                 .labelMedium
                                                                 .fontWeight,
                                                         fontStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
+                                                            VoizeAffinityChromaLayerTheme
+                                                                    .of(context)
                                                                 .labelMedium
                                                                 .fontStyle,
                                                       ),
-                                              hintText: FFAppState()
+                                              hintText: VoizeLunairaEchoMuse()
                                                   .voizeNaiyaEchoCompanionUsers
-                                                  .elementAtOrNull(FFAppState()
-                                                      .voizeRivenDreamVoiceLoginToken)
+                                                  .elementAtOrNull(
+                                                      VoizeLunairaEchoMuse()
+                                                          .voizeRivenDreamVoiceLoginToken)
                                                   ?.voizeCognitiveHarmonyUserAboutMe,
-                                              hintStyle: FlutterFlowTheme.of(
-                                                      context)
-                                                  .labelMedium
-                                                  .override(
-                                                    font: GoogleFonts.archivo(
-                                                      fontWeight:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .labelMedium
-                                                              .fontWeight,
-                                                      fontStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .labelMedium
-                                                              .fontStyle,
-                                                    ),
-                                                    color: Color(0x7FFFFFFF),
-                                                    letterSpacing: 0.0,
-                                                    fontWeight:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .labelMedium
-                                                            .fontWeight,
-                                                    fontStyle:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .labelMedium
-                                                            .fontStyle,
-                                                  ),
+                                              hintStyle:
+                                                  VoizeAffinityChromaLayerTheme
+                                                          .of(context)
+                                                      .labelMedium
+                                                      .override(
+                                                        font:
+                                                            GoogleFonts.archivo(
+                                                          fontWeight:
+                                                              VoizeAffinityChromaLayerTheme
+                                                                      .of(context)
+                                                                  .labelMedium
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              VoizeAffinityChromaLayerTheme
+                                                                      .of(context)
+                                                                  .labelMedium
+                                                                  .fontStyle,
+                                                        ),
+                                                        color:
+                                                            Color(0x7FFFFFFF),
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            VoizeAffinityChromaLayerTheme
+                                                                    .of(context)
+                                                                .labelMedium
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            VoizeAffinityChromaLayerTheme
+                                                                    .of(context)
+                                                                .labelMedium
+                                                                .fontStyle,
+                                                      ),
                                               enabledBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
                                                   color: Color(0x00000000),
@@ -633,38 +702,41 @@ class _VoizeAffectionContinuityPathEditFileWidgetState
                                                     BorderRadius.circular(16.0),
                                               ),
                                             ),
-                                            style: FlutterFlowTheme.of(context)
+                                            style: VoizeAffinityChromaLayerTheme
+                                                    .of(context)
                                                 .bodyMedium
                                                 .override(
                                                   font: GoogleFonts.archivo(
                                                     fontWeight:
-                                                        FlutterFlowTheme.of(
-                                                                context)
+                                                        VoizeAffinityChromaLayerTheme
+                                                                .of(context)
                                                             .bodyMedium
                                                             .fontWeight,
                                                     fontStyle:
-                                                        FlutterFlowTheme.of(
-                                                                context)
+                                                        VoizeAffinityChromaLayerTheme
+                                                                .of(context)
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .info,
+                                                  color:
+                                                      VoizeAffinityChromaLayerTheme
+                                                              .of(context)
+                                                          .info,
                                                   letterSpacing: 0.0,
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      VoizeAffinityChromaLayerTheme
+                                                              .of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      VoizeAffinityChromaLayerTheme
+                                                              .of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
                                             cursorColor:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .info,
                                             enableInteractiveSelection: true,
                                             validator: _model
@@ -684,34 +756,49 @@ class _VoizeAffectionContinuityPathEditFileWidgetState
                               child: GestureDetector(
                                 onTap: () async {
                                   // 验证输入
-                                  final nickname = _model.textController1.text.trim();
-                                  final aboutMe = _model.textController2.text.trim();
+                                  final nickname =
+                                      _model.textController1.text.trim();
+                                  final aboutMe =
+                                      _model.textController2.text.trim();
 
-                                  if (nickname.isEmpty && aboutMe.isEmpty && 
-                                      (_model.uploadedLocalFile.bytes?.isEmpty ?? true)) {
+                                  if (nickname.isEmpty &&
+                                      aboutMe.isEmpty &&
+                                      (_model.uploadedLocalFile.bytes
+                                              ?.isEmpty ??
+                                          true)) {
                                     PianoLoading.showWarning(
                                       context,
-                                      message: 'Please make at least one change',
+                                      message:
+                                          'Please make at least one change',
                                     );
                                     return;
                                   }
 
                                   // 显示 loading
-                                  PianoLoading.show(context, message: 'Saving...');
+                                  PianoLoading.show(context,
+                                      message: 'Saving...');
 
                                   // 模拟保存延迟
-                                  await Future.delayed(Duration(milliseconds: 500));
+                                  await Future.delayed(
+                                      Duration(milliseconds: 500));
 
                                   // 更新用户信息
-                                  FFAppState().updateVoizeNaiyaEchoCompanionUsersAtIndex(
-                                    FFAppState().voizeRivenDreamVoiceLoginToken,
+                                  VoizeLunairaEchoMuse()
+                                      .updateVoizeNaiyaEchoCompanionUsersAtIndex(
+                                    VoizeLunairaEchoMuse()
+                                        .voizeRivenDreamVoiceLoginToken,
                                     (user) => user
-                                      ..voizeCognitiveHarmonyUserName = 
-                                          nickname.isNotEmpty ? nickname : user.voizeCognitiveHarmonyUserName
-                                      ..voizeCognitiveHarmonyUserAboutMe = 
-                                          aboutMe.isNotEmpty ? aboutMe : user.voizeCognitiveHarmonyUserAboutMe,
+                                      ..voizeCognitiveHarmonyUserName = nickname
+                                              .isNotEmpty
+                                          ? nickname
+                                          : user.voizeCognitiveHarmonyUserName
+                                      ..voizeCognitiveHarmonyUserAboutMe = aboutMe
+                                              .isNotEmpty
+                                          ? aboutMe
+                                          : user
+                                              .voizeCognitiveHarmonyUserAboutMe,
                                   );
-                                  FFAppState().update(() {});
+                                  VoizeLunairaEchoMuse().update(() {});
 
                                   // 关闭 loading
                                   PianoLoading.dismiss();
@@ -723,7 +810,8 @@ class _VoizeAffectionContinuityPathEditFileWidgetState
                                   );
 
                                   // 延迟返回
-                                  await Future.delayed(Duration(milliseconds: 800));
+                                  await Future.delayed(
+                                      Duration(milliseconds: 800));
                                   context.safePop();
                                 },
                                 child: Container(
@@ -741,23 +829,27 @@ class _VoizeAffectionContinuityPathEditFileWidgetState
                                     alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       'Save',
-                                      style: FlutterFlowTheme.of(context)
+                                      style: VoizeAffinityChromaLayerTheme.of(
+                                              context)
                                           .bodyMedium
                                           .override(
                                             font: GoogleFonts.archivo(
                                               fontWeight: FontWeight.w600,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  VoizeAffinityChromaLayerTheme
+                                                          .of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
-                                            color:
-                                                FlutterFlowTheme.of(context).info,
+                                            color: VoizeAffinityChromaLayerTheme
+                                                    .of(context)
+                                                .info,
                                             fontSize: 16.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),

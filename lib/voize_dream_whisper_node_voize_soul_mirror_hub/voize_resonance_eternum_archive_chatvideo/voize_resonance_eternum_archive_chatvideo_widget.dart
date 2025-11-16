@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_theme.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -44,7 +44,7 @@ class _VoizeResonanceEternumArchiveChatvideoWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<VoizeLunairaEchoMuse>();
 
     return GestureDetector(
       onTap: () {
@@ -56,7 +56,7 @@ class _VoizeResonanceEternumArchiveChatvideoWidgetState
         body: Stack(
           children: [
             Image.asset(
-              FFAppState()
+              VoizeLunairaEchoMuse()
                   .voizeNaiyaEchoCompanionUsers
                   .elementAtOrNull(widget.voizeWhisperFlowProtocolUserid!)!
                   .voizeCognitiveHarmonyUserPhoto,
@@ -74,38 +74,47 @@ class _VoizeResonanceEternumArchiveChatvideoWidgetState
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Text(
-                        '${FFAppState().voizeNaiyaEchoCompanionUsers.elementAtOrNull(widget.voizeWhisperFlowProtocolUserid!)?.voizeCognitiveHarmonyUserName}',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        '${VoizeLunairaEchoMuse().voizeNaiyaEchoCompanionUsers.elementAtOrNull(widget.voizeWhisperFlowProtocolUserid!)?.voizeCognitiveHarmonyUserName}',
+                        style: VoizeAffinityChromaLayerTheme.of(context)
+                            .bodyMedium
+                            .override(
                               font: GoogleFonts.archivo(
                                 fontWeight: FontWeight.w600,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .fontStyle,
+                                fontStyle:
+                                    VoizeAffinityChromaLayerTheme.of(context)
+                                        .bodyMedium
+                                        .fontStyle,
                               ),
-                              color: FlutterFlowTheme.of(context).info,
+                              color: VoizeAffinityChromaLayerTheme.of(context)
+                                  .info,
                               fontSize: 28.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.w600,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .fontStyle,
+                              fontStyle:
+                                  VoizeAffinityChromaLayerTheme.of(context)
+                                      .bodyMedium
+                                      .fontStyle,
                             ),
                       ),
                       Text(
                         'Calling...',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: VoizeAffinityChromaLayerTheme.of(context)
+                            .bodyMedium
+                            .override(
                               font: GoogleFonts.archivo(
                                 fontWeight: FontWeight.w600,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .fontStyle,
+                                fontStyle:
+                                    VoizeAffinityChromaLayerTheme.of(context)
+                                        .bodyMedium
+                                        .fontStyle,
                               ),
                               color: Color(0x80FFFFFF),
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.w600,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .fontStyle,
+                              fontStyle:
+                                  VoizeAffinityChromaLayerTheme.of(context)
+                                      .bodyMedium
+                                      .fontStyle,
                             ),
                       ),
                     ].divide(SizedBox(height: 4.0)),

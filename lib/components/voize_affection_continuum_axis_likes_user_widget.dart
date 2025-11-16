@@ -1,4 +1,4 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -46,7 +46,7 @@ class _VoizeAffectionContinuumAxisLikesUserWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<VoizeLunairaEchoMuse>();
 
     return Builder(
       builder: (context) {
@@ -58,15 +58,16 @@ class _VoizeAffectionContinuumAxisLikesUserWidgetState
             highlightColor: Colors.transparent,
             onTap: () async {
               HapticFeedback.heavyImpact();
-              FFAppState().updateVoizeAelithBondEntityDynamticsAtIndex(
+              VoizeLunairaEchoMuse()
+                  .updateVoizeAelithBondEntityDynamticsAtIndex(
                 widget.voizeCognitionLatticeWorldPost!,
                 (e) => e
                   ..updateVoizeSynestheticConnectionDymaticLikeUsers(
-                    (e) =>
-                        e.remove(FFAppState().voizeRivenDreamVoiceLoginToken),
+                    (e) => e.remove(
+                        VoizeLunairaEchoMuse().voizeRivenDreamVoiceLoginToken),
                   ),
               );
-              FFAppState().update(() {});
+              VoizeLunairaEchoMuse().update(() {});
             },
             child: Container(
               width: 24.0,
@@ -89,14 +90,16 @@ class _VoizeAffectionContinuumAxisLikesUserWidgetState
             highlightColor: Colors.transparent,
             onTap: () async {
               HapticFeedback.heavyImpact();
-              FFAppState().updateVoizeAelithBondEntityDynamticsAtIndex(
+              VoizeLunairaEchoMuse()
+                  .updateVoizeAelithBondEntityDynamticsAtIndex(
                 widget.voizeCognitionLatticeWorldPost!,
                 (e) => e
                   ..updateVoizeSynestheticConnectionDymaticLikeUsers(
-                    (e) => e.add(FFAppState().voizeRivenDreamVoiceLoginToken),
+                    (e) => e.add(
+                        VoizeLunairaEchoMuse().voizeRivenDreamVoiceLoginToken),
                   ),
               );
-              FFAppState().update(() {});
+              VoizeLunairaEchoMuse().update(() {});
             },
             child: Container(
               width: 24.0,

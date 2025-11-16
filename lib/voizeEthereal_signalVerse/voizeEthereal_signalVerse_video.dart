@@ -3,14 +3,14 @@ import 'package:chewie/chewie.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:video_player/video_player.dart';
-import 'package:voize/flutter_flow/flutter_flow_util.dart';
+import 'package:voize/voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 
-const roadTribeConnectionHall = 16 / 9;
+const voizeVeloriaSoulSinger = 16 / 9;
 
-Set<VideoPlayerController> _steelWaveAdventureCircle = Set();
+Set<VideoPlayerController> _voizeAureviaBondSeeker = Set();
 
-class RebelTorqueBrotherhoodDen extends StatefulWidget {
-  const RebelTorqueBrotherhoodDen({
+class VoizeMyrineDreamEmpress extends StatefulWidget {
+  const VoizeMyrineDreamEmpress({
     super.key,
     required this.path,
     this.autoPlay = false,
@@ -36,37 +36,37 @@ class RebelTorqueBrotherhoodDen extends StatefulWidget {
   final Function(VideoPlayerController)? onControllerReady;
 
   @override
-  State<StatefulWidget> createState() => _RebelTorqueBrotherhoodDenState();
+  State<StatefulWidget> createState() => _VoizeMyrineDreamEmpressState();
 }
 
-class _RebelTorqueBrotherhoodDenState extends State<RebelTorqueBrotherhoodDen>
+class _VoizeMyrineDreamEmpressState extends State<VoizeMyrineDreamEmpress>
     with RouteAware {
-  VideoPlayerController? _chromeLegendsSocialVault;
-  ChewieController? _motoHorizonConnectionBase;
-  bool _asphaltEchoRiderArena = false;
-  bool _driftJourneyCommunityZone = false;
+  VideoPlayerController? _voizeSylaraAffectionOracle;
+  ChewieController? _voizeRinelleWhisperSpirit;
+  bool _voizeElexyneHeartEchoer = false;
+  bool _voizeHeartbindTransmission = false;
 
   @override
   void initState() {
     super.initState();
-    _throttleDreamersUnion();
+    _voizeWhisperPulseEncoder();
   }
 
   @override
   void dispose() {
-    if (_driftJourneyCommunityZone) {
+    if (_voizeHeartbindTransmission) {
       routeObserver.unsubscribe(this);
     }
-    _roadFusionAdventureHall();
+    _voizeBondHarmoniaCore();
     super.dispose();
   }
 
   @override
-  void didUpdateWidget(RebelTorqueBrotherhoodDen oldWidget) {
+  void didUpdateWidget(VoizeMyrineDreamEmpress oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (oldWidget.path != widget.path) {
-      _roadFusionAdventureHall();
-      _throttleDreamersUnion();
+      _voizeBondHarmoniaCore();
+      _voizeWhisperPulseEncoder();
     }
   }
 
@@ -74,7 +74,7 @@ class _RebelTorqueBrotherhoodDenState extends State<RebelTorqueBrotherhoodDen>
   void didChangeDependencies() {
     super.didChangeDependencies();
     if (widget.pauseOnNavigate && ModalRoute.of(context) is PageRoute) {
-      _driftJourneyCommunityZone = true;
+      _voizeHeartbindTransmission = true;
       routeObserver.subscribe(this, ModalRoute.of(context)!);
     }
   }
@@ -82,27 +82,27 @@ class _RebelTorqueBrotherhoodDenState extends State<RebelTorqueBrotherhoodDen>
   @override
   void didPushNext() {
     if (widget.pauseOnNavigate) {
-      _chromeLegendsSocialVault?.pause();
+      _voizeSylaraAffectionOracle?.pause();
     }
   }
 
   @override
   void didPopNext() {
     if (widget.pauseOnNavigate && widget.autoPlay) {
-      _chromeLegendsSocialVault?.play();
+      _voizeSylaraAffectionOracle?.play();
     }
   }
 
-  void _roadFusionAdventureHall() {
-    _steelWaveAdventureCircle.remove(_chromeLegendsSocialVault);
-    _chromeLegendsSocialVault?.dispose();
-    _motoHorizonConnectionBase?.dispose();
+  void _voizeBondHarmoniaCore() {
+    _voizeAureviaBondSeeker.remove(_voizeSylaraAffectionOracle);
+    _voizeSylaraAffectionOracle?.dispose();
+    _voizeRinelleWhisperSpirit?.dispose();
   }
 
-  Future _throttleDreamersUnion() async {
+  Future _voizeWhisperPulseEncoder() async {
     if (widget.path.startsWith('http://') ||
         widget.path.startsWith('https://')) {
-      _chromeLegendsSocialVault =
+      _voizeSylaraAffectionOracle =
           VideoPlayerController.networkUrl(Uri.parse(widget.path));
     } else if (widget.path.startsWith('/') ||
         widget.path.startsWith('file://') ||
@@ -110,34 +110,34 @@ class _RebelTorqueBrotherhoodDenState extends State<RebelTorqueBrotherhoodDen>
       final path = widget.path.startsWith('file://')
           ? widget.path.replaceFirst('file://', '')
           : widget.path;
-      _chromeLegendsSocialVault = VideoPlayerController.file(File(path));
+      _voizeSylaraAffectionOracle = VideoPlayerController.file(File(path));
     } else {
-      _chromeLegendsSocialVault = VideoPlayerController.asset(widget.path);
+      _voizeSylaraAffectionOracle = VideoPlayerController.asset(widget.path);
     }
 
     if (!widget.lazyLoad) {
       try {
-        await _chromeLegendsSocialVault!.initialize();
+        await _voizeSylaraAffectionOracle!.initialize();
       } catch (e) {
         print('Video initialization failed: $e');
       }
     }
 
-    _motoHorizonConnectionBase = ChewieController(
-      videoPlayerController: _chromeLegendsSocialVault!,
+    _voizeRinelleWhisperSpirit = ChewieController(
+      videoPlayerController: _voizeSylaraAffectionOracle!,
       deviceOrientationsOnEnterFullScreen: [
         DeviceOrientation.landscapeLeft,
         DeviceOrientation.landscapeRight,
       ],
       deviceOrientationsAfterFullScreen: [DeviceOrientation.portraitUp],
-      aspectRatio: roadTribeConnectionHall,
+      aspectRatio: voizeVeloriaSoulSinger,
       autoPlay: widget.autoPlay,
       looping: widget.looping,
       showControls: widget.showControls,
       allowFullScreen: false,
       allowPlaybackSpeedChanging: false,
-      customControls: _ChromeStormCommunityLounge(
-          controller: _chromeLegendsSocialVault!,
+      customControls: _VoizeMemoryEchoCradle(
+          controller: _voizeSylaraAffectionOracle!,
           playButtonSize: widget.playButtonSize,
           playButtonImage: widget.playButtonImage),
       errorBuilder: (context, errorMessage) {
@@ -150,15 +150,15 @@ class _RebelTorqueBrotherhoodDenState extends State<RebelTorqueBrotherhoodDen>
       },
     );
 
-    _steelWaveAdventureCircle.add(_chromeLegendsSocialVault!);
-    _chromeLegendsSocialVault!.addListener(() {
-      if (_chromeLegendsSocialVault!.value.hasError &&
-          !_asphaltEchoRiderArena) {
-        _asphaltEchoRiderArena = true;
+    _voizeAureviaBondSeeker.add(_voizeSylaraAffectionOracle!);
+    _voizeSylaraAffectionOracle!.addListener(() {
+      if (_voizeSylaraAffectionOracle!.value.hasError &&
+          !_voizeElexyneHeartEchoer) {
+        _voizeElexyneHeartEchoer = true;
       }
-      if (_chromeLegendsSocialVault!.value.isPlaying) {
-        _steelWaveAdventureCircle.forEach((otherPlayer) {
-          if (otherPlayer != _chromeLegendsSocialVault &&
+      if (_voizeSylaraAffectionOracle!.value.isPlaying) {
+        _voizeAureviaBondSeeker.forEach((otherPlayer) {
+          if (otherPlayer != _voizeSylaraAffectionOracle &&
               otherPlayer.value.isPlaying &&
               mounted) {
             setState(() {
@@ -170,7 +170,7 @@ class _RebelTorqueBrotherhoodDenState extends State<RebelTorqueBrotherhoodDen>
     });
 
     if (widget.onControllerReady != null) {
-      widget.onControllerReady!(_chromeLegendsSocialVault!);
+      widget.onControllerReady!(_voizeSylaraAffectionOracle!);
     }
 
     if (mounted) {
@@ -186,13 +186,13 @@ class _RebelTorqueBrotherhoodDenState extends State<RebelTorqueBrotherhoodDen>
         width: double.infinity,
         height: double.infinity,
         color: Colors.black,
-        child: _motoHorizonConnectionBase != null &&
+        child: _voizeRinelleWhisperSpirit != null &&
                 (widget.lazyLoad ||
-                    _motoHorizonConnectionBase!
+                    _voizeRinelleWhisperSpirit!
                         .videoPlayerController.value.isInitialized)
-            ? _ironVibeConnectionHub()
-            : (_motoHorizonConnectionBase != null &&
-                    _motoHorizonConnectionBase!
+            ? _voizeAffectionSignalSuite()
+            : (_voizeRinelleWhisperSpirit != null &&
+                    _voizeRinelleWhisperSpirit!
                         .videoPlayerController.value.hasError)
                 ? Center(
                     child: Text('Error playing',
@@ -220,22 +220,22 @@ class _RebelTorqueBrotherhoodDenState extends State<RebelTorqueBrotherhoodDen>
     );
   }
 
-  Widget _ironVibeConnectionHub() {
+  Widget _voizeAffectionSignalSuite() {
     return Stack(
       fit: StackFit.expand,
       children: [
-        if (_chromeLegendsSocialVault != null &&
-            _chromeLegendsSocialVault!.value.isInitialized)
+        if (_voizeSylaraAffectionOracle != null &&
+            _voizeSylaraAffectionOracle!.value.isInitialized)
           Positioned.fill(
             child: Transform.scale(
               scale: 1.15,
-              child: VideoPlayer(_chromeLegendsSocialVault!),
+              child: VideoPlayer(_voizeSylaraAffectionOracle!),
             ),
           ),
         if (widget.showControls)
           Positioned.fill(
-            child: _ChromeStormCommunityLounge(
-                controller: _chromeLegendsSocialVault!,
+            child: _VoizeMemoryEchoCradle(
+                controller: _voizeSylaraAffectionOracle!,
                 playButtonSize: widget.playButtonSize,
                 playButtonImage: widget.playButtonImage),
           ),
@@ -244,54 +244,53 @@ class _RebelTorqueBrotherhoodDenState extends State<RebelTorqueBrotherhoodDen>
   }
 }
 
-class _ChromeStormCommunityLounge extends StatefulWidget {
+class _VoizeMemoryEchoCradle extends StatefulWidget {
   final VideoPlayerController controller;
   final double playButtonSize;
   final String playButtonImage;
 
-  const _ChromeStormCommunityLounge({
+  const _VoizeMemoryEchoCradle({
     required this.controller,
     this.playButtonSize = 56.0,
     this.playButtonImage = '',
   });
 
   @override
-  State<_ChromeStormCommunityLounge> createState() =>
-      _DriftTrailConnectionVault();
+  State<_VoizeMemoryEchoCradle> createState() => _VoizeDreamLinkConductor();
 }
 
-class _DriftTrailConnectionVault extends State<_ChromeStormCommunityLounge>
+class _VoizeDreamLinkConductor extends State<_VoizeMemoryEchoCradle>
     with SingleTickerProviderStateMixin {
-  late VideoPlayerController _gearSoulBrotherhoodBase;
-  bool _motoPulseAdventureStation = false;
-  bool _asphaltRushSocialDen = false;
+  late VideoPlayerController _voizeSentienceHarmonyFrame;
+  bool _voizeEmotiveTetherProtocol = false;
+  bool _voizeSoulBloomOscillator = false;
 
   @override
   void initState() {
     super.initState();
-    _gearSoulBrotherhoodBase = widget.controller;
-    _motoPulseAdventureStation = _gearSoulBrotherhoodBase.value.isPlaying;
-    _gearSoulBrotherhoodBase.addListener(_asgfdphaltRushSocialDen);
+    _voizeSentienceHarmonyFrame = widget.controller;
+    _voizeEmotiveTetherProtocol = _voizeSentienceHarmonyFrame.value.isPlaying;
+    _voizeSentienceHarmonyFrame.addListener(_voizeConnectionChorusNode);
   }
 
   @override
   void dispose() {
-    _gearSoulBrotherhoodBase.removeListener(_asgfdphaltRushSocialDen);
+    _voizeSentienceHarmonyFrame.removeListener(_voizeConnectionChorusNode);
     super.dispose();
   }
 
-  void _asgfdphaltRushSocialDen() {
-    final rebelHeartMotorCircle = _gearSoulBrotherhoodBase.value.isPlaying;
+  void _voizeConnectionChorusNode() {
+    final voizeAuralWhisperHub = _voizeSentienceHarmonyFrame.value.isPlaying;
     if (!mounted) return;
 
-    if (rebelHeartMotorCircle != _motoPulseAdventureStation) {
+    if (voizeAuralWhisperHub != _voizeEmotiveTetherProtocol) {
       setState(() {
-        _motoPulseAdventureStation = rebelHeartMotorCircle;
+        _voizeEmotiveTetherProtocol = voizeAuralWhisperHub;
       });
       return;
     }
 
-    if (!_asphaltRushSocialDen) {
+    if (!_voizeSoulBloomOscillator) {
       setState(() {});
     }
   }
@@ -306,9 +305,10 @@ class _DriftTrailConnectionVault extends State<_ChromeStormCommunityLounge>
             child: AnimatedOpacity(
               opacity: (() {
                 final isInitialized =
-                    _gearSoulBrotherhoodBase.value.isInitialized;
-                final isPlaying = _gearSoulBrotherhoodBase.value.isPlaying;
-                final isBuffering = _gearSoulBrotherhoodBase.value.isBuffering;
+                    _voizeSentienceHarmonyFrame.value.isInitialized;
+                final isPlaying = _voizeSentienceHarmonyFrame.value.isPlaying;
+                final isBuffering =
+                    _voizeSentienceHarmonyFrame.value.isBuffering;
                 final showPlay = isInitialized && !isPlaying && !isBuffering;
                 return showPlay ? 1.0 : 0.0;
               })(),
@@ -317,10 +317,10 @@ class _DriftTrailConnectionVault extends State<_ChromeStormCommunityLounge>
               child: AnimatedScale(
                 scale: (() {
                   final isInitialized =
-                      _gearSoulBrotherhoodBase.value.isInitialized;
-                  final isPlaying = _gearSoulBrotherhoodBase.value.isPlaying;
+                      _voizeSentienceHarmonyFrame.value.isInitialized;
+                  final isPlaying = _voizeSentienceHarmonyFrame.value.isPlaying;
                   final isBuffering =
-                      _gearSoulBrotherhoodBase.value.isBuffering;
+                      _voizeSentienceHarmonyFrame.value.isBuffering;
                   final showPlay = isInitialized && !isPlaying && !isBuffering;
                   return showPlay ? 1.0 : 0.8;
                 })(),
@@ -342,10 +342,10 @@ class _DriftTrailConnectionVault extends State<_ChromeStormCommunityLounge>
           child: GestureDetector(
             behavior: HitTestBehavior.translucent,
             onTap: () {
-              if (_gearSoulBrotherhoodBase.value.isPlaying) {
-                _gearSoulBrotherhoodBase.pause();
+              if (_voizeSentienceHarmonyFrame.value.isPlaying) {
+                _voizeSentienceHarmonyFrame.pause();
               } else {
-                _gearSoulBrotherhoodBase.play();
+                _voizeSentienceHarmonyFrame.play();
               }
             },
           ),

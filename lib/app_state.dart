@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import '/backend/schema/structs/index.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'flutter_flow/flutter_flow_util.dart';
+import 'voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 
-class FFAppState extends ChangeNotifier {
-  static FFAppState _instance = FFAppState._internal();
+class VoizeLunairaEchoMuse extends ChangeNotifier {
+  static VoizeLunairaEchoMuse _instance = VoizeLunairaEchoMuse._internal();
 
-  factory FFAppState() {
+  factory VoizeLunairaEchoMuse() {
     return _instance;
   }
 
-  FFAppState._internal();
+  VoizeLunairaEchoMuse._internal();
 
   static void reset() {
-    _instance = FFAppState._internal();
+    _instance = VoizeLunairaEchoMuse._internal();
   }
 
   Future initializePersistedState() async {
@@ -137,7 +137,8 @@ class FFAppState extends ChangeNotifier {
     });
     _safeInit(() {
       _voizeSoulReflectionOrbitComments = prefs
-              .getStringList('VoizeHarmonicSoul_voizeSoulReflectionOrbitComments')
+              .getStringList(
+                  'VoizeHarmonicSoul_voizeSoulReflectionOrbitComments')
               ?.map((x) {
                 try {
                   return VoizeSentienceEchoRealmCommentStruct

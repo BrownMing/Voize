@@ -1,7 +1,7 @@
 import 'package:voize/utils/piano_loading.dart';
 
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_theme.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -48,7 +48,7 @@ class _VoizeConnectionCircuitryReportBlockWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<VoizeLunairaEchoMuse>();
 
     return Container(
       width: double.infinity,
@@ -105,7 +105,7 @@ class _VoizeConnectionCircuitryReportBlockWidgetState
                       shape: BoxShape.circle,
                     ),
                     child: Image.asset(
-                      FFAppState()
+                      VoizeLunairaEchoMuse()
                           .voizeNaiyaEchoCompanionUsers
                           .elementAtOrNull(widget.voizeNoelleVocalLoverUserid!)!
                           .voizeCognitiveHarmonyUserPhoto,
@@ -116,19 +116,23 @@ class _VoizeConnectionCircuitryReportBlockWidgetState
                     padding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
                     child: Text(
-                      '${FFAppState().voizeNaiyaEchoCompanionUsers.elementAtOrNull(widget.voizeNoelleVocalLoverUserid!)?.voizeCognitiveHarmonyUserName}',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      '${VoizeLunairaEchoMuse().voizeNaiyaEchoCompanionUsers.elementAtOrNull(widget.voizeNoelleVocalLoverUserid!)?.voizeCognitiveHarmonyUserName}',
+                      style: VoizeAffinityChromaLayerTheme.of(context)
+                          .bodyMedium
+                          .override(
                             font: GoogleFonts.archivo(
                               fontWeight: FontWeight.w600,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .fontStyle,
+                              fontStyle:
+                                  VoizeAffinityChromaLayerTheme.of(context)
+                                      .bodyMedium
+                                      .fontStyle,
                             ),
-                            color: FlutterFlowTheme.of(context).info,
+                            color:
+                                VoizeAffinityChromaLayerTheme.of(context).info,
                             fontSize: 20.0,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.w600,
-                            fontStyle: FlutterFlowTheme.of(context)
+                            fontStyle: VoizeAffinityChromaLayerTheme.of(context)
                                 .bodyMedium
                                 .fontStyle,
                           ),
@@ -171,13 +175,15 @@ class _VoizeConnectionCircuitryReportBlockWidgetState
                                 alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Text(
                                   'Report',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: VoizeAffinityChromaLayerTheme.of(
+                                          context)
                                       .bodyMedium
                                       .override(
                                         font: GoogleFonts.archivo(
                                           fontWeight: FontWeight.w600,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
@@ -185,9 +191,11 @@ class _VoizeConnectionCircuitryReportBlockWidgetState
                                         fontSize: 16.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
+                                        fontStyle:
+                                            VoizeAffinityChromaLayerTheme.of(
+                                                    context)
+                                                .bodyMedium
+                                                .fontStyle,
                                       ),
                                 ),
                               ),
@@ -201,16 +209,17 @@ class _VoizeConnectionCircuitryReportBlockWidgetState
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              FFAppState()
+                              VoizeLunairaEchoMuse()
                                   .updateVoizeNaiyaEchoCompanionUsersAtIndex(
-                                FFAppState().voizeRivenDreamVoiceLoginToken,
+                                VoizeLunairaEchoMuse()
+                                    .voizeRivenDreamVoiceLoginToken,
                                 (e) => e
                                   ..updateVoizeCognitiveHarmonyUserBlacklist(
                                     (e) => e.add(
                                         widget.voizeNoelleVocalLoverUserid!),
                                   ),
                               );
-                              FFAppState().update(() {});
+                              VoizeLunairaEchoMuse().update(() {});
                               Navigator.pop(context, true);
                               PianoLoading.showSuccess(
                                 context,
@@ -228,13 +237,15 @@ class _VoizeConnectionCircuitryReportBlockWidgetState
                                 alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Text(
                                   'Block',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: VoizeAffinityChromaLayerTheme.of(
+                                          context)
                                       .bodyMedium
                                       .override(
                                         font: GoogleFonts.archivo(
                                           fontWeight: FontWeight.w600,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              VoizeAffinityChromaLayerTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
@@ -242,9 +253,11 @@ class _VoizeConnectionCircuitryReportBlockWidgetState
                                         fontSize: 16.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
+                                        fontStyle:
+                                            VoizeAffinityChromaLayerTheme.of(
+                                                    context)
+                                                .bodyMedium
+                                                .fontStyle,
                                       ),
                                 ),
                               ),

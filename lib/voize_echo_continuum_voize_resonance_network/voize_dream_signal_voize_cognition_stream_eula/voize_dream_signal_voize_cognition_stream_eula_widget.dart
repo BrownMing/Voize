@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_theme.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -70,37 +70,46 @@ class _VoizeDreamSignalVoizeCognitionStreamEulaWidgetState
           children: [
             Text(
               'EULA',
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.archivo(
-                      fontWeight: FontWeight.w600,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                    ),
-                    color: FlutterFlowTheme.of(context).info,
-                    fontSize: 28.0,
-                    letterSpacing: 0.0,
-                    fontWeight: FontWeight.w600,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                  ),
+              style:
+                  VoizeAffinityChromaLayerTheme.of(context).bodyMedium.override(
+                        font: GoogleFonts.archivo(
+                          fontWeight: FontWeight.w600,
+                          fontStyle: VoizeAffinityChromaLayerTheme.of(context)
+                              .bodyMedium
+                              .fontStyle,
+                        ),
+                        color: VoizeAffinityChromaLayerTheme.of(context).info,
+                        fontSize: 28.0,
+                        letterSpacing: 0.0,
+                        fontWeight: FontWeight.w600,
+                        fontStyle: VoizeAffinityChromaLayerTheme.of(context)
+                            .bodyMedium
+                            .fontStyle,
+                      ),
             ),
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
               child: Text(
                 'Welcome to Voize! To make a better place,the following content is not allowed in the app in particular.\n1.Any content about child harm,pornography related detrimental to children.\n2. Fake and harmful messages about recent or current events.3. Any violence,bullying content, publicly promotes pornography and other content.If we find any content including and not limited to the above violations your content will be deleted and account will be banned.By clicking the above button,you agreeto the Terms of Use and Privacy Policy',
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                style: VoizeAffinityChromaLayerTheme.of(context)
+                    .bodyMedium
+                    .override(
                       font: GoogleFonts.archivo(
-                        fontWeight:
-                            FlutterFlowTheme.of(context).bodyMedium.fontWeight,
-                        fontStyle:
-                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        fontWeight: VoizeAffinityChromaLayerTheme.of(context)
+                            .bodyMedium
+                            .fontWeight,
+                        fontStyle: VoizeAffinityChromaLayerTheme.of(context)
+                            .bodyMedium
+                            .fontStyle,
                       ),
                       color: Color(0xB3FFFFFF),
                       letterSpacing: 0.0,
-                      fontWeight:
-                          FlutterFlowTheme.of(context).bodyMedium.fontWeight,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      fontWeight: VoizeAffinityChromaLayerTheme.of(context)
+                          .bodyMedium
+                          .fontWeight,
+                      fontStyle: VoizeAffinityChromaLayerTheme.of(context)
+                          .bodyMedium
+                          .fontStyle,
                       lineHeight: 1.5,
                     ),
               ),
@@ -138,22 +147,28 @@ class _VoizeDreamSignalVoizeCognitionStreamEulaWidgetState
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: Text(
                                 'Cancle',
-                                style: FlutterFlowTheme.of(context)
+                                style: VoizeAffinityChromaLayerTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       font: GoogleFonts.archivo(
                                         fontWeight: FontWeight.w600,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
+                                        fontStyle:
+                                            VoizeAffinityChromaLayerTheme.of(
+                                                    context)
+                                                .bodyMedium
+                                                .fontStyle,
                                       ),
-                                      color: FlutterFlowTheme.of(context).info,
+                                      color: VoizeAffinityChromaLayerTheme.of(
+                                              context)
+                                          .info,
                                       fontSize: 16.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w600,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
+                                      fontStyle:
+                                          VoizeAffinityChromaLayerTheme.of(
+                                                  context)
+                                              .bodyMedium
+                                              .fontStyle,
                                     ),
                               ),
                             ),
@@ -186,22 +201,26 @@ class _VoizeDreamSignalVoizeCognitionStreamEulaWidgetState
                           alignment: AlignmentDirectional(0.0, 0.0),
                           child: Text(
                             'I agree',
-                            style: FlutterFlowTheme.of(context)
+                            style: VoizeAffinityChromaLayerTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   font: GoogleFonts.archivo(
                                     fontWeight: FontWeight.w600,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: VoizeAffinityChromaLayerTheme.of(
+                                            context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
-                                  color: FlutterFlowTheme.of(context).info,
+                                  color:
+                                      VoizeAffinityChromaLayerTheme.of(context)
+                                          .info,
                                   fontSize: 16.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.w600,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .fontStyle,
+                                  fontStyle:
+                                      VoizeAffinityChromaLayerTheme.of(context)
+                                          .bodyMedium
+                                          .fontStyle,
                                 ),
                           ),
                         ),

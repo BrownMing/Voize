@@ -1,6 +1,6 @@
 import '/backend/schema/structs/index.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_theme.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import '/voize_echo_continuum_voize_resonance_network/voize_connection_circuitry_report_block/voize_connection_circuitry_report_block_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -49,7 +49,7 @@ class _VoizeLumaEmpathEntityCommentsWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<VoizeLunairaEchoMuse>();
 
     return Container(
       width: double.infinity,
@@ -72,18 +72,22 @@ class _VoizeLumaEmpathEntityCommentsWidgetState
               padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
               child: Text(
                 'Comments',
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                style: VoizeAffinityChromaLayerTheme.of(context)
+                    .bodyMedium
+                    .override(
                       font: GoogleFonts.archivo(
                         fontWeight: FontWeight.w600,
-                        fontStyle:
-                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        fontStyle: VoizeAffinityChromaLayerTheme.of(context)
+                            .bodyMedium
+                            .fontStyle,
                       ),
-                      color: FlutterFlowTheme.of(context).info,
+                      color: VoizeAffinityChromaLayerTheme.of(context).info,
                       fontSize: 24.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.w600,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      fontStyle: VoizeAffinityChromaLayerTheme.of(context)
+                          .bodyMedium
+                          .fontStyle,
                     ),
               ),
             ),
@@ -92,14 +96,14 @@ class _VoizeLumaEmpathEntityCommentsWidgetState
                 padding: EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 0.0),
                 child: Builder(
                   builder: (context) {
-                    final voizeResonanceVaultSystem = FFAppState()
+                    final voizeResonanceVaultSystem = VoizeLunairaEchoMuse()
                         .voizeVelanEmpathComments
                         .where((e) =>
                             (widget.voizeDreamTetherCorePostRef ==
                                 e.voizeSentienceEchoRealmCommentPostRef) &&
-                            !FFAppState()
+                            !VoizeLunairaEchoMuse()
                                 .voizeNaiyaEchoCompanionUsers
-                                .elementAtOrNull(FFAppState()
+                                .elementAtOrNull(VoizeLunairaEchoMuse()
                                     .voizeRivenDreamVoiceLoginToken)!
                                 .voizeCognitiveHarmonyUserBlacklist
                                 .contains(
@@ -130,7 +134,7 @@ class _VoizeLumaEmpathEntityCommentsWidgetState
                                   shape: BoxShape.circle,
                                 ),
                                 child: Image.asset(
-                                  FFAppState()
+                                  VoizeLunairaEchoMuse()
                                       .voizeNaiyaEchoCompanionUsers
                                       .elementAtOrNull(voizeResonanceVaultSystemItem
                                           .voizeSentienceEchoRealmCommentCreateId)!
@@ -148,23 +152,27 @@ class _VoizeLumaEmpathEntityCommentsWidgetState
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      '${FFAppState().voizeNaiyaEchoCompanionUsers.elementAtOrNull(voizeResonanceVaultSystemItem.voizeSentienceEchoRealmCommentCreateId)?.voizeCognitiveHarmonyUserName}',
-                                      style: FlutterFlowTheme.of(context)
+                                      '${VoizeLunairaEchoMuse().voizeNaiyaEchoCompanionUsers.elementAtOrNull(voizeResonanceVaultSystemItem.voizeSentienceEchoRealmCommentCreateId)?.voizeCognitiveHarmonyUserName}',
+                                      style: VoizeAffinityChromaLayerTheme.of(
+                                              context)
                                           .bodyMedium
                                           .override(
                                             font: GoogleFonts.archivo(
                                               fontWeight: FontWeight.w600,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  VoizeAffinityChromaLayerTheme
+                                                          .of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
-                                            color: FlutterFlowTheme.of(context)
+                                            color: VoizeAffinityChromaLayerTheme
+                                                    .of(context)
                                                 .info,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
@@ -172,16 +180,19 @@ class _VoizeLumaEmpathEntityCommentsWidgetState
                                     Text(
                                       voizeResonanceVaultSystemItem
                                           .voizeSentienceEchoRealmCommentContent,
-                                      style: FlutterFlowTheme.of(context)
+                                      style: VoizeAffinityChromaLayerTheme.of(
+                                              context)
                                           .bodyMedium
                                           .override(
                                             font: GoogleFonts.archivo(
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  VoizeAffinityChromaLayerTheme
+                                                          .of(context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  VoizeAffinityChromaLayerTheme
+                                                          .of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
@@ -189,11 +200,13 @@ class _VoizeLumaEmpathEntityCommentsWidgetState
                                             fontSize: 12.0,
                                             letterSpacing: 0.0,
                                             fontWeight:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .fontWeight,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                VoizeAffinityChromaLayerTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
@@ -204,7 +217,8 @@ class _VoizeLumaEmpathEntityCommentsWidgetState
                             ),
                             if (voizeResonanceVaultSystemItem
                                     .voizeSentienceEchoRealmCommentCreateId !=
-                                FFAppState().voizeRivenDreamVoiceLoginToken)
+                                VoizeLunairaEchoMuse()
+                                    .voizeRivenDreamVoiceLoginToken)
                               InkWell(
                                 splashColor: Colors.transparent,
                                 focusColor: Colors.transparent,
@@ -275,9 +289,9 @@ class _VoizeLumaEmpathEntityCommentsWidgetState
                             shape: BoxShape.circle,
                           ),
                           child: Image.asset(
-                            FFAppState()
+                            VoizeLunairaEchoMuse()
                                 .voizeNaiyaEchoCompanionUsers
-                                .elementAtOrNull(FFAppState()
+                                .elementAtOrNull(VoizeLunairaEchoMuse()
                                     .voizeRivenDreamVoiceLoginToken)!
                                 .voizeCognitiveHarmonyUserPhoto,
                             fit: BoxFit.cover,
@@ -295,45 +309,63 @@ class _VoizeLumaEmpathEntityCommentsWidgetState
                               obscureText: false,
                               decoration: InputDecoration(
                                 isDense: true,
-                                labelStyle: FlutterFlowTheme.of(context)
+                                labelStyle: VoizeAffinityChromaLayerTheme.of(
+                                        context)
                                     .labelMedium
                                     .override(
                                       font: GoogleFonts.archivo(
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .labelMedium
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .labelMedium
-                                            .fontStyle,
+                                        fontWeight:
+                                            VoizeAffinityChromaLayerTheme.of(
+                                                    context)
+                                                .labelMedium
+                                                .fontWeight,
+                                        fontStyle:
+                                            VoizeAffinityChromaLayerTheme.of(
+                                                    context)
+                                                .labelMedium
+                                                .fontStyle,
                                       ),
                                       letterSpacing: 0.0,
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .labelMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium
-                                          .fontStyle,
+                                      fontWeight:
+                                          VoizeAffinityChromaLayerTheme.of(
+                                                  context)
+                                              .labelMedium
+                                              .fontWeight,
+                                      fontStyle:
+                                          VoizeAffinityChromaLayerTheme.of(
+                                                  context)
+                                              .labelMedium
+                                              .fontStyle,
                                     ),
                                 hintText: 'Add a comment...',
-                                hintStyle: FlutterFlowTheme.of(context)
+                                hintStyle: VoizeAffinityChromaLayerTheme.of(
+                                        context)
                                     .labelMedium
                                     .override(
                                       font: GoogleFonts.archivo(
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .labelMedium
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .labelMedium
-                                            .fontStyle,
+                                        fontWeight:
+                                            VoizeAffinityChromaLayerTheme.of(
+                                                    context)
+                                                .labelMedium
+                                                .fontWeight,
+                                        fontStyle:
+                                            VoizeAffinityChromaLayerTheme.of(
+                                                    context)
+                                                .labelMedium
+                                                .fontStyle,
                                       ),
                                       color: Color(0xB3FFFFFF),
                                       letterSpacing: 0.0,
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .labelMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium
-                                          .fontStyle,
+                                      fontWeight:
+                                          VoizeAffinityChromaLayerTheme.of(
+                                                  context)
+                                              .labelMedium
+                                              .fontWeight,
+                                      fontStyle:
+                                          VoizeAffinityChromaLayerTheme.of(
+                                                  context)
+                                              .labelMedium
+                                              .fontStyle,
                                     ),
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
@@ -376,27 +408,38 @@ class _VoizeLumaEmpathEntityCommentsWidgetState
                                   ),
                                 ),
                               ),
-                              style: FlutterFlowTheme.of(context)
+                              style: VoizeAffinityChromaLayerTheme.of(context)
                                   .bodyMedium
                                   .override(
                                     font: GoogleFonts.archivo(
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
+                                      fontWeight:
+                                          VoizeAffinityChromaLayerTheme.of(
+                                                  context)
+                                              .bodyMedium
+                                              .fontWeight,
+                                      fontStyle:
+                                          VoizeAffinityChromaLayerTheme.of(
+                                                  context)
+                                              .bodyMedium
+                                              .fontStyle,
                                     ),
-                                    color: FlutterFlowTheme.of(context).info,
+                                    color: VoizeAffinityChromaLayerTheme.of(
+                                            context)
+                                        .info,
                                     letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontWeight:
+                                        VoizeAffinityChromaLayerTheme.of(
+                                                context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                    fontStyle: VoizeAffinityChromaLayerTheme.of(
+                                            context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
-                              cursorColor: FlutterFlowTheme.of(context).info,
+                              cursorColor:
+                                  VoizeAffinityChromaLayerTheme.of(context)
+                                      .info,
                               enableInteractiveSelection: true,
                               validator: _model.textControllerValidator
                                   .asValidator(context),
@@ -410,23 +453,25 @@ class _VoizeLumaEmpathEntityCommentsWidgetState
                           highlightColor: Colors.transparent,
                           onTap: () async {
                             if (_model.textController.text != '') {
-                              FFAppState().addToVoizeVelanEmpathComments(
-                                  VoizeSentienceEchoRealmCommentStruct(
+                              VoizeLunairaEchoMuse()
+                                  .addToVoizeVelanEmpathComments(
+                                      VoizeSentienceEchoRealmCommentStruct(
                                 voizeSentienceEchoRealmCommentContent:
                                     _model.textController.text,
                                 voizeSentienceEchoRealmCommentCreateId:
-                                    FFAppState().voizeRivenDreamVoiceLoginToken,
+                                    VoizeLunairaEchoMuse()
+                                        .voizeRivenDreamVoiceLoginToken,
                                 voizeSentienceEchoRealmCommentPostRef:
                                     widget.voizeDreamTetherCorePostRef,
                               ));
-                              FFAppState()
+                              VoizeLunairaEchoMuse()
                                   .updateVoizeSerenEmotionSpiritVideosAtIndex(
                                 widget.voizeDreamTetherCorePostRef!,
                                 (e) => e
                                   ..incrementVoizeHeartWaveContinuityVideoComments(
                                       1),
                               );
-                              FFAppState().update(() {});
+                              VoizeLunairaEchoMuse().update(() {});
                               safeSetState(() {
                                 _model.textController?.clear();
                               });

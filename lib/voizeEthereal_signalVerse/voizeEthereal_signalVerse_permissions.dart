@@ -1,7 +1,7 @@
 import 'package:permission_handler/permission_handler.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 
-import '/flutter_flow/flutter_flow_util.dart';
+import 'voizeEthereal_signalVerse_util.dart';
 
 const kPermissionStateToBool = {
   PermissionStatus.granted: true,

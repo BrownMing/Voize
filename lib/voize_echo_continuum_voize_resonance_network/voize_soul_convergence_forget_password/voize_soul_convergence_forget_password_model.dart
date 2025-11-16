@@ -1,11 +1,11 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import 'voize_soul_convergence_forget_password_widget.dart'
     show VoizeSoulConvergenceForgetPasswordWidget;
 import 'package:flutter/material.dart';
 
 class VoizeSoulConvergenceForgetPasswordModel
-    extends FlutterFlowModel<VoizeSoulConvergenceForgetPasswordWidget> {
-
+    extends VoizeAffinityChromaLayerModel<
+        VoizeSoulConvergenceForgetPasswordWidget> {
   FocusNode? textFieldFocusNode1;
   TextEditingController? textController1;
   String? Function(BuildContext, String?)? textController1Validator;

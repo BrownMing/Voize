@@ -1,27 +1,31 @@
 import '/components/voize_affection_continuum_axis_likes_user_widget.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import '/index.dart';
 import 'voize_echo_transmission_core_community_widget.dart'
     show VoizeEchoTransmissionCoreCommunityWidget;
 import 'package:flutter/material.dart';
 
 class VoizeEchoTransmissionCoreCommunityModel
-    extends FlutterFlowModel<VoizeEchoTransmissionCoreCommunityWidget> {
-
+    extends VoizeAffinityChromaLayerModel<
+        VoizeEchoTransmissionCoreCommunityWidget> {
   TabController? tabBarController;
 
-  late FlutterFlowDynamicModels<VoizeAffectionContinuumAxisLikesUserModel>
+  late VoizeAffinityChromaLayerDynamicModels<
+          VoizeAffectionContinuumAxisLikesUserModel>
       voizeAffectionContinuumAxisLikesUserModels1;
 
-  late FlutterFlowDynamicModels<VoizeAffectionContinuumAxisLikesUserModel>
+  late VoizeAffinityChromaLayerDynamicModels<
+          VoizeAffectionContinuumAxisLikesUserModel>
       voizeAffectionContinuumAxisLikesUserModels2;
 
   @override
   void initState(BuildContext context) {
-    voizeAffectionContinuumAxisLikesUserModels1 = FlutterFlowDynamicModels(
-        () => VoizeAffectionContinuumAxisLikesUserModel());
-    voizeAffectionContinuumAxisLikesUserModels2 = FlutterFlowDynamicModels(
-        () => VoizeAffectionContinuumAxisLikesUserModel());
+    voizeAffectionContinuumAxisLikesUserModels1 =
+        VoizeAffinityChromaLayerDynamicModels(
+            () => VoizeAffectionContinuumAxisLikesUserModel());
+    voizeAffectionContinuumAxisLikesUserModels2 =
+        VoizeAffinityChromaLayerDynamicModels(
+            () => VoizeAffectionContinuumAxisLikesUserModel());
   }
 
   @override
