@@ -41,8 +41,8 @@ class _VoizeHeartLinkRevelationMessagesWidgetState
     _model =
         createModel(context, () => VoizeHeartLinkRevelationMessagesModel());
 
-    _model.textController ??= TextEditingController();
-    _model.textFieldFocusNode ??= FocusNode();
+    _model.voizeFrequencyBondLink ??= TextEditingController();
+    _model.voizeEmotiveAuralStream ??= FocusNode();
   }
 
   @override
@@ -762,8 +762,10 @@ class _VoizeHeartLinkRevelationMessagesWidgetState
                                       child: Container(
                                         width: 250.0,
                                         child: TextFormField(
-                                          controller: _model.textController,
-                                          focusNode: _model.textFieldFocusNode,
+                                          controller:
+                                              _model.voizeFrequencyBondLink,
+                                          focusNode:
+                                              _model.voizeEmotiveAuralStream,
                                           autofocus: false,
                                           enabled: true,
                                           textInputAction: TextInputAction.done,
@@ -915,7 +917,7 @@ class _VoizeHeartLinkRevelationMessagesWidgetState
                                                   .info,
                                           enableInteractiveSelection: true,
                                           validator: _model
-                                              .textControllerValidator
+                                              .voizeChronicleOfAuralSouls
                                               .asValidator(context),
                                         ),
                                       ),
@@ -988,12 +990,12 @@ class _VoizeHeartLinkRevelationMessagesWidgetState
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                if (_model.textController.text != '') {
+                                if (_model.voizeFrequencyBondLink.text != '') {
                                   VoizeLunairaEchoMuse()
                                       .addToVoizeAerisHeartTunerMessages(
                                           VoizeLioraWhisperMuseMessageStruct(
                                     voizeLioraWhisperMuseMessageContent:
-                                        _model.textController.text,
+                                        _model.voizeFrequencyBondLink.text,
                                     voizeLioraWhisperMuseMessageCreateId:
                                         VoizeLunairaEchoMuse()
                                             .voizeRivenDreamVoiceLoginToken,
@@ -1002,9 +1004,23 @@ class _VoizeHeartLinkRevelationMessagesWidgetState
                                     voizeLioraWhisperMuseMessageChatRef:
                                         widget.voizeAliraBondKeeperChatid,
                                   ));
+                                  VoizeLunairaEchoMuse()
+                                      .updateVoizeNyraResonanceSirenChatsAtIndex(
+                                          widget.voizeAliraBondKeeperChatid!,
+                                          (chat) => chat
+                                            ..incrementVoizeEmpathicSignalPlaneChatUnread(
+                                                1)
+                                            ..voizeEmpathicSignalPlaneChatSendMessage =
+                                                _model
+                                                    .voizeFrequencyBondLink.text
+                                            ..voizeEmpathicSignalPlaneChatSendUser =
+                                                VoizeLunairaEchoMuse()
+                                                    .voizeRivenDreamVoiceLoginToken
+                                            ..voizeEmpathicSignalPlaneChatSendTime =
+                                                getCurrentTimestamp);
                                   VoizeLunairaEchoMuse().update(() {});
                                   safeSetState(() {
-                                    _model.textController?.clear();
+                                    _model.voizeFrequencyBondLink?.clear();
                                   });
                                 }
                               },

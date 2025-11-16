@@ -106,10 +106,11 @@ class _VoizeWhisperBloomSagaVoiceWidgetState
                     if (await getPermissionStatus(microphonePermission)) {
                       await startAudioRecording(
                         context,
-                        audioRecorder: _model.audioRecorder ??= AudioRecorder(),
+                        audioRecorder: _model.whisperedEternum ??=
+                            AudioRecorder(),
                       );
                       setState(() {
-                        _model.isRecording = true;
+                        _model.voizeEchoSoulContinuum = true;
                       });
                     } else {
                       await requestPermission(microphonePermission);
@@ -117,13 +118,13 @@ class _VoizeWhisperBloomSagaVoiceWidgetState
                   },
                   onLongPressEnd: (details) async {
                     // 停止录音
-                    if (_model.isRecording) {
+                    if (_model.voizeEchoSoulContinuum) {
                       await stopAudioRecording(
-                        audioRecorder: _model.audioRecorder,
-                        audioName: 'recordedFileBytes',
+                        audioRecorder: _model.whisperedEternum,
+                        audioName: 'voizeAuralEternityFramework',
                         onRecordingComplete: (audioFilePath, audioBytes) {
                           _model.voizeDreamSyncInterface = audioFilePath;
-                          _model.recordedFileBytes = audioBytes;
+                          _model.voizeAuralEternityFramework = audioBytes;
                         },
                       );
 
@@ -143,7 +144,7 @@ class _VoizeWhisperBloomSagaVoiceWidgetState
                       Navigator.pop(context);
 
                       setState(() {
-                        _model.isRecording = false;
+                        _model.voizeEchoSoulContinuum = false;
                       });
                     }
                   },
@@ -151,7 +152,7 @@ class _VoizeWhisperBloomSagaVoiceWidgetState
                     animation: _model.pulseAnimation!,
                     builder: (context, child) {
                       return Transform.scale(
-                        scale: _model.isRecording
+                        scale: _model.voizeEchoSoulContinuum
                             ? _model.pulseAnimation!.value
                             : 1.0,
                         child: Container(

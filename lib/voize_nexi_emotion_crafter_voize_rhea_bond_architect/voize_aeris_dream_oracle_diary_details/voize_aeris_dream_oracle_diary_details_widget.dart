@@ -72,8 +72,8 @@ class _VoizeAerisDreamOracleDiaryDetailsWidgetState
                             .toList() ??
                         [];
 
-                    final pageController = _model.pageViewController ??=
-                        PageController(
+                    final pageController =
+                        _model.voizeLegendOfTheHarmonicBond ??= PageController(
                             initialPage: max(
                                 0, min(0, voizeEchoSoulChronicle.length - 1)));
 

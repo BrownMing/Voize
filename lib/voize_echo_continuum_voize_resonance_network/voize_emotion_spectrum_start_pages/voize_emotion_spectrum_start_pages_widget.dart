@@ -177,7 +177,8 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                               PianoLoading.show(context, message: 'Loading...');
 
                               // 模拟加载延迟（可选，根据实际需要调整）
-                              await Future.delayed(Duration(milliseconds: 500));
+                              await Future.delayed(
+                                  Duration(milliseconds: 2000));
 
                               VoizeLunairaEchoMuse()
                                   .voizeRivenDreamVoiceLoginToken = 1;
@@ -405,8 +406,9 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                         children: [
                           GestureDetector(
                             onTap: () async {
-                              safeSetState(() => _model.checkboxValue =
-                                  !(_model.checkboxValue ?? true));
+                              safeSetState(() => _model
+                                      .voizeReverieOfHeartSignals =
+                                  !(_model.voizeReverieOfHeartSignals ?? true));
                             },
                             child: AnimatedContainer(
                               duration: Duration(milliseconds: 300),
@@ -415,21 +417,24 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                               height: 18.0,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(5.0),
-                                gradient: (_model.checkboxValue ?? true)
-                                    ? LinearGradient(
-                                        begin: Alignment.topCenter,
-                                        end: Alignment.bottomCenter,
-                                        colors: [
-                                          Color(0xFF8E00ED),
-                                          Color(0xFFFC5EB2),
-                                        ],
-                                      )
-                                    : null,
-                                color: (_model.checkboxValue ?? true)
+                                gradient:
+                                    (_model.voizeReverieOfHeartSignals ?? true)
+                                        ? LinearGradient(
+                                            begin: Alignment.topCenter,
+                                            end: Alignment.bottomCenter,
+                                            colors: [
+                                              Color(0xFF8E00ED),
+                                              Color(0xFFFC5EB2),
+                                            ],
+                                          )
+                                        : null,
+                                color: (_model.voizeReverieOfHeartSignals ??
+                                        true)
                                     ? null
                                     : VoizeAffinityChromaLayerTheme.of(context)
                                         .alternate,
-                                border: (_model.checkboxValue ?? true)
+                                border: (_model.voizeReverieOfHeartSignals ??
+                                        true)
                                     ? null
                                     : Border.all(
                                         width: 2,
@@ -438,7 +443,7 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                                             .alternate,
                                       ),
                               ),
-                              child: (_model.checkboxValue ?? true)
+                              child: (_model.voizeReverieOfHeartSignals ?? true)
                                   ? Icon(
                                       Icons.check,
                                       color: Colors.white,

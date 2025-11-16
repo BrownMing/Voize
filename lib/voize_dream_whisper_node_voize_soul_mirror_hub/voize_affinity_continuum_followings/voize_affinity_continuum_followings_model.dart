@@ -8,11 +8,13 @@ import 'package:flutter/material.dart';
 class VoizeAffinityContinuumFollowingsModel
     extends VoizeAffinityChromaLayerModel<
         VoizeAffinityContinuumFollowingsWidget> {
-  TabController? tabBarController;
-  int get tabBarCurrentIndex =>
-      tabBarController != null ? tabBarController!.index : 0;
-  int get tabBarPreviousIndex =>
-      tabBarController != null ? tabBarController!.previousIndex : 0;
+  TabController? voizeSagaOfDreamborneEchoes;
+  int get tabBarCurrentIndex => voizeSagaOfDreamborneEchoes != null
+      ? voizeSagaOfDreamborneEchoes!.index
+      : 0;
+  int get tabBarPreviousIndex => voizeSagaOfDreamborneEchoes != null
+      ? voizeSagaOfDreamborneEchoes!.previousIndex
+      : 0;
 
   late VoizeAffinityChromaLayerDynamicModels<
           VoizeEtherealSoundCodexFollowingModel>
@@ -27,7 +29,7 @@ class VoizeAffinityContinuumFollowingsModel
 
   @override
   void dispose() {
-    tabBarController?.dispose();
+    voizeSagaOfDreamborneEchoes?.dispose();
     voizeEtherealSoundCodexFollowingModels.dispose();
   }
 }

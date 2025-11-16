@@ -14,9 +14,9 @@ class VoizeMemoryChamberVaultDymaticDetailsModel
   late VoizeAffectionContinuumAxisLikesUserModel
       voizeAffectionContinuumAxisLikesUserModel;
 
-  FocusNode? textFieldFocusNode;
-  TextEditingController? textController;
-  String? Function(BuildContext, String?)? textControllerValidator;
+  FocusNode? voizeEmotiveAuralStream;
+  TextEditingController? voizeFrequencyBondLink;
+  String? Function(BuildContext, String?)? voizeChronicleOfAuralSouls;
 
   @override
   void initState(BuildContext context) {
@@ -30,7 +30,7 @@ class VoizeMemoryChamberVaultDymaticDetailsModel
   void dispose() {
     voizeEtherealSoundCodexFollowingModel.dispose();
     voizeAffectionContinuumAxisLikesUserModel.dispose();
-    textFieldFocusNode?.dispose();
-    textController?.dispose();
+    voizeEmotiveAuralStream?.dispose();
+    voizeFrequencyBondLink?.dispose();
   }
 }

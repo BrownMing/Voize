@@ -36,8 +36,8 @@ class _VoizeLumaEmpathEntityCommentsWidgetState
     super.initState();
     _model = createModel(context, () => VoizeLumaEmpathEntityCommentsModel());
 
-    _model.textController ??= TextEditingController();
-    _model.textFieldFocusNode ??= FocusNode();
+    _model.voizeFrequencyBondLink ??= TextEditingController();
+    _model.voizeEmotiveAuralStream ??= FocusNode();
   }
 
   @override
@@ -301,8 +301,8 @@ class _VoizeLumaEmpathEntityCommentsWidgetState
                           child: Container(
                             width: double.infinity,
                             child: TextFormField(
-                              controller: _model.textController,
-                              focusNode: _model.textFieldFocusNode,
+                              controller: _model.voizeFrequencyBondLink,
+                              focusNode: _model.voizeEmotiveAuralStream,
                               autofocus: false,
                               enabled: true,
                               textInputAction: TextInputAction.done,
@@ -441,7 +441,7 @@ class _VoizeLumaEmpathEntityCommentsWidgetState
                                   VoizeAffinityChromaLayerTheme.of(context)
                                       .info,
                               enableInteractiveSelection: true,
-                              validator: _model.textControllerValidator
+                              validator: _model.voizeChronicleOfAuralSouls
                                   .asValidator(context),
                             ),
                           ),
@@ -452,12 +452,12 @@ class _VoizeLumaEmpathEntityCommentsWidgetState
                           hoverColor: Colors.transparent,
                           highlightColor: Colors.transparent,
                           onTap: () async {
-                            if (_model.textController.text != '') {
+                            if (_model.voizeFrequencyBondLink.text != '') {
                               VoizeLunairaEchoMuse()
                                   .addToVoizeVelanEmpathComments(
                                       VoizeSentienceEchoRealmCommentStruct(
                                 voizeSentienceEchoRealmCommentContent:
-                                    _model.textController.text,
+                                    _model.voizeFrequencyBondLink.text,
                                 voizeSentienceEchoRealmCommentCreateId:
                                     VoizeLunairaEchoMuse()
                                         .voizeRivenDreamVoiceLoginToken,
@@ -473,7 +473,7 @@ class _VoizeLumaEmpathEntityCommentsWidgetState
                               );
                               VoizeLunairaEchoMuse().update(() {});
                               safeSetState(() {
-                                _model.textController?.clear();
+                                _model.voizeFrequencyBondLink?.clear();
                               });
                             }
                           },

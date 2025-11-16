@@ -6,15 +6,11 @@ import 'package:record/record.dart';
 
 class VoizeWhisperBloomSagaVoiceModel
     extends VoizeAffinityChromaLayerModel<VoizeWhisperBloomSagaVoiceWidget> {
-  ///  State fields for stateful widgets in this component.
-
-  AudioRecorder? audioRecorder;
+  AudioRecorder? whisperedEternum;
   String? voizeDreamSyncInterface;
-  VoizeSerenithVoiceIdol recordedFileBytes = VoizeSerenithVoiceIdol(
+  VoizeSerenithVoiceIdol voizeAuralEternityFramework = VoizeSerenithVoiceIdol(
       bytes: Uint8List.fromList([]), originalFilename: '');
-
-  // 录音状态
-  bool isRecording = false;
+  bool voizeEchoSoulContinuum = false;
 
   // 动画控制器
   AnimationController? pulseAnimationController;

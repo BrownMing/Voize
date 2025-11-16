@@ -34,8 +34,8 @@ class _VoizeHeartWaveInterfacePostVideoWidgetState
     _model =
         createModel(context, () => VoizeHeartWaveInterfacePostVideoModel());
 
-    _model.textController ??= TextEditingController();
-    _model.textFieldFocusNode ??= FocusNode();
+    _model.voizeFrequencyBondLink ??= TextEditingController();
+    _model.voizeEmotiveAuralStream ??= FocusNode();
   }
 
   @override
@@ -121,8 +121,10 @@ class _VoizeHeartWaveInterfacePostVideoWidgetState
                                     child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
-                                        controller: _model.textController,
-                                        focusNode: _model.textFieldFocusNode,
+                                        controller:
+                                            _model.voizeFrequencyBondLink,
+                                        focusNode:
+                                            _model.voizeEmotiveAuralStream,
                                         autofocus: false,
                                         enabled: true,
                                         textInputAction: TextInputAction.done,
@@ -275,7 +277,7 @@ class _VoizeHeartWaveInterfacePostVideoWidgetState
                                                 .info,
                                         enableInteractiveSelection: true,
                                         validator: _model
-                                            .textControllerValidator
+                                            .voizeChronicleOfAuralSouls
                                             .asValidator(context),
                                       ),
                                     ),
@@ -473,7 +475,8 @@ class _VoizeHeartWaveInterfacePostVideoWidgetState
                                 hoverColor: Colors.transparent,
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
-                                  if (_model.textController.text != '') {
+                                  if (_model.voizeFrequencyBondLink.text !=
+                                      '') {
                                     if (_model.voizeEmotiveFrequencyFieldUrl !=
                                             null &&
                                         _model.voizeEmotiveFrequencyFieldUrl !=
@@ -491,7 +494,7 @@ class _VoizeHeartWaveInterfacePostVideoWidgetState
                                             VoizeLunairaEchoMuse()
                                                 .voizeRivenDreamVoiceLoginToken,
                                         voizeHeartWaveContinuityVideoDescribe:
-                                            _model.textController.text,
+                                            _model.voizeFrequencyBondLink.text,
                                         voizeHeartWaveContinuityVideoCreateTime:
                                             getCurrentTimestamp,
                                         voizeHeartWaveContinuityVideoLikeUsers: [],

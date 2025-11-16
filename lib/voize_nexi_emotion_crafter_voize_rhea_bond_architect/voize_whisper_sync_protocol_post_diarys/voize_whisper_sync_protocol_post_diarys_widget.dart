@@ -34,11 +34,11 @@ class _VoizeWhisperSyncProtocolPostDiarysWidgetState
     _model =
         createModel(context, () => VoizeWhisperSyncProtocolPostDiarysModel());
 
-    _model.textController1 ??= TextEditingController();
-    _model.textFieldFocusNode1 ??= FocusNode();
+    _model.voizeSoundSoulInterface ??= TextEditingController();
+    _model.voizeVoiceAffinityChannel ??= FocusNode();
 
-    _model.textController2 ??= TextEditingController();
-    _model.textFieldFocusNode2 ??= FocusNode();
+    _model.cvoizeSoftwaveDialogueNet ??= TextEditingController();
+    _model.voizeHeartVoiceRelay ??= FocusNode();
   }
 
   @override
@@ -125,8 +125,10 @@ class _VoizeWhisperSyncProtocolPostDiarysWidgetState
                                   Container(
                                     width: double.infinity,
                                     child: TextFormField(
-                                      controller: _model.textController1,
-                                      focusNode: _model.textFieldFocusNode1,
+                                      controller:
+                                          _model.voizeSoundSoulInterface,
+                                      focusNode:
+                                          _model.voizeVoiceAffinityChannel,
                                       autofocus: false,
                                       enabled: true,
                                       textInputAction: TextInputAction.done,
@@ -272,7 +274,7 @@ class _VoizeWhisperSyncProtocolPostDiarysWidgetState
                                                   context)
                                               .info,
                                       enableInteractiveSelection: true,
-                                      validator: _model.textController1Validator
+                                      validator: _model.voizeDreamcallResonator
                                           .asValidator(context),
                                     ),
                                   ),
@@ -299,8 +301,10 @@ class _VoizeWhisperSyncProtocolPostDiarysWidgetState
                                       child: Container(
                                         width: double.infinity,
                                         child: TextFormField(
-                                          controller: _model.textController2,
-                                          focusNode: _model.textFieldFocusNode2,
+                                          controller:
+                                              _model.cvoizeSoftwaveDialogueNet,
+                                          focusNode:
+                                              _model.voizeHeartVoiceRelay,
                                           autofocus: false,
                                           enabled: true,
                                           textInputAction: TextInputAction.done,
@@ -453,7 +457,7 @@ class _VoizeWhisperSyncProtocolPostDiarysWidgetState
                                                   .info,
                                           enableInteractiveSelection: true,
                                           validator: _model
-                                              .textController2Validator
+                                              .voizeWhisperlineSynthesis
                                               .asValidator(context),
                                         ),
                                       ),
@@ -676,11 +680,13 @@ class _VoizeWhisperSyncProtocolPostDiarysWidgetState
                                                 Color(0x25FFFFFF),
                                           ),
                                           child: Checkbox(
-                                            value: _model.checkboxValue ??=
+                                            value: _model
+                                                    .voizeReverieOfHeartSignals ??=
                                                 true,
                                             onChanged: (newValue) async {
                                               safeSetState(() => _model
-                                                  .checkboxValue = newValue!);
+                                                      .voizeReverieOfHeartSignals =
+                                                  newValue!);
                                             },
                                             side: (Color(0x25FFFFFF) != null)
                                                 ? BorderSide(
@@ -711,8 +717,9 @@ class _VoizeWhisperSyncProtocolPostDiarysWidgetState
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                if (_model.textController1.text != '') {
-                                  if (_model.textController2.text != '') {
+                                if (_model.voizeSoundSoulInterface.text != '') {
+                                  if (_model.cvoizeSoftwaveDialogueNet.text !=
+                                      '') {
                                     if (_model.voizeNeraiWhisperIdolPhoto
                                         .isNotEmpty) {
                                       VoizeLunairaEchoMuse()
@@ -728,9 +735,10 @@ class _VoizeWhisperSyncProtocolPostDiarysWidgetState
                                         voizeEclipticSoulStreamPianoNotesShow:
                                             _model.voizeNeraiWhisperIdolPhoto,
                                         voizeEclipticSoulStreamPianoNotesTitle:
-                                            _model.textController1.text,
+                                            _model.voizeSoundSoulInterface.text,
                                         voizeEclipticSoulStreamPianoNotesDescribe:
-                                            _model.textController2.text,
+                                            _model
+                                                .cvoizeSoftwaveDialogueNet.text,
                                         voizeEclipticSoulStreamPianoNotesLikeUsers: [],
                                         voizeEclipticSoulStreamPianoNotesCreateTime:
                                             getCurrentTimestamp,
@@ -739,7 +747,7 @@ class _VoizeWhisperSyncProtocolPostDiarysWidgetState
                                               .voizeRivenDreamVoiceLoginToken,
                                         ],
                                         voizeEclipticSoulStreamPianoNotesUnlockShow:
-                                            _model.checkboxValue,
+                                            _model.voizeReverieOfHeartSignals,
                                       ));
                                       VoizeLunairaEchoMuse().update(() {});
                                       context.safePop();

@@ -34,8 +34,8 @@ class _VoizeBondResonatorEnginePostDymaticWidgetState
     _model =
         createModel(context, () => VoizeBondResonatorEnginePostDymaticModel());
 
-    _model.textController ??= TextEditingController();
-    _model.textFieldFocusNode ??= FocusNode();
+    _model.voizeFrequencyBondLink ??= TextEditingController();
+    _model.voizeEmotiveAuralStream ??= FocusNode();
   }
 
   @override
@@ -125,8 +125,10 @@ class _VoizeBondResonatorEnginePostDymaticWidgetState
                                     child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
-                                        controller: _model.textController,
-                                        focusNode: _model.textFieldFocusNode,
+                                        controller:
+                                            _model.voizeFrequencyBondLink,
+                                        focusNode:
+                                            _model.voizeEmotiveAuralStream,
                                         autofocus: false,
                                         enabled: true,
                                         textInputAction: TextInputAction.done,
@@ -279,7 +281,7 @@ class _VoizeBondResonatorEnginePostDymaticWidgetState
                                                 .info,
                                         enableInteractiveSelection: true,
                                         validator: _model
-                                            .textControllerValidator
+                                            .voizeChronicleOfAuralSouls
                                             .asValidator(context),
                                       ),
                                     ),
@@ -542,7 +544,7 @@ class _VoizeBondResonatorEnginePostDymaticWidgetState
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                if (_model.textController.text != '') {
+                                if (_model.voizeFrequencyBondLink.text != '') {
                                   if (_model.voizeEclipticaLoverVersePhoto !=
                                           null &&
                                       _model.voizeEclipticaLoverVersePhoto !=
@@ -560,7 +562,7 @@ class _VoizeBondResonatorEnginePostDymaticWidgetState
                                           VoizeLunairaEchoMuse()
                                               .voizeRivenDreamVoiceLoginToken,
                                       voizeSynestheticConnectionDymaticDescribe:
-                                          _model.textController.text,
+                                          _model.voizeFrequencyBondLink.text,
                                       voizeSynestheticConnectionDymaticCreateTime:
                                           getCurrentTimestamp,
                                       voizeSynestheticConnectionDymaticLikeUsers: [],

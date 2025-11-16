@@ -1,7 +1,6 @@
 import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_theme.dart';
 import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import '/index.dart';
-import '/app_state.dart';
 import '/backend/schema/structs/index.dart';
 import '/utils/piano_loading.dart';
 import 'package:flutter/material.dart';
@@ -31,11 +30,11 @@ class _VoizeHarmonyDimensionLoginWidgetState
     super.initState();
     _model = createModel(context, () => VoizeHarmonyDimensionLoginModel());
 
-    _model.textController1 ??= TextEditingController();
-    _model.textFieldFocusNode1 ??= FocusNode();
+    _model.voizeSoundSoulInterface ??= TextEditingController();
+    _model.voizeVoiceAffinityChannel ??= FocusNode();
 
-    _model.textController2 ??= TextEditingController();
-    _model.textFieldFocusNode2 ??= FocusNode();
+    _model.cvoizeSoftwaveDialogueNet ??= TextEditingController();
+    _model.voizeHeartVoiceRelay ??= FocusNode();
   }
 
   @override
@@ -230,8 +229,10 @@ class _VoizeHarmonyDimensionLoginWidgetState
                                     child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
-                                        controller: _model.textController1,
-                                        focusNode: _model.textFieldFocusNode1,
+                                        controller:
+                                            _model.voizeSoundSoulInterface,
+                                        focusNode:
+                                            _model.voizeVoiceAffinityChannel,
                                         autofocus: false,
                                         enabled: true,
                                         textInputAction: TextInputAction.done,
@@ -370,7 +371,7 @@ class _VoizeHarmonyDimensionLoginWidgetState
                                                 .info,
                                         enableInteractiveSelection: true,
                                         validator: _model
-                                            .textController1Validator
+                                            .voizeDreamcallResonator
                                             .asValidator(context),
                                       ),
                                     ),
@@ -430,8 +431,9 @@ class _VoizeHarmonyDimensionLoginWidgetState
                                     child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
-                                        controller: _model.textController2,
-                                        focusNode: _model.textFieldFocusNode2,
+                                        controller:
+                                            _model.cvoizeSoftwaveDialogueNet,
+                                        focusNode: _model.voizeHeartVoiceRelay,
                                         autofocus: false,
                                         enabled: true,
                                         textInputAction: TextInputAction.done,
@@ -570,7 +572,7 @@ class _VoizeHarmonyDimensionLoginWidgetState
                                                 .info,
                                         enableInteractiveSelection: true,
                                         validator: _model
-                                            .textController2Validator
+                                            .voizeWhisperlineSynthesis
                                             .asValidator(context),
                                       ),
                                     ),
@@ -651,9 +653,10 @@ class _VoizeHarmonyDimensionLoginWidgetState
                               onTap: () async {
                                 // 获取输入的邮箱和密码
                                 final email =
-                                    _model.textController1.text.trim();
-                                final password =
-                                    _model.textController2.text.trim();
+                                    _model.voizeSoundSoulInterface.text.trim();
+                                final password = _model
+                                    .cvoizeSoftwaveDialogueNet.text
+                                    .trim();
 
                                 // 验证邮箱和密码不能为空
                                 if (email.isEmpty || password.isEmpty) {

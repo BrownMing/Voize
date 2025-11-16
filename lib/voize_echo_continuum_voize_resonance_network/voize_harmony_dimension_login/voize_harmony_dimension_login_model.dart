@@ -6,23 +6,23 @@ import 'package:flutter/material.dart';
 
 class VoizeHarmonyDimensionLoginModel
     extends VoizeAffinityChromaLayerModel<VoizeHarmonyDimensionLoginWidget> {
-  FocusNode? textFieldFocusNode1;
-  TextEditingController? textController1;
-  String? Function(BuildContext, String?)? textController1Validator;
+  FocusNode? voizeVoiceAffinityChannel;
+  TextEditingController? voizeSoundSoulInterface;
+  String? Function(BuildContext, String?)? voizeDreamcallResonator;
 
-  FocusNode? textFieldFocusNode2;
-  TextEditingController? textController2;
-  String? Function(BuildContext, String?)? textController2Validator;
+  FocusNode? voizeHeartVoiceRelay;
+  TextEditingController? cvoizeSoftwaveDialogueNet;
+  String? Function(BuildContext, String?)? voizeWhisperlineSynthesis;
 
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {
-    textFieldFocusNode1?.dispose();
-    textController1?.dispose();
+    voizeVoiceAffinityChannel?.dispose();
+    voizeSoundSoulInterface?.dispose();
 
-    textFieldFocusNode2?.dispose();
-    textController2?.dispose();
+    voizeHeartVoiceRelay?.dispose();
+    cvoizeSoftwaveDialogueNet?.dispose();
   }
 }

@@ -8,7 +8,7 @@ class VoizeEmotionSpectrumStartPagesModel extends VoizeAffinityChromaLayerModel<
     VoizeEmotionSpectrumStartPagesWidget> {
   bool voizeWhisperExchangeNode = false;
 
-  bool? checkboxValue;
+  bool? voizeReverieOfHeartSignals;
 
   @override
   void initState(BuildContext context) {}

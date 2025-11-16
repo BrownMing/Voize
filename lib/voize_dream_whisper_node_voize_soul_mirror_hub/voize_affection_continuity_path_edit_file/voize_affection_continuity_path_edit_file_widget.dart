@@ -31,11 +31,11 @@ class _VoizeAffectionContinuityPathEditFileWidgetState
     _model =
         createModel(context, () => VoizeAffectionContinuityPathEditFileModel());
 
-    _model.textController1 ??= TextEditingController();
-    _model.textFieldFocusNode1 ??= FocusNode();
+    _model.voizeSoundSoulInterface ??= TextEditingController();
+    _model.voizeVoiceAffinityChannel ??= FocusNode();
 
-    _model.textController2 ??= TextEditingController();
-    _model.textFieldFocusNode2 ??= FocusNode();
+    _model.cvoizeSoftwaveDialogueNet ??= TextEditingController();
+    _model.voizeHeartVoiceRelay ??= FocusNode();
   }
 
   @override
@@ -381,8 +381,10 @@ class _VoizeAffectionContinuityPathEditFileWidgetState
                                       child: Container(
                                         width: double.infinity,
                                         child: TextFormField(
-                                          controller: _model.textController1,
-                                          focusNode: _model.textFieldFocusNode1,
+                                          controller:
+                                              _model.voizeSoundSoulInterface,
+                                          focusNode:
+                                              _model.voizeVoiceAffinityChannel,
                                           autofocus: false,
                                           enabled: true,
                                           textInputAction: TextInputAction.done,
@@ -530,7 +532,7 @@ class _VoizeAffectionContinuityPathEditFileWidgetState
                                                   .info,
                                           enableInteractiveSelection: true,
                                           validator: _model
-                                              .textController1Validator
+                                              .voizeDreamcallResonator
                                               .asValidator(context),
                                         ),
                                       ),
@@ -590,9 +592,10 @@ class _VoizeAffectionContinuityPathEditFileWidgetState
                                         child: Container(
                                           width: double.infinity,
                                           child: TextFormField(
-                                            controller: _model.textController2,
+                                            controller: _model
+                                                .cvoizeSoftwaveDialogueNet,
                                             focusNode:
-                                                _model.textFieldFocusNode2,
+                                                _model.voizeHeartVoiceRelay,
                                             autofocus: false,
                                             enabled: true,
                                             textInputAction:
@@ -740,7 +743,7 @@ class _VoizeAffectionContinuityPathEditFileWidgetState
                                                     .info,
                                             enableInteractiveSelection: true,
                                             validator: _model
-                                                .textController2Validator
+                                                .voizeWhisperlineSynthesis
                                                 .asValidator(context),
                                           ),
                                         ),
@@ -756,10 +759,12 @@ class _VoizeAffectionContinuityPathEditFileWidgetState
                               child: GestureDetector(
                                 onTap: () async {
                                   // 验证输入
-                                  final nickname =
-                                      _model.textController1.text.trim();
-                                  final aboutMe =
-                                      _model.textController2.text.trim();
+                                  final nickname = _model
+                                      .voizeSoundSoulInterface.text
+                                      .trim();
+                                  final aboutMe = _model
+                                      .cvoizeSoftwaveDialogueNet.text
+                                      .trim();
 
                                   if (nickname.isEmpty &&
                                       aboutMe.isEmpty &&

@@ -251,7 +251,7 @@ class _VoizeEchoDreamLegacyRechargeWidgetState
                                     crossAxisCount: 3,
                                     crossAxisSpacing: 10.0,
                                     mainAxisSpacing: 10.0,
-                                    childAspectRatio: 0.89,
+                                    childAspectRatio: 0.8,
                                   ),
                                   primary: false,
                                   shrinkWrap: true,
@@ -268,113 +268,119 @@ class _VoizeEchoDreamLegacyRechargeWidgetState
                                             voizeRhaenSympathyCasterItem
                                                 .voizeNioraDreamListenerPurchaseProductid);
                                       },
-                                      child: Stack(
-                                        children: [
-                                          Container(
-                                            width: 100.0,
-                                            height: 100.0,
-                                            decoration: BoxDecoration(
-                                              color: Color(0x26FFFFFF),
-                                              borderRadius:
-                                                  BorderRadius.circular(16.0),
-                                            ),
-                                            child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(0.0, 8.0, 0.0, 0.0),
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                children: [
-                                                  Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 8.0,
-                                                                0.0, 0.0),
-                                                    child: Container(
-                                                      width: 38.0,
-                                                      height: 38.0,
-                                                      decoration: BoxDecoration(
-                                                        image: DecorationImage(
-                                                          fit: BoxFit.cover,
-                                                          image: Image.asset(
-                                                            'assets/images/sgdfysgdyufigsdy_zcugydugfsuiydf.png',
-                                                          ).image,
+                                      child: SizedBox(
+                                        width: 107.0,
+                                        height: 140.0,
+                                        child: Stack(
+                                          children: [
+                                            Center(
+                                              child: Container(
+                                                width: 107.0,
+                                                height: 120.0,
+                                                decoration: BoxDecoration(
+                                                  color: Color(0x26FFFFFF),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          16.0),
+                                                ),
+                                                child: Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.min,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  0.0,
+                                                                  4.0,
+                                                                  0.0,
+                                                                  0.0),
+                                                      child: Container(
+                                                        width: 38.0,
+                                                        height: 38.0,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          image:
+                                                              DecorationImage(
+                                                            fit: BoxFit.cover,
+                                                            image: Image.asset(
+                                                              'assets/images/sgdfysgdyufigsdy_zcugydugfsuiydf.png',
+                                                            ).image,
+                                                          ),
                                                         ),
                                                       ),
                                                     ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 6.0,
-                                                                0.0, 0.0),
-                                                    child: Text(
-                                                      '${voizeRhaenSympathyCasterItem.voizeNioraDreamListenerPurchasePrince.toString()}',
-                                                      style:
-                                                          VoizeAffinityChromaLayerTheme
-                                                                  .of(context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                font: GoogleFonts
-                                                                    .archivo(
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w600,
-                                                                  fontStyle: VoizeAffinityChromaLayerTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontStyle,
-                                                                ),
-                                                                color: VoizeAffinityChromaLayerTheme.of(
-                                                                        context)
-                                                                    .info,
-                                                                fontSize: 20.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w600,
-                                                                fontStyle: VoizeAffinityChromaLayerTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontStyle,
+                                                    Padding(
+                                                      padding:
+                                                          EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  0.0,
+                                                                  4.0,
+                                                                  0.0,
+                                                                  8.0),
+                                                      child: (voizeRhaenSympathyCasterIndex ==
+                                                                  3 ||
+                                                              voizeRhaenSympathyCasterIndex ==
+                                                                  4)
+                                                          ? RichText(
+                                                              text: TextSpan(
+                                                                children: [
+                                                                  TextSpan(
+                                                                    text: voizeRhaenSympathyCasterIndex ==
+                                                                            3
+                                                                        ? '159'
+                                                                        : '276',
+                                                                    style: VoizeAffinityChromaLayerTheme.of(
+                                                                            context)
+                                                                        .bodyMedium
+                                                                        .override(
+                                                                          font:
+                                                                              GoogleFonts.archivo(
+                                                                            fontWeight:
+                                                                                FontWeight.w600,
+                                                                          ),
+                                                                          color:
+                                                                              VoizeAffinityChromaLayerTheme.of(context).info,
+                                                                          fontSize:
+                                                                              20.0,
+                                                                          letterSpacing:
+                                                                              0.0,
+                                                                          fontWeight:
+                                                                              FontWeight.w600,
+                                                                        ),
+                                                                  ),
+                                                                  TextSpan(
+                                                                    text: voizeRhaenSympathyCasterIndex ==
+                                                                            3
+                                                                        ? '+39'
+                                                                        : '+62',
+                                                                    style: VoizeAffinityChromaLayerTheme.of(
+                                                                            context)
+                                                                        .bodyMedium
+                                                                        .override(
+                                                                          font:
+                                                                              GoogleFonts.archivo(
+                                                                            fontWeight:
+                                                                                FontWeight.w600,
+                                                                          ),
+                                                                          color:
+                                                                              Color(0xFFFFEB3B),
+                                                                          fontSize:
+                                                                              20.0,
+                                                                          letterSpacing:
+                                                                              0.0,
+                                                                          fontWeight:
+                                                                              FontWeight.w600,
+                                                                        ),
+                                                                  ),
+                                                                ],
                                                               ),
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 8.0,
-                                                                0.0, 0.0),
-                                                    child: Container(
-                                                      width: 68.0,
-                                                      height: 30.0,
-                                                      decoration: BoxDecoration(
-                                                        gradient:
-                                                            LinearGradient(
-                                                          colors: [
-                                                            Color(0xFFFC5EB2),
-                                                            Color(0xFF8E00ED)
-                                                          ],
-                                                          stops: [0.0, 1.0],
-                                                          begin:
-                                                              AlignmentDirectional(
-                                                                  0.0, -1.0),
-                                                          end:
-                                                              AlignmentDirectional(
-                                                                  0, 1.0),
-                                                        ),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(16.0),
-                                                      ),
-                                                      child: Align(
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                0.0, 0.0),
-                                                        child: Text(
-                                                          '\$ ${voizeRhaenSympathyCasterItem.voizeNioraDreamListenerPurchaseUsd.toString()}',
-                                                          style:
-                                                              VoizeAffinityChromaLayerTheme
+                                                            )
+                                                          : Text(
+                                                              '${voizeRhaenSympathyCasterItem.voizeNioraDreamListenerPurchasePrince.toString()}',
+                                                              style: VoizeAffinityChromaLayerTheme
                                                                       .of(context)
                                                                   .bodyMedium
                                                                   .override(
@@ -382,7 +388,7 @@ class _VoizeEchoDreamLegacyRechargeWidgetState
                                                                         .archivo(
                                                                       fontWeight:
                                                                           FontWeight
-                                                                              .w500,
+                                                                              .w600,
                                                                       fontStyle: VoizeAffinityChromaLayerTheme.of(
                                                                               context)
                                                                           .bodyMedium
@@ -391,8 +397,64 @@ class _VoizeEchoDreamLegacyRechargeWidgetState
                                                                     color: VoizeAffinityChromaLayerTheme.of(
                                                                             context)
                                                                         .info,
+                                                                    fontSize:
+                                                                        20.0,
                                                                     letterSpacing:
                                                                         0.0,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w600,
+                                                                    fontStyle: VoizeAffinityChromaLayerTheme.of(
+                                                                            context)
+                                                                        .bodyMedium
+                                                                        .fontStyle,
+                                                                  ),
+                                                            ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  0.0,
+                                                                  4.0,
+                                                                  0.0,
+                                                                  0.0),
+                                                      child: Container(
+                                                        width: 68.0,
+                                                        height: 28.0,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          gradient:
+                                                              LinearGradient(
+                                                            colors: [
+                                                              Color(0xFFFC5EB2),
+                                                              Color(0xFF8E00ED)
+                                                            ],
+                                                            stops: [0.0, 1.0],
+                                                            begin:
+                                                                AlignmentDirectional(
+                                                                    0.0, -1.0),
+                                                            end:
+                                                                AlignmentDirectional(
+                                                                    0, 1.0),
+                                                          ),
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      16.0),
+                                                        ),
+                                                        child: Align(
+                                                          alignment:
+                                                              AlignmentDirectional(
+                                                                  0.0, 0.0),
+                                                          child: Text(
+                                                            '\$ ${voizeRhaenSympathyCasterItem.voizeNioraDreamListenerPurchaseUsd.toString()}',
+                                                            style: VoizeAffinityChromaLayerTheme
+                                                                    .of(context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  font: GoogleFonts
+                                                                      .archivo(
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
@@ -401,82 +463,96 @@ class _VoizeEchoDreamLegacyRechargeWidgetState
                                                                         .bodyMedium
                                                                         .fontStyle,
                                                                   ),
+                                                                  color: VoizeAffinityChromaLayerTheme.of(
+                                                                          context)
+                                                                      .info,
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w500,
+                                                                  fontStyle: VoizeAffinityChromaLayerTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontStyle,
+                                                                ),
+                                                          ),
                                                         ),
                                                       ),
                                                     ),
-                                                  ),
-                                                ],
+                                                  ],
+                                                ),
                                               ),
                                             ),
-                                          ),
-                                          // Extra bonus label for items at index 3 and 4
-                                          if (voizeRhaenSympathyCasterIndex ==
-                                                  3 ||
-                                              voizeRhaenSympathyCasterIndex ==
-                                                  4)
-                                            Positioned(
-                                              top: -8.0,
-                                              left: 0,
-                                              right: 0,
-                                              child: Center(
-                                                child: Container(
-                                                  padding: EdgeInsets.symmetric(
-                                                    horizontal: 12.0,
-                                                    vertical: 4.0,
-                                                  ),
-                                                  decoration: BoxDecoration(
-                                                    gradient: LinearGradient(
-                                                      colors: [
-                                                        Color(0xFFFFE082),
-                                                        Color(0xFFFFF59D),
-                                                      ],
-                                                      begin:
-                                                          Alignment.centerLeft,
-                                                      end:
-                                                          Alignment.centerRight,
+                                            if (voizeRhaenSympathyCasterIndex ==
+                                                    3 ||
+                                                voizeRhaenSympathyCasterIndex ==
+                                                    4)
+                                              Positioned(
+                                                top: 0.0,
+                                                left: 0,
+                                                right: 0,
+                                                child: Center(
+                                                  child: Container(
+                                                    padding:
+                                                        EdgeInsets.symmetric(
+                                                      horizontal: 12.0,
+                                                      vertical: 4.0,
                                                     ),
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            12.0),
-                                                    boxShadow: [
-                                                      BoxShadow(
-                                                        color:
-                                                            Color(0x40000000),
-                                                        blurRadius: 4.0,
-                                                        offset: Offset(0, 2),
+                                                    decoration: BoxDecoration(
+                                                      gradient: LinearGradient(
+                                                        colors: [
+                                                          Color(0xFFFFE082),
+                                                          Color(0xFFFFF59D),
+                                                        ],
+                                                        begin: Alignment
+                                                            .centerLeft,
+                                                        end: Alignment
+                                                            .centerRight,
                                                       ),
-                                                    ],
-                                                  ),
-                                                  child: Text(
-                                                    voizeRhaenSympathyCasterIndex ==
-                                                            3
-                                                        ? 'Extra +25%'
-                                                        : 'Extra +23%',
-                                                    style:
-                                                        VoizeAffinityChromaLayerTheme
-                                                                .of(context)
-                                                            .bodySmall
-                                                            .override(
-                                                              font: GoogleFonts
-                                                                  .archivo(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              12.0),
+                                                      boxShadow: [
+                                                        BoxShadow(
+                                                          color:
+                                                              Color(0x40000000),
+                                                          blurRadius: 4.0,
+                                                          offset: Offset(0, 2),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                    child: Text(
+                                                      voizeRhaenSympathyCasterIndex ==
+                                                              3
+                                                          ? 'Extra +25%'
+                                                          : 'Extra +23%',
+                                                      style:
+                                                          VoizeAffinityChromaLayerTheme
+                                                                  .of(context)
+                                                              .bodySmall
+                                                              .override(
+                                                                font: GoogleFonts
+                                                                    .archivo(
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                ),
+                                                                color: Color(
+                                                                    0xFF1A1A1A),
+                                                                fontSize: 11.0,
+                                                                letterSpacing:
+                                                                    0.0,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .w600,
                                                               ),
-                                                              color: Color(
-                                                                  0xFF1A1A1A),
-                                                              fontSize: 11.0,
-                                                              letterSpacing:
-                                                                  0.0,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                            ),
+                                                    ),
                                                   ),
                                                 ),
                                               ),
-                                            ),
-                                        ],
+                                          ],
+                                        ),
                                       ),
                                     );
                                   },

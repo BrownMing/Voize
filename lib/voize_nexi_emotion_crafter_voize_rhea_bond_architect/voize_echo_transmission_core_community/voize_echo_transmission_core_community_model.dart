@@ -8,30 +8,26 @@ import 'package:flutter/material.dart';
 class VoizeEchoTransmissionCoreCommunityModel
     extends VoizeAffinityChromaLayerModel<
         VoizeEchoTransmissionCoreCommunityWidget> {
-  TabController? tabBarController;
+  TabController? voizeSagaOfDreamborneEchoes;
 
   late VoizeAffinityChromaLayerDynamicModels<
-          VoizeAffectionContinuumAxisLikesUserModel>
-      voizeAffectionContinuumAxisLikesUserModels1;
+      VoizeAffectionContinuumAxisLikesUserModel> voizeEclipseOfWhisperedHearts;
 
   late VoizeAffinityChromaLayerDynamicModels<
-          VoizeAffectionContinuumAxisLikesUserModel>
-      voizeAffectionContinuumAxisLikesUserModels2;
+      VoizeAffectionContinuumAxisLikesUserModel> voizeMythosOfResonantLovers;
 
   @override
   void initState(BuildContext context) {
-    voizeAffectionContinuumAxisLikesUserModels1 =
-        VoizeAffinityChromaLayerDynamicModels(
-            () => VoizeAffectionContinuumAxisLikesUserModel());
-    voizeAffectionContinuumAxisLikesUserModels2 =
-        VoizeAffinityChromaLayerDynamicModels(
-            () => VoizeAffectionContinuumAxisLikesUserModel());
+    voizeEclipseOfWhisperedHearts = VoizeAffinityChromaLayerDynamicModels(
+        () => VoizeAffectionContinuumAxisLikesUserModel());
+    voizeMythosOfResonantLovers = VoizeAffinityChromaLayerDynamicModels(
+        () => VoizeAffectionContinuumAxisLikesUserModel());
   }
 
   @override
   void dispose() {
-    tabBarController?.dispose();
-    voizeAffectionContinuumAxisLikesUserModels1.dispose();
-    voizeAffectionContinuumAxisLikesUserModels2.dispose();
+    voizeSagaOfDreamborneEchoes?.dispose();
+    voizeEclipseOfWhisperedHearts.dispose();
+    voizeMythosOfResonantLovers.dispose();
   }
 }

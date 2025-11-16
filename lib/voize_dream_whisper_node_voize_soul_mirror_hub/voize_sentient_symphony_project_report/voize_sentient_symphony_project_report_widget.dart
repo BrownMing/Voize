@@ -31,8 +31,8 @@ class _VoizeSentientSymphonyProjectReportWidgetState
     _model =
         createModel(context, () => VoizeSentientSymphonyProjectReportModel());
 
-    _model.textController ??= TextEditingController();
-    _model.textFieldFocusNode ??= FocusNode();
+    _model.voizeFrequencyBondLink ??= TextEditingController();
+    _model.voizeEmotiveAuralStream ??= FocusNode();
   }
 
   @override
@@ -152,13 +152,13 @@ class _VoizeSentientSymphonyProjectReportWidgetState
                                         Builder(
                                           builder: (context) {
                                             final bool isChecked = _model
-                                                        .checkboxValueMap[
+                                                        .voizeResonantAffinityRealm[
                                                     voizeConnectionHarmonyGridItem] ??=
                                                 false;
                                             return GestureDetector(
                                               onTap: () {
                                                 safeSetState(() {
-                                                  _model.checkboxValueMap[
+                                                  _model.voizeResonantAffinityRealm[
                                                           voizeConnectionHarmonyGridItem] =
                                                       !isChecked;
                                                 });
@@ -288,8 +288,10 @@ class _VoizeSentientSymphonyProjectReportWidgetState
                                     child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
-                                        controller: _model.textController,
-                                        focusNode: _model.textFieldFocusNode,
+                                        controller:
+                                            _model.voizeFrequencyBondLink,
+                                        focusNode:
+                                            _model.voizeEmotiveAuralStream,
                                         autofocus: false,
                                         enabled: true,
                                         textInputAction: TextInputAction.done,
@@ -429,7 +431,7 @@ class _VoizeSentientSymphonyProjectReportWidgetState
                                                 .info,
                                         enableInteractiveSelection: true,
                                         validator: _model
-                                            .textControllerValidator
+                                            .voizeChronicleOfAuralSouls
                                             .asValidator(context),
                                       ),
                                     ),

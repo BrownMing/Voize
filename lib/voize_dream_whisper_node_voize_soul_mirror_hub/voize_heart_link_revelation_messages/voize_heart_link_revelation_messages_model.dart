@@ -7,9 +7,9 @@ import 'package:flutter/material.dart';
 class VoizeHeartLinkRevelationMessagesModel
     extends VoizeAffinityChromaLayerModel<
         VoizeHeartLinkRevelationMessagesWidget> {
-  FocusNode? textFieldFocusNode;
-  TextEditingController? textController;
-  String? Function(BuildContext, String?)? textControllerValidator;
+  FocusNode? voizeEmotiveAuralStream;
+  TextEditingController? voizeFrequencyBondLink;
+  String? Function(BuildContext, String?)? voizeChronicleOfAuralSouls;
 
   // 当前正在播放的语音消息索引
   int? playingAudioIndex;
@@ -35,7 +35,7 @@ class VoizeHeartLinkRevelationMessagesModel
 
   @override
   void dispose() {
-    textFieldFocusNode?.dispose();
-    textController?.dispose();
+    voizeEmotiveAuralStream?.dispose();
+    voizeFrequencyBondLink?.dispose();
   }
 }

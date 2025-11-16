@@ -1,10 +1,8 @@
 import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_theme.dart';
 import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import '/index.dart';
-import '/app_state.dart';
 import '/backend/schema/structs/index.dart';
 import '/utils/piano_loading.dart';
-import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'voize_whisper_ecliptica_pulse_odyssey_signup_model.dart';
@@ -33,14 +31,14 @@ class _VoizeWhisperEclipticaPulseOdysseySignupWidgetState
     _model = createModel(
         context, () => VoizeWhisperEclipticaPulseOdysseySignupModel());
 
-    _model.textController1 ??= TextEditingController();
-    _model.textFieldFocusNode1 ??= FocusNode();
+    _model.voizeSoundSoulInterface ??= TextEditingController();
+    _model.voizeVoiceAffinityChannel ??= FocusNode();
 
-    _model.textController2 ??= TextEditingController();
-    _model.textFieldFocusNode2 ??= FocusNode();
+    _model.cvoizeSoftwaveDialogueNet ??= TextEditingController();
+    _model.voizeHeartVoiceRelay ??= FocusNode();
 
-    _model.textController3 ??= TextEditingController();
-    _model.textFieldFocusNode3 ??= FocusNode();
+    _model.voizeEtherealAffectionCodex ??= TextEditingController();
+    _model.voizeScriptureOfTheSoulWave ??= FocusNode();
   }
 
   @override
@@ -235,8 +233,10 @@ class _VoizeWhisperEclipticaPulseOdysseySignupWidgetState
                                     child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
-                                        controller: _model.textController1,
-                                        focusNode: _model.textFieldFocusNode1,
+                                        controller:
+                                            _model.voizeSoundSoulInterface,
+                                        focusNode:
+                                            _model.voizeVoiceAffinityChannel,
                                         autofocus: false,
                                         enabled: true,
                                         textInputAction: TextInputAction.done,
@@ -375,7 +375,7 @@ class _VoizeWhisperEclipticaPulseOdysseySignupWidgetState
                                                 .info,
                                         enableInteractiveSelection: true,
                                         validator: _model
-                                            .textController1Validator
+                                            .voizeDreamcallResonator
                                             .asValidator(context),
                                       ),
                                     ),
@@ -435,8 +435,9 @@ class _VoizeWhisperEclipticaPulseOdysseySignupWidgetState
                                     child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
-                                        controller: _model.textController2,
-                                        focusNode: _model.textFieldFocusNode2,
+                                        controller:
+                                            _model.cvoizeSoftwaveDialogueNet,
+                                        focusNode: _model.voizeHeartVoiceRelay,
                                         autofocus: false,
                                         enabled: true,
                                         textInputAction: TextInputAction.done,
@@ -575,7 +576,7 @@ class _VoizeWhisperEclipticaPulseOdysseySignupWidgetState
                                                 .info,
                                         enableInteractiveSelection: true,
                                         validator: _model
-                                            .textController2Validator
+                                            .voizeWhisperlineSynthesis
                                             .asValidator(context),
                                       ),
                                     ),
@@ -597,8 +598,10 @@ class _VoizeWhisperEclipticaPulseOdysseySignupWidgetState
                                       child: Container(
                                         width: double.infinity,
                                         child: TextFormField(
-                                          controller: _model.textController3,
-                                          focusNode: _model.textFieldFocusNode3,
+                                          controller: _model
+                                              .voizeEtherealAffectionCodex,
+                                          focusNode: _model
+                                              .voizeScriptureOfTheSoulWave,
                                           autofocus: false,
                                           enabled: true,
                                           textInputAction: TextInputAction.done,
@@ -739,7 +742,7 @@ class _VoizeWhisperEclipticaPulseOdysseySignupWidgetState
                                                   .info,
                                           enableInteractiveSelection: true,
                                           validator: _model
-                                              .textController3Validator
+                                              .voizeArchiveOfSilentDreams
                                               .asValidator(context),
                                         ),
                                       ),
@@ -756,11 +759,13 @@ class _VoizeWhisperEclipticaPulseOdysseySignupWidgetState
                               onTap: () async {
                                 // 获取输入的邮箱和密码
                                 final email =
-                                    _model.textController1.text.trim();
-                                final password =
-                                    _model.textController2.text.trim();
-                                final confirmPassword =
-                                    _model.textController3.text.trim();
+                                    _model.voizeSoundSoulInterface.text.trim();
+                                final password = _model
+                                    .cvoizeSoftwaveDialogueNet.text
+                                    .trim();
+                                final confirmPassword = _model
+                                    .voizeEtherealAffectionCodex.text
+                                    .trim();
 
                                 // 验证邮箱是否输入
                                 if (email.isEmpty) {

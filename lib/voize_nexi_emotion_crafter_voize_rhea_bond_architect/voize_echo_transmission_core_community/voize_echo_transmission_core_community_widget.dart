@@ -35,7 +35,7 @@ class _VoizeEchoTransmissionCoreCommunityWidgetState
     _model =
         createModel(context, () => VoizeEchoTransmissionCoreCommunityModel());
 
-    _model.tabBarController = TabController(
+    _model.voizeSagaOfDreamborneEchoes = TabController(
       vsync: this,
       length: 2,
       initialIndex: 0,
@@ -432,7 +432,8 @@ class _VoizeEchoTransmissionCoreCommunityWidgetState
                                       text: 'Popular',
                                     ),
                                   ],
-                                  controller: _model.tabBarController,
+                                  controller:
+                                      _model.voizeSagaOfDreamborneEchoes,
                                   onTap: (i) async {
                                     [() async {}, () async {}][i]();
                                   },
@@ -440,7 +441,8 @@ class _VoizeEchoTransmissionCoreCommunityWidgetState
                               ),
                               Expanded(
                                 child: TabBarView(
-                                  controller: _model.tabBarController,
+                                  controller:
+                                      _model.voizeSagaOfDreamborneEchoes,
                                   children: [
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
@@ -579,7 +581,7 @@ class _VoizeEchoTransmissionCoreCommunityWidgetState
                                                                           [
                                                                         wrapWithModel(
                                                                           model: _model
-                                                                              .voizeAffectionContinuumAxisLikesUserModels1
+                                                                              .voizeEclipseOfWhisperedHearts
                                                                               .getModel(
                                                                             voizeHeartSynthesisWorldItem.voizeSynestheticConnectionDymaticId.toString(),
                                                                             voizeHeartSynthesisWorldIndex,
@@ -948,7 +950,7 @@ class _VoizeEchoTransmissionCoreCommunityWidgetState
                                                                     children: [
                                                                       wrapWithModel(
                                                                         model: _model
-                                                                            .voizeAffectionContinuumAxisLikesUserModels2
+                                                                            .voizeMythosOfResonantLovers
                                                                             .getModel(
                                                                           voizeEtherealResonanceRealmItem
                                                                               .voizeSynestheticConnectionDymaticId

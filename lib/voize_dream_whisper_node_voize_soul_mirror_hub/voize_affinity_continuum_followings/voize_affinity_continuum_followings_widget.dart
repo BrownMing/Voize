@@ -37,7 +37,7 @@ class _VoizeAffinityContinuumFollowingsWidgetState
     _model =
         createModel(context, () => VoizeAffinityContinuumFollowingsModel());
 
-    _model.tabBarController = TabController(
+    _model.voizeSagaOfDreamborneEchoes = TabController(
       vsync: this,
       length: 2,
       initialIndex: widget.initialIndex.clamp(0, 1),
@@ -186,7 +186,7 @@ class _VoizeAffinityContinuumFollowingsWidgetState
                                 text: 'Followers',
                               ),
                             ],
-                            controller: _model.tabBarController,
+                            controller: _model.voizeSagaOfDreamborneEchoes,
                             onTap: (i) async {
                               [() async {}, () async {}][i]();
                             },
@@ -194,7 +194,7 @@ class _VoizeAffinityContinuumFollowingsWidgetState
                         ),
                         Expanded(
                           child: TabBarView(
-                            controller: _model.tabBarController,
+                            controller: _model.voizeSagaOfDreamborneEchoes,
                             children: [
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(

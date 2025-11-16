@@ -34,13 +34,11 @@ class _VoizeKaelWhisperSoulPostsGroupWidgetState
     super.initState();
     _model = createModel(context, () => VoizeKaelWhisperSoulPostsGroupModel());
 
-    // 初始化动画控制器
     _animationController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 600),
     );
 
-    // 创建4个按钮的淡入动画（每个延迟100ms）
     _fadeAnimations = List.generate(4, (index) {
       return Tween<double>(begin: 0.0, end: 1.0).animate(
         CurvedAnimation(
@@ -54,7 +52,6 @@ class _VoizeKaelWhisperSoulPostsGroupWidgetState
       );
     });
 
-    // 创建4个按钮的滑动动画
     _slideAnimations = List.generate(4, (index) {
       return Tween<Offset>(
         begin: const Offset(0, 0.3),
@@ -71,7 +68,6 @@ class _VoizeKaelWhisperSoulPostsGroupWidgetState
       );
     });
 
-    // 启动动画
     _animationController.forward();
   }
 

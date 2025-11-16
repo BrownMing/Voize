@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 class VoizeAerisDreamOracleDiaryDetailsModel
     extends VoizeAffinityChromaLayerModel<
         VoizeAerisDreamOracleDiaryDetailsWidget> {
-  PageController? pageViewController;
+  PageController? voizeLegendOfTheHarmonicBond;
 
   late VoizeEtherealSoundCodexFollowingModel
       voizeEtherealSoundCodexFollowingModel;

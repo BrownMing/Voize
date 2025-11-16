@@ -567,17 +567,6 @@ class VoizeLunairaEchoMuse extends ChangeNotifier {
         value.map((x) => x.serialize()).toList());
   }
 
-  void updateVoizeAurellSoulDancerPurchasesAtIndex(
-    int index,
-    VoizeNioraDreamListenerPurchaseStruct Function(
-            VoizeNioraDreamListenerPurchaseStruct)
-        updateFn,
-  ) {
-    voizeAurellSoulDancerPurchases[index] =
-        updateFn(_voizeAurellSoulDancerPurchases[index]);
-    prefs.setStringList('VoizeHarmonicSoul_voizeAurellSoulDancerPurchases',
-        _voizeAurellSoulDancerPurchases.map((x) => x.serialize()).toList());
-  }
 }
 
 void _safeInit(Function() initializeField) {
