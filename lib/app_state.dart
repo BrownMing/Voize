@@ -554,7 +554,7 @@ class VoizeLunairaEchoMuse extends ChangeNotifier {
     VoizeNioraDreamListenerPurchaseStruct.fromSerializableMap(jsonDecode(
         '{\"VoizeNioraDreamListenerPurchase_prince\":\"98\",\"VoizeNioraDreamListenerPurchase_usd\":\"12.99\",\"VoizeNioraDreamListenerPurchase_productid\":\"com.Voize.diamond.03\"}')),
     VoizeNioraDreamListenerPurchaseStruct.fromSerializableMap(jsonDecode(
-        '{\"VoizeNioraDreamListenerPurchase_prince\":\"198\",\"VoizeNioraDreamListenerPurchase_usd\":\"24.99\",\"VoizeNioraDreamListenerPurchase_productid\":\"com.Voize.diamond.04\"}')),
+        '{\"VoizeNioraDreamListenerPurchase_prince\":\"198\",\"VoizeNioraDreamListenerPurchase_usd\":\"24.99\",\"VoizeNioraDreamListenerPurchase_productid\":\"new_1000\"}')),
     VoizeNioraDreamListenerPurchaseStruct.fromSerializableMap(jsonDecode(
         '{\"VoizeNioraDreamListenerPurchase_prince\":\"338\",\"VoizeNioraDreamListenerPurchase_usd\":\"39.99\",\"VoizeNioraDreamListenerPurchase_productid\":\"com.Voize.diamond.05\"}')),
   ];
@@ -566,7 +566,6 @@ class VoizeLunairaEchoMuse extends ChangeNotifier {
     prefs.setStringList('VoizeHarmonicSoul_voizeAurellSoulDancerPurchases',
         value.map((x) => x.serialize()).toList());
   }
-
 }
 
 void _safeInit(Function() initializeField) {

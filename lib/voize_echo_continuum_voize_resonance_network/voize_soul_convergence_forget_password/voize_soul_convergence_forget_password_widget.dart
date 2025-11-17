@@ -923,7 +923,9 @@ class _VoizeSoulConvergenceForgetPasswordWidgetState
                               ),
                             ),
                           ),
-                        ],
+                        ].addToEnd(SizedBox(
+                          height: 70,
+                        )),
                       ),
                     ),
                   ),

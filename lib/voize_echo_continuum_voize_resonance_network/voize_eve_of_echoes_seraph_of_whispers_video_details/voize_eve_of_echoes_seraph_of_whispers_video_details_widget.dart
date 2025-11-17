@@ -92,6 +92,7 @@ class _VoizeEveOfEchoesSeraphOfWhispersVideoDetailsWidgetState
                     autoPlay: true,
                     looping: true,
                     showControls: false,
+                    borderRadius: 0.0,
                   ),
                 ],
               ),

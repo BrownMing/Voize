@@ -441,7 +441,7 @@ class _VoizeAerisDreamOracleDiaryDetailsWidgetState
                                           height: 68.0,
                                           decoration: BoxDecoration(
                                             image: DecorationImage(
-                                              fit: BoxFit.cover,
+                                              fit: BoxFit.fill,
                                               image: Image.asset(
                                                 'assets/images/dfghudsifhoghdsiufg_dfihgusdifhgoiudsfg.png',
                                               ).image,

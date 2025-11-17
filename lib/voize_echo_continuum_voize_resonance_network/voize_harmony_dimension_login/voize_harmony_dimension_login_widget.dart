@@ -60,7 +60,7 @@ class _VoizeHarmonyDimensionLoginWidgetState
               height: double.infinity,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  fit: BoxFit.cover,
+                  fit: BoxFit.fill,
                   image: Image.asset(
                     'assets/images/cfghsdfghuid_giysagfidffgydsfagiadf.png',
                   ).image,
@@ -770,7 +770,9 @@ class _VoizeHarmonyDimensionLoginWidgetState
                               ),
                             ),
                           ),
-                        ],
+                        ].addToEnd(SizedBox(
+                          height: 70,
+                        )),
                       ),
                     ),
                   ),

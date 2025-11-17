@@ -613,9 +613,12 @@ class _VoizeHeartLinkRevelationMessagesWidgetState
                                                                         .max,
                                                                 children: [
                                                                   GestureDetector(
-                                                                    onTap: () {
-                                                                      _model.toggleAudioPlaying(
-                                                                          voizeEchoAffinityMatrixMessagesIndex);
+                                                                    onTap:
+                                                                        () async {
+                                                                      await _model.toggleAudioPlaying(
+                                                                          voizeEchoAffinityMatrixMessagesIndex,
+                                                                          voizeEchoAffinityMatrixMessagesItem
+                                                                              .voizeLioraWhisperMuseMessageAudio);
                                                                       safeSetState(
                                                                           () {});
                                                                     },

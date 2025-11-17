@@ -11,6 +11,9 @@ class VoizeWhisperBloomSagaVoiceModel
   VoizeSerenithVoiceIdol voizeAuralEternityFramework = VoizeSerenithVoiceIdol(
       bytes: Uint8List.fromList([]), originalFilename: '');
   bool voizeEchoSoulContinuum = false;
+  
+  // 录音开始时间
+  DateTime? recordingStartTime;
 
   // 动画控制器
   AnimationController? pulseAnimationController;
@@ -21,6 +24,5 @@ class VoizeWhisperBloomSagaVoiceModel
 
   @override
   void dispose() {
-    pulseAnimationController?.dispose();
   }
 }

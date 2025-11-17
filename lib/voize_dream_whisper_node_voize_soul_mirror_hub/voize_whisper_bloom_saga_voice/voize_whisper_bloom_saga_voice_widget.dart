@@ -104,6 +104,7 @@ class _VoizeWhisperBloomSagaVoiceWidgetState
                   onLongPressStart: (details) async {
                     // 开始录音
                     if (await getPermissionStatus(microphonePermission)) {
+                      _model.recordingStartTime = DateTime.now();
                       await startAudioRecording(
                         context,
                         audioRecorder: _model.whisperedEternum ??=
@@ -128,6 +129,15 @@ class _VoizeWhisperBloomSagaVoiceWidgetState
                         },
                       );
 
+                      // 计算录音时长
+                      String audioDuration = '';
+                      if (_model.recordingStartTime != null) {
+                        final duration = DateTime.now()
+                            .difference(_model.recordingStartTime!);
+                        final seconds = duration.inSeconds;
+                        audioDuration = "$seconds'";
+                      }
+
                       VoizeLunairaEchoMuse().addToVoizeAerisHeartTunerMessages(
                           VoizeLioraWhisperMuseMessageStruct(
                         voizeLioraWhisperMuseMessageCreateId:
@@ -139,6 +149,7 @@ class _VoizeWhisperBloomSagaVoiceWidgetState
                             _model.voizeDreamSyncInterface,
                         voizeLioraWhisperMuseMessageChatRef:
                             widget.voizeSentiencePulseEngineChat,
+                        voizeLioraWhisperMuseMessageAudioTime: audioDuration,
                       ));
                       VoizeLunairaEchoMuse().update(() {});
                       Navigator.pop(context);
@@ -148,64 +159,65 @@ class _VoizeWhisperBloomSagaVoiceWidgetState
                       });
                     }
                   },
-                  child: AnimatedBuilder(
-                    animation: _model.pulseAnimation!,
-                    builder: (context, child) {
-                      return Transform.scale(
-                        scale: _model.voizeEchoSoulContinuum
-                            ? _model.pulseAnimation!.value
-                            : 1.0,
-                        child: Container(
-                          width: 65.0,
-                          height: 65.0,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: Image.asset(
-                                'assets/images/dgfuhdhfugihdfo_bcvuygdfuygsdhfiod.png',
-                              ).image,
-                            ),
-                            shape: BoxShape.circle,
-                          ),
-                          child: Stack(
-                            children: [
-                              Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
-                                child: Container(
-                                  width: 36.0,
-                                  height: 36.0,
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image: Image.asset(
-                                        'assets/images/iregfyudgfvyusidgfyus_sdigfyushgdufhgosuid.png',
-                                      ).image,
-                                    ),
-                                  ),
-                                ),
+                  child: Container(
+                    width: 65.0,
+                    height: 65.0,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: Image.asset(
+                          'assets/images/dgfuhdhfugihdfo_bcvuygdfuygsdhfiod.png',
+                        ).image,
+                      ),
+                      shape: BoxShape.circle,
+                    ),
+                    child: Stack(
+                      children: [
+                        Align(
+                          alignment: AlignmentDirectional(0.0, 0.0),
+                          child: Container(
+                            width: 36.0,
+                            height: 36.0,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: Image.asset(
+                                  'assets/images/iregfyudgfvyusidgfyus_sdigfyushgdufhgosuid.png',
+                                ).image,
                               ),
-                            ],
+                            ),
                           ),
                         ),
-                      );
-                    },
+                      ],
+                    ),
                   ),
                 ),
               ),
               Align(
                 alignment: AlignmentDirectional(0.0, 0.0),
-                child: Container(
-                  width: 93.0,
-                  height: 93.0,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: Image.asset(
-                        'assets/images/dgushdghfuysdfi_cbyiusgfyugisuydf.png',
-                      ).image,
-                    ),
-                    shape: BoxShape.circle,
-                  ),
+                child: IgnorePointer(
+                  child: AnimatedBuilder(
+                      animation: _model.pulseAnimation!,
+                      builder: (context, child) {
+                        return Transform.scale(
+                          scale: _model.voizeEchoSoulContinuum
+                              ? _model.pulseAnimation!.value
+                              : 1.0,
+                          child: Container(
+                            width: 93.0,
+                            height: 93.0,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: Image.asset(
+                                  'assets/images/dgushdghfuysdfi_cbyiusgfyugisuydf.png',
+                                ).image,
+                              ),
+                              shape: BoxShape.circle,
+                            ),
+                          ),
+                        );
+                      }),
                 ),
               ),
             ],

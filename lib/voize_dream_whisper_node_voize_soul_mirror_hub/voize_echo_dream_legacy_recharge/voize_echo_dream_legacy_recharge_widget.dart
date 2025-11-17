@@ -27,6 +27,18 @@ class _VoizeEchoDreamLegacyRechargeWidgetState
   void initState() {
     super.initState();
     _model = createModel(context, () => VoizeEchoDreamLegacyRechargeModel());
+    // 设置状态更新回调
+    _model.setOnStateChanged(() {
+      if (mounted) {
+        setState(() {});
+      }
+    });
+
+    // 加载 IAP 商品
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _model
+          .loadProducts(VoizeLunairaEchoMuse().voizeAurellSoulDancerPurchases);
+    });
   }
 
   @override
@@ -262,11 +274,20 @@ class _VoizeEchoDreamLegacyRechargeWidgetState
                                     final voizeRhaenSympathyCasterItem =
                                         voizeRhaenSympathyCaster[
                                             voizeRhaenSympathyCasterIndex];
+                                    final localizedPrice = _model.getLocalizedPrice(
+                                        voizeRhaenSympathyCasterItem
+                                            .voizeNioraDreamListenerPurchaseProductid);
+                                    final displayPrice = localizedPrice
+                                            .isNotEmpty
+                                        ? localizedPrice
+                                        : '\$${voizeRhaenSympathyCasterItem.voizeNioraDreamListenerPurchaseUsd}';
+
                                     return GestureDetector(
                                       onTap: () async {
                                         _model.selectProduct(
                                             voizeRhaenSympathyCasterItem
                                                 .voizeNioraDreamListenerPurchaseProductid);
+                                        await _model.purchaseSelectedProduct();
                                       },
                                       child: SizedBox(
                                         width: 107.0,
@@ -379,7 +400,7 @@ class _VoizeEchoDreamLegacyRechargeWidgetState
                                                               ),
                                                             )
                                                           : Text(
-                                                              '${voizeRhaenSympathyCasterItem.voizeNioraDreamListenerPurchasePrince.toString()}',
+                                                              displayPrice,
                                                               style: VoizeAffinityChromaLayerTheme
                                                                       .of(context)
                                                                   .bodyMedium

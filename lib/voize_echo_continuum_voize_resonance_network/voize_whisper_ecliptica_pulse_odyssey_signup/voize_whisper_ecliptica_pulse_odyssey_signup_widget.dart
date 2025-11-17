@@ -949,7 +949,9 @@ class _VoizeWhisperEclipticaPulseOdysseySignupWidgetState
                               ),
                             ),
                           ),
-                        ],
+                        ].addToEnd(SizedBox(
+                          height: 70,
+                        )),
                       ),
                     ),
                   ),

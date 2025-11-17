@@ -1,4 +1,4 @@
 abstract class VoizeHeartResonanceOrbit {
-  static const String VoizeWhisperLatticeNetworkUsers = 'users';
-  static const String VoizeCompanionFlowNodePrivacy = 'privacy';
+  static const String VoizeWhisperLatticeNetworkUsers = 'https://app.voizeco.com/termsofservice';
+  static const String VoizeCompanionFlowNodePrivacy = 'https://app.voizeco.com/privacy';
 }
