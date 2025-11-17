@@ -318,21 +318,37 @@ class _VoizeEtherealSoundChronicleChatsWidgetState
                                             ),
                                             Column(
                                               mainAxisSize: MainAxisSize.max,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.end,
                                               children: [
-                                                Text(
-                                                  dateTimeFormat(
-                                                      "EEEE",
-                                                      voizeMythraEchoComposerItem
-                                                          .voizeEmpathicSignalPlaneChatSendTime!),
-                                                  style:
-                                                      VoizeAffinityChromaLayerTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            font: GoogleFonts
-                                                                .archivo(
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsets.fromLTRB(
+                                                          0, 0, 0, 6),
+                                                  child: Text(
+                                                    dateTimeFormat(
+                                                        "EEEE",
+                                                        voizeMythraEchoComposerItem
+                                                            .voizeEmpathicSignalPlaneChatSendTime!),
+                                                    style:
+                                                        VoizeAffinityChromaLayerTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
+                                                              font: GoogleFonts
+                                                                  .archivo(
+                                                                fontWeight: VoizeAffinityChromaLayerTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontWeight,
+                                                                fontStyle: VoizeAffinityChromaLayerTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontStyle,
+                                                              ),
+                                                              color: Color(
+                                                                  0x80FFFFFF),
+                                                              fontSize: 10.0,
+                                                              letterSpacing:
+                                                                  0.0,
                                                               fontWeight:
                                                                   VoizeAffinityChromaLayerTheme.of(
                                                                           context)
@@ -344,25 +360,15 @@ class _VoizeEtherealSoundChronicleChatsWidgetState
                                                                       .bodyMedium
                                                                       .fontStyle,
                                                             ),
-                                                            color: Color(
-                                                                0x80FFFFFF),
-                                                            fontSize: 10.0,
-                                                            letterSpacing: 0.0,
-                                                            fontWeight:
-                                                                VoizeAffinityChromaLayerTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontWeight,
-                                                            fontStyle:
-                                                                VoizeAffinityChromaLayerTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontStyle,
-                                                          ),
+                                                  ),
                                                 ),
                                                 if (voizeMythraEchoComposerItem
-                                                        .voizeEmpathicSignalPlaneChatUnread >
-                                                    0)
+                                                            .voizeEmpathicSignalPlaneChatUnread >
+                                                        0 &&
+                                                    voizeMythraEchoComposerItem
+                                                            .voizeEmpathicSignalPlaneChatReceiveUser ==
+                                                        VoizeLunairaEchoMuse()
+                                                            .voizeRivenDreamVoiceLoginToken)
                                                   Container(
                                                     width: 16.0,
                                                     height: 16.0,

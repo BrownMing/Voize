@@ -395,22 +395,96 @@ class _VoizeLoverResonanceMythosSettingsWidgetState
                               ],
                             ),
                           ),
-                          InkWell(
-                            splashColor: Colors.transparent,
-                            focusColor: Colors.transparent,
-                            hoverColor: Colors.transparent,
-                            highlightColor: Colors.transparent,
+                          GestureDetector(
                             onTap: () async {
-                              context.pushNamed(
-                                VoizeEmotionSpectrumStartPagesWidget.routeName,
-                                extra: <String, dynamic>{
-                                  kTransitionInfoKey: TransitionInfo(
-                                    hasTransition: true,
-                                    transitionType:
-                                        PageTransitionType.bottomToTop,
-                                  ),
-                                },
-                              );
+                              final currentUserId = VoizeLunairaEchoMuse()
+                                  .voizeRivenDreamVoiceLoginToken;
+                              if (currentUserId == 10) {
+                                // I'm New 进入：只重置为访客登录，并回到起始页
+                                VoizeLunairaEchoMuse().update(() {
+                                  VoizeLunairaEchoMuse()
+                                      .voizeRivenDreamVoiceLoginToken = 10;
+                                });
+                                context.pushNamed(
+                                  VoizeEmotionSpectrumStartPagesWidget
+                                      .routeName,
+                                  extra: <String, dynamic>{
+                                    kTransitionInfoKey: TransitionInfo(
+                                      hasTransition: true,
+                                      transitionType:
+                                          PageTransitionType.bottomToTop,
+                                    ),
+                                  },
+                                );
+                              } else {
+                                VoizeLunairaEchoMuse().update(() {
+                                  final appState = VoizeLunairaEchoMuse();
+                                  final users =
+                                      appState.voizeNaiyaEchoCompanionUsers;
+                                  appState.voizeNaiyaEchoCompanionUsers = users
+                                      .where((u) =>
+                                          u.voizeCognitiveHarmonyUserId !=
+                                          currentUserId)
+                                      .toList();
+
+                                  // 清空该用户创建的视频
+                                  appState.voizeSerenEmotionSpiritVideos = appState
+                                      .voizeSerenEmotionSpiritVideos
+                                      .where((v) =>
+                                          v.voizeHeartWaveContinuityVideoCreateId !=
+                                          currentUserId)
+                                      .toList();
+
+                                  // 清空该用户创建的动态
+                                  appState.voizeAelithBondEntityDynamtics = appState
+                                      .voizeAelithBondEntityDynamtics
+                                      .where((d) =>
+                                          d.voizeSynestheticConnectionDymaticCreateId !=
+                                          currentUserId)
+                                      .toList();
+
+                                  // 清空该用户创建的钢琴故事
+                                  appState.voizeKiraSoundOraclePianoNotes = appState
+                                      .voizeKiraSoundOraclePianoNotes
+                                      .where((n) =>
+                                          n.voizeEclipticSoulStreamPianoNotesCreateId !=
+                                          currentUserId)
+                                      .toList();
+
+                                  // 清空该用户创建的评论
+                                  appState.voizeVelanEmpathComments = appState
+                                      .voizeVelanEmpathComments
+                                      .where((c) =>
+                                          c.voizeSentienceEchoRealmCommentCreateId !=
+                                          currentUserId)
+                                      .toList();
+
+                                  // 清空该用户相关的聊天记录（收发都删除）
+                                  appState
+                                      .VoizeNyraResonanceSirenChats = appState
+                                          .VoizeNyraResonanceSirenChats
+                                      .where((chat) =>
+                                          chat.voizeEmpathicSignalPlaneChatSendUser !=
+                                              currentUserId &&
+                                          chat.voizeEmpathicSignalPlaneChatReceiveUser !=
+                                              currentUserId).toList();
+
+                                  // 清空登录 token
+                                  appState.voizeRivenDreamVoiceLoginToken = 0;
+                                });
+
+                                context.goNamed(
+                                  VoizeEmotionSpectrumStartPagesWidget
+                                      .routeName,
+                                  extra: <String, dynamic>{
+                                    kTransitionInfoKey: TransitionInfo(
+                                      hasTransition: true,
+                                      transitionType:
+                                          PageTransitionType.bottomToTop,
+                                    ),
+                                  },
+                                );
+                              }
                             },
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -457,6 +531,23 @@ class _VoizeLoverResonanceMythosSettingsWidgetState
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
+                                  ),
+                                ),
+                                Flexible(
+                                  child: Align(
+                                    alignment: AlignmentDirectional(1.0, 0.0),
+                                    child: Container(
+                                      width: 20.0,
+                                      height: 20.0,
+                                      decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                          fit: BoxFit.cover,
+                                          image: Image.asset(
+                                            'assets/images/iusdgfygsdyufigsd_dsgifuysdgfyiusd.png',
+                                          ).image,
+                                        ),
+                                      ),
+                                    ),
                                   ),
                                 ),
                                 Flexible(

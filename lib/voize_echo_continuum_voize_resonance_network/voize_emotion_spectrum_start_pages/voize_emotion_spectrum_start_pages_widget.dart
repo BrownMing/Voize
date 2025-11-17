@@ -175,13 +175,10 @@ class _VoizeEmotionSpectrumStartPagesWidgetState
                             onTap: () async {
                               // 显示 loading
                               PianoLoading.show(context, message: 'Loading...');
-
-                              // 模拟加载延迟（可选，根据实际需要调整）
                               await Future.delayed(
                                   Duration(milliseconds: 2000));
-
                               VoizeLunairaEchoMuse()
-                                  .voizeRivenDreamVoiceLoginToken = 1;
+                                  .voizeRivenDreamVoiceLoginToken = 10;
                               VoizeLunairaEchoMuse().update(() {});
 
                               // 关闭 loading

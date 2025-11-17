@@ -535,26 +535,63 @@ class _VoizeEchoTransmissionCoreCommunityWidgetState
                                                                 CrossAxisAlignment
                                                                     .center,
                                                             children: [
-                                                              Container(
-                                                                width: 48.0,
-                                                                height: 48.0,
-                                                                clipBehavior: Clip
-                                                                    .antiAlias,
-                                                                decoration:
-                                                                    BoxDecoration(
-                                                                  shape: BoxShape
-                                                                      .circle,
-                                                                ),
+                                                              GestureDetector(
+                                                                onTap:
+                                                                    () async {
+                                                                  if (voizeHeartSynthesisWorldItem
+                                                                          .voizeSynestheticConnectionDymaticCreateId !=
+                                                                      VoizeLunairaEchoMuse()
+                                                                          .voizeRivenDreamVoiceLoginToken) {
+                                                                    context
+                                                                        .pushNamed(
+                                                                      VoizeAffinityWeaveSystemOtherinfoWidget
+                                                                          .routeName,
+                                                                      extra: <String,
+                                                                          dynamic>{
+                                                                        kTransitionInfoKey:
+                                                                            TransitionInfo(
+                                                                          hasTransition:
+                                                                              true,
+                                                                          transitionType:
+                                                                              PageTransitionType.rightToLeft,
+                                                                        ),
+                                                                      },
+                                                                      queryParameters:
+                                                                          {
+                                                                        'voizeLoverResonanceVerseUserid':
+                                                                            serializeParam(
+                                                                          VoizeLunairaEchoMuse()
+                                                                              .voizeNaiyaEchoCompanionUsers
+                                                                              .elementAtOrNull(voizeHeartSynthesisWorldItem.voizeSynestheticConnectionDymaticCreateId)!
+                                                                              .voizeCognitiveHarmonyUserId,
+                                                                          ParamType
+                                                                              .int,
+                                                                        ),
+                                                                      }.withoutNulls,
+                                                                    );
+                                                                  }
+                                                                },
                                                                 child:
-                                                                    Image.asset(
-                                                                  VoizeLunairaEchoMuse()
-                                                                      .voizeNaiyaEchoCompanionUsers
-                                                                      .elementAtOrNull(
-                                                                          voizeHeartSynthesisWorldItem
-                                                                              .voizeSynestheticConnectionDymaticCreateId)!
-                                                                      .voizeCognitiveHarmonyUserPhoto,
-                                                                  fit: BoxFit
-                                                                      .cover,
+                                                                    Container(
+                                                                  width: 48.0,
+                                                                  height: 48.0,
+                                                                  clipBehavior:
+                                                                      Clip.antiAlias,
+                                                                  decoration:
+                                                                      BoxDecoration(
+                                                                    shape: BoxShape
+                                                                        .circle,
+                                                                  ),
+                                                                  child: Image
+                                                                      .asset(
+                                                                    VoizeLunairaEchoMuse()
+                                                                        .voizeNaiyaEchoCompanionUsers
+                                                                        .elementAtOrNull(
+                                                                            voizeHeartSynthesisWorldItem.voizeSynestheticConnectionDymaticCreateId)!
+                                                                        .voizeCognitiveHarmonyUserPhoto,
+                                                                    fit: BoxFit
+                                                                        .cover,
+                                                                  ),
                                                                 ),
                                                               ),
                                                               Padding(

@@ -1,5 +1,6 @@
 import 'package:voize/components/voize_ethereal_sound_codex_following_widget.dart';
 
+import '../voize_affinity_weave_system_otherinfo/voize_affinity_weave_system_otherinfo_widget.dart';
 import '/backend/schema/structs/index.dart';
 import '/components/voize_affection_continuum_axis_likes_user_widget.dart';
 import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_theme.dart';
@@ -161,20 +162,54 @@ class _VoizeMemoryChamberVaultDymaticDetailsWidgetState
                           Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
-                              Container(
-                                width: 48.0,
-                                height: 48.0,
-                                clipBehavior: Clip.antiAlias,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Image.asset(
-                                  VoizeLunairaEchoMuse()
-                                      .voizeNaiyaEchoCompanionUsers
-                                      .elementAtOrNull(widget
-                                          .voizeDreamSignalTopologyUserid!)!
-                                      .voizeCognitiveHarmonyUserPhoto,
-                                  fit: BoxFit.cover,
+                              GestureDetector(
+                                onTap: () async {
+                                  if (VoizeLunairaEchoMuse()
+                                          .voizeNaiyaEchoCompanionUsers
+                                          .elementAtOrNull(widget
+                                              .voizeDreamSignalTopologyUserid!)!
+                                          .voizeCognitiveHarmonyUserId !=
+                                      VoizeLunairaEchoMuse()
+                                          .voizeRivenDreamVoiceLoginToken) {
+                                    context.pushNamed(
+                                      VoizeAffinityWeaveSystemOtherinfoWidget
+                                          .routeName,
+                                      extra: <String, dynamic>{
+                                        kTransitionInfoKey: TransitionInfo(
+                                          hasTransition: true,
+                                          transitionType:
+                                              PageTransitionType.rightToLeft,
+                                        ),
+                                      },
+                                      queryParameters: {
+                                        'voizeLoverResonanceVerseUserid':
+                                            serializeParam(
+                                          VoizeLunairaEchoMuse()
+                                              .voizeNaiyaEchoCompanionUsers
+                                              .elementAtOrNull(widget
+                                                  .voizeDreamSignalTopologyUserid!)!
+                                              .voizeCognitiveHarmonyUserId,
+                                          ParamType.int,
+                                        ),
+                                      }.withoutNulls,
+                                    );
+                                  }
+                                },
+                                child: Container(
+                                  width: 48.0,
+                                  height: 48.0,
+                                  clipBehavior: Clip.antiAlias,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Image.asset(
+                                    VoizeLunairaEchoMuse()
+                                        .voizeNaiyaEchoCompanionUsers
+                                        .elementAtOrNull(widget
+                                            .voizeDreamSignalTopologyUserid!)!
+                                        .voizeCognitiveHarmonyUserPhoto,
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                               ),
                               Padding(

@@ -637,8 +637,8 @@ class _VoizeHeartLinkRevelationMessagesWidgetState
                                                                           image:
                                                                               Image.asset(
                                                                             _model.isAudioPlaying(voizeEchoAffinityMatrixMessagesIndex)
-                                                                                ? 'assets/images/sdgfuyhgsdfui_sdfgskdyughfuyigs.png'
-                                                                                : 'assets/images/xcvysudgfysgdiuf_eyifugysdfyustid.png',
+                                                                                ? 'assets/images/sdgfuyhgsdfui_sdfgskdyughfuyigs.png' 
+                                                                                : 'assets/images/xcvysudgfysgdiuf_eyifugysdfyustid.png', 
                                                                           ).image,
                                                                         ),
                                                                       ),

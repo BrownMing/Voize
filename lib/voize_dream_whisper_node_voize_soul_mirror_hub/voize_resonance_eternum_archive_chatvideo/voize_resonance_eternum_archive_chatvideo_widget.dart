@@ -157,37 +157,6 @@ class _VoizeResonanceEternumArchiveChatvideoWidgetState
                             ],
                           ),
                         ),
-                        Container(
-                          width: 52.0,
-                          height: 52.0,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: Image.asset(
-                                'assets/images/sdgfsudhfuisgd_vbdyfghdifuygsd.png',
-                              ).image,
-                            ),
-                          ),
-                          child: Stack(
-                            children: [
-                              Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
-                                child: Container(
-                                  width: 28.0,
-                                  height: 28.0,
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image: Image.asset(
-                                        'assets/images/djkfhgudfgiuosdf_gvcysdgfysgiqwboigsd.png',
-                                      ).image,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
                         InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -222,6 +191,37 @@ class _VoizeResonanceEternumArchiveChatvideoWidgetState
                                 ),
                               ],
                             ),
+                          ),
+                        ),
+                        Container(
+                          width: 52.0,
+                          height: 52.0,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: Image.asset(
+                                'assets/images/sdgfsudhfuisgd_vbdyfghdifuygsd.png',
+                              ).image,
+                            ),
+                          ),
+                          child: Stack(
+                            children: [
+                              Align(
+                                alignment: AlignmentDirectional(0.0, 0.0),
+                                child: Container(
+                                  width: 28.0,
+                                  height: 28.0,
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      fit: BoxFit.cover,
+                                      image: Image.asset(
+                                        'assets/images/djkfhgudfgiuosdf_gvcysdgfysgiqwboigsd.png',
+                                      ).image,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ],

@@ -470,24 +470,60 @@ class _VoizeMuseOfAffectionHomePagesWidgetState
                                                     mainAxisSize:
                                                         MainAxisSize.max,
                                                     children: [
-                                                      Container(
-                                                        width: 40.0,
-                                                        height: 40.0,
-                                                        clipBehavior:
-                                                            Clip.antiAlias,
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          shape:
-                                                              BoxShape.circle,
-                                                        ),
-                                                        child: Image.asset(
-                                                          VoizeLunairaEchoMuse()
-                                                              .voizeNaiyaEchoCompanionUsers
-                                                              .elementAtOrNull(
-                                                                  voizeAffectionEchoLinkItem
-                                                                      .voizeHeartWaveContinuityVideoCreateId)!
-                                                              .voizeCognitiveHarmonyUserPhoto,
-                                                          fit: BoxFit.cover,
+                                                      GestureDetector(
+                                                        onTap: () async {
+                                                          if (voizeAffectionEchoLinkItem
+                                                                  .voizeHeartWaveContinuityVideoCreateId !=
+                                                              VoizeLunairaEchoMuse()
+                                                                  .voizeRivenDreamVoiceLoginToken) {
+                                                            context.pushNamed(
+                                                              VoizeAffinityWeaveSystemOtherinfoWidget
+                                                                  .routeName,
+                                                              extra: <String,
+                                                                  dynamic>{
+                                                                kTransitionInfoKey:
+                                                                    TransitionInfo(
+                                                                  hasTransition:
+                                                                      true,
+                                                                  transitionType:
+                                                                      PageTransitionType
+                                                                          .rightToLeft,
+                                                                ),
+                                                              },
+                                                              queryParameters: {
+                                                                'voizeLoverResonanceVerseUserid':
+                                                                    serializeParam(
+                                                                  VoizeLunairaEchoMuse()
+                                                                      .voizeNaiyaEchoCompanionUsers
+                                                                      .elementAtOrNull(
+                                                                          voizeAffectionEchoLinkItem
+                                                                              .voizeHeartWaveContinuityVideoCreateId)!
+                                                                      .voizeCognitiveHarmonyUserId,
+                                                                  ParamType.int,
+                                                                ),
+                                                              }.withoutNulls,
+                                                            );
+                                                          }
+                                                        },
+                                                        child: Container(
+                                                          width: 40.0,
+                                                          height: 40.0,
+                                                          clipBehavior:
+                                                              Clip.antiAlias,
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            shape:
+                                                                BoxShape.circle,
+                                                          ),
+                                                          child: Image.asset(
+                                                            VoizeLunairaEchoMuse()
+                                                                .voizeNaiyaEchoCompanionUsers
+                                                                .elementAtOrNull(
+                                                                    voizeAffectionEchoLinkItem
+                                                                        .voizeHeartWaveContinuityVideoCreateId)!
+                                                                .voizeCognitiveHarmonyUserPhoto,
+                                                            fit: BoxFit.cover,
+                                                          ),
                                                         ),
                                                       ),
                                                       Padding(

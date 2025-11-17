@@ -204,7 +204,9 @@ class VoizeLunairaEchoMuse extends ChangeNotifier {
     VoizeCognitiveHarmonyUserStruct.fromSerializableMap(jsonDecode(
         '{\"VoizeCognitiveHarmonyUser_id\":\"8\",\"VoizeCognitiveHarmonyUser_email\":\"1zx@voize.com\",\"VoizeCognitiveHarmonyUser_password\":\"123456\",\"VoizeCognitiveHarmonyUser_photo\":\"assets/images/ertyguidhfiogu_cxvhbhudfhogi.jpeg\",\"VoizeCognitiveHarmonyUser_name\":\"1ZX\",\"VoizeCognitiveHarmonyUser_about_me\":\"Organizing piano meetups in the city! Join our community for jam sessions, workshops, and making new music friends 🎹🎵\",\"VoizeCognitiveHarmonyUser_diamonds\":\"0\",\"VoizeCognitiveHarmonyUser_followers\":\"[\\\"6\\\",\\\"7\\\"]\",\"VoizeCognitiveHarmonyUser_followings\":\"[\\\"9\\\"]\",\"VoizeCognitiveHarmonyUser_blacklist\":\"[]\"}')),
     VoizeCognitiveHarmonyUserStruct.fromSerializableMap(jsonDecode(
-        '{\"VoizeCognitiveHarmonyUser_id\":\"9\",\"VoizeCognitiveHarmonyUser_email\":\"kevin@voize.com\",\"VoizeCognitiveHarmonyUser_password\":\"123456\",\"VoizeCognitiveHarmonyUser_photo\":\"assets/images/qdfpogjid_xchdfuighidof.jpeg\",\"VoizeCognitiveHarmonyUser_name\":\"kevin\",\"VoizeCognitiveHarmonyUser_about_me\":\"Sharing my piano journey and learning from amazing musicians here! Open to collaborations and always happy to chat about music 🎼🌟\",\"VoizeCognitiveHarmonyUser_diamonds\":\"0\",\"VoizeCognitiveHarmonyUser_followers\":\"[\\\"7\\\",\\\"8\\\"]\",\"VoizeCognitiveHarmonyUser_followings\":\"[\\\"0\\\"]\",\"VoizeCognitiveHarmonyUser_blacklist\":\"[]\"}'))
+        '{\"VoizeCognitiveHarmonyUser_id\":\"9\",\"VoizeCognitiveHarmonyUser_email\":\"kevin@voize.com\",\"VoizeCognitiveHarmonyUser_password\":\"123456\",\"VoizeCognitiveHarmonyUser_photo\":\"assets/images/qdfpogjid_xchdfuighidof.jpeg\",\"VoizeCognitiveHarmonyUser_name\":\"kevin\",\"VoizeCognitiveHarmonyUser_about_me\":\"Sharing my piano journey and learning from amazing musicians here! Open to collaborations and always happy to chat about music 🎼🌟\",\"VoizeCognitiveHarmonyUser_diamonds\":\"0\",\"VoizeCognitiveHarmonyUser_followers\":\"[\\\"7\\\",\\\"8\\\"]\",\"VoizeCognitiveHarmonyUser_followings\":\"[\\\"0\\\"]\",\"VoizeCognitiveHarmonyUser_blacklist\":\"[]\"}')),
+    VoizeCognitiveHarmonyUserStruct.fromSerializableMap(jsonDecode(
+        '{\"VoizeCognitiveHarmonyUser_id\":\"10\",\"VoizeCognitiveHarmonyUser_email\":\"visitor@gmail.com\",\"VoizeCognitiveHarmonyUser_password\":\"123456\",\"VoizeCognitiveHarmonyUser_photo\":\"assets/images/dfghudfhogiuo_dfuighudifhoig.png\",\"VoizeCognitiveHarmonyUser_name\":\"Voize_new\",\"VoizeCognitiveHarmonyUser_about_me\":\"\",\"VoizeCognitiveHarmonyUser_diamonds\":\"0\",\"VoizeCognitiveHarmonyUser_followers\":\"[]\",\"VoizeCognitiveHarmonyUser_followings\":\"[]\",\"VoizeCognitiveHarmonyUser_blacklist\":\"[]\"}'))
   ];
 
   List<VoizeCognitiveHarmonyUserStruct> get voizeNaiyaEchoCompanionUsers =>
@@ -554,7 +556,7 @@ class VoizeLunairaEchoMuse extends ChangeNotifier {
     VoizeNioraDreamListenerPurchaseStruct.fromSerializableMap(jsonDecode(
         '{\"VoizeNioraDreamListenerPurchase_prince\":\"98\",\"VoizeNioraDreamListenerPurchase_usd\":\"12.99\",\"VoizeNioraDreamListenerPurchase_productid\":\"com.Voize.diamond.03\"}')),
     VoizeNioraDreamListenerPurchaseStruct.fromSerializableMap(jsonDecode(
-        '{\"VoizeNioraDreamListenerPurchase_prince\":\"198\",\"VoizeNioraDreamListenerPurchase_usd\":\"24.99\",\"VoizeNioraDreamListenerPurchase_productid\":\"new_1000\"}')),
+        '{\"VoizeNioraDreamListenerPurchase_prince\":\"198\",\"VoizeNioraDreamListenerPurchase_usd\":\"24.99\",\"VoizeNioraDreamListenerPurchase_productid\":\"com.Voize.diamond.04\"}')),
     VoizeNioraDreamListenerPurchaseStruct.fromSerializableMap(jsonDecode(
         '{\"VoizeNioraDreamListenerPurchase_prince\":\"338\",\"VoizeNioraDreamListenerPurchase_usd\":\"39.99\",\"VoizeNioraDreamListenerPurchase_productid\":\"com.Voize.diamond.05\"}')),
   ];

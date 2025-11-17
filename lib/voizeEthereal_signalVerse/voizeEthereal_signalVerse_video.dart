@@ -227,9 +227,14 @@ class _VoizeMyrineDreamEmpressState extends State<VoizeMyrineDreamEmpress>
         if (_voizeSylaraAffectionOracle != null &&
             _voizeSylaraAffectionOracle!.value.isInitialized)
           Positioned.fill(
-            child: Transform.scale(
-              scale: 1.15,
-              child: VideoPlayer(_voizeSylaraAffectionOracle!),
+            child: FittedBox(
+              fit: BoxFit.cover,
+              alignment: Alignment.center,
+              child: SizedBox(
+                width: _voizeSylaraAffectionOracle!.value.size.width,
+                height: _voizeSylaraAffectionOracle!.value.size.height,
+                child: VideoPlayer(_voizeSylaraAffectionOracle!),
+              ),
             ),
           ),
         if (widget.showControls)

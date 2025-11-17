@@ -400,7 +400,7 @@ class _VoizeEchoDreamLegacyRechargeWidgetState
                                                               ),
                                                             )
                                                           : Text(
-                                                              displayPrice,
+                                                              '${voizeRhaenSympathyCasterItem.voizeNioraDreamListenerPurchasePrince.toString()}',
                                                               style: VoizeAffinityChromaLayerTheme
                                                                       .of(context)
                                                                   .bodyMedium
@@ -469,7 +469,7 @@ class _VoizeEchoDreamLegacyRechargeWidgetState
                                                               AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Text(
-                                                            '\$ ${voizeRhaenSympathyCasterItem.voizeNioraDreamListenerPurchaseUsd.toString()}',
+                                                            displayPrice,
                                                             style: VoizeAffinityChromaLayerTheme
                                                                     .of(context)
                                                                 .bodyMedium
