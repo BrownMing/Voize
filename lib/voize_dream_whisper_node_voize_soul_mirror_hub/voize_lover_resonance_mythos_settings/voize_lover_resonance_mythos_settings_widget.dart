@@ -550,23 +550,6 @@ class _VoizeLoverResonanceMythosSettingsWidgetState
                                     ),
                                   ),
                                 ),
-                                Flexible(
-                                  child: Align(
-                                    alignment: AlignmentDirectional(1.0, 0.0),
-                                    child: Container(
-                                      width: 20.0,
-                                      height: 20.0,
-                                      decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                          fit: BoxFit.cover,
-                                          image: Image.asset(
-                                            'assets/images/iusdgfygsdyufigsd_dsgifuysdgfyiusd.png',
-                                          ).image,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
                               ],
                             ),
                           ),
