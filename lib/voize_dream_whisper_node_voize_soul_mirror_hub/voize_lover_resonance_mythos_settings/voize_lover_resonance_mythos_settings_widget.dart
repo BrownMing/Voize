@@ -505,7 +505,7 @@ class _VoizeLoverResonanceMythosSettingsWidgetState
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       12.0, 0.0, 0.0, 0.0),
                                   child: Text(
-                                    'Deactivate Account',
+                                    'Delete Account',
                                     style: VoizeAffinityChromaLayerTheme.of(
                                             context)
                                         .bodyMedium
