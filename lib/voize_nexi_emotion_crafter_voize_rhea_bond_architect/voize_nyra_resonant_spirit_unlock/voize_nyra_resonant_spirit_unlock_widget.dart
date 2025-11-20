@@ -1,3 +1,5 @@
+import 'package:voize/utils/piano_loading.dart';
+
 import '../../voizeEthereal_signalVerse/voizeEthereal_signalVerse_util.dart';
 import '/voize_nexi_emotion_crafter_voize_rhea_bond_architect/voize_velin_heart_singer_noenough_coins/voize_velin_heart_singer_noenough_coins_widget.dart';
 import 'package:flutter/material.dart';
@@ -132,8 +134,18 @@ class _VoizeNyraResonantSpiritUnlockWidgetState
                                     ..voizeEclipticSoulStreamPianoNotesUnlockShow =
                                         false,
                                 );
+                                VoizeLunairaEchoMuse()
+                                    .updateVoizeNaiyaEchoCompanionUsersAtIndex(
+                                  VoizeLunairaEchoMuse()
+                                      .voizeRivenDreamVoiceLoginToken,
+                                  (user) => user
+                                    ..incrementVoizeCognitiveHarmonyUserDiamonds(
+                                        -200),
+                                );
                                 VoizeLunairaEchoMuse().update(() {});
                                 Navigator.pop(context);
+                                PianoLoading.showSuccess(context,
+                                    message: 'Unlock success!');
                               } else {
                                 await showDialog(
                                   barrierColor: Color(0x98000000),
