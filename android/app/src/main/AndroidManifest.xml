@@ -7,6 +7,9 @@
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" tools:replace="android:maxSdkVersion"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="32" tools:replace="android:maxSdkVersion"/>
+    
+    <!-- 用于检测 SIM 卡状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <application
         android:label="Voize"
         tools:replace="android:label"

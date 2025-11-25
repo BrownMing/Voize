@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:in_app_purchase_storekit/in_app_purchase_storekit.dart';
 import 'package:in_app_purchase_storekit/store_kit_wrappers.dart';
+import 'package:voize/backend/api_service.dart';
 
 /// IAP 服务类 - 处理 Apple In-App Purchase
 class IAPService {
@@ -30,6 +31,8 @@ class IAPService {
   bool _loading = false;
   bool get loading => _loading;
 
+  String? _deviceNo;
+
   // 购买回调
   Function(PurchaseDetails)? _onPurchaseSuccess;
   Function(PurchaseDetails)? _onPurchaseError;
@@ -37,8 +40,11 @@ class IAPService {
   Function(PurchaseDetails)? _onPurchaseCanceled;
 
   /// 初始化 IAP 服务
-  Future<bool> initialize() async {
+  Future<bool> initialize({String? deviceNo}) async {
     try {
+      // 设置设备编号
+      _deviceNo = deviceNo;
+
       // 如果已经初始化，直接返回
       if (_initialized) {
         return _available;
@@ -48,6 +54,7 @@ class IAPService {
       _available = await _iap.isAvailable();
 
       if (!_available) {
+        debugPrint('❌ IAP 不可用');
         return false;
       }
 
@@ -64,14 +71,19 @@ class IAPService {
 
       _initialized = true;
 
+      debugPrint('✅ IAP 服务初始化成功');
+      if (_deviceNo != null) {
+        debugPrint('✅ 已设置设备编号: $_deviceNo');
+      }
+
       return true;
     } catch (e) {
+      debugPrint('❌ IAP 初始化失败: $e');
       return false;
     }
   }
 
   /// 加载商品信息
-  /// [productIds] - 商品 ID 列表
   Future<List<ProductDetails>> loadProducts(Set<String> productIds) async {
     if (!_available) {
       return [];
@@ -112,7 +124,6 @@ class IAPService {
   }
 
   /// 购买商品
-  /// [productDetails] - 商品详情
   Future<bool> buyProduct(ProductDetails productDetails) async {
     if (!_available) {
       return false;
@@ -184,22 +195,49 @@ class IAPService {
   /// 处理购买成功
   Future<void> _handlePurchaseSuccess(PurchaseDetails purchaseDetails) async {
     try {
+      bool verified = true;
       if (Platform.isIOS) {
-        await _verifyPurchase(purchaseDetails);
+        verified = await _verifyPurchase(purchaseDetails);
       }
-
-      _onPurchaseSuccess?.call(purchaseDetails);
-    } catch (e) {}
+      // 只有验证成功才调用成功回调
+      if (verified) {
+        _onPurchaseSuccess?.call(purchaseDetails);
+      } else {
+        _onPurchaseError?.call(purchaseDetails);
+      }
+    } catch (e) {
+      _onPurchaseError?.call(purchaseDetails);
+    }
   }
 
-  /// 验证购买（iOS）
+  /// 验证购买 - 调用后端接口验证
   Future<bool> _verifyPurchase(PurchaseDetails purchaseDetails) async {
     try {
-      if (purchaseDetails.verificationData.serverVerificationData.isEmpty) {
+      // 获取 receiptString (base64 编码的凭证)
+      final String receiptString =
+          purchaseDetails.verificationData.serverVerificationData;
+      if (receiptString.isEmpty) {
+        debugPrint('❌ receiptString 为空');
         return false;
       }
 
-      return true;
+      // 如果没有设置设备编号，跳过后端验证
+      if (_deviceNo == null) {
+        return true;
+      }
+
+      // 调用后端验证接口
+      final response = await ApiService().verifyPayment(
+        deviceNo: _deviceNo!,
+        receiptString: receiptString,
+        productId: purchaseDetails.productID,
+      );
+
+      if (response.isSuccess) {
+        return true;
+      } else {
+        return false;
+      }
     } catch (e) {
       return false;
     }
@@ -230,6 +268,14 @@ class IAPService {
   void setOnPurchaseCanceled(Function(PurchaseDetails) callback) {
     _onPurchaseCanceled = callback;
   }
+
+  /// 设置设备编号（用于后端支付验证）
+  void setDeviceNo(String deviceNo) {
+    _deviceNo = deviceNo;
+  }
+
+  /// 获取当前设备编号
+  String? get deviceNo => _deviceNo;
 
   /// 清除所有回调
   void clearCallbacks() {
