@@ -13,7 +13,7 @@ class ApiConfig {
 
   // 应用配置
   static String bundleId = 'com.daichen.voize';
-  static String appVersion = '1.1.0';
+
 
   // 设备编号前缀
   static const String deviceNoPrefix = 'ae968339';
@@ -28,8 +28,4 @@ class ApiConfig {
     bundleId = newBundleId;
   }
 
-  /// 更新应用版本
-  static void updateAppVersion(String newVersion) {
-    appVersion = newVersion;
-  }
 }

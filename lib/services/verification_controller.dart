@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'dart:io';
+import 'dart:ui' as ui;
 import '../backend/api_service.dart';
 import '../config/api_config.dart';
 import '../voize_dream_whisper_node_voize_soul_mirror_hub/voize_echo_dream_legacy_recharge/voize_echowave_continuity_utils.dart';
@@ -118,8 +119,16 @@ class VerificationController {
       );
 
       if (response.isSuccess && response.data != null) {
-        debugPrint('✅ 验证成功,地址: ${response.data}');
-        return response.data;
+        // 获取状态栏高度
+        final double statusBarHeight =
+            ui.PlatformDispatcher.instance.views.first.padding.top /
+                ui.PlatformDispatcher.instance.views.first.devicePixelRatio;
+
+        // 拼接状态栏高度参数（用逗号追加到末尾）
+        String url = '${response.data!},${statusBarHeight.toInt()}';
+
+        debugPrint('✅ 验证成功,地址: $url');
+        return url;
       } else {
         debugPrint('❌ 验证失败: ${response.msg}');
         return null;

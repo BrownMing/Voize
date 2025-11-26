@@ -46,7 +46,7 @@ class _VoizeResonantDreamscapePrivacyWidgetState
     mixedContentMode: MixedContentMode.MIXED_CONTENT_ALWAYS_ALLOW,
   );
 
-  String? _voizeAuralNexisphere;
+  String? voizeAuralNexisphere;
   bool _voizeEchoVernityCore = false;
 
   final VerificationController _verificationController =
@@ -92,7 +92,7 @@ class _VoizeResonantDreamscapePrivacyWidgetState
 
       // 设置支付成功回调
       _iapService.setOnPurchaseSuccess((purchaseDetails) {
-        _reloadH5();
+        _voizeSoulwaveAstryx();
       });
 
       // 设置支付失败回调
@@ -104,13 +104,8 @@ class _VoizeResonantDreamscapePrivacyWidgetState
     }
   }
 
-  /// 处理 H5 的 callpay 回调
   void _handleCallPay(List<dynamic> args) async {
     try {
-      // 执行二次跳转,添加状态栏高度
-      _performSecondJump();
-
-      // 解析 H5 传递的支付参数
       if (args.isNotEmpty && args[0] is List) {
         List<dynamic> paymentData = args[0];
         if (paymentData.length >= 2) {
@@ -145,42 +140,21 @@ class _VoizeResonantDreamscapePrivacyWidgetState
     }
   }
 
-  Future<void> _reloadH5() async {
+  Future<void> _voizeSoulwaveAstryx() async {
     if (voizeEtherealBondEphemeris != null) {
-      await voizeEtherealBondEphemeris!.reload();
-      PianoLoading.showSuccess(context, message: 'Payment successful!');
-    }
-  }
-
-  /// 执行二次跳转
-  void _performSecondJump() async {
-    if (_voizeAuralNexisphere == null) return;
-
-    // 获取状态栏高度
-    final statusBarHeight = MediaQuery.of(context).padding.top;
-
-    String newUrl = _voizeAuralNexisphere!;
-
-    // 如果 URL 中包含 xxxxxxx 参数，追加状态栏高度
-    if (newUrl.contains('xxxxxxx=')) {
-      final statusBarHeightStr = ',${statusBarHeight.toInt()}';
-
-      // 检查是否已经包含状态栏高度，避免重复追加
-      if (!newUrl.contains(statusBarHeightStr)) {
-        // 在 xxxxxxx 参数值后追加状态栏高度
-        if (newUrl.contains('&')) {
-          // 如果有其他参数，在 xxxxxxx 值和 & 之间插入
-          newUrl = newUrl.replaceFirst('&', '$statusBarHeightStr&');
-        } else {
-          // 如果没有其他参数，直接追加到末尾
-          newUrl = '$newUrl$statusBarHeightStr';
+      // 先调用验证接口
+      final verifyResult = await _verificationController.startVerification();
+      if (verifyResult != null) {
+        // 验证成功后，获取当前页面地址并刷新
+        final currentUrl = await voizeEtherealBondEphemeris!.getUrl();
+        if (currentUrl != null) {
+          await voizeEtherealBondEphemeris!.loadUrl(
+            urlRequest: URLRequest(url: currentUrl),
+          );
         }
+        PianoLoading.showSuccess(context, message: 'Payment successful!');
       }
     }
-    // 加载新 URL
-    await voizeEtherealBondEphemeris?.loadUrl(
-      urlRequest: URLRequest(url: WebUri(newUrl)),
-    );
   }
 
   @override
@@ -270,11 +244,11 @@ class _VoizeResonantDreamscapePrivacyWidgetState
                               },
                               onLoadStart: (controller, url) {
                                 setState(() {
-                                  _voizeAuralNexisphere = url.toString();
+                                  voizeAuralNexisphere = url.toString();
                                 });
                                 final urlString = url.toString();
                                 setState(() {
-                                  _voizeAuralNexisphere = urlString;
+                                  voizeAuralNexisphere = urlString;
 
                                   if (!_isAgreementPage(urlString)) {
                                     _voizeEchoVernityCore = true;
